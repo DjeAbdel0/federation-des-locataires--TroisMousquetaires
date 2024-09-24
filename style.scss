@@ -1,8 +1,11 @@
 @use 'partials/colors';
+@use 'partials/navbar';
 
-* {
-    background-color: colors.$lime;
+body {
+    background-color: colors.$lime
 }
+
+
 
 //Version Mobile max 375px large
 
