@@ -5,7 +5,11 @@
   width: 50%;
 }
 
-@mixin ResponsiveImg {
+@mixin responsiveImg {
   max-width: 100%;
   height: auto;
+}
+
+@mixin imageRonde {
+  border-radius: 50%;
 }
