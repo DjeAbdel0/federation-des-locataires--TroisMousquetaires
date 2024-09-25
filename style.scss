@@ -14,15 +14,15 @@ html {
 }
 
 h1 {
+  @include typo.bold;
   font-size: 20px;
-  font-weight: typo.$bold;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  font-weight: typo.$bold;
+  @include typo.bold;
 }
 
 //Version Mobile max 375px large
