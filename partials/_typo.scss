@@ -1,4 +1,15 @@
-@font-face {
-    font-family: $archivo;
-    src: url();
+@mixin small-capitals {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+@mixin small-capitals-bold {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin bold {
+  font-weight: bold;
 }

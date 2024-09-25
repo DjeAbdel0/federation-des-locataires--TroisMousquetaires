@@ -1,16 +1,32 @@
-@use 'partials/colors';
-@use 'partials/navbar';
+@use "partials/colors";
+@use "partials/navbar";
+@use "partials/typo";
 
-body {
-    background-color: colors.$lime
+@font-face {
+  font-family: "archivo";
+  src: url("../assets/font/Archivo-Regular.ttf");
 }
 
+body,
+html {
+  font-family: "archivo";
+  background-color: colors.$lime;
+}
 
+h1 {
+  font-size: 20px;
+  font-weight: typo.$bold;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: typo.$bold;
+}
 
 //Version Mobile max 375px large
 
-
 //Version Tablette min 765px large
-
 
 //Version Pc min 1400px large
