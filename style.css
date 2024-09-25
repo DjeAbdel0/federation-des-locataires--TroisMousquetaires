@@ -18,4 +18,15 @@ h3,
 h4,
 h5 {
   font-weight: bold;
+}
+
+.navbar {
+  background-color: #415456;
+}
+
+footer {
+  background-color: #415456;
+  min-height: 15vh;
+  left: 0;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

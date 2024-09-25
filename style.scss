@@ -6,7 +6,7 @@
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");
 }
-
+//Version Mobile max 375px large
 body,
 html {
   font-family: "archivo";
@@ -25,7 +25,18 @@ h5 {
   @include typo.bold;
 }
 
-//Version Mobile max 375px large
+.navbar {
+  background-color: colors.$espace;
+}
+
+footer {
+  background-color: colors.$espace;
+  min-height: 15vh;
+  left: 0;
+  bottom: 0;
+}
+
+
 
 //Version Tablette min 765px large
 
