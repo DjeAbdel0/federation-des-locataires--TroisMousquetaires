@@ -6,23 +6,112 @@
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");
 }
+
+header {
+  background-color: colors.$espace;
+}
+
+// Search Bar
+
+.search {
+  display: table;
+  input {
+      background: none;
+      border: none;
+      outline: none;
+      width: 28px;
+      min-width: 0;
+      padding: 0;
+      z-index: 1;
+      position: relative;
+      line-height: 18px;
+      margin: 5px 0;
+      font-size: 14px;
+      -webkit-appearance: none;
+      font-family: 'Mukta Malar';
+      transition: all .6s ease;
+      cursor: pointer;
+      color: $color;
+      & + div {
+          position: relative;
+          height: 28px;
+          width: 100%;
+          margin: -28px 0 0 0;
+          svg {
+              display: block;
+              position: absolute;
+              height: 28px;
+              width: 160px;
+              right: 0;
+              top: 0;
+              fill: none;
+              stroke: $color;
+              stroke-width: 1.5px;
+              stroke-dashoffset: 212.908 + 59;
+              stroke-dasharray: 59 212.908;
+              transition: all .6s ease;
+          }
+      }
+      &:not(:placeholder-shown),
+      &:focus {
+          width: 160px;
+          padding: 0 4px;
+          cursor: text;
+          &+ div {
+              svg {
+                  stroke-dasharray: 150 212.908;
+                  stroke-dashoffset: 300;
+              }
+          }
+      }
+  }
+}
+
+::selection {
+  background: rgba(#fff, .2);
+}
+::-moz-selection {
+  background: rgba(#fff, .2);
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+      box-sizing: inherit;
+  }
+}
+
+// Center & dribbble
+body {
+  min-height: 100vh;
+  font-family: 'Mukta Malar', Arial;
+  background: #F3628D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .dribbble {
+      position: fixed;
+      display: block;
+      right: 24px;
+      bottom: 24px;
+      img {
+          display: block;
+          width: 76px;
+      }
+  }
+}
+
 //Version Mobile max 375px large
 body,
 html {
   font-family: "archivo";
   background-color: colors.$lime;
-}
-
-h1 {
-  @include typo.bold;
-  font-size: 40px;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  @include typo.bold;
 }
 
 .navbar {
@@ -82,7 +171,7 @@ footer {
 
 //Version Tablette min 765px large
 
-@media screen and (min-width:765px){
+@media screen and (min-width: 765px) {
   footer {
     min-height: 15vh;
     font-size: 15px;
@@ -94,7 +183,7 @@ footer {
     margin-left: 10px;
     margin-top: 25px;
   }
-  
+
   .lien {
     width: 100%;
     margin-top: 23px;
@@ -103,7 +192,7 @@ footer {
   .lien a {
     padding: 15px;
   }
-  
+
   .adresse {
     font-size: 12px;
     margin-top: 42px;
@@ -117,7 +206,8 @@ footer {
 
 //Version Pc min 1400px large
 
-@media screen and (min-width:1400px){
+
+@media screen and (min-width: 1400px) {
   footer {
     min-height: 15vh;
     font-size: 25px;
@@ -129,7 +219,7 @@ footer {
     margin-left: 20px;
     margin-top: 40px;
   }
-  
+
   .lien {
     width: 100%;
     margin-top: 23px;
@@ -139,7 +229,7 @@ footer {
   .lien a {
     padding: 15px;
   }
-  
+
   .adresse {
     font-size: 20px;
     margin-top: 42px;
