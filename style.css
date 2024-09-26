@@ -28,82 +28,103 @@ footer {
   font-weight: bold;
   background-color: #415456;
   min-height: 13vh;
-  left: 0;
-  bottom: 0;
-  font-size: 10px;
+  font-size: 11px;
   color: white;
 }
 
 .logo_footer {
-  position: absolute;
-  bottom: -490px;
-  left: 10px;
-  height: 55px;
-  width: 45px;
+  grid-area: logo;
+  height: 65px;
+  width: 55px;
+  margin-left: 10px;
+  margin-top: 23px;
 }
 
 .lien {
-  position: absolute;
-  bottom: -445px;
-  left: 60px;
+  background-color: red;
+  grid-area: lien;
+  width: 100%;
+  margin-top: 23px;
+  padding: none;
 }
 
 .adresse {
+  background-color: red;
+  grid-area: adresse;
   font-size: 8px;
-  position: absolute;
-  bottom: -507px;
-  left: 60px;
+  margin-top: 38px;
+}
+
+.reseaux {
+  grid-area: reseaux;
+  background-color: blue;
+  padding-right: none;
+  margin-top: 35px;
+}
+
+.reseaux i {
+  padding: 7px;
+}
+
+.grid_footer {
+  display: grid;
+  height: 100%;
+  grid-template-areas: "logo lien lien" "logo adresse reseaux";
 }
 
 @media screen and (min-width: 765px) {
   footer {
     min-height: 15vh;
-    left: 0;
-    bottom: 0;
     font-size: 15px;
   }
   .logo_footer {
-    position: absolute;
-    bottom: -375px;
-    left: 10px;
-    height: 75px;
-    width: 65px;
+    height: 80px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 25px;
   }
   .lien {
-    position: absolute;
-    bottom: -320px;
-    left: 90px;
+    width: 100%;
+    margin-top: 23px;
+  }
+  .lien a {
+    padding: 15px;
   }
   .adresse {
     font-size: 12px;
-    position: absolute;
-    bottom: -394px;
-    left: 90px;
+    margin-top: 42px;
+  }
+  .reseaux {
+    margin-top: 40px;
+    margin-left: 22px;
   }
 }
 @media screen and (min-width: 1400px) {
   footer {
     min-height: 15vh;
-    left: 0;
-    bottom: 0;
-    font-size: 15px;
+    font-size: 25px;
   }
   .logo_footer {
-    position: absolute;
-    bottom: -335px;
-    left: 10px;
-    height: 75px;
-    width: 65px;
+    height: 140px;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 40px;
   }
   .lien {
-    position: absolute;
-    bottom: -280px;
-    left: 90px;
+    width: 100%;
+    margin-top: 23px;
+    margin-left: -100px;
+  }
+  .lien a {
+    padding: 15px;
   }
   .adresse {
-    font-size: 12px;
-    position: absolute;
-    bottom: -355px;
-    left: 90px;
+    font-size: 20px;
+    margin-top: 42px;
+    margin-left: -100px;
+  }
+  .reseaux {
+    margin-top: 40px;
+    margin-left: 22px;
   }
 }/*# sourceMappingURL=style.css.map */
