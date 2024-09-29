@@ -6,31 +6,92 @@ header {
   background-color: #415456;
 }
 
-#search input[type=search] {
-  width: 15px;
-  padding-left: 10px;
-  color: transparent;
+.fond {
+  background-color: #fff;
+}
+
+.search {
+  display: table;
+}
+.search input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 28px;
+  min-width: 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+  line-height: 18px;
+  margin: 5px 0;
+  font-size: 14px;
+  -webkit-appearance: none;
+  font-family: "Mukta Malar";
+  transition: all 0.6s ease;
   cursor: pointer;
+  color: wheat;
+}
+.search input + div {
+  position: relative;
+  height: 28px;
+  width: 100%;
+  margin: -28px 0 0 0;
+}
+.search input + div svg {
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 160px;
+  right: 0;
+  top: 0;
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5px;
+  stroke-dashoffset: 271.908;
+  stroke-dasharray: 59 212.908;
+  transition: all 0.6s ease;
+}
+.search input:not(:-moz-placeholder-shown) {
+  width: 160px;
+  padding: 0 4px;
+  cursor: text;
+}
+.search input:not(:placeholder-shown), .search input:focus {
+  width: 160px;
+  padding: 0 4px;
+  cursor: text;
+}
+.search input:not(:-moz-placeholder-shown) + div svg {
+  stroke-dasharray: 150 212.908;
+  stroke-dashoffset: 300;
+}
+.search input:not(:placeholder-shown) + div svg, .search input:focus + div svg {
+  stroke-dasharray: 150 212.908;
+  stroke-dashoffset: 300;
 }
 
-#search input[type=search]:hover {
-  background-color: #fff;
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-#search input[type=search]:focus {
-  width: 130px;
-  padding-left: 32px;
-  color: #000;
-  background-color: #fff;
-  cursor: auto;
+::selection {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-#search input:-moz-placeholder {
-  color: transparent;
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-#search input::-webkit-input-placeholder {
-  color: transparent;
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
 }
 
 body,
@@ -91,6 +152,51 @@ footer {
   grid-template-areas: "logo lien lien" "logo adresse reseaux";
 }
 
+.services {
+  margin: 0 auto;
+  width: 50%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-titre {
+  color: #000;
+  grid-column: span 3;
+  margin: 0 auto;
+}
+
+.service-fleche {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.service-no1 {
+  font: 12px;
+}
+.service-no1 img {
+  width: 45px;
+  height: auto;
+}
+
+.service-no2 {
+  font: 12px;
+}
+.service-no2 img {
+  width: 45px;
+  height: auto;
+}
+
+.service-no3 {
+  font: 12px;
+}
+.service-no3 img {
+  width: 45px;
+  height: auto;
+}
+
 @media screen and (min-width: 765px) {
   footer {
     min-height: 15vh;
@@ -116,6 +222,34 @@ footer {
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
+  }
+  .services {
+    padding-top: 15px;
+  }
+  .service-titre {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .service-no1 {
+    font-size: 24px;
+  }
+  .service-no1 img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no2 {
+    font-size: 24px;
+  }
+  .service-no2 img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no3 {
+    font-size: 24px;
+  }
+  .service-no3 img {
+    width: 10vw;
+    height: auto;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -145,5 +279,32 @@ footer {
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
+  }
+  .service-titre {
+    font-size: 55px;
+  }
+  .service-no1 {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+  img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no2 {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+  img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no3 {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+  img {
+    width: 10vw;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,204 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Boostrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <body>
-    <header>
-      <!-- NavBar Boostrap-->
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid">
-          <!-- Logo -->
-          <a class="navbar-brand" href="./index.html">
-            <img
-              src="./assets/Logo.png"
-              width="30"
-              height="30"
-              class="d-inline-block align-top"
-              alt=""
-            />
-          </a>
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
 
-          <!-- Bouton menu burger -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobile_menu"
-            aria-controls="mobile_menu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<body>
+  <header>
+    <!-- NavBar Boostrap-->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+        </a>
 
-          <!-- Menu burger -->
-          <div class="collapse navbar-collapse" id="mobile_menu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nouvelles</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">Équipe</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nous joindre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">À propos</a>
-              </li>
-            </ul>
-            <!-- Barre de recherche -->
+        <!-- Bouton menu burger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_menu"
+          aria-controls="mobile_menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="search">
-              <input type="text" placeholder=" ">
-              <div>
-                  <svg>
-                      <use xlink:href="#path">
-                  </svg>
-              </div>
-          </div>
+        <!-- Menu burger -->
+        <div class="collapse navbar-collapse" id="mobile_menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nouvelles</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Équipe</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nous joindre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">À propos</a>
+            </li>
+          </ul>
+          <!-- Barre de recherche -->
 
-            <!-- Icon -->
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><i class="fas fa-user"></i> <i class="bi bi-person-fill"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!--Section Hero-->
-    <section class="hero">
-      <div class="hero-contenu">
-        <h1>federation-des-locataires--TroisMousquetaires</h1>
-        <h3>Site scolaires qui refait l'interface du site de la FLHLMQ</h3>
-        <p>
-          Nom du client : Fédération des locataires d’habitations à loyer modique du
-          Québec
-        </p>
-        <a href="https://flhlmq.com/fr">Site officiel du client</a>
-      </div>
-    </section>
-    <!--FIN Section Hero-->
-
-     <!--Section Actualités-->
-     <section class="actualite">
-      <div class="card">
-        <div class="card__header">
-          <img src="" alt="card__image" class="card__image">
-        </div>
-        <div class="card__body">
-          <span class="tag tag-blue">Technology</span>
-          <h4>What's new in 2022 Tech</h4>
-          <p></p>
-        </div>
-        <div class="card__footer">
-          <div class="user">
-            <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
-            <div class="user__info">
-              <h5></h5>
-              <small></small>
+          <div class="search">
+            <input type="text" placeholder=" ">
+            <div>
+              <svg>
+                <use xlink:href="#path">
+              </svg>
             </div>
           </div>
+
+          <!-- Icon -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user"></i> <i class="bi bi-person-fill"></i></a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
+  <!--Section Hero-->
+  <section class="hero">
+    <div class="hero-contenu">
+      <h1>federation-des-locataires--TroisMousquetaires</h1>
+      <h3>Site scolaires qui refait l'interface du site de la FLHLMQ</h3>
+      <p>
+        Nom du client : Fédération des locataires d’habitations à loyer modique du
+        Québec
+      </p>
+      <a href="https://flhlmq.com/fr">Site officiel du client</a>
+    </div>
+  </section>
+  <!--FIN Section Hero-->
+
+  <!--Section Actualités-->
+  <section class="actualite">
+    <div class="card">
+      <div class="card__header">
+        <img src="" alt="card__image" class="card__image">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">Technology</span>
+        <h4>What's new in 2022 Tech</h4>
+        <p></p>
+      </div>
+      <div class="card__footer">
+        <div class="user">
+          <img src="https://i.pravatar.cc/40?img=1" alt="user__image" class="user__image">
+          <div class="user__info">
+            <h5></h5>
+            <small></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--FIN Section Actualités-->
+
+  <!--Section Services-->
+  <div class="fond">
+    <section class="services">
+      <div class="service service-titre">
+        
+        <h2 class="service service-titre">Services<i class="bi bi-arrow-right-circle-fill service service-fleche"></i></h1>
+          
+      </div>
+      <div class="service service-no1">
+        <p class="service service-no1">Locataire</p>
+        <img src="./assets/Icons/Connect.png">
+      </div>
+      <div class="service service-no2">
+        <p>Infolettre</p>
+        <img src="./assets/Icons/Document.png">
+      </div>
+      <div class="service service-no3">
+        <p>CRR</p>
+        <img src="./assets/Icons/Lease.png">
       </div>
     </section>
-    <!--FIN Section Actualités-->
-    <a href="https://djeabdel0.github.io/federation-des-locataires--TroisMousquetaires/">Lien Github</a>
-    <h4>Nom du groupe :</h4>
-    <p>Les Trois Mousquetaires</p>
+  </div>
 
-    <h5>Djeral Abdel Ali :</h5>
-    <p>Développeur Back-end & DevOp</p>
+  <!--FIN Section Services-->
 
-    <h5>Gucluer Yavuz-Selim :</h5>
-    <p>Designer & Assurance Qualité (QA)</p>
 
-    <h5>Delisle Vincent:</h5>
-    <p>Project Owner (PO) & Scrum Master</p>
 
-    <!--------------------------Des extras-------------------------->
+  <a href="https://djeabdel0.github.io/federation-des-locataires--TroisMousquetaires/">Lien Github</a>
+  <h4>Nom du groupe :</h4>
+  <p>Les Trois Mousquetaires</p>
 
-    <h4>Nom du groupe :</h4>
-    <p>Les Trois Mousquetaires</p>
+  <h5>Djeral Abdel Ali :</h5>
+  <p>Développeur Back-end & DevOp</p>
 
-    <h5>Djeral Abdel Ali :</h5>
-    <p>Développeur Back-end & DevOp</p>
+  <h5>Gucluer Yavuz-Selim :</h5>
+  <p>Designer & Assurance Qualité (QA)</p>
 
-    <h5>Gucluer Yavuz-Selim :</h5>
-    <p>Designer & Assurance Qualité (QA)</p>
+  <h5>Delisle Vincent:</h5>
+  <p>Project Owner (PO) & Scrum Master</p>
 
-    <h5>Delisle Vincent:</h5>
-    <p>Project Owner (PO) & Scrum Master</p>
 
-    <h4>Nom du groupe :</h4>
-    <p>Les Trois Mousquetaires</p>
 
-    <h5>Djeral Abdel Ali :</h5>
-    <p>Développeur Back-end & DevOp</p>
-
-    <h5>Gucluer Yavuz-Selim :</h5>
-    <p>Designer & Assurance Qualité (QA)</p>
-
-    <h5>Delisle Vincent:</h5>
-    <p>Project Owner (PO) & Scrum Master</p>
-
-    <!-- Pied de page-->
-    <footer>
-      <div class="grid_footer">
-        <img class="logo_footer" src="./assets/Logo.png"/>
-        <div class="lien">
-          <a>Nouvelles</a>
-          <a>Services</a>
-          <a>Équipe</a>
-          <a>FAQ</a>
-          <a>Nous Joindre</a>
-          <a>À propos</a>
-        </div>
-        <p class="adresse">1245 Adresse du bureau Laval Québec H1H H2H</p>
-        <div class="reseaux">
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-twitter"></i>
-          <i class="bi bi-send"></i>
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-person"></i>
-        </div>
+  <!-- Pied de page-->
+  <footer>
+    <div class="grid_footer">
+      <img class="logo_footer" src="./assets/Logo.png" />
+      <div class="lien">
+        <a>Nouvelles</a>
+        <a>Services</a>
+        <a>Équipe</a>
+        <a>FAQ</a>
+        <a>Nous Joindre</a>
+        <a>À propos</a>
       </div>
-    </footer>
-    <!-- Scripts Boostrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Script Main-->
-    <script src="main.js"></script>
-  </body>
+      <p class="adresse">1245 Adresse du bureau Laval Québec H1H H2H</p>
+      <div class="reseaux">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-send"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-person"></i>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts Boostrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <!-- Script Main-->
+  <script src="main.js"></script>
+</body>
+
 </html>

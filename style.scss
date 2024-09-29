@@ -11,65 +11,74 @@ header {
   background-color: colors.$espace;
 }
 
+.fond{
+  background-color: colors.$blanc;
+}
 // Search Bar
 
 .search {
   display: table;
+
   input {
-      background: none;
-      border: none;
-      outline: none;
-      width: 28px;
-      min-width: 0;
-      padding: 0;
-      z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+    width: 28px;
+    min-width: 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    line-height: 18px;
+    margin: 5px 0;
+    font-size: 14px;
+    -webkit-appearance: none;
+    font-family: 'Mukta Malar';
+    transition: all .6s ease;
+    cursor: pointer;
+    color: wheat;
+
+    &+div {
       position: relative;
-      line-height: 18px;
-      margin: 5px 0;
-      font-size: 14px;
-      -webkit-appearance: none;
-      font-family: 'Mukta Malar';
-      transition: all .6s ease;
-      cursor: pointer;
-      color: $color;
-      & + div {
-          position: relative;
-          height: 28px;
-          width: 100%;
-          margin: -28px 0 0 0;
-          svg {
-              display: block;
-              position: absolute;
-              height: 28px;
-              width: 160px;
-              right: 0;
-              top: 0;
-              fill: none;
-              stroke: $color;
-              stroke-width: 1.5px;
-              stroke-dashoffset: 212.908 + 59;
-              stroke-dasharray: 59 212.908;
-              transition: all .6s ease;
-          }
+      height: 28px;
+      width: 100%;
+      margin: -28px 0 0 0;
+
+      svg {
+        display: block;
+        position: absolute;
+        height: 28px;
+        width: 160px;
+        right: 0;
+        top: 0;
+        fill: none;
+        stroke: white;
+        stroke-width: 1.5px;
+        stroke-dashoffset: 212.908 + 59;
+        stroke-dasharray: 59 212.908;
+        transition: all .6s ease;
       }
-      &:not(:placeholder-shown),
-      &:focus {
-          width: 160px;
-          padding: 0 4px;
-          cursor: text;
-          &+ div {
-              svg {
-                  stroke-dasharray: 150 212.908;
-                  stroke-dashoffset: 300;
-              }
-          }
+    }
+
+    &:not(:placeholder-shown),
+    &:focus {
+      width: 160px;
+      padding: 0 4px;
+      cursor: text;
+
+      &+div {
+        svg {
+          stroke-dasharray: 150 212.908;
+          stroke-dashoffset: 300;
+        }
       }
+    }
   }
 }
 
 ::selection {
   background: rgba(#fff, .2);
 }
+
 ::-moz-selection {
   background: rgba(#fff, .2);
 }
@@ -81,31 +90,15 @@ html {
 
 * {
   box-sizing: inherit;
+
   &:before,
   &:after {
-      box-sizing: inherit;
+    box-sizing: inherit;
   }
 }
 
 // Center & dribbble
-body {
-  min-height: 100vh;
-  font-family: 'Mukta Malar', Arial;
-  background: #F3628D;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .dribbble {
-      position: fixed;
-      display: block;
-      right: 24px;
-      bottom: 24px;
-      img {
-          display: block;
-          width: 76px;
-      }
-  }
-}
+
 
 //Version Mobile max 375px large
 body,
@@ -163,10 +156,47 @@ footer {
 .grid_footer {
   display: grid;
   height: 100%;
-  grid-template-areas: 
-  "logo lien lien"
-  "logo adresse reseaux"
+  grid-template-areas:
+    "logo lien lien"
+    "logo adresse reseaux"
   ;
+}
+
+//Services 
+
+.services {
+  margin: 0 auto;
+  width: 50%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-titre {
+  color: #000;
+  grid-column: span 3;
+  margin: 0 auto;
+}
+
+.service-fleche{
+ position:relative;
+ right: 0;
+ top: 0;
+}
+
+$servicesNumero: no1,
+no2,
+no3;
+
+@each $service in $servicesNumero {
+  .service-#{$service} {
+    font: 12px;
+    img {
+      width: 45px;
+      height: auto;
+    }
+  }
 }
 
 //Version Tablette min 765px large
@@ -197,11 +227,36 @@ footer {
     font-size: 12px;
     margin-top: 42px;
   }
-  
+
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
   }
+
+  // Services 765px
+.services {
+ padding-top: 15px;
+}
+
+.service-titre {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+$servicesNumero: no1,
+no2,
+no3;
+
+@each $service in $servicesNumero {
+  .service-#{$service} {
+    font-size: 24px;
+    img {
+      width: 10vw;
+      height: auto;
+    }
+  }
+  
+}
 }
 
 //Version Pc min 1400px large
@@ -235,9 +290,28 @@ footer {
     margin-top: 42px;
     margin-left: -100px;
   }
-  
+
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
   }
+
+   // Services 1400px
+
+
+.service-titre {
+  font-size: 55px;
+}
+
+//Ne marche pas sur les img
+@each $service in $servicesNumero {
+  .service-#{$service} {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+   img {
+    width: 10vw;
+    height: auto;
+  }
+}
 }
