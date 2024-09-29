@@ -14,73 +14,74 @@ header {
 .fond{
   background-color: colors.$blanc;
 }
+
 // Search Bar
+.container {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
 
-.search {
-  display: table;
-
-  input {
-    background: none;
+.search-box { 
+  input[type="text"] {
     border: none;
-    outline: none;
-    width: 28px;
-    min-width: 0;
-    padding: 0;
+    background: none;
     z-index: 1;
-    position: relative;
-    line-height: 18px;
-    margin: 5px 0;
-    font-size: 14px;
-    -webkit-appearance: none;
-    font-family: 'Mukta Malar';
-    transition: all .6s ease;
-    cursor: pointer;
-    color: wheat;
-
-    &+div {
-      position: relative;
-      height: 28px;
-      width: 100%;
-      margin: -28px 0 0 0;
-
-      svg {
-        display: block;
-        position: absolute;
-        height: 28px;
-        width: 160px;
-        right: 0;
-        top: 0;
-        fill: none;
-        stroke: white;
-        stroke-width: 1.5px;
-        stroke-dashoffset: 212.908 + 59;
-        stroke-dasharray: 59 212.908;
-        transition: all .6s ease;
+    width: 25px;
+    height: 25px;
+    transition: all .25s ease-in .25s;
+    color: transparent;
+    font-size: .75rem;
+    line-height:25px;
+    &:hover {
+      cursor: pointer;
+      &:focus {
+        cursor: text;
+      }
+      + span {
+        background: rgba(255,255,255,0.2);
       }
     }
-
-    &:not(:placeholder-shown),
     &:focus {
-      width: 160px;
-      padding: 0 4px;
-      cursor: text;
-
-      &+div {
-        svg {
-          stroke-dasharray: 150 212.908;
-          stroke-dashoffset: 300;
+      width: 200px;
+      padding: 0 10px;
+      outline: none;
+      color: black;
+      background:none;
+      color: white;
+      + span {
+        width: 200px;
+        &::before {
+          width:2px;
+          opacity: 0;
+          transition: all .25s ease-in;
         }
       }
     }
+    + span {
+      z-index: -1;
+      position: absolute;
+      border: 2px solid white;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      transition: all .25s ease-in .25s;
+      border-radius: 25px;
+      left: 0;
+      &::before {
+        transition: all .25s ease-in .5s;
+        transform-origin: left top;
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 5px;
+        border-radius: 5px;
+        background: white;
+        transform: rotate(45deg) translate(26px, -2px);
+      }
+    }
   }
-}
-
-::selection {
-  background: rgba(#fff, .2);
-}
-
-::-moz-selection {
-  background: rgba(#fff, .2);
 }
 
 html {

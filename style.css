@@ -10,76 +10,70 @@ header {
   background-color: #fff;
 }
 
-.search {
-  display: table;
+.container {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
 }
-.search input {
-  background: none;
+
+.search-box input[type=text] {
   border: none;
-  outline: none;
-  width: 28px;
-  min-width: 0;
-  padding: 0;
+  background: none;
   z-index: 1;
-  position: relative;
-  line-height: 18px;
-  margin: 5px 0;
-  font-size: 14px;
-  -webkit-appearance: none;
-  font-family: "Mukta Malar";
-  transition: all 0.6s ease;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  color: transparent;
+  font-size: 0.75rem;
+  line-height: 25px;
+}
+.search-box input[type=text]:hover {
   cursor: pointer;
-  color: wheat;
 }
-.search input + div {
-  position: relative;
-  height: 28px;
-  width: 100%;
-  margin: -28px 0 0 0;
+.search-box input[type=text]:hover:focus {
+  cursor: text;
 }
-.search input + div svg {
-  display: block;
+.search-box input[type=text]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type=text]:focus {
+  width: 200px;
+  padding: 0 10px;
+  outline: none;
+  color: black;
+  background: none;
+  color: white;
+}
+.search-box input[type=text]:focus + span {
+  width: 200px;
+}
+.search-box input[type=text]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+.search-box input[type=text] + span {
+  z-index: -1;
   position: absolute;
-  height: 28px;
-  width: 160px;
-  right: 0;
+  border: 2px solid white;
   top: 0;
-  fill: none;
-  stroke: white;
-  stroke-width: 1.5px;
-  stroke-dashoffset: 271.908;
-  stroke-dasharray: 59 212.908;
-  transition: all 0.6s ease;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  border-radius: 25px;
+  left: 0;
 }
-.search input:not(:-moz-placeholder-shown) {
-  width: 160px;
-  padding: 0 4px;
-  cursor: text;
-}
-.search input:not(:placeholder-shown), .search input:focus {
-  width: 160px;
-  padding: 0 4px;
-  cursor: text;
-}
-.search input:not(:-moz-placeholder-shown) + div svg {
-  stroke-dasharray: 150 212.908;
-  stroke-dashoffset: 300;
-}
-.search input:not(:placeholder-shown) + div svg, .search input:focus + div svg {
-  stroke-dasharray: 150 212.908;
-  stroke-dashoffset: 300;
-}
-
-::-moz-selection {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-::selection {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-::-moz-selection {
-  background: rgba(255, 255, 255, 0.2);
+.search-box input[type=text] + span::before {
+  transition: all 0.25s ease-in 0.5s;
+  transform-origin: left top;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(26px, -2px);
 }
 
 html {
