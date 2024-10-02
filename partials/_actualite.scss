@@ -1,24 +1,48 @@
-.actualite{
-    width: 100vw;
-    height: 100vh;
-}
+.actualite {
+  width: 100vw;
+  height: 100vh; /* On ajuste la hauteur pour être automatique en fonction du contenu */
+  display: flex;
+  justify-content: center; /* Centrer les cartes horizontalement */
+  align-items: center; /* Centrer les cartes verticalement si nécessaire */
+  gap: 20px;
+  padding: 40px;
 
-.card {
-    width: 100%;
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 20%; /* Ajuster la largeur des cartes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 0 10px; /* Espacement latéral supplémentaire */
 
-    &__header{
-        
+    &__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 15px;
     }
 
-    &__body{
-        
+    &__text {
+      font-size: 1rem;
+      margin: 15px;
+      color: #555;
     }
 
-    &__image{
-        
+    &__image {
+      width: 100%;
+      object-fit: cover;
+      height: 200px; /* Hauteur fixe pour les images */
     }
 
-    &__footer{
-        
+    &__footer {
+      margin: 15px;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: right;
     }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
