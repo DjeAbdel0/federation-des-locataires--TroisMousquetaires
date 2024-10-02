@@ -1,7 +1,7 @@
 @use "partials/colors";
 @use "partials/navbar";
 @use "partials/typo";
-
+@use "partials/hero";
 @font-face {
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");
@@ -11,7 +11,7 @@ header {
   background-color: colors.$espace;
 }
 
-.fond{
+.fond {
   background-color: colors.$blanc;
 }
 
@@ -23,24 +23,24 @@ header {
   transform: translate(-50%);
 }
 
-.search-box { 
+.search-box {
   input[type="text"] {
     border: none;
     background: none;
     z-index: 1;
     width: 25px;
     height: 25px;
-    transition: all .25s ease-in .25s;
+    transition: all 0.25s ease-in 0.25s;
     color: transparent;
-    font-size: .75rem;
-    line-height:25px;
+    font-size: 0.75rem;
+    line-height: 25px;
     &:hover {
       cursor: pointer;
       &:focus {
         cursor: text;
       }
       + span {
-        background: rgba(255,255,255,0.2);
+        background: rgba(255, 255, 255, 0.2);
       }
     }
     &:focus {
@@ -48,14 +48,14 @@ header {
       padding: 0 10px;
       outline: none;
       color: black;
-      background:none;
+      background: none;
       color: white;
       + span {
         width: 200px;
         &::before {
-          width:2px;
+          width: 2px;
           opacity: 0;
-          transition: all .25s ease-in;
+          transition: all 0.25s ease-in;
         }
       }
     }
@@ -66,13 +66,13 @@ header {
       top: 0;
       width: 25px;
       height: 25px;
-      transition: all .25s ease-in .25s;
+      transition: all 0.25s ease-in 0.25s;
       border-radius: 25px;
       left: 0;
       &::before {
-        transition: all .25s ease-in .5s;
+        transition: all 0.25s ease-in 0.5s;
         transform-origin: left top;
-        content: '';
+        content: "";
         position: absolute;
         width: 10px;
         height: 5px;
@@ -99,7 +99,6 @@ html {
 }
 
 // Center & dribbble
-
 
 //Version Mobile max 375px large
 body,
@@ -159,11 +158,10 @@ footer {
   height: 100%;
   grid-template-areas:
     "logo lien lien"
-    "logo adresse reseaux"
-  ;
+    "logo adresse reseaux";
 }
 
-//Services 
+//Services
 
 .services {
   margin: 0 auto;
@@ -180,15 +178,13 @@ footer {
   margin: 0 auto;
 }
 
-.service-fleche{
- position:relative;
- right: 0;
- top: 0;
+.service-fleche {
+  position: relative;
+  right: 0;
+  top: 0;
 }
 
-$servicesNumero: no1,
-no2,
-no3;
+$servicesNumero: no1, no2, no3;
 
 @each $service in $servicesNumero {
   .service-#{$service} {
@@ -235,33 +231,29 @@ no3;
   }
 
   // Services 765px
-.services {
- padding-top: 15px;
-}
+  .services {
+    padding-top: 15px;
+  }
 
-.service-titre {
-  font-size: 40px;
-  font-weight: 500;
-}
+  .service-titre {
+    font-size: 40px;
+    font-weight: 500;
+  }
 
-$servicesNumero: no1,
-no2,
-no3;
+  $servicesNumero: no1, no2, no3;
 
-@each $service in $servicesNumero {
-  .service-#{$service} {
-    font-size: 24px;
-    img {
-      width: 10vw;
-      height: auto;
+  @each $service in $servicesNumero {
+    .service-#{$service} {
+      font-size: 24px;
+      img {
+        width: 10vw;
+        height: auto;
+      }
     }
   }
-  
-}
 }
 
 //Version Pc min 1400px large
-
 
 @media screen and (min-width: 1400px) {
   footer {
@@ -297,22 +289,21 @@ no3;
     margin-left: 22px;
   }
 
-   // Services 1400px
+  // Services 1400px
 
-
-.service-titre {
-  font-size: 55px;
-}
-
-//Ne marche pas sur les img
-@each $service in $servicesNumero {
-  .service-#{$service} {
-    margin: 0 10px;
-    font-size: 40px;
+  .service-titre {
+    font-size: 55px;
   }
-   img {
-    width: 10vw;
-    height: auto;
+
+  //Ne marche pas sur les img
+  @each $service in $servicesNumero {
+    .service-#{$service} {
+      margin: 0 10px;
+      font-size: 40px;
+    }
+    img {
+      width: 10vw;
+      height: auto;
+    }
   }
-}
 }
