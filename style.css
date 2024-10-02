@@ -148,6 +148,7 @@ body,
 html {
   font-family: "archivo";
   background-color: #8BBD8E;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -157,7 +158,7 @@ html {
 footer {
   font-weight: bold;
   background-color: #415456;
-  min-height: 13vh;
+  min-height: 11vh;
   font-size: 11px;
   color: white;
 }
@@ -171,15 +172,18 @@ footer {
 }
 
 .lien {
-  background-color: red;
   grid-area: lien;
   width: 100%;
   margin-top: 23px;
   padding: none;
 }
 
+.lien a {
+  padding: 2px;
+  font-size: 10px;
+}
+
 .adresse {
-  background-color: red;
   grid-area: adresse;
   font-size: 8px;
   margin-top: 38px;
@@ -187,18 +191,16 @@ footer {
 
 .reseaux {
   grid-area: reseaux;
-  background-color: blue;
   padding-right: none;
   margin-top: 35px;
 }
 
 .reseaux i {
-  padding: 7px;
+  padding: 3px;
 }
 
 .grid_footer {
   display: grid;
-  height: 100%;
   grid-template-areas: "logo lien lien" "logo adresse reseaux";
 }
 
@@ -256,22 +258,27 @@ footer {
     height: 80px;
     width: 70px;
     margin-left: 10px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   .lien {
     width: 100%;
-    margin-top: 23px;
+    margin-top: 28px;
   }
   .lien a {
-    padding: 15px;
+    font-size: 18px;
+    padding: 10px;
   }
   .adresse {
     font-size: 12px;
     margin-top: 42px;
+    margin-left: 10px;
   }
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
+  }
+  .reseaux i {
+    padding: 10px;
   }
   .services {
     padding-top: 15px;
@@ -304,31 +311,31 @@ footer {
 }
 @media screen and (min-width: 1400px) {
   footer {
-    min-height: 15vh;
-    font-size: 25px;
+    min-height: 19vh;
+    font-size: 20px;
   }
   .logo_footer {
-    height: 140px;
-    width: 120px;
+    height: 120px;
+    width: 105px;
     margin-left: 20px;
-    margin-top: 40px;
   }
   .lien {
     width: 100%;
-    margin-top: 23px;
-    margin-left: -100px;
+    margin-top: 25px;
+    margin-left: -70px;
   }
   .lien a {
-    padding: 15px;
+    font-size: 25px;
+    padding: 40px;
   }
   .adresse {
-    font-size: 20px;
-    margin-top: 42px;
-    margin-left: -100px;
+    font-size: 18px;
+    margin-top: 69px;
+    margin-left: -32px;
   }
   .reseaux {
-    margin-top: 40px;
-    margin-left: 22px;
+    margin-top: 65px;
+    margin-left: 220px;
   }
   .service-titre {
     font-size: 55px;
@@ -422,10 +429,11 @@ footer {
   font-weight: bold;
   color: #000;
   grid-column: span 3;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .temoins-img {
+  margin-left: 10px;
   width: 90px;
   height: 90px;
   border-radius: 100%;
@@ -433,4 +441,64 @@ footer {
 
 .temoins-text {
   font-size: 12px;
+  font-style: italic;
+}
+
+.plus_btn {
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.plus_btn:hover {
+  background: #8bb08d;
+}
+
+.plus_btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/********* Largeur Tablette Temoignages: 765px */
+@media screen and (min-width: 765px) {
+  .temoins-text {
+    font-size: 18px;
+  }
+  .nom {
+    font-size: 18px;
+  }
+  .temoins-img {
+    width: 120px;
+    height: 120px;
+  }
+  .plus_btn {
+    padding: 5px 20px;
+    font-size: 1.1rem;
+  }
+}
+/********* Largeur Pc Temoignages: 1400px */
+@media screen and (min-width: 1400px) {
+  .temoins-titre {
+    font-size: 40px;
+  }
+  .temoins-text {
+    font-size: 28px;
+  }
+  .nom {
+    font-size: 28px;
+  }
+  .temoins-img {
+    width: 180px;
+    height: 180px;
+  }
+  .plus_btn {
+    padding: 5px 30px;
+    font-size: 1.3rem;
+  }
 }/*# sourceMappingURL=style.css.map */
