@@ -144,6 +144,9 @@ html {
   box-sizing: inherit;
 }
 
+/* 
+--------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 body,
 html {
   font-family: "archivo";
@@ -205,12 +208,14 @@ footer {
 }
 
 .services {
+  position: relative;
   margin: 0 auto;
   width: 50%;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 25px 0;
 }
 
 .service-titre {
@@ -220,35 +225,49 @@ footer {
 }
 
 .service-fleche {
-  position: relative;
-  right: 0;
-  top: 0;
+  position: absolute;
+  right: -50px;
+  top: 20px;
+}
+
+.service-no2 {
+  border-right: #000 2px solid;
+  border-left: #000 2px solid;
 }
 
 .service-no1 {
   font: 12px;
+  text-align: center;
 }
 .service-no1 img {
   width: 45px;
   height: auto;
+  margin: 0 auto;
 }
 
 .service-no2 {
   font: 12px;
+  text-align: center;
 }
 .service-no2 img {
   width: 45px;
   height: auto;
+  margin: 0 auto;
 }
 
 .service-no3 {
   font: 12px;
+  text-align: center;
 }
 .service-no3 img {
   width: 45px;
   height: auto;
+  margin: 0 auto;
 }
 
+/* 
+--------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 @media screen and (min-width: 765px) {
   footer {
     min-height: 15vh;
@@ -308,7 +327,14 @@ footer {
     width: 10vw;
     height: auto;
   }
+  .service-no2 {
+    border-right: #000 4px solid;
+    border-left: #000 4px solid;
+  }
 }
+/* 
+--------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 @media screen and (min-width: 1400px) {
   footer {
     min-height: 19vh;
@@ -340,29 +366,9 @@ footer {
   .service-titre {
     font-size: 55px;
   }
-  .service-no1 {
-    margin: 0 10px;
-    font-size: 40px;
-  }
-  img {
-    width: 10vw;
-    height: auto;
-  }
   .service-no2 {
-    margin: 0 10px;
-    font-size: 40px;
-  }
-  img {
-    width: 10vw;
-    height: auto;
-  }
-  .service-no3 {
-    margin: 0 10px;
-    font-size: 40px;
-  }
-  img {
-    width: 10vw;
-    height: auto;
+    border-right: #000 6px solid;
+    border-left: #000 6px solid;
   }
 }
 .fond-temoins {
