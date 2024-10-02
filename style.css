@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .hero {
   background-color: red;
   /* Sizing */
@@ -7,6 +8,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.actualite {
+  width: 100vw;
+  height: 100vh; /* On ajuste la hauteur pour être automatique en fonction du contenu */
+  display: flex;
+  justify-content: center; /* Centrer les cartes horizontalement */
+  align-items: center; /* Centrer les cartes verticalement si nécessaire */
+  gap: 20px;
+  padding: 40px;
+}
+.actualite .card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 20%; /* Ajuster la largeur des cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  margin: 0 10px; /* Espacement latéral supplémentaire */
+}
+.actualite .card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px;
+}
+.actualite .card__text {
+  font-size: 1rem;
+  margin: 15px;
+  color: #555;
+}
+.actualite .card__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px; /* Hauteur fixe pour les images */
+}
+.actualite .card__footer {
+  margin: 15px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+}
+.actualite .card:hover {
+  transform: translateY(-10px);
 }
 
 @font-face {
@@ -28,7 +73,7 @@ header {
   transform: translate(-50%);
 }
 
-.search-box input[type="text"] {
+.search-box input[type=text] {
   border: none;
   background: none;
   z-index: 1;
@@ -39,16 +84,16 @@ header {
   font-size: 0.75rem;
   line-height: 25px;
 }
-.search-box input[type="text"]:hover {
+.search-box input[type=text]:hover {
   cursor: pointer;
 }
-.search-box input[type="text"]:hover:focus {
+.search-box input[type=text]:hover:focus {
   cursor: text;
 }
-.search-box input[type="text"]:hover + span {
+.search-box input[type=text]:hover + span {
   background: rgba(255, 255, 255, 0.2);
 }
-.search-box input[type="text"]:focus {
+.search-box input[type=text]:focus {
   width: 200px;
   padding: 0 10px;
   outline: none;
@@ -56,15 +101,15 @@ header {
   background: none;
   color: white;
 }
-.search-box input[type="text"]:focus + span {
+.search-box input[type=text]:focus + span {
   width: 200px;
 }
-.search-box input[type="text"]:focus + span::before {
+.search-box input[type=text]:focus + span::before {
   width: 2px;
   opacity: 0;
   transition: all 0.25s ease-in;
 }
-.search-box input[type="text"] + span {
+.search-box input[type=text] + span {
   z-index: -1;
   position: absolute;
   border: 2px solid white;
@@ -75,7 +120,7 @@ header {
   border-radius: 25px;
   left: 0;
 }
-.search-box input[type="text"] + span::before {
+.search-box input[type=text] + span::before {
   transition: all 0.25s ease-in 0.5s;
   transform-origin: left top;
   content: "";
@@ -95,15 +140,14 @@ html {
 * {
   box-sizing: inherit;
 }
-*:before,
-*:after {
+*:before, *:after {
   box-sizing: inherit;
 }
 
 body,
 html {
   font-family: "archivo";
-  background-color: #8bbd8e;
+  background-color: #8BBD8E;
 }
 
 .navbar {
@@ -313,4 +357,4 @@ footer {
     width: 10vw;
     height: auto;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
