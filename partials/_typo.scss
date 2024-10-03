@@ -1,4 +1,4 @@
-@mixin small-capitals {
+@mixin small-text {
   font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
@@ -11,5 +11,10 @@
 }
 
 @mixin bold {
+  font-weight: bold;
+}
+
+@mixin title-bold {
+  font-size: 25px;
   font-weight: bold;
 }

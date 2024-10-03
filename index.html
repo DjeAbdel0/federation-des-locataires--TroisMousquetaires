@@ -20,7 +20,7 @@
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="./index.html">
-          <img src="./assets/medias/Logo_figma.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+          <img src="./assets/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="" />
         </a>
 
         <!-- Bouton menu burger -->
@@ -83,11 +83,11 @@
 
   <!--Section Hero-->
   <section class="hero">
-    <div class="slides">
+    <div class="hero__carousel">
       <!-- Slide 1 : Présentation de l'organisme -->
-      <div class="slide">
-       <!-- <img src="./assets/medias/hero.png" alt="Présentation de l'organisme">-->
-        <div class="slide-content">
+      <div class="carousel__slide">
+        <img src="./assets/medias/hero.png" alt="Présentation de l'organisme">
+        <div class="slide__contenu">
           <h1>Fédération des Locataires</h1>
           <p>Luttes pour les droits des locataires du Québec</p>
         </div>
@@ -96,53 +96,40 @@
   </section>
   <!--FIN Section Hero-->
 
-  <!--Section Actualités-->
-  <section class="actualite">
-    <!-- Carte 1 -->
-    <div class="card">
-      <img class="card__image" src="./assets/medias/nouvelle_05.png" alt="Image nouvelle_05">
-      <div class="card__title">Titre Actualité 1</div>
-      <div class="card__text">Voici un résumé de l'actualité 1. Ce texte peut être un aperçu de l'article complet.</div>
-      <div class="card__footer">Publié le : 1er octobre 2024</div>
+<!-- Section Actualités -->
+<section class="actualite">
+  <!-- Carte 1 -->
+  <div class="card">
+    <img class="card__image" src="./assets/medias/nouvelle_05.png" alt="Image nouvelle_05">
+    <div class="card__text-container">
+      <div class="card__title">Première pelletée de terre pour Unitaînés à Rimouski</div>
+      <div class="card__text">Les offices ne doivent pas dépendre des autres pour remplir leur mission..</div>
+      <div class="card__footer">Publié le : 10 septembre, 2024</div>
     </div>
-
-    <!-- Carte 2 -->
-    <div class="card">
-      <img class="card__image" src="./assets/medias/nouvelle_08.png" alt="Image nouvelle_08">
-      <div class="card__title">Titre Actualité 2</div>
-      <div class="card__text">Voici un résumé de l'actualité 2. Ce texte peut être un aperçu de l'article complet.</div>
-      <div class="card__footer">Publié le : 2 octobre 2024</div>
-    </div>
-
-    <!-- Carte 3 -->
-    <div class="card">
-      <img class="card__image" src="./assets/medias/nouvelle_10.png" alt="Image nouvelle_10">
-      <div class="card__title">Titre Actualité 3</div>
-      <div class="card__text">Voici un résumé de l'actualité 3. Ce texte peut être un aperçu de l'article complet.</div>
-      <div class="card__footer">Publié le : 3 octobre 2024</div>
-    </div>
-  </section>
-  <!--FIN Section Actualités-->
-
-  <!--Section Témoignages-->
-  <div class="fond-temoins">
-    <section class="temoignages">
-      <h2 class="temoins-titre">Témoignages</h2>
-      <div class="temoins">
-        <img src="./assets/medias/equipe_01.jpg" class="temoins-img temoins-1">
-        <p class="nom nom-1">Jean L., Québec</p>
-        <p class="temoins-text text-1">"Grâce à la Fédération des locataires, j'ai enfin pu comprendre mes droits en tant que locataire en HLM. Ils m'ont aidé à me défendre face à des injustices et à améliorer mes conditions de vie. Leur soutien a changé ma vie pour le mieux."</p>
-        <img src="./assets/medias/equipe_02.jpg" class="temoins-img temoins-2">
-        <p class="nom nom-2">Fatima D., Laval</p>
-        <p class="temoins-text text-2">"Quand notre immeuble a eu des problèmes d'entretien, je ne savais pas vers qui me tourner. La Fédération des locataires a été là pour nous. Ils ont organisé une rencontre avec les autorités responsables, et nous avons obtenu les réparations nécessaires. Je me sens enfin en sécurité chez moi."</p>
-        <img src="./assets/medias/equipe_03.jpg" class="temoins-img temoins-3">
-        <p class="nom nom-3">Sylvie G., Montréal</p>
-        <p class="temoins-text text-3">"Être en HLM peut être stressant, surtout quand on est confronté à des hausses de loyer ou à des règles difficiles à comprendre. La Fédération m'a apporté des informations claires et m'a guidée à travers le processus. Je me sens mieux outillée et moins seule grâce à eux."</p>
-      </div>
-      <button class="plus_btn">Voir Plus</button>
-    </section>
   </div>
-  <!--Fin Section Témoignages-->
+
+  <!-- Carte 2 -->
+  <div class="card">
+    <img class="card__image" src="./assets/medias/nouvelle_08.png" alt="Image nouvelle_08">
+    <div class="card__text-container">
+      <div class="card__title">Demande record de HLM à Saguenay</div>
+      <div class="card__text">La liste explose de 200-300 à 454 personnes en attente.</div>
+      <div class="card__footer">Publié le : 3 septembre, 2024</div>
+    </div>
+  </div>
+
+  <!-- Carte 3 -->
+  <div class="card">
+    <img class="card__image" src="./assets/medias/nouvelle_10.png" alt="Image nouvelle_10">
+    <div class="card__text-container">
+      <div class="card__title">Une nouvelle voie rapide pour les développeurs</div>
+      <div class="card__text">Les offices d'habitation doivent être du nombre</div>
+      <div class="card__footer">Publié le : 30 août, 2024</div>
+    </div>
+  </div>
+</section>
+<!-- FIN Section Actualités -->
+
 
   <!--Section Services-->
   <div class="fond">
@@ -184,22 +171,12 @@
   <h5>Delisle Vincent:</h5>
   <p>Project Owner (PO) & Scrum Master</p>
 
-  <!--Section Don-->
-  <div class="fond">
-    <section class="dons">
-      <h2 class="dons dons-titre">Donnez pour aider à loger les plus démunis</h2>
-      <p class="dons dons-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <img src="./assets/medias/donnations_maison.jpg" alt="" class="dons dons-image">
-      <button class="dons dons-btn">Donner</button>
-    </section>
-  </div>
 
-  <!--FIN Section Don-->
 
   <!-- Pied de page-->
   <footer>
     <div class="grid_footer">
-      <img class="logo_footer" src="./assets/medias/Logo_figma.png" />
+      <img class="logo_footer" src="./assets/Logo.png" />
       <div class="lien">
         <a>Nouvelles</a>
         <a>Services</a>

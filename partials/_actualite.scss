@@ -1,48 +1,108 @@
+@use "colors";
+@use "typo";
+
 .actualite {
   width: 100vw;
-  height: 100vh; /* On ajuste la hauteur pour être automatique en fonction du contenu */
+  height: 100vh;
   display: flex;
-  justify-content: center; /* Centrer les cartes horizontalement */
-  align-items: center; /* Centrer les cartes verticalement si nécessaire */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 40px;
+  flex-wrap: wrap;
 
   .card {
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 20%; /* Ajuster la largeur des cartes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s;
-    margin: 0 10px; /* Espacement latéral supplémentaire */
-
-    &__title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 15px;
-    }
-
-    &__text {
-      font-size: 1rem;
-      margin: 15px;
-      color: #555;
-    }
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
 
     &__image {
       width: 100%;
       object-fit: cover;
-      height: 200px; /* Hauteur fixe pour les images */
+      height: 200px;
+    }
+
+    &__text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; // Espace uniformément le contenu verticalement
+      flex-grow: 1; // Permet de prendre l'espace restant
+      margin: 15px;
+    }
+
+    &__title {
+      @include typo.title-bold;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      @include typo.small-text;
+      color: #555;
+      flex-grow: 1; // Prend l'espace restant
+      margin-top: 10px;
     }
 
     &__footer {
-      margin: 15px;
-      font-size: 0.9rem;
+      @include typo.small-text;
       color: #777;
       text-align: right;
     }
 
     &:hover {
       transform: translateY(-10px);
+    }
+  }
+
+  // Styles pour tablette et mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .card {
+      flex-direction: row;
+      width: 90%;
+      height: auto;
+
+      &:nth-child(3) {
+        display: none; // Cache la troisième carte
+      }
+
+      &__image {
+        width: 40%;
+        height: auto;
+      }
+
+      &__text-container {
+        width: 60%;
+        margin: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .card {
+      flex-direction: row;
+      width: 100%;
+      height: auto;
+
+      &:nth-child(3) {
+        display: none; // Cache la troisième carte
+      }
+
+      &__image {
+        width: 35%;
+      }
+
+      &__text-container {
+        width: 65%;
+      }
     }
   }
 }
