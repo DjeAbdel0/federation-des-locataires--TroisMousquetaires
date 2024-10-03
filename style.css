@@ -210,7 +210,7 @@
 .banniere .bannière__contenu a {
   color: #fff;
 }
-.banniere .btn-quitter {
+.banniere .btn-fermer {
   background-color: #fff;
   color: #415456;
   border: none;
@@ -218,7 +218,7 @@
   cursor: pointer;
   border-radius: 5px;
 }
-.banniere .btn-quitter:hover {
+.banniere .btn-fermer:hover {
   background-color: #415456;
   color: #fff;
 }
