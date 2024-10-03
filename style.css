@@ -551,7 +551,8 @@ footer {
 }
 
 .temoins {
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
   padding: 10px;
   grid-column: span 3;
   gap: 20px;
@@ -619,6 +620,7 @@ footer {
 }
 
 .plus_btn {
+  margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
@@ -631,12 +633,6 @@ footer {
 
 .plus_btn:hover {
   background: #8bb08d;
-}
-
-.plus_btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 /* 
@@ -705,7 +701,6 @@ footer {
     border-right: #000 4px solid;
     border-left: #000 4px solid;
   }
-  /********* Largeur Tablette Temoignages: 765px */
   .temoins-text {
     font-size: 18px;
   }
@@ -759,7 +754,6 @@ footer {
     border-right: #000 6px solid;
     border-left: #000 6px solid;
   }
-  /********* Largeur Pc Temoignages: 1400px */
   .temoins-titre {
     font-size: 40px;
   }
