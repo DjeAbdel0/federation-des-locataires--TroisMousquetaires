@@ -1,0 +1,42 @@
+@use "colors";
+
+.banniere {
+  display: flex;
+  background-color: colors.$espace;
+  color: colors.$blanc;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .bannière__contenu {
+    flex: 1;
+    h5,
+    p {
+      margin: 0;
+      line-height: 0.8;
+    }
+    p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: colors.$blanc;
+    }
+  }
+
+  .btn-quitter {
+    background-color: colors.$blanc;
+    color: colors.$espace;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: colors.$espace;
+      color: colors.$blanc;
+    }
+  }
+}
