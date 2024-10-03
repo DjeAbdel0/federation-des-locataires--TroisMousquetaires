@@ -1,1 +1,18 @@
 @use "colors";
+
+
+.btn {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 5px 13px;
+    background-color: colors.$lime;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .btn:hover {
+    background: color.adjust(colors.$lime, $blackness: 5%);
+  }
