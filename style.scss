@@ -3,6 +3,8 @@
 @use "partials/typo";
 @use "partials/hero";
 @use "partials/actualite";
+@use "sass:color";
+
 @font-face {
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");
@@ -101,11 +103,14 @@ html {
 
 // Center & dribbble
 
-//Version Mobile max 375px large
+/* 
+--------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 body,
 html {
   font-family: "archivo";
   background-color: colors.$lime;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -115,7 +120,7 @@ html {
 footer {
   @include typo.bold;
   background-color: colors.$espace;
-  min-height: 13vh;
+  min-height: 11vh;
   font-size: 11px;
   color: white;
 }
@@ -129,15 +134,18 @@ footer {
 }
 
 .lien {
-  background-color: red;
   grid-area: lien;
   width: 100%;
   margin-top: 23px;
   padding: none;
 }
 
+.lien a {
+  padding: 2px;
+  font-size: 10px;
+}
+
 .adresse {
-  background-color: red;
   grid-area: adresse;
   font-size: 8px;
   margin-top: 38px;
@@ -145,18 +153,16 @@ footer {
 
 .reseaux {
   grid-area: reseaux;
-  background-color: blue;
   padding-right: none;
   margin-top: 35px;
 }
 
 .reseaux i {
-  padding: 7px;
+  padding: 3px;
 }
 
 .grid_footer {
   display: grid;
-  height: 100%;
   grid-template-areas:
     "logo lien lien"
     "logo adresse reseaux";
@@ -165,12 +171,14 @@ footer {
 //Services
 
 .services {
+  position: relative;
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 25px 0;
 }
 
 .service-titre {
@@ -180,9 +188,14 @@ footer {
 }
 
 .service-fleche {
-  position: relative;
-  right: 0;
-  top: 0;
+  position: absolute;
+  right: -50px;
+  top: 20px;
+}
+
+.service-no2 {
+  border-right: #000 2px solid;
+  border-left: #000 2px solid;
 }
 
 $servicesNumero: no1, no2, no3;
@@ -190,15 +203,114 @@ $servicesNumero: no1, no2, no3;
 @each $service in $servicesNumero {
   .service-#{$service} {
     font: 12px;
+    text-align: center;
     img {
       width: 45px;
       height: auto;
+      margin: 0 auto;
     }
   }
 }
 
-//Version Tablette min 765px large
+//Section Dons
+.dons {
+  display: grid;
+  grid-template-rows: auto;
+  text-align: center;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 25px 0;
+}
 
+.dons-titre{
+  grid-column: span 4; 
+  margin: 0 auto;
+  font-weight: 800;
+
+.dons-text{
+  grid-column: span 2; 
+  width: 100%;
+  text-align: center;
+}
+
+.dons-image{
+  grid-column: span 2; 
+  width: 100%;
+  height: auto;
+  margin-top: 50%;
+}
+
+.dons-btn {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.dons-btn:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.dons-btn:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.dons-btn:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.dons-btn:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.dons-btn:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.dons-btn:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.dons-btn:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.dons-btn:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+/* 
+--------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 @media screen and (min-width: 765px) {
   footer {
     min-height: 15vh;
@@ -209,26 +321,32 @@ $servicesNumero: no1, no2, no3;
     height: 80px;
     width: 70px;
     margin-left: 10px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .lien {
     width: 100%;
-    margin-top: 23px;
+    margin-top: 28px;
   }
 
   .lien a {
-    padding: 15px;
+    font-size: 18px;
+    padding: 10px;
   }
 
   .adresse {
     font-size: 12px;
     margin-top: 42px;
+    margin-left: 10px;
   }
 
   .reseaux {
     margin-top: 40px;
     margin-left: 22px;
+  }
+
+  .reseaux i {
+    padding: 10px;
   }
 
   // Services 765px
@@ -252,42 +370,51 @@ $servicesNumero: no1, no2, no3;
       }
     }
   }
+
+  .service-no2
+    {
+      border-right: #000 4px solid;
+      border-left: #000 4px solid;
+    }
+      
 }
 
-//Version Pc min 1400px large
+/* 
+--------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 
 @media screen and (min-width: 1400px) {
   footer {
-    min-height: 15vh;
-    font-size: 25px;
+    min-height: 19vh;
+    font-size: 20px;
   }
 
   .logo_footer {
-    height: 140px;
-    width: 120px;
+    height: 120px;
+    width: 105px;
     margin-left: 20px;
-    margin-top: 40px;
   }
 
   .lien {
     width: 100%;
-    margin-top: 23px;
-    margin-left: -100px;
+    margin-top: 25px;
+    margin-left: -70px;
   }
 
   .lien a {
-    padding: 15px;
+    font-size: 25px;
+    padding: 40px;
   }
 
   .adresse {
-    font-size: 20px;
-    margin-top: 42px;
-    margin-left: -100px;
+    font-size: 18px;
+    margin-top: 69px;
+    margin-left: -32px;
   }
 
   .reseaux {
-    margin-top: 40px;
-    margin-left: 22px;
+    margin-top: 65px;
+    margin-left: 220px;
   }
 
   // Services 1400px
@@ -295,16 +422,171 @@ $servicesNumero: no1, no2, no3;
   .service-titre {
     font-size: 55px;
   }
-
-  //Ne marche pas sur les img
-  @each $service in $servicesNumero {
-    .service-#{$service} {
-      margin: 0 10px;
-      font-size: 40px;
-    }
-    img {
-      width: 10vw;
-      height: auto;
-    }
+  .service-no2 {
+    border-right: #000 6px solid;
+    border-left: #000 6px solid;
   }
 }
+
+////////// Témoignages\\\\\\\\
+/// width: 375px
+
+.fond-temoins {
+  background-color: colors.$alabaster;
+}
+
+.temoignages {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+
+.temoins {
+  width: 100%;
+  padding: 10px;
+  grid-column: span 3;
+  gap: 20px;
+  display: grid;
+  grid-template-areas:
+    "t1 text1"
+    "n1 text1"
+    "t2 text2"
+    "n2 text2"
+    "t3 text3"
+    "n3 text3";
+}
+
+.temoins-1 {
+  grid-area: t1;
+}
+
+.temoins-2 {
+  grid-area: t2;
+}
+.temoins-3 {
+  grid-area: t3;
+}
+
+.nom {
+  font-size: 12px;
+}
+
+.nom-1 {
+  grid-area: n1;
+}
+
+.nom-2 {
+  grid-area: n2;
+}
+
+.nom-3 {
+  grid-area: n3;
+}
+
+.text-1 {
+  grid-area: text1;
+}
+
+.text-2 {
+  grid-area: text2;
+}
+
+.text-3 {
+  grid-area: text3;
+}
+
+.temoins-titre {
+  @include typo.bold;
+  color: #000;
+  grid-column: span 3;
+  margin: 15px auto;
+}
+
+.temoins-img {
+  margin-left: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+}
+
+.temoins-text {
+  font-size: 12px;
+  font-style: italic;
+}
+
+<<<<<<< Updated upstream
+.plus_btn {
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: colors.$lime;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.plus_btn:hover {
+  background: color.adjust(colors.$lime, $blackness: 5%); 
+}
+
+.plus_btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/********* Largeur Tablette Temoignages: 765px */
+
+@media screen and (min-width: 765px){
+  .temoins-text {
+    font-size: 18px;
+  }
+
+  .nom {
+    font-size: 18px;
+  }
+
+  .temoins-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .plus_btn {
+    padding: 5px 20px;
+    font-size: 1.1rem;
+  }
+  
+}
+
+/********* Largeur Pc Temoignages: 1400px */
+
+@media screen and (min-width: 1400px){
+
+  .temoins-titre {
+    font-size: 40px;
+  }
+
+  .temoins-text {
+    font-size: 28px;
+  }
+
+  .nom {
+    font-size: 28px;
+  }
+
+  .temoins-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .plus_btn {
+    padding: 5px 30px;
+    font-size: 1.3rem;
+  }
+}
+=======
+/********* Largeur Tablette Temoignages: 765px  */ //
+}
+>>>>>>> Stashed changes
