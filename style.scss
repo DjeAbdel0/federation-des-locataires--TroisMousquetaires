@@ -226,6 +226,7 @@ $servicesNumero: no1, no2, no3;
   grid-column: span 4; 
   margin: 0 auto;
   font-weight: 800;
+}
 
 .dons-text{
   grid-column: span 2; 
@@ -307,125 +308,6 @@ $servicesNumero: no1, no2, no3;
 
 .dons-btn:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-/* 
---------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
-*/
-@media screen and (min-width: 765px) {
-  footer {
-    min-height: 15vh;
-    font-size: 15px;
-  }
-
-  .logo_footer {
-    height: 80px;
-    width: 70px;
-    margin-left: 10px;
-    margin-top: 30px;
-  }
-
-  .lien {
-    width: 100%;
-    margin-top: 28px;
-  }
-
-  .lien a {
-    font-size: 18px;
-    padding: 10px;
-  }
-
-  .adresse {
-    font-size: 12px;
-    margin-top: 42px;
-    margin-left: 10px;
-  }
-
-  .reseaux {
-    margin-top: 40px;
-    margin-left: 22px;
-  }
-
-  .reseaux i {
-    padding: 10px;
-  }
-
-  // Services 765px
-  .services {
-    padding-top: 15px;
-  }
-
-  .service-titre {
-    font-size: 40px;
-    font-weight: 500;
-  }
-
-  $servicesNumero: no1, no2, no3;
-
-  @each $service in $servicesNumero {
-    .service-#{$service} {
-      font-size: 24px;
-      img {
-        width: 10vw;
-        height: auto;
-      }
-    }
-  }
-
-  .service-no2
-    {
-      border-right: #000 4px solid;
-      border-left: #000 4px solid;
-    }
-      
-}
-
-/* 
---------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
-*/
-
-@media screen and (min-width: 1400px) {
-  footer {
-    min-height: 19vh;
-    font-size: 20px;
-  }
-
-  .logo_footer {
-    height: 120px;
-    width: 105px;
-    margin-left: 20px;
-  }
-
-  .lien {
-    width: 100%;
-    margin-top: 25px;
-    margin-left: -70px;
-  }
-
-  .lien a {
-    font-size: 25px;
-    padding: 40px;
-  }
-
-  .adresse {
-    font-size: 18px;
-    margin-top: 69px;
-    margin-left: -32px;
-  }
-
-  .reseaux {
-    margin-top: 65px;
-    margin-left: 220px;
-  }
-
-  // Services 1400px
-
-  .service-titre {
-    font-size: 55px;
-  }
-  .service-no2 {
-    border-right: #000 6px solid;
-    border-left: #000 6px solid;
-  }
 }
 
 ////////// Témoignages\\\\\\\\
@@ -515,7 +397,6 @@ $servicesNumero: no1, no2, no3;
   font-style: italic;
 }
 
-<<<<<<< Updated upstream
 .plus_btn {
   display: inline-block;
   padding: 5px 13px;
@@ -537,9 +418,78 @@ $servicesNumero: no1, no2, no3;
   margin-top: 20px;
 }
 
-/********* Largeur Tablette Temoignages: 765px */
 
-@media screen and (min-width: 765px){
+/* 
+--------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
+@media screen and (min-width: 765px) {
+  footer {
+    min-height: 15vh;
+    font-size: 15px;
+  }
+
+  .logo_footer {
+    height: 80px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+
+  .lien {
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .lien a {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .adresse {
+    font-size: 12px;
+    margin-top: 42px;
+    margin-left: 10px;
+  }
+
+  .reseaux {
+    margin-top: 40px;
+    margin-left: 22px;
+  }
+
+  .reseaux i {
+    padding: 10px;
+  }
+
+  // Services 765px
+  .services {
+    padding-top: 15px;
+  }
+
+  .service-titre {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  $servicesNumero: no1, no2, no3;
+
+  @each $service in $servicesNumero {
+    .service-#{$service} {
+      font-size: 24px;
+      img {
+        width: 10vw;
+        height: auto;
+      }
+    }
+  }
+
+  .service-no2
+    {
+      border-right: #000 4px solid;
+      border-left: #000 4px solid;
+    }
+      
+  
+    /********* Largeur Tablette Temoignages: 765px */
   .temoins-text {
     font-size: 18px;
   }
@@ -557,13 +507,57 @@ $servicesNumero: no1, no2, no3;
     padding: 5px 20px;
     font-size: 1.1rem;
   }
-  
 }
 
-/********* Largeur Pc Temoignages: 1400px */
+/* 
+--------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
+  footer {
+    min-height: 19vh;
+    font-size: 20px;
+  }
 
+  .logo_footer {
+    height: 120px;
+    width: 105px;
+    margin-left: 20px;
+  }
+
+  .lien {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: -70px;
+  }
+
+  .lien a {
+    font-size: 25px;
+    padding: 40px;
+  }
+
+  .adresse {
+    font-size: 18px;
+    margin-top: 69px;
+    margin-left: -32px;
+  }
+
+  .reseaux {
+    margin-top: 65px;
+    margin-left: 220px;
+  }
+
+  // Services 1400px
+
+  .service-titre {
+    font-size: 55px;
+  }
+  .service-no2 {
+    border-right: #000 6px solid;
+    border-left: #000 6px solid;
+  }
+
+  /********* Largeur Pc Temoignages: 1400px */
   .temoins-titre {
     font-size: 40px;
   }
@@ -586,7 +580,3 @@ $servicesNumero: no1, no2, no3;
     font-size: 1.3rem;
   }
 }
-=======
-/********* Largeur Tablette Temoignages: 765px  */ //
-}
->>>>>>> Stashed changes

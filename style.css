@@ -278,26 +278,22 @@ footer {
   grid-column: span 4;
   margin: 0 auto;
   font-weight: 800;
-  /* 
-  --------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
-  */
-  /* 
-  --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
-  */
-  /********* Largeur Tablette Temoignages: 765px  */
 }
-.dons-titre .dons-text {
+
+.dons-text {
   grid-column: span 2;
   width: 100%;
   text-align: center;
 }
-.dons-titre .dons-image {
+
+.dons-image {
   grid-column: span 2;
   width: 100%;
   height: auto;
   margin-top: 50%;
 }
-.dons-titre .dons-btn {
+
+.dons-btn {
   align-items: center;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -333,176 +329,54 @@ footer {
   will-change: transform, opacity;
   z-index: 0;
 }
-.dons-titre .dons-btn:hover {
+
+.dons-btn:hover {
   background: #F6F9FE;
   color: #174ea6;
 }
-.dons-titre .dons-btn:active {
+
+.dons-btn:active {
   box-shadow: 0 4px 4px 0 rgba(60, 64, 67, 0.3), 0 8px 12px 6px rgba(60, 64, 67, 0.15);
   outline: none;
 }
-.dons-titre .dons-btn:focus {
+
+.dons-btn:focus {
   outline: none;
   border: 2px solid #4285f4;
 }
-.dons-titre .dons-btn:not(:disabled) {
+
+.dons-btn:not(:disabled) {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0, rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
-.dons-titre .dons-btn:not(:disabled):hover {
+
+.dons-btn:not(:disabled):hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0, rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
 }
-.dons-titre .dons-btn:not(:disabled):focus {
+
+.dons-btn:not(:disabled):focus {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0, rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
-.dons-titre .dons-btn:not(:disabled):active {
+
+.dons-btn:not(:disabled):active {
   box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
 }
-.dons-titre .dons-btn:disabled {
+
+.dons-btn:disabled {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0, rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }
-@media screen and (min-width: 765px) {
-  .dons-titre footer {
-    min-height: 15vh;
-    font-size: 15px;
-  }
-  .dons-titre .logo_footer {
-    height: 80px;
-    width: 70px;
-    margin-left: 10px;
-    margin-top: 30px;
-  }
-  .dons-titre .lien {
-    width: 100%;
-    margin-top: 28px;
-  }
-<<<<<<< Updated upstream
-  .lien a {
-    font-size: 18px;
-    padding: 10px;
-=======
-  .dons-titre .lien a {
-    padding: 15px;
->>>>>>> Stashed changes
-  }
-  .dons-titre .adresse {
-    font-size: 12px;
-    margin-top: 42px;
-    margin-left: 10px;
-  }
-  .dons-titre .reseaux {
-    margin-top: 40px;
-    margin-left: 22px;
-  }
-<<<<<<< Updated upstream
-  .reseaux i {
-    padding: 10px;
-  }
-  .services {
-=======
-  .dons-titre .services {
->>>>>>> Stashed changes
-    padding-top: 15px;
-  }
-  .dons-titre .service-titre {
-    font-size: 40px;
-    font-weight: 500;
-  }
-  .dons-titre .service-no1 {
-    font-size: 24px;
-  }
-  .dons-titre .service-no1 img {
-    width: 10vw;
-    height: auto;
-  }
-  .dons-titre .service-no2 {
-    font-size: 24px;
-  }
-  .dons-titre .service-no2 img {
-    width: 10vw;
-    height: auto;
-  }
-  .dons-titre .service-no3 {
-    font-size: 24px;
-  }
-  .dons-titre .service-no3 img {
-    width: 10vw;
-    height: auto;
-  }
-  .dons-titre .service-no2 {
-    border-right: #000 4px solid;
-    border-left: #000 4px solid;
-  }
-}
-@media screen and (min-width: 1400px) {
-<<<<<<< Updated upstream
-  footer {
-    min-height: 19vh;
-    font-size: 20px;
-  }
-  .logo_footer {
-    height: 120px;
-    width: 105px;
-=======
-  .dons-titre footer {
-    min-height: 15vh;
-    font-size: 25px;
-  }
-  .dons-titre .logo_footer {
-    height: 140px;
-    width: 120px;
->>>>>>> Stashed changes
-    margin-left: 20px;
-  }
-  .dons-titre .lien {
-    width: 100%;
-    margin-top: 25px;
-    margin-left: -70px;
-  }
-<<<<<<< Updated upstream
-  .lien a {
-    font-size: 25px;
-    padding: 40px;
-  }
-  .adresse {
-    font-size: 18px;
-    margin-top: 69px;
-    margin-left: -32px;
-  }
-  .reseaux {
-    margin-top: 65px;
-    margin-left: 220px;
-=======
-  .dons-titre .lien a {
-    padding: 15px;
-  }
-  .dons-titre .adresse {
-    font-size: 20px;
-    margin-top: 42px;
-    margin-left: -100px;
-  }
-  .dons-titre .reseaux {
-    margin-top: 40px;
-    margin-left: 22px;
->>>>>>> Stashed changes
-  }
-  .dons-titre .service-titre {
-    font-size: 55px;
-  }
-  .dons-titre .service-no2 {
-    border-right: #000 6px solid;
-    border-left: #000 6px solid;
-  }
-}
-.dons-titre .fond-temoins {
+
+.fond-temoins {
   background-color: #E6EAE4;
 }
-.dons-titre .temoignages {
+
+.temoignages {
   margin: 0 auto;
   width: 100%;
   display: grid;
   gap: 20px;
 }
-.dons-titre .temoins {
+
+.temoins {
   width: 100%;
   padding: 10px;
   grid-column: span 3;
@@ -510,56 +384,63 @@ footer {
   display: grid;
   grid-template-areas: "t1 text1" "n1 text1" "t2 text2" "n2 text2" "t3 text3" "n3 text3";
 }
-.dons-titre .temoins-1 {
+
+.temoins-1 {
   grid-area: t1;
 }
-.dons-titre .temoins-2 {
+
+.temoins-2 {
   grid-area: t2;
 }
-.dons-titre .temoins-3 {
+
+.temoins-3 {
   grid-area: t3;
 }
-.dons-titre .nom {
+
+.nom {
   font-size: 12px;
 }
-.dons-titre .nom-1 {
+
+.nom-1 {
   grid-area: n1;
 }
-.dons-titre .nom-2 {
+
+.nom-2 {
   grid-area: n2;
 }
-.dons-titre .nom-3 {
+
+.nom-3 {
   grid-area: n3;
 }
-.dons-titre .text-1 {
+
+.text-1 {
   grid-area: text1;
 }
-.dons-titre .text-2 {
+
+.text-2 {
   grid-area: text2;
 }
-.dons-titre .text-3 {
+
+.text-3 {
   grid-area: text3;
 }
-.dons-titre .temoins-titre {
+
+.temoins-titre {
   font-weight: bold;
   color: #000;
   grid-column: span 3;
   margin: 15px auto;
 }
-<<<<<<< Updated upstream
 
 .temoins-img {
   margin-left: 10px;
-=======
-.dons-titre .temoins-img {
->>>>>>> Stashed changes
   width: 90px;
   height: 90px;
   border-radius: 100%;
 }
-.dons-titre .temoins-text {
+
+.temoins-text {
   font-size: 12px;
-<<<<<<< Updated upstream
   font-style: italic;
 }
 
@@ -584,8 +465,73 @@ footer {
   margin-top: 20px;
 }
 
-/********* Largeur Tablette Temoignages: 765px */
+/* 
+--------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 @media screen and (min-width: 765px) {
+  footer {
+    min-height: 15vh;
+    font-size: 15px;
+  }
+  .logo_footer {
+    height: 80px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .lien {
+    width: 100%;
+    margin-top: 28px;
+  }
+  .lien a {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .adresse {
+    font-size: 12px;
+    margin-top: 42px;
+    margin-left: 10px;
+  }
+  .reseaux {
+    margin-top: 40px;
+    margin-left: 22px;
+  }
+  .reseaux i {
+    padding: 10px;
+  }
+  .services {
+    padding-top: 15px;
+  }
+  .service-titre {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .service-no1 {
+    font-size: 24px;
+  }
+  .service-no1 img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no2 {
+    font-size: 24px;
+  }
+  .service-no2 img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no3 {
+    font-size: 24px;
+  }
+  .service-no3 img {
+    width: 10vw;
+    height: auto;
+  }
+  .service-no2 {
+    border-right: #000 4px solid;
+    border-left: #000 4px solid;
+  }
+  /********* Largeur Tablette Temoignages: 765px */
   .temoins-text {
     font-size: 18px;
   }
@@ -601,8 +547,45 @@ footer {
     font-size: 1.1rem;
   }
 }
-/********* Largeur Pc Temoignages: 1400px */
+/* 
+--------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
+*/
 @media screen and (min-width: 1400px) {
+  footer {
+    min-height: 19vh;
+    font-size: 20px;
+  }
+  .logo_footer {
+    height: 120px;
+    width: 105px;
+    margin-left: 20px;
+  }
+  .lien {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: -70px;
+  }
+  .lien a {
+    font-size: 25px;
+    padding: 40px;
+  }
+  .adresse {
+    font-size: 18px;
+    margin-top: 69px;
+    margin-left: -32px;
+  }
+  .reseaux {
+    margin-top: 65px;
+    margin-left: 220px;
+  }
+  .service-titre {
+    font-size: 55px;
+  }
+  .service-no2 {
+    border-right: #000 6px solid;
+    border-left: #000 6px solid;
+  }
+  /********* Largeur Pc Temoignages: 1400px */
   .temoins-titre {
     font-size: 40px;
   }
@@ -620,6 +603,4 @@ footer {
     padding: 5px 30px;
     font-size: 1.3rem;
   }
-=======
->>>>>>> Stashed changes
 }/*# sourceMappingURL=style.css.map */
