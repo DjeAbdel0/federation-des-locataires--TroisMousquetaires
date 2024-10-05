@@ -33,7 +33,7 @@
 
     &__title,
     &__text {
-      @include typo.title-bold;
+      @include typo.small-title-bold;
       position: absolute;
       width: 30%;
       bottom: 5vh;

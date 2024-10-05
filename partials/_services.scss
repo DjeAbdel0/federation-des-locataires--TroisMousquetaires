@@ -1,0 +1,106 @@
+// Parial contenant la section Services sur la page d'acceuil
+@use "typo";
+
+$servicesNumero: no1, no2, no3;
+
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+.services {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 0;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    &__titre {
+        color: #000;
+        grid-column: span 3;
+        margin: 0 auto;
+        @include typo.small-title-bold;
+    }
+
+    &__no2 {
+        border: 0 solid #000;
+        border-width: 0 2px;
+        padding: 20px;
+    }
+
+    p {
+        @include typo.small-text;
+    }
+
+    @each $service in $servicesNumero {
+        &__#{$service} {
+            img {
+                width: 100%;
+                min-width: 65px;
+            }
+
+        }
+    }
+
+}
+
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+    .services {
+        &__titre {
+            @include typo.medium-title-bold;
+        }
+
+        p {
+            @include typo.medium-text;
+        }
+
+        &__no2 {
+            border: 0 solid #000;
+            border-width: 0 3px;
+            padding: 37px;
+        }
+
+        @each $service in $servicesNumero {
+            &__#{$service} {
+                img {
+                    min-width: 165px;
+                }
+            }
+        }
+
+    }
+
+}
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+    .services {
+        gap: 45px;
+
+        &__titre {
+            @include typo.big-title-bold;
+        }
+
+        &__no2 {
+            border: 0 solid #000;
+            border-width: 0 5px;
+            padding: 45px
+        }
+
+        p {
+            @include typo.big-text;
+        }
+
+        @each $service in $servicesNumero {
+            &__#{$service} {
+                img {
+                    width: 100%;
+                    min-width: 265px;
+                }
+
+            }
+        }
+    }
+
+}

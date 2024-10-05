@@ -60,7 +60,7 @@
     }
 
     &__title {
-      @include typo.title-bold;
+      @include typo.small-title-bold;
       margin-bottom: 10px;
     }
 
