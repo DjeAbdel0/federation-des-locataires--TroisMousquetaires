@@ -1,0 +1,29 @@
+@use "typo";
+
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    @include typo.small-capitals-bold;
+  }
+  
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+  }
+  
+  .navbar-nav{
+    justify-content: space-around; 
+    gap: 7%;
+  }
+  
+
+  
+    /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
+
+@media screen and (min-width: 1400px) {
+    .navbar {
+        @include typo.medium-capitals-bold;
+      }
+}

@@ -27,6 +27,7 @@ section{
 h1, h2, h3 {
   font-family: "archivo";
 }
+
 .fond {
   background-color: colors.$blanc;
 }
@@ -142,48 +143,11 @@ html {
 /* 
 --------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
 */
-@media screen and (min-width: 765px) {
-
-  
-}
+@media screen and (min-width: 765px) {}
 
 /* 
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
 */
 
-@media screen and (min-width: 1400px) {
-  
-
-  // DOns
-
-  .dons {
-    height: 70vh;
-  }
-
-  .dons-titre {
-    font-weight: 900;
-    font-size: 62px;
-  }
-
-  .dons-text {
-    top: -65%;
-    font-weight: 600;
-    font-size: 30px;
-  }
-
-  .dons-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    top: -700px;
-    right: 0%;
-  }
-
-  .dons-btn {
-    position: absolute;
-    height: 10%;
-    font-size: 24px;
-    top: 75%;
-  }
-}
+@media screen and (min-width: 1400px) {}
 
