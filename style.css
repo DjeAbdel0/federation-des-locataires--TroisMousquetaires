@@ -18,7 +18,7 @@
 
 .navbar-nav {
   justify-content: space-around;
-  gap: 7%;
+  gap: 5%;
 }
 
 .nav-item:hover {
@@ -27,9 +27,15 @@
   box-shadow: 0px 4px 0px 0px #8bab8d;
 }
 
-i {
-  width: 150px;
-  height: 150px;
+.bi-person-fill {
+  font-size: 30px;
+}
+
+.nav-item {
+  white-space: nowrap;
+  font-size: 20px;
+  width: 100%;
+  background-color: aqua;
 }
 
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
@@ -500,25 +506,23 @@ i {
 }
 .temoins {
   background-color: #E6EAE4;
-  margin: 0 auto;
   width: 100%;
   display: grid;
-  gap: 20px;
 }
 .temoins__titre {
   font-weight: bold;
   color: #000;
   grid-column: span 3;
-  margin: 15px auto;
+  margin: 30px auto;
 }
 .temoins__carte {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 70%;
   padding: 10px;
   grid-column: span 3;
   gap: 20px;
   display: grid;
-  grid-template-areas: "t1 text1" "n1 text1" "t2 text2" "n2 text2" "t3 text3" "n3 text3";
+  grid-template-areas: "t1 text1" "n1 text1" "t2 text2" "n2 text2" "t3 text3" "n3 text3" "btn btn";
 }
 .temoins__1 {
   grid-area: t1;
@@ -570,6 +574,7 @@ i {
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  grid-area: btn;
 }
 .temoins__btn:hover {
   background: #8bb08d;
@@ -632,8 +637,7 @@ i {
 }
 footer {
   font-weight: bold;
-  background-color: #415456;
-  min-height: 11vh;
+  background-color: #8BBD8E;
   font-size: 11px;
   color: white;
 }
@@ -648,6 +652,7 @@ footer {
   width: 55px;
   margin-left: 10px;
   margin-top: 23px;
+  border-radius: 25%;
 }
 .footer__lien {
   grid-area: lien;
@@ -675,13 +680,11 @@ footer {
 
 @media screen and (min-width: 765px) {
   footer {
-    min-height: 15vh;
     font-size: 15px;
   }
   .footer__logo {
     height: 80px;
     width: 70px;
-    margin-left: 10px;
     margin-top: 30px;
   }
   .footer__lien {
@@ -707,7 +710,6 @@ footer {
 }
 @media screen and (min-width: 1400px) {
   footer {
-    min-height: 19vh;
     font-size: 20px;
   }
   .footer__logo {
@@ -3154,7 +3156,7 @@ html {
   background-color: #8BBD8E;
 }
 
-.logo__header s {
+.logo__header {
   border-radius: 25%;
   width: 50px;
   height: 50px;

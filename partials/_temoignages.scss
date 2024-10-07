@@ -5,20 +5,18 @@
   
   .temoins {
     background-color: colors.$alabaster;
-    margin: 0 auto;
     width: 100%;
     display: grid;
-    gap: 20px;
 
     &__titre {
       @include typo.bold;
       color: #000;
       grid-column: span 3;
-      margin: 15px auto;
+      margin: 30px auto;
     }
 
     &__carte {
-      margin: 0 auto;
+      margin: 20px auto;
       width: 70%;
       padding: 10px;
       grid-column: span 3;
@@ -30,7 +28,8 @@
         "t2 text2"
         "n2 text2"
         "t3 text3"
-        "n3 text3";
+        "n3 text3"
+        "btn btn";
     }
 
     &__1 {
@@ -87,6 +86,7 @@
 
     &__btn {
       @include buttons.small-btn-general;
+      grid-area: btn;
     }
   }
   
