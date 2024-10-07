@@ -1,141 +1,129 @@
-//Appel de nos partials
+// Parial contenant la section Actualités sur la page d'acceuil
 @use "colors";
+@use "buttons";
 @use "typo";
+@use 'sass:color';
 
+
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .actualite {
   background-color: colors.$blanc;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 20px;
-  padding: 40px;
+  text-align: center;
 
-  h2 {
-    font-size: 55px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  &__titre{
+    margin: 10px;
+    width: 100%;
   }
 
-  button {
-    position: absolute;
-    top: 5vh;
-    right: 5vw;
-    width: 5vw;
-    height: auto;
-    font-size: 15px;
-    background-color: colors.$lime;
-    color: colors.$espace;
-    border-radius: 15px;
+  &__carte {
+    width: 100%;
+    border: solid 5px red;
+    flex-direction: row;
   }
 
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 20%;
-    height: 75%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-
-    &__image {
-      width: 100%;
-      object-fit: cover;
-      height: 200px;
-    }
-
-    &__text-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-grow: 1;
-      margin: 15px;
-    }
-
-    &__title {
-      @include typo.small-title-bold;
-      margin-bottom: 10px;
-    }
-
-    &__text {
-      @include typo.small-text;
-      color: #555;
-      flex-grow: 1;
-      margin-top: 10px;
-    }
-
-    &__footer {
-      @include typo.small-text;
-      color: #777;
-      text-align: right;
-    }
-
-    &:hover {
-      transform: translateY(-10px);
-    }
+  &__zone-texte{
+    width: 100%;
   }
 
-  // Styles pour tablette et mobile
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-
-    h2 {
-      display: flex;
-      align-self: center;
-      justify-self: center;
-    }
-
-    button {
-      width: 10vw;
-    }
-
-    .card {
-      flex-direction: row;
-      width: 90%;
-      height: auto;
-
-      &:nth-child(3) {
-        display: none; // Cache la troisième carte
-      }
-
-      &__image {
-        width: 40%;
-        height: auto;
-      }
-
-      &__text-container {
-        width: 60%;
-        margin: 10px;
-      }
-    }
+  &__image-1 {
+    width: 100%;
+    height: 100%;
+  }
+  &__image-2 {
+    width: 100%;
+  }
+  &__image-3 {
+    width: 100%;
   }
 
-  @media (max-width: 375px) {
-    .card {
-      flex-direction: row;
-      width: 100%;
-      height: auto;
+  &__petit-titre {
 
-      &:nth-child(3) {
-        display: none; // Cache la troisième carte
-      }
-
-      &__image {
-        width: 35%;
-      }
-
-      &__text-container {
-        width: 65%;
-      }
-    }
   }
+
+  &__text{
+
+  }
+
+  &__footer {
+
+  }
+  
+  &__btn {
+    @include buttons.small-btn-general;
+  }
+
+
 }
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+  @media screen and (min-width: 765px) {
+    .actualite{
+      &__titre{
+
+      }
+    
+      &__carte {
+    
+      }
+    
+      &__image {
+    
+      }
+    
+      &__petit-titre {
+    
+      }
+    
+      &__text{
+    
+      }
+    
+      &__footer {
+    
+      }
+      
+      &__btn {
+        @include buttons.medium-btn-general;
+      }
+    }
+
+  }
+
+  /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+  @media screen and (min-width: 1400px) {
+    .actualite{
+      &__titre{
+
+      }
+    
+      &__carte {
+    
+      }
+    
+      &__image {
+    
+      }
+    
+      &__petit-titre {
+    
+      }
+    
+      &__text{
+    
+      }
+    
+      &__footer {
+    
+      }
+      
+      &__btn {
+        @include buttons.big-btn-general;
+      }
+    }
+
+  }
