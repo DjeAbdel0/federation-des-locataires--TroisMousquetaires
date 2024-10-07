@@ -21,6 +21,17 @@
   gap: 7%;
 }
 
+.nav-item:hover {
+  color: #8BBD8E;
+  background: #8bab8d;
+  box-shadow: 0px 4px 0px 0px #8bab8d;
+}
+
+i {
+  width: 150px;
+  height: 150px;
+}
+
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
   .navbar {
@@ -3145,6 +3156,8 @@ html {
 
 .logo__header, .logo_footer {
   border-radius: 25%;
+  width: 50px;
+  height: 50px;
 }
 
 /* 
@@ -3152,4 +3165,11 @@ html {
 */
 /* 
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
-*//*# sourceMappingURL=style.css.map */
+*/
+@media screen and (min-width: 1400px) {
+  .logo__header, .logo_footer {
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */

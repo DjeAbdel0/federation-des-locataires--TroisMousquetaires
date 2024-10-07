@@ -1,29 +1,41 @@
+//Appel de nos partials
 @use "typo";
+@use "colors";
 
+// Style de la navbar
 .navbar {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    @include typo.small-capitals-bold;
-  }
-  
-  .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    gap: 10%;
-  }
-  
-  .navbar-nav{
-    justify-content: space-around; 
-    gap: 7%;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include typo.small-capitals-bold;
+}
 
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.navbar-nav {
+  justify-content: space-around;
+  gap: 7%;
+}
   
-    /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
+.nav-item:hover {
+  color: colors.$lime;
+  background: colors.$lime_fonce;
+  box-shadow: 0px 4px 0px 0px colors.$lime_fonce;
+}
+
+i{ 
+  width: 150px;
+  height: 150px;
+}
+
+/**------------------------------------------------ 1400 px -------------------------------------------------------------*/
 
 @media screen and (min-width: 1400px) {
-    .navbar {
-        @include typo.medium-capitals-bold;
-      }
+  .navbar {
+    @include typo.medium-capitals-bold;
+  }
 }

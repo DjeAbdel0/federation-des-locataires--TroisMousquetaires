@@ -1,3 +1,4 @@
+//Appel de nos partials
 @use "partials/colors";
 @use "partials/navbar";
 @use "partials/typo";
@@ -28,12 +29,12 @@
 @import "vendors/bootstrap/scss/nav";
 @import "vendors/bootstrap/scss/navbar";
 
-
+//Fonts importées
 @font-face {
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");
 }
-
+//Styles généraux
 header {
   background-color: colors.$espace;
 }
@@ -157,6 +158,8 @@ html {
 
 .logo__header, .logo_footer{
   border-radius: 25%;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -169,4 +172,11 @@ html {
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
 */
 
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1400px) {
+  .logo__header, .logo_footer{
+    border-radius: 25%;
+    width: 100px;
+    height: 100px;
+  }
+}
+

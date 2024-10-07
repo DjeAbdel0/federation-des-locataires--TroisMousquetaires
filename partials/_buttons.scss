@@ -1,6 +1,8 @@
+//Appel de nos partials
 @use "colors";
 @use 'sass:color';
 
+//Style du bouton général
 @mixin small-btn-general{
   margin: 0 auto;
   display: inline-block;
