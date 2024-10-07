@@ -1,3 +1,4 @@
+//Appel de nos partials
 @use "sass:color";
 
 $espace: #415456;
@@ -6,3 +7,4 @@ $lime: #8BBD8E;
 $alabaster: #E6EAE4;
 $bonbon: #97C399;
 $blanc: #fff;
+$lime_fonce: color.adjust($lime, $blackness: 7%);
