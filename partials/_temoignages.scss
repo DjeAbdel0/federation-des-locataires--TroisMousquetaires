@@ -1,133 +1,149 @@
-// Temoignages
-
-.fond-temoins {
-    background-color: colors.$alabaster;
-  }
+@use "colors";
+@use "buttons";
+@use "typo";
+@use 'sass:color';
   
-  .temoignages {
+  .temoins {
+    background-color: colors.$alabaster;
     margin: 0 auto;
     width: 100%;
     display: grid;
     gap: 20px;
+
+    &__titre {
+      @include typo.bold;
+      color: #000;
+      grid-column: span 3;
+      margin: 15px auto;
+    }
+
+    &__carte {
+      margin: 0 auto;
+      width: 70%;
+      padding: 10px;
+      grid-column: span 3;
+      gap: 20px;
+      display: grid;
+      grid-template-areas:
+        "t1 text1"
+        "n1 text1"
+        "t2 text2"
+        "n2 text2"
+        "t3 text3"
+        "n3 text3";
+    }
+
+    &__1 {
+      grid-area: t1; 
+    }
+
+    &__2 {
+      grid-area: t2; 
+    }
+
+    &__3 {
+      grid-area: t3; 
+    }
+
+    &__nom {
+      font-size: 12px;
+    }
+
+    &__nom-1 {
+      grid-area: n1;
+    }
+
+    &__nom-2 {
+      grid-area: n2;
+    }
+
+    &__nom-3 {
+      grid-area: n3;
+    }
+
+    &__text-1 {
+      grid-area: text1;
+    }
+
+    &__text-2 {
+      grid-area: text2;
+    }
+
+    &__text-3 {
+      grid-area: text3;
+    }
+
+    &__img {
+      margin-left: 10px;
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+    }
+
+    &__text {
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    &__btn {
+      @include buttons.small-btn-general;
+    }
   }
   
-  .temoins {
-    margin: 0 auto;
-    width: 70%;
-    padding: 10px;
-    grid-column: span 3;
-    gap: 20px;
-    display: grid;
-    grid-template-areas:
-      "t1 text1"
-      "n1 text1"
-      "t2 text2"
-      "n2 text2"
-      "t3 text3"
-      "n3 text3";
-  }
-  
-  .temoins-1 {
-    grid-area: t1;
-  }
-  
-  .temoins-2 {
-    grid-area: t2;
-  }
-  
-  .temoins-3 {
-    grid-area: t3;
-  }
-  
-  .nom {
-    font-size: 12px;
-  }
-  
-  .nom-1 {
-    grid-area: n1;
-  }
-  
-  .nom-2 {
-    grid-area: n2;
-  }
-  
-  .nom-3 {
-    grid-area: n3;
-  }
-  
-  .text-1 {
-    grid-area: text1;
-  }
-  
-  .text-2 {
-    grid-area: text2;
-  }
-  
-  .text-3 {
-    grid-area: text3;
-  }
-  
-  .temoins-titre {
-    @include typo.bold;
-    color: #000;
-    grid-column: span 3;
-    margin: 15px auto;
-  }
-  
-  .temoins-img {
-    margin-left: 10px;
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-  }
-  
-  .temoins-text {
-    font-size: 12px;
-    font-style: italic;
-  }
+  //////////  tablette 765px
 
   @media screen and (min-width: 765px) {
-    // Temoignages
-  .temoins-text {
-    font-size: 18px;
-  }
+    
+    .temoins {
+      &__text {
+        font-size: 18px;
+      }
 
-  .nom {
-    font-size: 18px;
-  }
+      &__nom {
+          font-size: 18px;
+      }
 
-  .temoins-img {
-    width: 120px;
-    height: 120px;
-  }
+      &__img {
+        width: 120px;
+        height: 120px;
+      }
 
-  .plus_btn {
-    padding: 5px 20px;
-    font-size: 1.1rem;
-  }
+      &__btn {
+        @include buttons.medium-btn-general;
+      }
+    }
 }
 
 @media screen and (min-width: 1400px) {
-    // Temoignages
-  .temoins-titre {
-    font-size: 40px;
+  
+  .temoins {
+    &__titre {
+      font-size: 40px;
+    }
+
+    &__text {
+      font-size: 28px;
+    }
+
+    &__nom {
+      font-size: 28px;
+    }
+
+    &__img {
+      width: 180px;
+      height: 180px;
+    }
+    
+    &__btn {
+      @include buttons.big-btn-general;
+    }
   }
 
-  .temoins-text {
-    font-size: 28px;
-  }
+  
 
-  .nom {
-    font-size: 28px;
-  }
+  
 
-  .temoins-img {
-    width: 180px;
-    height: 180px;
-  }
+  
 
-  .plus_btn {
-    padding: 5px 30px;
-    font-size: 1.3rem;
-  }
+  
 }

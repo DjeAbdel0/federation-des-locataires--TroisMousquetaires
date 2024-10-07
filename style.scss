@@ -7,6 +7,8 @@
 @use "partials/services";
 @use "partials/don";
 @use "partials/buttons";
+@use "partials/temoignages";
+@use "partials/footer";
 
 @use "sass:color";
 
@@ -150,4 +152,3 @@ html {
 */
 
 @media screen and (min-width: 1400px) {}
-

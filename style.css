@@ -487,6 +487,242 @@
     background: #8bb08d;
   }
 }
+.temoins {
+  background-color: #E6EAE4;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
+.temoins__titre {
+  font-weight: bold;
+  color: #000;
+  grid-column: span 3;
+  margin: 15px auto;
+}
+.temoins__carte {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+  grid-column: span 3;
+  gap: 20px;
+  display: grid;
+  grid-template-areas: "t1 text1" "n1 text1" "t2 text2" "n2 text2" "t3 text3" "n3 text3";
+}
+.temoins__1 {
+  grid-area: t1;
+}
+.temoins__2 {
+  grid-area: t2;
+}
+.temoins__3 {
+  grid-area: t3;
+}
+.temoins__nom {
+  font-size: 12px;
+}
+.temoins__nom-1 {
+  grid-area: n1;
+}
+.temoins__nom-2 {
+  grid-area: n2;
+}
+.temoins__nom-3 {
+  grid-area: n3;
+}
+.temoins__text-1 {
+  grid-area: text1;
+}
+.temoins__text-2 {
+  grid-area: text2;
+}
+.temoins__text-3 {
+  grid-area: text3;
+}
+.temoins__img {
+  margin-left: 10px;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+}
+.temoins__text {
+  font-size: 12px;
+  font-style: italic;
+}
+.temoins__btn {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.temoins__btn:hover {
+  background: #8bb08d;
+}
+
+@media screen and (min-width: 765px) {
+  .temoins__text {
+    font-size: 18px;
+  }
+  .temoins__nom {
+    font-size: 18px;
+  }
+  .temoins__img {
+    width: 120px;
+    height: 120px;
+  }
+  .temoins__btn {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 5px 13px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .temoins__btn:hover {
+    background: #8bb08d;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .temoins__titre {
+    font-size: 40px;
+  }
+  .temoins__text {
+    font-size: 28px;
+  }
+  .temoins__nom {
+    font-size: 28px;
+  }
+  .temoins__img {
+    width: 180px;
+    height: 180px;
+  }
+  .temoins__btn {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 5px 13px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2.2rem;
+  }
+  .temoins__btn:hover {
+    background: #8bb08d;
+  }
+}
+footer {
+  font-weight: bold;
+  background-color: #415456;
+  min-height: 11vh;
+  font-size: 11px;
+  color: white;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-areas: "logo lien lien" "logo adresse reseaux";
+}
+.footer__logo {
+  grid-area: logo;
+  height: 65px;
+  width: 55px;
+  margin-left: 10px;
+  margin-top: 23px;
+}
+.footer__lien {
+  grid-area: lien;
+  width: 100%;
+  margin-top: 23px;
+  padding: none;
+}
+.footer__lien a {
+  padding: 2px;
+  font-size: 10px;
+}
+.footer__adresse {
+  grid-area: adresse;
+  font-size: 8px;
+  margin-top: 38px;
+}
+.footer__reseaux {
+  grid-area: reseaux;
+  padding-right: none;
+  margin-top: 35px;
+}
+.footer__reseaux i {
+  padding: 3px;
+}
+
+@media screen and (min-width: 765px) {
+  footer {
+    min-height: 15vh;
+    font-size: 15px;
+  }
+  .footer__logo {
+    height: 80px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .footer__lien {
+    width: 100%;
+    margin-top: 28px;
+  }
+  .footer__lien a {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .footer__adresse {
+    font-size: 12px;
+    margin-top: 42px;
+    margin-left: 10px;
+  }
+  .footer__reseaux {
+    margin-top: 40px;
+    margin-left: 22px;
+  }
+  .footer__reseaux i {
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer {
+    min-height: 19vh;
+    font-size: 20px;
+  }
+  .footer__logo {
+    height: 120px;
+    width: 105px;
+    margin-left: 20px;
+  }
+  .footer__lien {
+    width: 100%;
+    margin-top: 25px;
+    margin-left: -70px;
+  }
+  .footer__lien a {
+    font-size: 25px;
+    padding: 40px;
+  }
+  .footer__adresse {
+    font-size: 18px;
+    margin-top: 69px;
+    margin-left: -32px;
+  }
+  .footer__reseaux {
+    margin-top: 65px;
+    margin-left: 220px;
+  }
+}
 @font-face {
   font-family: "archivo";
   src: url("../assets/font/Archivo-Regular.ttf");

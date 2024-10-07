@@ -1,4 +1,5 @@
 @use "colors";
+@use "typo";
 
 ////////////////////// footer 
 
@@ -9,86 +10,94 @@ footer {
     font-size: 11px;
     color: white;
   }
+
+.footer {
   
-  .logo_footer {
+  &__grid {
+      display: grid;
+      grid-template-areas:
+        "logo lien lien"
+        "logo adresse reseaux";
+  }
+
+  &__logo {
     grid-area: logo;
     height: 65px;
     width: 55px;
     margin-left: 10px;
     margin-top: 23px;
   }
-  
-  .lien {
+
+  &__lien {
     grid-area: lien;
     width: 100%;
     margin-top: 23px;
     padding: none;
   }
-  
-  .lien a {
+
+  &__lien a {
     padding: 2px;
     font-size: 10px;
   }
-  
-  .adresse {
+
+  &__adresse {
     grid-area: adresse;
     font-size: 8px;
     margin-top: 38px;
   }
-  
-  .reseaux {
+
+  &__reseaux {
     grid-area: reseaux;
     padding-right: none;
     margin-top: 35px;
   }
-  
-  .reseaux i {
+
+  &__reseaux i {
     padding: 3px;
   }
+}
   
-  .grid_footer {
-    display: grid;
-    grid-template-areas:
-      "logo lien lien"
-      "logo adresse reseaux";
-  }
+  
 
   @media screen and (min-width: 765px) {
     footer {
       min-height: 15vh;
       font-size: 15px;
     }
-  
-    .logo_footer {
-      height: 80px;
-      width: 70px;
-      margin-left: 10px;
-      margin-top: 30px;
-    }
-  
-    .lien {
-      width: 100%;
-      margin-top: 28px;
-    }
-  
-    .lien a {
-      font-size: 18px;
-      padding: 10px;
-    }
-  
-    .adresse {
-      font-size: 12px;
-      margin-top: 42px;
-      margin-left: 10px;
-    }
-  
-    .reseaux {
-      margin-top: 40px;
-      margin-left: 22px;
-    }
-  
-    .reseaux i {
-      padding: 10px;
+
+    .footer {
+
+      &__logo {
+        height: 80px;
+        width: 70px;
+        margin-left: 10px;
+        margin-top: 30px;
+      }
+
+      &__lien {
+        width: 100%;
+        margin-top: 28px;
+      }
+
+      &__lien a {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      &__adresse {
+        font-size: 12px;
+        margin-top: 42px;
+        margin-left: 10px;
+      }
+
+      &__reseaux {
+        margin-top: 40px;
+        margin-left: 22px;
+      }
+
+      &__reseaux i {
+        padding: 10px;
+      }
     }
   }
 
@@ -98,31 +107,34 @@ footer {
       font-size: 20px;
     }
   
-    .logo_footer {
-      height: 120px;
-      width: 105px;
-      margin-left: 20px;
-    }
-  
-    .lien {
-      width: 100%;
-      margin-top: 25px;
-      margin-left: -70px;
-    }
-  
-    .lien a {
-      font-size: 25px;
-      padding: 40px;
-    }
-  
-    .adresse {
-      font-size: 18px;
-      margin-top: 69px;
-      margin-left: -32px;
-    }
-  
-    .reseaux {
-      margin-top: 65px;
-      margin-left: 220px;
-    }
-  }  
+    .footer {
+
+      &__logo {
+        height: 120px;
+        width: 105px;
+        margin-left: 20px;
+      }
+
+      &__lien {
+        width: 100%;
+        margin-top: 25px;
+        margin-left: -70px;
+      }
+
+      &__lien a {
+        font-size: 25px;
+        padding: 40px;
+      }
+
+      &__adresse {
+        font-size: 18px;
+        margin-top: 69px;
+        margin-left: -32px;
+      }
+
+      &__reseaux {
+        margin-top: 65px;
+        margin-left: 220px;
+      }
+  }
+}  
