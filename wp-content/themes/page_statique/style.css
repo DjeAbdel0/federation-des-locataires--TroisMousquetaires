@@ -112,35 +112,46 @@
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .actualite {
-  background-color: #fff;
-  margin: 0 auto;
+  display: grid;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  background-color: #fff;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 10px;
   text-align: center;
 }
 .actualite__titre {
-  margin: 10px;
-  width: 100%;
+  font-weight: bold;
 }
 .actualite__carte {
-  width: 100%;
+  display: flex;
   border: solid 5px red;
-  flex-direction: row;
-}
-.actualite__zone-texte {
-  width: 100%;
-}
-.actualite__image-1 {
-  width: 100%;
+  position: relative;
   height: 100%;
 }
-.actualite__image-2 {
-  width: 100%;
+.actualite__image {
+  display: block;
+  width: 30%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
 }
-.actualite__image-3 {
-  width: 100%;
+.actualite__zoneTexte {
+  padding: 5px;
+}
+.actualite--petit {
+  font-size: 25px;
+  font-weight: bold;
+}
+.actualite__text {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.actualite__footer {
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .actualite__btn {
   margin: 0 auto;
@@ -227,6 +238,7 @@
 .banniere .btn-fermer:hover {
   background-color: #415456;
   color: #fff;
+  border: solid 2px #fff;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -717,16 +729,6 @@ footer {
 
 .active {
   background: #e2e2e2;
-}
-
-.contenue {
-  background: red;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cartes {
-  background-color: green;
 }
 
 :root,

@@ -7,50 +7,46 @@
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .actualite {
-  background-color: colors.$blanc;
-  margin: 0 auto;
+  display: grid;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  background-color: colors.$blanc;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 10px;
   text-align: center;
 
   &__titre{
-    margin: 10px;
-    width: 100%;
+    @include typo.bold;
   }
 
   &__carte {
-    width: 100%;
+    display: flex;
     border: solid 5px red;
-    flex-direction: row;
-  }
-
-  &__zone-texte{
-    width: 100%;
-  }
-
-  &__image-1 {
-    width: 100%;
+    position: relative;
     height: 100%;
   }
-  &__image-2 {
-    width: 100%;
-  }
-  &__image-3 {
-    width: 100%;
+
+  &__image {
+    display: block;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 16px; 
   }
 
-  &__petit-titre {
+  &__zoneTexte{
+    padding: 5px
+  }
 
+  &--petit {
+    @include typo.small-title-bold;
   }
 
   &__text{
-
+    @include typo.small-text;
   }
 
   &__footer {
-
+    @include typo.small-text;
   }
   
   &__btn {
@@ -63,29 +59,6 @@
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
   @media screen and (min-width: 765px) {
     .actualite{
-      &__titre{
-
-      }
-    
-      &__carte {
-    
-      }
-    
-      &__image {
-    
-      }
-    
-      &__petit-titre {
-    
-      }
-    
-      &__text{
-    
-      }
-    
-      &__footer {
-    
-      }
       
       &__btn {
         @include buttons.medium-btn-general;
@@ -97,29 +70,6 @@
   /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
   @media screen and (min-width: 1400px) {
     .actualite{
-      &__titre{
-
-      }
-    
-      &__carte {
-    
-      }
-    
-      &__image {
-    
-      }
-    
-      &__petit-titre {
-    
-      }
-    
-      &__text{
-    
-      }
-    
-      &__footer {
-    
-      }
       
       &__btn {
         @include buttons.big-btn-general;

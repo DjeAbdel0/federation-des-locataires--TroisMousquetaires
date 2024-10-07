@@ -39,6 +39,7 @@
     &:hover {
       background-color: colors.$espace;
       color: colors.$blanc;
+      border: solid 2px colors.$blanc;
     }
   }
 }
