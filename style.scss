@@ -7,8 +7,24 @@
 @use "partials/services";
 @use "partials/don";
 @use "partials/buttons";
-
 @use "sass:color";
+
+// Vendors de Bootstrap
+@import "vendors/bootstrap/scss/mixins/banner";
+@import "vendors/bootstrap/scss/functions";
+@import "vendors/bootstrap/scss/variables";
+@import "vendors/bootstrap/scss/variables-dark";
+@import "vendors/bootstrap/scss/maps";
+@import "vendors/bootstrap/scss/mixins";
+@import "vendors/bootstrap/scss/utilities";
+@import "vendors/bootstrap/scss/root";
+@import "vendors/bootstrap/scss/reboot";
+@import "vendors/bootstrap/scss/containers";
+@import "vendors/bootstrap/scss/grid";
+@import "vendors/bootstrap/scss/transitions";
+@import "vendors/bootstrap/scss/nav";
+@import "vendors/bootstrap/scss/navbar";
+
 
 @font-face {
   font-family: "archivo";
@@ -87,7 +103,7 @@ h1, h2, h3 {
       z-index: -1;
       position: absolute;
       border: 2px solid white;
-      top: 0;
+      top: -1px;
       width: 25px;
       height: 25px;
       transition: all 0.25s ease-in 0.25s;
@@ -122,9 +138,6 @@ html {
     box-sizing: inherit;
   }
 }
-
-// Center & dribbble
-
 /* 
 --------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
 */
@@ -137,6 +150,10 @@ html {
 
 .navbar {
   background-color: colors.$lime;
+}
+
+.logo__header, .logo_footer{
+  border-radius: 25%;
 }
 
 
