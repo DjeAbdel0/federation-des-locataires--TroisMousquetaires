@@ -1,0 +1,48 @@
+.edit-post-header-toolbar, .edit-widgets-header__navigable-toolbar-wrapper {
+    margin-left: 48px !important;
+
+	.wpm-language-switcher {
+		position: absolute;
+		left: 10px !important;
+
+		.lang-main {
+			padding-left: 10px;
+			padding-right: 10px;
+			line-height: 36px;
+
+			img {
+				top: 2px;
+			}
+		}
+	}
+
+	.lang-dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		z-index: 1;
+
+		ul {
+			list-style: none;
+
+			a {
+				padding: 10px;
+				display: block;
+
+				&:hover,
+				&:focus {
+					background-color: #ccc;
+				}
+			}
+		}
+	}
+}
+
+.gutenberg {
+
+	.languagechecklist {
+		list-style: none !important;
+	}
+}
