@@ -18,8 +18,9 @@
 
 .navbar-nav {
   justify-content: space-around;
-  gap: 7%;
+  gap: 5%;
 }
+
   
 .nav-item:hover {
   color: colors.$lime;
@@ -27,11 +28,16 @@
   box-shadow: 0px 4px 0px 0px colors.$lime_fonce;
 }
 
-i{ 
-  width: 150px;
-  height: 150px;
+.bi-person-fill{ 
+  font-size: 30px;
 }
 
+.nav-item {
+  white-space: nowrap;
+  font-size: 20px;
+  width: 100%;
+  background-color: aqua;
+}
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
 
 @media screen and (min-width: 1400px) {
