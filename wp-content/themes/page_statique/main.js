@@ -13,3 +13,26 @@ function changeDonsImage() {
   window.onload = changeDonsImage;
   window.onresize = changeDonsImage;
   */ 
+
+
+  const headers = document.querySelectorAll('.accordion-header');
+
+  headers.forEach(header => {
+      header.addEventListener('click', () => {
+          const content = header.nextElementSibling;
+
+          // Toggle active class
+          header.classList.toggle('active');
+
+          // Toggle content visibility
+          if (content.style.display === 'block') {
+              content.style.display = 'none';
+          } else {
+              // Hide other contents
+              document.querySelectorAll('.accordion-content').forEach(item => {
+                  item.style.display = 'none';
+              });
+              content.style.display = 'block';
+          }
+      });
+  });
