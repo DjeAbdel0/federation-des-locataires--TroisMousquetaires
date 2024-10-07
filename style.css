@@ -3154,7 +3154,7 @@ html {
   background-color: #8BBD8E;
 }
 
-.logo__header, .logo_footer {
+.logo__header s {
   border-radius: 25%;
   width: 50px;
   height: 50px;
@@ -3167,7 +3167,7 @@ html {
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
 */
 @media screen and (min-width: 1400px) {
-  .logo__header, .logo_footer {
+  .logo__header {
     border-radius: 25%;
     width: 100px;
     height: 100px;
