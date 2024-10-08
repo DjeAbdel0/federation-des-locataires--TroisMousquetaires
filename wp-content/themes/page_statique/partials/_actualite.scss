@@ -2,78 +2,113 @@
 @use "colors";
 @use "buttons";
 @use "typo";
-@use 'sass:color';
-
+@use "sass:color";
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .actualite {
   display: grid;
   width: 100%;
   background-color: colors.$blanc;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr;
+  padding: 15px;
+  gap: 40px;
   text-align: center;
 
-  &__titre{
+  &__titre {
     @include typo.bold;
+    margin: 30px auto;
   }
 
   &__carte {
     display: flex;
-    border: solid 5px red;
-    position: relative;
-    height: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    width: 90%;
+    height: 200px;
+    margin: 0 auto; // Centrer les cartes horizontalement
   }
 
   &__image {
-    display: block;
-    width: 30%;
-    height: 100%;
+    width: 200px;
     object-fit: cover;
-    margin-bottom: 16px; 
+    border-radius: 25%;
   }
 
-  &__zoneTexte{
-    padding: 5px
+  &__zoneTexte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Pour que le footer soit en bas
+    padding: 5px;
+    text-align: center;
+    width: 70%;
   }
 
-  &--petit {
+  &__titre--petit {
     @include typo.small-title-bold;
+    font-size: 20px;
   }
 
-  &__text{
+  &__text {
     @include typo.small-text;
+    font-size: 12px;
+    flex-grow: 1; // Le texte occupe l'espace disponible
+    margin: 10px;
   }
 
   &__footer {
-    @include typo.small-text;
+    align-self: flex-end; // Placer le footer en bas
+    text-align: right;
+    font-size: 10px;
   }
-  
+
   &__btn {
     @include buttons.small-btn-general;
+    margin-bottom: 10px;
   }
 
-
+  &__carte:nth-child(4) {
+    display: none;
+  }
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-  @media screen and (min-width: 765px) {
-    .actualite{
-      
-      &__btn {
-        @include buttons.medium-btn-general;
-      }
+@media screen and (min-width: 765px) {
+  .actualite {
+    &__carte {
+      position: relative;
+      height: 200px;
+      margin-top: 20px;
     }
 
-  }
-
-  /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
-  @media screen and (min-width: 1400px) {
-    .actualite{
-      
-      &__btn {
-        @include buttons.big-btn-general;
-      }
+    &__titre--petit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 23px;
     }
 
+    &__image {
+      width: 200px; // L'image conserve 40% de la largeur
+      height: 100%;
+      margin-top: 35px;
+      object-fit: cover;
+    }
+    &__text {
+      margin-top: 50px;
+      font-size: 15px;
+    }
+
+    &__footer {
+      font-size: 12px;
+    }
+
+    &__btn {
+      @include buttons.medium-btn-general;
+      margin-bottom: 10px;
+    }
   }
+}
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+}
