@@ -25,7 +25,7 @@
     align-items: stretch;
     width: 90%;
     height: 200px;
-    margin: 0 auto; // Centrer les cartes horizontalement
+    margin: 0 auto;
   }
 
   &__image {
@@ -88,7 +88,7 @@
     }
 
     &__image {
-      width: 200px; // L'image conserve 40% de la largeur
+      width: 200px;
       height: 100%;
       margin-top: 35px;
       object-fit: cover;
@@ -109,6 +109,74 @@
   }
 }
 
-/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
+  .actualite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+
+    &__titre {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__carte {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      height: 500px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    &__carte:nth-child(4) {
+      display: block;
+    }
+
+    &__image {
+      width: 100%;
+      height: 275px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 15px;
+    }
+
+    &__zoneTexte {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__titre--petit {
+      position: relative;
+      font-size: 24px;
+      margin: 15px 0;
+      padding: 15px;
+      height: 40px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin: 10px 0;
+      padding-top: 20px;
+    }
+
+    &__footer {
+      font-size: 14px;
+      padding-top: 20px;
+      margin-top: auto;
+    }
+
+    &__btn {
+      margin-top: 60px;
+      @include buttons.big-btn-general;
+    }
+  }
 }
