@@ -3224,6 +3224,28 @@ html {
   box-sizing: inherit;
 }
 
+.pdp {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+}
+.pdp .pdp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pdp .pdp-container .pdp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+.pdp .pdp-container .pdp-grid img {
+  max-width: 100%;
+  height: auto;
+}
+.pdp .pdp-container .pdp-logo {
+  margin-top: 40px;
+}
+
 /* 
 --------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
 */

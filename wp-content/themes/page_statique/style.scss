@@ -146,6 +146,38 @@ html {
     box-sizing: inherit;
   }
 }
+
+$pdp-bg-color: #f0f0f0;
+$pdp-max-width: 1200px;
+$pdp-padding: 40px;
+
+.pdp {
+    background-color: $pdp-bg-color;
+    padding: $pdp-padding 0;
+
+    .pdp-container {
+        max-width: $pdp-max-width;
+        margin: 0 auto;
+        text-align: center;
+
+        .pdp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .pdp-logo {
+            margin-top: 40px;
+        }
+    }
+}
+
+
 /* 
 --------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
 */
