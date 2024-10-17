@@ -34,19 +34,21 @@
 //Fonts importées
 @font-face {
   font-family: "archivo";
-  src: url("../assets/font/Archivo-Regular.ttf");
+  src: url("./assets/font/Archivo-Regular.ttf");
 }
 //Styles généraux
 header {
   background-color: colors.$espace;
 }
 
-section{
+section {
   position: relative;
   margin: 0 auto;
   width: 70%;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "archivo";
 }
 
@@ -81,7 +83,7 @@ h1, h2, h3 {
         cursor: text;
       }
 
-      +span {
+      + span {
         background: rgba(255, 255, 255, 0.2);
       }
     }
@@ -94,7 +96,7 @@ h1, h2, h3 {
       background: none;
       color: white;
 
-      +span {
+      + span {
         width: 200px;
 
         &::before {
@@ -105,7 +107,7 @@ h1, h2, h3 {
       }
     }
 
-    +span {
+    + span {
       z-index: -1;
       position: absolute;
       border: 2px solid white;
@@ -164,11 +166,11 @@ html {
   height: 50px;
 }
 
-
 /* 
 --------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
 */
-@media screen and (min-width: 765px) {}
+@media screen and (min-width: 765px) {
+}
 
 /* 
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
@@ -182,6 +184,6 @@ html {
   }
 }
 
-.test{
+.test {
   background-color: red;
 }
