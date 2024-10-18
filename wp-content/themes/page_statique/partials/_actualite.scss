@@ -16,25 +16,20 @@
     padding: 20px;
   }
 
-  &__cartes {
-    display: flex;
-    flex-direction: row;
-  }
-
   &__carte {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    margin: 20px;
     gap: 20px;
   }
 
   &__conteneurImg {
     width: 40%;
     height: auto;
-    min-height: 100%;
+
     overflow: hidden;
     position: relative;
     display: inline-block;
@@ -49,16 +44,16 @@
     height: 150px;
     width: 150px;
     object-fit: cover;
-    border-radius: 25%;
+    border-radius: 15px;
   }
 
   &__zoneTexte {
     display: flex;
     flex-direction: column;
     justify-content: space-between; // Pour que le footer soit en bas
-    padding: 5px;
     text-align: left;
     width: 40%;
+    height: 150px;
   }
 
   &__titre--petit {
@@ -67,13 +62,13 @@
   }
 
   &__text {
-    @include typo.small-text;
-    font-size: 10px;
-    margin: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
 
   &__footer {
-    text-align: right;
+    align-self: flex-end;
     font-size: 8px;
   }
 
@@ -92,9 +87,15 @@
       margin-bottom: 30px;
     }
 
+    &__cartes {
+      display: flex;
+      flex-direction: column;
+    }
+
     &__carte {
       position: relative;
-      margin: 20px;
+      margin: 50px;
+      width: 90%;
     }
 
     &__image {
@@ -107,19 +108,20 @@
     }
 
     &__text {
+      font-size: 18px;
       margin: 20px;
     }
 
     &__titre--petit {
       position: absolute;
-      top: -10px;
-      left: 25%;
+      top: -30px;
+      left: 20%;
       font-size: 20px;
       margin-bottom: 10px;
     }
 
     &__footer {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     &__btn {
@@ -130,50 +132,80 @@
 }
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
-
 @media screen and (min-width: 1400px) {
   .actualite {
+    padding: 30px;
+
     &__titre {
-      width: 100%;
-      text-align: center;
+      font-size: 40px;
     }
 
     &__cartes {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
+      justify-content: center;
+      align-items: center;
     }
 
     &__carte {
       display: flex;
       flex-direction: column;
-      width: 30%;
+      align-items: center;
+      max-width: 20vw;
+      height: auto;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Ombre légère autour de la carte
+      transition: box-shadow 0.3s ease; // Animation pour un effet visuel  lors du survol
+    }
+
+    &__carte:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &__conteneurImg {
+      width: 100%;
+      object-fit: cover;
     }
 
     &__image {
       width: 100%;
       object-fit: cover;
-    }
-
-    &__zoneTexte {
-      align-items: center;
-      padding: 10px;
+      border-radius: 15px 15px 0 0;
     }
 
     &__titre--petit {
+      position: relative;
+      top: 0;
+      left: 0;
+      font-size: 22px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    &__zoneTexte {
+      width: 100%;
+      height: 250px;
+      padding: 10px;
+      margin: 0;
     }
 
     &__text {
-    }
-
-    &__footer {
-      font-size: 14px;
-      padding-top: 20px;
+      font-size: 20px;
+      flex-grow: 1;
+      overflow: hidden;
     }
 
     &__btn {
       @include buttons.big-btn-general;
+      margin-top: 30px;
+      align-self: center;
+    }
+
+    &__footer {
+      align-self: flex-end; // Assure que le footer reste en bas
     }
   }
 }
