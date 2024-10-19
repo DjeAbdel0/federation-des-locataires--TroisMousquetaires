@@ -1,38 +1,26 @@
 
 
-/* Changer l'url de l'image dons lorsque la page dépasse les 1400px
-function changeDonsImage() {
-    const img = document.getElementById('dons__image');
-    if (window.innerWidth >= 1400) {
-      img.src = './assets/medias/dons/dons_maison.png'; 
-    } else {
-      img.src = './assets/medias/dons/donnations_maison.jpg';
-    }
-  }
-
-  window.onload = changeDonsImage;
-  window.onresize = changeDonsImage;
-  */ 
+  /*   Abdel
+  ---------------------- Code qui lorsqu'on Hover une nouvelle, rend le texte visible et lorqu'on quitte, le cache ------------------------------ */
+  // Select all elements that have class 'list-service__assos', 'list-service__truc', 'list-service__cool', etc.
+const serviceDiv = document.querySelectorAll('.list-service > div'); // Choisis la div enfant directe de .list-service
+const serviceTexte = document.querySelectorAll('.page-service__texte'); // Choisis le texte dans .list-service
+const serviceBtn = document.querySelectorAll('.page-service__btn'); //  Choisis le btn dans .list-service
 
 
-  const headers = document.querySelectorAll('.accordion-header');
+// Toogle la visibilité selon si la souris Hover ou pas
+serviceDiv.forEach((element, index) => {
+    element.addEventListener('mouseenter', () => {
+        serviceTexte[index].style.opacity = '1';
+        serviceTexte[index].style.visibility = 'visible';
+        serviceBtn[index].style.opacity = '1';
+        serviceBtn[index].style.visibility = 'visible';
+    });
 
-  headers.forEach(header => {
-      header.addEventListener('click', () => {
-          const content = header.nextElementSibling;
-
-          // Toggle active class
-          header.classList.toggle('active');
-
-          // Toggle content visibility
-          if (content.style.display === 'block') {
-              content.style.display = 'none';
-          } else {
-              // Hide other contents
-              document.querySelectorAll('.accordion-content').forEach(item => {
-                  item.style.display = 'none';
-              });
-              content.style.display = 'block';
-          }
-      });
-  });
+    element.addEventListener('mouseleave', () => {
+        serviceTexte[index].style.opacity = '0';
+        serviceTexte[index].style.visibility = 'hidden';
+        serviceBtn[index].style.opacity = '0';
+        serviceBtn[index].style.visibility = 'hidden';
+    });
+});
