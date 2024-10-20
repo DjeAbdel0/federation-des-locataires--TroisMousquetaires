@@ -1,68 +1,153 @@
-//Appel de nos partials
 @use "colors";
+@use "buttons";
 @use "typo";
+@use "sass:color";
+
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+
 .hero {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
   overflow: hidden;
+  background-color: colors.$lime;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-    z-index: 0;
-  }
-
-  &__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  &__items {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .hero__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+
+      &.active {
+        opacity: 1; // Rend visible l'élément actif
+      }
+
+      .hero__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   &__content {
-    position: relative;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    z-index: 1;
-
-    &__title,
-    &__text {
-      @include typo.small-title-bold;
-      position: absolute;
-      width: 30%;
-      bottom: 5vh;
-      margin: 0;
-    }
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
     &__title {
-      left: 5vw;
-      font-size: 40px;
+      color: white;
+      max-width: 60%;
+      font-weight: bold;
     }
 
     &__text {
-      right: 5vw;
+      color: white;
+      width: 30%;
+      @include typo.small-text-bold;
+      font-size: 15px;
     }
-    @media (max-width: 768px) {
+  }
+}
+
+// Animation pour changer les images avec leur opacité
+@keyframes slide-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// Animation des images
+.hero__item:nth-child(1) {
+  animation: slide-animation 9s infinite;
+}
+
+.hero__item:nth-child(2) {
+  animation: slide-animation 9s infinite 3s;
+}
+
+.hero__item:nth-child(3) {
+  animation: slide-animation 9s infinite 6s;
+}
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+  .hero {
+    height: 60vh;
+    &__content {
       &__title {
-        font-size: 30px;
+        color: white;
+        padding: 10px;
+        max-width: 50%;
+        font-weight: bold;
+        font-size: 50px;
       }
+
       &__text {
-        right: 8vw;
+        color: white;
+        margin-right: 30px;
+        max-width: 40%;
+        @include typo.medium-text-bold;
       }
     }
-    @media (max-width: 375px) {
+  }
+}
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+  .hero {
+    height: 75vh;
+    &__content {
       &__title {
-        font-size: 20px;
+        color: white;
+        max-width: 50%;
+        font-weight: bold;
       }
+
       &__text {
-        right: 8vw;
+        margin-right: 40px;
+        color: white;
+        max-width: 40%;
+        @include typo.big-text-bold;
       }
     }
   }

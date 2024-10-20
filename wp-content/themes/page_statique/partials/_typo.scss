@@ -1,20 +1,24 @@
 // Pour les p
-@mixin small-text {     
+@mixin small-text {
   font-size: 12px;
   font-weight: normal;
-  text-transform: uppercase;
 }
- // Pour les mini titres
+
+@mixin small-text-bold {
+  font-size: 12px;
+  font-weight: bold;
+}
+// Pour les mini titres
 @mixin small-capitals-bold {
   font-size: 12px;
   font-weight: bold;
   text-transform: capitalize;
 }
- // Pour bold
+// Pour bold
 @mixin bold {
   font-weight: bold;
 }
- // Pour les gros titres
+// Pour les gros titres
 @mixin small-title-bold {
   font-size: 25px;
   font-weight: bold;
@@ -23,7 +27,11 @@
 @mixin medium-text {
   font-size: 24px;
   font-weight: normal;
-  text-transform: uppercase;
+}
+
+@mixin medium-text-bold {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 @mixin medium-capitals-bold {
@@ -41,7 +49,11 @@
 @mixin big-text {
   font-size: 36px;
   font-weight: normal;
-  text-transform: uppercase;
+}
+
+@mixin big-text-bold {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 @mixin big-capitals-bold {
