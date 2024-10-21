@@ -483,7 +483,6 @@
 .page-service__nom {
   font-weight: bold;
   margin: auto 0;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 95%, rgba(51, 50, 50, 0.1) 5%);
   top: 15px;
   position: absolute;
   left: 0;
@@ -493,7 +492,6 @@
 .page-service__texte {
   font-size: 12px;
   font-weight: normal;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 95%, rgba(51, 50, 50, 0.1) 5%);
   position: absolute;
   top: 50%;
   visibility: hidden;
@@ -534,6 +532,16 @@
   background-position: center;
   position: relative;
   background-repeat: no-repeat;
+}
+.list-service__assos::before, .list-service__crr::before, .list-service__locataire::before, .list-service__bulettin::before, .list-service__infolettre::before, .list-service__guide::before, .list-service__congres::before, .list-service__memoire::before, .list-service__recherche::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
 }
 .list-service__assos {
   background-image: url("./assets/medias/services/comite-association.jpg");
