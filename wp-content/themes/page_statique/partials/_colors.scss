@@ -6,5 +6,6 @@ $honeyDew: #D4E1D7;
 $lime: #8BBD8E;
 $alabaster: #E6EAE4;
 $bonbon: #97C399;
-$blanc: #fff;
+$blanc: #ffffff;
 $lime_fonce: color.adjust($lime, $blackness: 7%);
+$bonbon_pale: color.adjust($bonbon, $whiteness: 15%);
