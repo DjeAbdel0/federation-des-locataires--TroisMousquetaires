@@ -95,8 +95,8 @@
   padding: 20px;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-evenly;
 }
 .hero__content__title {
   color: white;
@@ -150,7 +150,7 @@
     padding: 10px;
     max-width: 50%;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 2rem;
   }
   .hero__content__text {
     color: white;
@@ -169,6 +169,7 @@
     color: white;
     max-width: 50%;
     font-weight: bold;
+    font-size: 3rem;
   }
   .hero__content__text {
     margin-right: 40px;
@@ -176,6 +177,7 @@
     max-width: 40%;
     font-size: 26px;
     font-weight: bold;
+    font-size: 2rem;
   }
 }
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
