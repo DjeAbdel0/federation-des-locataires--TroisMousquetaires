@@ -9,6 +9,7 @@
 @use "partials/don";
 @use "partials/buttons";
 @use "partials/temoignages";
+@use "partials/team";
 @use "partials/footer";
 //@use "partials/cartes";
 
@@ -148,16 +149,9 @@ html {
   }
 }
 
-$pdp-bg-color: #f0f0f0;
-$pdp-max-width: 1200px;
-$pdp-padding: 40px;
-
 .pdp {
-  background-color: $pdp-bg-color;
-  padding: $pdp-padding 0;
-
   .pdp-container {
-    max-width: $pdp-max-width;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 
