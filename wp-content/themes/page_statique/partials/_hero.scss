@@ -60,8 +60,8 @@
     padding: 20px;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-evenly;
 
     &__title {
       color: white;
@@ -120,7 +120,7 @@
         padding: 10px;
         max-width: 50%;
         font-weight: bold;
-        font-size: 50px;
+        font-size: 2rem;
       }
 
       &__text {
@@ -141,6 +141,7 @@
         color: white;
         max-width: 50%;
         font-weight: bold;
+        font-size: 3rem;
       }
 
       &__text {
@@ -148,6 +149,7 @@
         color: white;
         max-width: 40%;
         @include typo.big-text-bold;
+        font-size: 2rem;
       }
     }
   }
