@@ -44,12 +44,62 @@ $servicesNumero: no1, no2, no3;
   }
 }
 
-/*-------------------- page-service.html*/
+/*-------------------- page-service.html -------------------- */
 .page-service {
   color: white;
   text-align: center;
   width: 100%;
   position: relative;
+
+  
+  &__assos,
+  &__crr,
+  &__locataire,
+  &__bulettin,
+  &__infolettre,
+  &__guide,
+  &__congres,
+  &__memoire,
+  &__recherche {
+    width: 100%;
+    height: auto;
+    background-size:contain;
+    position: relative;
+    background-repeat: no-repeat;
+    display: block; 
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      margin: 0 auto;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.25) 100%,
+        rgba(0, 0, 0, 0.25) 100%
+      );
+      z-index: 1;
+    }
+  }
+  &__assos img,
+  &__crr img,
+  &__locataire img,
+  &__bulettin img,
+  &__infolettre img,
+  &__guide img,
+  &__congres img,
+  &__memoire img,
+  &__recherche img{
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    position: relative;
+    display: block; 
+    margin: 0 auto; 
+  }
 
   &__titre {
     @include typo.small-title-bold;
@@ -86,78 +136,8 @@ $servicesNumero: no1, no2, no3;
     transform: translateX(-50%);
     margin-top: 2%;
   }
-}
 
-.list-service {
-  position: relative;
 
-  &__assos,
-  &__crr,
-  &__locataire,
-  &__bulettin,
-  &__infolettre,
-  &__guide,
-  &__congres,
-  &__memoire,
-  &__recherche {
-    width: 100%;
-    height: 35vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    background-repeat: no-repeat;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.3) 100%,
-        rgba(0, 0, 0, 0.3) 100%
-      );
-      z-index: 1;
-    }
-  }
-
-  &__assos {
-    background-image: url("./assets/medias/services/comite-association.jpg");
-  }
-
-  &__crr {
-    background-image: url("./assets/medias/services/meeting-crr.jpg");
-  }
-
-  &__locataire {
-    background-image: url("./assets/medias/services/Donner_cle-locataire.jpg");
-  }
-
-  &__bulettin {
-    background-image: url("./assets/medias/services/journal.jpg");
-  }
-
-  &__infolettre {
-    background-image: url("./assets/medias/services/travail-infolettre.jpg");
-  }
-
-  &__guide {
-    background-image: url("./assets/medias/services/livre_stack-guide.jpg");
-  }
-
-  &__congres {
-    background-image: url("./assets/medias/services/revue-congres.jpg");
-  }
-
-  &__memoire {
-    background-image: url("./assets/medias/services/memoire.jpg");
-  }
-
-  &__recherche {
-    background-image: url("./assets/medias/services/loupe_recherche.jpg");
-  }
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
@@ -187,22 +167,7 @@ $servicesNumero: no1, no2, no3;
   }
 
   .page-service {
-    width: 70%;
-
-    &__assos,
-    &__crr,
-    &__locataire,
-    &__bulettin,
-    &__infolettre,
-    &__guide,
-    &__congres,
-    &__memoire,
-    &__recherche {
-      width: 100%;
-      height: 100vh;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+    width: 100%;
 
     &__titre {
       @include typo.medium-title-bold;
@@ -223,21 +188,6 @@ $servicesNumero: no1, no2, no3;
     }
   }
 
-  .list-service {
-    position: relative;
-
-    &__assos,
-    &__crr,
-    &__locataire,
-    &__bulettin,
-    &__infolettre,
-    &__guide,
-    &__congres,
-    &__memoire,
-    &__recherche {
-      height: 55vh;
-    }
-  }
 }
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
@@ -270,8 +220,7 @@ $servicesNumero: no1, no2, no3;
   }
 
   .page-service {
-    width: 100%;
-
+    
     &__assos,
     &__crr,
     &__locataire,
@@ -281,11 +230,7 @@ $servicesNumero: no1, no2, no3;
     &__congres,
     &__memoire,
     &__recherche {
-      width: 70%;
-      height: 100vh;
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
+    
       &::before {
         background: linear-gradient(
           to top,
@@ -346,16 +291,9 @@ $servicesNumero: no1, no2, no3;
       bottom: 22.5%;
     }
 
-    &__imgGrand {
-      height: 85vh;
-      background-image: url("./assets/medias/services/service-informer.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      position: relative;
-    }
   }
 
-  .list-service {
+  .page-service {
     position: relative;
     background: repeating-linear-gradient(
       to bottom,

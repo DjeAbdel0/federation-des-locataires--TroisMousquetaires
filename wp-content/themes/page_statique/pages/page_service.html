@@ -2,167 +2,187 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <link rel="stylesheet" href="../style.css" />
-    <title>Document</title>
+  <link rel="stylesheet" href="../style.css" />
+  <title>Document</title>
 </head>
 
 <body>
-    <!--Section Bannière-->
-    <section class="banniere">
-        <div class="bannière__contenu">
-            <h5>Site scolaire qui refait l'interface du site de la FLHLMQ</h5>
-            <a href="https://flhlmq.com/fr">Site officiel du client</a>
+  <!--Section Bannière-->
+  <section class="banniere">
+    <div class="bannière__contenu">
+      <h5>Site scolaire qui refait l'interface du site de la FLHLMQ</h5>
+      <a href="https://flhlmq.com/fr">Site officiel du client</a>
+    </div>
+    <button class="btn-fermer">X</button>
+  </section>
+  <!--Fin Section Bannière-->
+
+  <header>
+    <!-- NavBar Boostrap-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="./index.html">
+          <img class="logo__header" src="../assets/medias/logo/Logo_figma.png" class="d-inline-block align-top"
+            alt="logo_Acceuil" href="#" />
+        </a>
+
+        <!-- Bouton menu burger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_menu"
+          aria-controls="mobile_menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu burger -->
+        <div class="collapse navbar-collapse" id="mobile_menu">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nouvelles</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Équipe</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nous joindre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">À propos</a>
+            </li>
+          </ul>
+
+          <!-- Barre de recherche -->
+          <div class="container">
+            <div class="search-box">
+              <input type="text" />
+              <span></span>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
+            </li>
+          </ul>
         </div>
-        <button class="btn-fermer">X</button>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="page-service">
+    <div class="page-service__assos">
+      <img src="../assets/medias/services/comite-consultatif.jpg" alt="">
+      <p class="page-service__nom">Association</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__crr">
+      <img src="../assets/medias/services/meeting-crr.jpg" alt="">
+      <p class="page-service__nom">CRR</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__locataire">
+      <img src="../assets/medias/services/Donner_cle-locataire.jpg" alt="">
+      <p class="page-service__nom">Locataire au CA</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__bulettin">
+      <img src="../assets/medias/services/journal.jpg" alt="">
+      <p class="page-service__nom">Bulletins</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__infolettre">
+      <img src="../assets/medias/services/travail-infolettre.webp" alt="">
+      <p class="page-service__nom">Infolettre</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__guide">
+      <img src="../assets/medias/services/livre_stack-guide.jpg" alt="">
+      <p class="page-service__nom">Guides pratiques</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__congres">
+      <img src="../assets/medias/services/revue-congres.webp" alt="">
+      <p class="page-service__nom">Cahier des congrès</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__memoire">
+      <img src="../assets/medias/services/memoire.png" alt="">
+      <p class="page-service__nom">Mémoires</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
+
+    <div class="page-service__recherche">
+      <img src="../assets/medias/services/loupe_recherche.jpg" alt="">
+      <p class="page-service__nom">Recherches</p>
+      <p class="page-service__texte">
+        Une association de locataires, c'est le regroupement des locataires
+        d'un ou de plusieurs HLM. Cette association est mise sur pied par
+        les locataires et pour les locataires.
+      </p>
+      <button class="page-service__btn">En savoir plus</button>
+    </div>
     </section>
-    <!--Fin Section Bannière-->
-
-    <header>
-        <!-- NavBar Boostrap-->
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <!-- Logo -->
-                <a class="navbar-brand" href="./index.html">
-                    <img class="logo__header" src="../assets/medias/logo/Logo_figma.png"
-                        class="d-inline-block align-top" alt="logo_Acceuil" href="#" />
-                </a>
-
-                <!-- Bouton menu burger -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_menu"
-                    aria-controls="mobile_menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menu burger -->
-                <div class="collapse navbar-collapse" id="mobile_menu">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nouvelles</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Équipe</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nous joindre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">À propos</a>
-                        </li>
-                    </ul>
-
-                    <!-- Barre de recherche -->
-                    <div class="container">
-                        <div class="search-box">
-                            <input type="text" />
-                            <span></span>
-                        </div>
-                    </div>
-
-                    <!-- Icon -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-    <section class="page-service">
-        <div class="page-service__imgGrand">
-            <h3 class="page-service__titre">Informez-vous sur nos services</h3>
-        </div>
-        <div class="list-service">
-            <div class="list-service__assos">
-                <p class="page-service__nom">Association</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__crr">
-                <p class="page-service__nom">CRR</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__locataire">
-                <p class="page-service__nom">Locataire au CA</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__bulettin">
-                <p class="page-service__nom">Bulletins</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__infolettre">
-                <p class="page-service__nom">Infolettre</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__guide">
-                <p class="page-service__nom">Guides pratiques</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__congres">
-                <p class="page-service__nom">Cahier des congrès</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__memoire">
-                <p class="page-service__nom">Mémoires</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-            <div class="list-service__recherche">
-                <p class="page-service__nom">Recherches</p>
-                <p class="page-service__texte">Une association de locataires, c'est le regroupement des locataires d'un
-                    ou de plusieurs HLM. Cette association est mise sur pied par les locataires et pour les locataires.
-                </p>
-                <button class="page-service__btn">En savoir plus</button>
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-
-
-
-
-
 
     <!-- Scripts Boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <!-- Script Main-->
     <script src="../main.js"></script>
@@ -170,25 +190,25 @@
 
 <!-- Pied de page-->
 <footer>
-    <div class="footer__grid">
-        <img class="footer__logo" src="../assets/medias/logo/Logo_flhlmq.jpg" />
-        <div class="footer__lien">
-            <a>Nouvelles</a>
-            <a>Services</a>
-            <a>Équipe</a>
-            <a>FAQ</a>
-            <a>Nous Joindre</a>
-            <a>À propos</a>
-        </div>
-        <p class="footer__adresse">1245 Adresse du bureau Laval Québec H1H H2H</p>
-        <div class="footer__reseaux">
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-twitter"></i>
-            <i class="bi bi-send"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-person"></i>
-        </div>
+  <div class="footer__grid">
+    <img class="footer__logo" src="../assets/medias/logo/Logo_flhlmq.jpg" />
+    <div class="footer__lien">
+      <a>Nouvelles</a>
+      <a>Services</a>
+      <a>Équipe</a>
+      <a>FAQ</a>
+      <a>Nous Joindre</a>
+      <a>À propos</a>
     </div>
+    <p class="footer__adresse">1245 Adresse du bureau Laval Québec H1H H2H</p>
+    <div class="footer__reseaux">
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter"></i>
+      <i class="bi bi-send"></i>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-person"></i>
+    </div>
+  </div>
 </footer>
 
 </html>

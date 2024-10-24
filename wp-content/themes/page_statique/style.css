@@ -469,12 +469,40 @@
   min-width: 65px;
 }
 
-/*-------------------- page-service.html*/
+/*-------------------- page-service.html -------------------- */
 .page-service {
   color: white;
   text-align: center;
   width: 100%;
   position: relative;
+}
+.page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+  display: block;
+}
+.page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 100%, rgba(0, 0, 0, 0.25) 100%);
+  z-index: 1;
+}
+.page-service__assos img, .page-service__crr img, .page-service__locataire img, .page-service__bulettin img, .page-service__infolettre img, .page-service__guide img, .page-service__congres img, .page-service__memoire img, .page-service__recherche img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 .page-service__titre {
   font-size: 25px;
@@ -522,55 +550,6 @@
   background: #8bb08d;
 }
 
-.list-service {
-  position: relative;
-}
-.list-service__assos, .list-service__crr, .list-service__locataire, .list-service__bulettin, .list-service__infolettre, .list-service__guide, .list-service__congres, .list-service__memoire, .list-service__recherche {
-  width: 100%;
-  height: 35vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-repeat: no-repeat;
-}
-.list-service__assos::before, .list-service__crr::before, .list-service__locataire::before, .list-service__bulettin::before, .list-service__infolettre::before, .list-service__guide::before, .list-service__congres::before, .list-service__memoire::before, .list-service__recherche::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%);
-  z-index: 1;
-}
-.list-service__assos {
-  background-image: url("./assets/medias/services/comite-association.jpg");
-}
-.list-service__crr {
-  background-image: url("./assets/medias/services/meeting-crr.jpg");
-}
-.list-service__locataire {
-  background-image: url("./assets/medias/services/Donner_cle-locataire.jpg");
-}
-.list-service__bulettin {
-  background-image: url("./assets/medias/services/journal.jpg");
-}
-.list-service__infolettre {
-  background-image: url("./assets/medias/services/travail-infolettre.jpg");
-}
-.list-service__guide {
-  background-image: url("./assets/medias/services/livre_stack-guide.jpg");
-}
-.list-service__congres {
-  background-image: url("./assets/medias/services/revue-congres.jpg");
-}
-.list-service__memoire {
-  background-image: url("./assets/medias/services/memoire.jpg");
-}
-.list-service__recherche {
-  background-image: url("./assets/medias/services/loupe_recherche.jpg");
-}
-
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   .services__titre {
@@ -596,13 +575,7 @@
     min-width: 165px;
   }
   .page-service {
-    width: 70%;
-  }
-  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
     width: 100%;
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
   .page-service__titre {
     font-size: 33px;
@@ -631,12 +604,6 @@
   }
   .page-service__btn:hover {
     background: #8bb08d;
-  }
-  .list-service {
-    position: relative;
-  }
-  .list-service__assos, .list-service__crr, .list-service__locataire, .list-service__bulettin, .list-service__infolettre, .list-service__guide, .list-service__congres, .list-service__memoire, .list-service__recherche {
-    height: 55vh;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
@@ -668,16 +635,6 @@
   .services__no3 img {
     width: 100%;
     min-width: 265px;
-  }
-  .page-service {
-    width: 100%;
-  }
-  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
-    width: 70%;
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
   }
   .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 100%, rgba(0, 0, 0, 0.9) 100%);
@@ -733,25 +690,18 @@
   .page-service__btn:hover {
     background: #8bb08d;
   }
-  .page-service__imgGrand {
-    height: 85vh;
-    background-image: url("./assets/medias/services/service-informer.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  .list-service {
+  .page-service {
     position: relative;
     background: repeating-linear-gradient(to bottom, #E6EAE4 0, #E6EAE4 85vh, #bdc3be 85vh, #bdc3be 170vh, #E6EAE4 170vh, #E6EAE4 255vh, #bdc3be 255vh, #bdc3be 340vh, #E6EAE4 340vh);
   }
-  .list-service__assos, .list-service__crr, .list-service__locataire, .list-service__bulettin, .list-service__infolettre, .list-service__guide, .list-service__congres, .list-service__memoire, .list-service__recherche {
+  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
     height: 85vh;
     background-size: 50%;
   }
-  .list-service__assos::before, .list-service__crr::before, .list-service__locataire::before, .list-service__bulettin::before, .list-service__infolettre::before, .list-service__guide::before, .list-service__congres::before, .list-service__memoire::before, .list-service__recherche::before {
+  .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
   }
-  .list-service__assos:hover::before, .list-service__crr:hover::before, .list-service__locataire:hover::before, .list-service__bulettin:hover::before, .list-service__infolettre:hover::before, .list-service__guide:hover::before, .list-service__congres:hover::before, .list-service__memoire:hover::before, .list-service__recherche:hover::before {
+  .page-service__assos:hover::before, .page-service__crr:hover::before, .page-service__locataire:hover::before, .page-service__bulettin:hover::before, .page-service__infolettre:hover::before, .page-service__guide:hover::before, .page-service__congres:hover::before, .page-service__memoire:hover::before, .page-service__recherche:hover::before {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%);
   }
 }

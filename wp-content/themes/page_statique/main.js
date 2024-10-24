@@ -21,6 +21,41 @@ serviceDiv.forEach((element, index) => {
     serviceBtn[index].style.visibility = "hidden";
   });
 });
+/*
+const serviceImages = document.querySelectorAll('.page-service__assos img, .page-service__crr img, .page-service__locataire img');
+
+function updateImageSources() {
+  const screenWidth = window.innerWidth;
+
+  serviceImages.forEach((img) => {
+    if (screenWidth >= 765) {
+      if (img.parentElement.classList.contains('page-service__assos')) {
+        img.src = '../assets/medias/services/memoire.jpg'; // Change to desired image
+      } else if (img.parentElement.classList.contains('page-service__crr')) {
+        img.src = '../assets/medias/services/memoire.jpg'; // Change to desired image
+      } else if (img.parentElement.classList.contains('page-service__locataire')) {
+        img.src = '../assets/medias/services/memoire.jpg'; // Change to desired image
+      }
+    } else {
+      // Reset to original images
+      if (img.parentElement.classList.contains('page-service__assos')) {
+        img.src = '../assets/medias/services/comite-association.jpg';
+      } else if (img.parentElement.classList.contains('page-service__crr')) {
+        img.src = '../assets/medias/services/meeting-crr.jpg';
+      } else if (img.parentElement.classList.contains('page-service__locataire')) {
+        img.src = '../assets/medias/services/Donner_cle-locataire.jpg';
+      }
+    }
+  });
+}
+
+
+// Initial check
+updateImageSources();
+
+// Event listener for window resize
+window.addEventListener('resize', updateImageSources);
+  */
 
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".hero__item");
