@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -40,7 +40,7 @@
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
   .navbar {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-transform: capitalize;
   }
@@ -106,7 +106,7 @@
 .hero__content__text {
   color: white;
   width: 30%;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   font-size: 15px;
 }
@@ -156,7 +156,7 @@
     color: white;
     margin-right: 30px;
     max-width: 40%;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 }
@@ -175,7 +175,7 @@
     margin-right: 40px;
     color: white;
     max-width: 40%;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: bold;
     font-size: 2rem;
   }
@@ -228,7 +228,7 @@
   height: 150px;
 }
 .actualite__titre--petit {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   font-size: 15px;
 }
@@ -446,7 +446,7 @@
   color: #000;
   grid-column: span 3;
   margin: 0 auto;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
 }
 .services__no2 {
@@ -455,7 +455,7 @@
   padding: 20px;
 }
 .services p {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
 }
 .services__no1 img {
@@ -472,6 +472,34 @@
 }
 
 /*-------------------- page-service.html -------------------- */
+.service-hero {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+.service-hero__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.service-hero__titre {
+  width: 75%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-size: 2.0625rem;
+  font-weight: bold;
+  z-index: 5;
+  color: #ffffff;
+}
+
 .page-service {
   color: white;
   text-align: center;
@@ -507,7 +535,7 @@
   margin: 0 auto;
 }
 .page-service__titre {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
 }
 .page-service__nom {
@@ -520,10 +548,11 @@
   z-index: 1;
 }
 .page-service__texte {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
   position: absolute;
-  top: 50%;
+  top: 40%;
+  margin: auto 10%;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 2;
@@ -555,11 +584,11 @@
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   .services__titre {
-    font-size: 33px;
+    font-size: 2.0625rem;
     font-weight: bold;
   }
   .services p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: normal;
   }
   .services__no2 {
@@ -576,21 +605,24 @@
   .services__no3 img {
     min-width: 165px;
   }
+  .service-hero__titre {
+    font-size: 3.75rem;
+    font-weight: bold;
+  }
   .page-service {
     width: 100%;
   }
   .page-service__titre {
-    font-size: 33px;
+    font-size: 2.0625rem;
     font-weight: bold;
   }
   .page-service__nom {
-    font-size: 33px;
+    font-size: 2.0625rem;
     font-weight: bold;
   }
   .page-service__texte {
-    font-size: 12px;
+    font-size: 1.5rem;
     font-weight: normal;
-    font-size: 1.35rem;
     top: 35%;
   }
   .page-service__btn {
@@ -614,7 +646,7 @@
     gap: 45px;
   }
   .services__titre {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: bold;
   }
   .services__no2 {
@@ -623,7 +655,7 @@
     padding: 45px;
   }
   .services p {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: normal;
   }
   .services__no1 img {
@@ -638,44 +670,54 @@
     width: 100%;
     min-width: 265px;
   }
-  .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 100%, rgba(0, 0, 0, 0.9) 100%);
-  }
-  .page-service__assos::before::before, .page-service__crr::before::before, .page-service__locataire::before::before, .page-service__bulettin::before::before, .page-service__infolettre::before::before, .page-service__guide::before::before, .page-service__congres::before::before, .page-service__memoire::before::before, .page-service__recherche::before::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%);
-    z-index: 1;
-  }
-  .page-service__titre {
+  .service-hero__titre {
     font-size: 7rem;
     font-weight: bold;
-    position: absolute;
-    bottom: 3%;
-    left: 3%;
-    max-width: 50%;
-    white-space: normal;
-    text-align: left;
   }
-  .page-service::before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 100%, rgba(0, 0, 0, 0.9) 100%);
+  .page-service {
+    width: 100%;
+  }
+  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
+    width: 70%;
+    height: 85%;
+    margin: 15% auto;
+  }
+  .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
+    content: "";
+    /* Ensure content is set */
+    position: absolute;
+    /* Required for positioning */
+    width: 100%;
+    /* Set width to 100% */
+    height: 100%;
+    /* Adjust height as needed */
+    top: 0;
+    left: 0;
+    /* Align to the left edge */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 100%, rgba(0, 0, 0, 0.25) 100%);
+    z-index: 1;
+    /* Adjust z-index if necessary */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s;
+    /* Smooth transition */
+  }
+  .page-service__assos:hover::before, .page-service__crr:hover::before, .page-service__locataire:hover::before, .page-service__bulettin:hover::before, .page-service__infolettre:hover::before, .page-service__guide:hover::before, .page-service__congres:hover::before, .page-service__memoire:hover::before, .page-service__recherche:hover::before {
+    opacity: 1;
+    /* Show on hover */
+  }
+  .page-service__titre {
+    font-size: 3.75rem;
+    font-weight: bold;
   }
   .page-service__nom {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: bold;
-    top: 18.5%;
   }
   .page-service__texte {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: normal;
-    top: 35%;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 25%;
   }
   .page-service__btn {
     margin: 0 auto;
@@ -687,24 +729,9 @@
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
-    bottom: 22.5%;
   }
   .page-service__btn:hover {
     background: #8bb08d;
-  }
-  .page-service {
-    position: relative;
-    background: repeating-linear-gradient(to bottom, #E6EAE4 0, #E6EAE4 85vh, #bdc3be 85vh, #bdc3be 170vh, #E6EAE4 170vh, #E6EAE4 255vh, #bdc3be 255vh, #bdc3be 340vh, #E6EAE4 340vh);
-  }
-  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
-    height: 85vh;
-    background-size: 50%;
-  }
-  .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
-  }
-  .page-service__assos:hover::before, .page-service__crr:hover::before, .page-service__locataire:hover::before, .page-service__bulettin:hover::before, .page-service__infolettre:hover::before, .page-service__guide:hover::before, .page-service__congres:hover::before, .page-service__memoire:hover::before, .page-service__recherche:hover::before {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%);
   }
 }
 /**------------------------------------------------ 375 px -------------------------------------------------------------*/
@@ -720,12 +747,12 @@
 .dons__titre {
   grid-column: span 4;
   margin: 20px;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
 }
 .dons__text {
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
 }
 .dons__image {
@@ -756,12 +783,12 @@
   }
   .dons__titre {
     margin: 20px;
-    font-size: 33px;
+    font-size: 2.0625rem;
     font-weight: bold;
     grid-column: span 4;
   }
   .dons__text {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: normal;
     grid-column: span 2;
     width: -moz-min-content;
@@ -799,11 +826,11 @@
     justify-items: center;
   }
   .dons__titre {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: bold;
   }
   .dons__text {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: normal;
     width: -moz-min-content;
     width: min-content;
@@ -1014,7 +1041,7 @@
   height: 150px;
 }
 .equipe__titre--petit {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   font-size: 15px;
 }

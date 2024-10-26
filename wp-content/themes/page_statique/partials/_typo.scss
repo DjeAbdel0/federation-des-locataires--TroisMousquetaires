@@ -1,73 +1,80 @@
+
+                               // 1 rem c'est 16px
 // Pour les p
 @mixin small-text {
-  font-size: 12px;
+  font-size: 0.75rem; // 12px
   font-weight: normal;
 }
 
+// Pour les p en gras
 @mixin small-text-bold {
-  font-size: 12px;
+  font-size: 0.75rem; // 12px
   font-weight: bold;
 }
+
 // Pour les mini titres
 @mixin small-capitals-bold {
-  font-size: 12px;
+  font-size: 0.75rem; // 12px
   font-weight: bold;
   text-transform: capitalize;
 }
+
 // Pour bold
 @mixin bold {
   font-weight: bold;
 }
-// Pour les gros titres
+
+// Pour les titres en gras
 @mixin small-title-bold {
-  font-size: 25px;
+  font-size: 1.5625rem; // 25px
   font-weight: bold;
 }
+
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 @mixin medium-text {
-  font-size: 24px;
+  font-size: 1.5rem; // 24px
   font-weight: normal;
 }
 
 @mixin medium-text-bold {
-  font-size: 24px;
+  font-size: 1.5rem; // 24px
   font-weight: bold;
 }
 
 @mixin medium-capitals-bold {
-  font-size: 24px;
+  font-size: 1.5rem; // 24px
   font-weight: bold;
   text-transform: capitalize;
 }
 
 @mixin medium-title-bold {
-  font-size: 33px;
+  font-size: 2.0625rem; // 33px
   font-weight: bold;
 }
 
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 @mixin big-text {
-  font-size: 36px;
+  font-size: 2.25rem; // 36px
   font-weight: normal;
 }
 
 @mixin big-text-bold {
-  font-size: 26px;
+  font-size: 1.625rem; // 26px
   font-weight: bold;
 }
 
 @mixin big-capitals-bold {
-  font-size: 42px;
+  font-size: 2.625rem; // 42px
   font-weight: bold;
   text-transform: capitalize;
 }
 
 @mixin big-title-bold {
-  font-size: 60px;
+  font-size: 3.75rem; // 60px
   font-weight: bold;
 }
 
 @mixin giant-title-bold {
-  font-size: 7rem;
+  font-size: 7rem; // 112px
   font-weight: bold;
 }

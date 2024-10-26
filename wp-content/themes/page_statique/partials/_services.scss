@@ -3,7 +3,9 @@
 @use "buttons";
 @use "typo";
 
-$servicesNumero: no1, no2, no3;
+$servicesNumero: no1,
+no2,
+no3;
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 /*-------------------- index.html -- Services*/
@@ -45,13 +47,42 @@ $servicesNumero: no1, no2, no3;
 }
 
 /*-------------------- page-service.html -------------------- */
+
+.service-hero {
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__titre {
+    width: 75%;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    @include typo.medium-title-bold;
+    z-index: 5;
+    color: colors.$blanc;
+  }
+}
+
 .page-service {
   color: white;
   text-align: center;
   width: 100%;
   position: relative;
 
-  
+
   &__assos,
   &__crr,
   &__locataire,
@@ -63,10 +94,10 @@ $servicesNumero: no1, no2, no3;
   &__recherche {
     width: 100%;
     height: auto;
-    background-size:contain;
+    background-size: contain;
     position: relative;
     background-repeat: no-repeat;
-    display: block; 
+    display: block;
 
     &::before {
       content: "";
@@ -76,14 +107,13 @@ $servicesNumero: no1, no2, no3;
       width: 100vw;
       height: 100%;
       margin: 0 auto;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.25) 100%,
-        rgba(0, 0, 0, 0.25) 100%
-      );
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.25) 100%,
+          rgba(0, 0, 0, 0.25) 100%);
       z-index: 1;
     }
   }
+
   &__assos img,
   &__crr img,
   &__locataire img,
@@ -92,13 +122,13 @@ $servicesNumero: no1, no2, no3;
   &__guide img,
   &__congres img,
   &__memoire img,
-  &__recherche img{
-    width: 100%; 
-    height: auto; 
-    object-fit: contain; 
+  &__recherche img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     position: relative;
-    display: block; 
-    margin: 0 auto; 
+    display: block;
+    margin: 0 auto;
   }
 
   &__titre {
@@ -118,7 +148,8 @@ $servicesNumero: no1, no2, no3;
   &__texte {
     @include typo.small-text;
     position: absolute;
-    top: 50%;
+    top: 40%;
+    margin: auto 10%;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 2;
@@ -137,8 +168,8 @@ $servicesNumero: no1, no2, no3;
     margin-top: 2%;
   }
 
-
 }
+
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
@@ -166,6 +197,12 @@ $servicesNumero: no1, no2, no3;
     }
   }
 
+  .service-hero {
+    &__titre {
+      @include typo.big-title-bold;
+    }
+  }
+
   .page-service {
     width: 100%;
 
@@ -178,8 +215,7 @@ $servicesNumero: no1, no2, no3;
     }
 
     &__texte {
-      @include typo.small-text;
-      font-size: 1.35rem;
+      @include typo.medium-text;
       top: 35%;
     }
 
@@ -219,8 +255,15 @@ $servicesNumero: no1, no2, no3;
     }
   }
 
+  .service-hero {
+    &__titre {
+      @include typo.giant-title-bold;
+    }
+  }
+  
   .page-service {
-    
+    width: 100%;
+
     &__assos,
     &__crr,
     &__locataire,
@@ -230,112 +273,56 @@ $servicesNumero: no1, no2, no3;
     &__congres,
     &__memoire,
     &__recherche {
-    
-      &::before {
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.9) 100%,
-          rgba(0, 0, 0, 0.9) 100%
-        );
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.3) 100%,
-            rgba(0, 0, 0, 0.3) 100%
-          );
-          z-index: 1;
-        }
-        
+      width: 70%;
+      height: 85%;
+      margin: 15% auto;
+
+      &::before {
+        content: '';
+        /* Ensure content is set */
+        position: absolute;
+        /* Required for positioning */
+        width: 100%;
+        /* Set width to 100% */
+        height: 100%;
+        /* Adjust height as needed */
+        top: 0;
+        left: 0;
+        /* Align to the left edge */
+        background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.25) 100%,
+            rgba(0, 0, 0, 0.25) 100%);
+        z-index: 1;
+        /* Adjust z-index if necessary */
+        opacity: 0;
+        /* Initially hidden */
+        transition: opacity 0.3s;
+        /* Smooth transition */
       }
+
+      &:hover::before {
+        opacity: 1;
+        /* Show on hover */
+      }
+
     }
 
     &__titre {
-      @include typo.giant-title-bold;
-      position: absolute;
-      bottom: 3%;
-      left: 3%;
-      max-width: 50%;
-      white-space: normal;
-      text-align: left;
-    }
-    &::before {
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9) 100%,
-        rgba(0, 0, 0, 0.9) 100%
-      );
+      @include typo.big-title-bold;
     }
 
     &__nom {
       @include typo.big-title-bold;
-      top: 18.5%;
     }
 
     &__texte {
       @include typo.big-text;
-      top: 35%;
-      width: 50%;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 25%;
     }
 
     &__btn {
       @include buttons.big-btn-general;
-      bottom: 22.5%;
-    }
-
-  }
-
-  .page-service {
-    position: relative;
-    background: repeating-linear-gradient(
-      to bottom,
-      colors.$alabaster 0,
-      colors.$alabaster 85vh,
-      colors.$bonbon_pale 85vh,
-      colors.$bonbon_pale 170vh,
-      colors.$alabaster 170vh,
-      colors.$alabaster 255vh,
-      colors.$bonbon_pale 255vh,
-      colors.$bonbon_pale 340vh,
-      colors.$alabaster 340vh
-    );
-
-    &__assos,
-    &__crr,
-    &__locataire,
-    &__bulettin,
-    &__infolettre,
-    &__guide,
-    &__congres,
-    &__memoire,
-    &__recherche {
-      height: 85vh;
-      background-size: 50%;
-
-      &::before {
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0) 100%,
-          rgba(0, 0, 0, 0) 100%
-        );
-      }
-
-      &:hover::before {
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.3) 100%, 
-            rgba(0, 0, 0, 0.3) 100%
-        );
-    }
-      
     }
   }
 }
