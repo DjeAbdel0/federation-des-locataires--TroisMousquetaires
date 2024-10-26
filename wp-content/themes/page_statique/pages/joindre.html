@@ -75,53 +75,83 @@
         </nav>
     </header>
 
-    <div class="page-joindre">
-        <div class="page-joindre__base">
-            <h1>Nous joindre</h1>
-            <p>Pour contacter la Fédération des locataires d'habitations à loyer modique du Québec (FLHLMQ).</p>
+
+
+    <body class="body-joindre">
+        <div class="page-joindre">
+            <div class="joindre-gauche">
+                <div class="joindre-gauche__base">
+                    <h1 class="joindre-gauche__base__h1">Nous joindre</h1>
+                    <p>Pour contacter la Fédération des locataires d'habitations à loyer modique du Québec (FLHLMQ).</p>
+                </div>
+                <div class="joindre-informations">
+                    <div class="joindre-informations__contact">
+                        <h1><i class="bi bi-telephone-fill"></i>(514) 521-1485</h1>
+
+                        <h1><i class="bi bi-printer-fill"></i>(514) 521-6444</h1>
+
+                        <h1><i class="bi bi-envelope-fill"></i>info@flhlmq.com</h1>
+                    
+                        <h1><i class="bi bi-geo-alt-fill large-icon"></i>2520, av. Lionel-Groulx, local 202
+                                Montréal, (Québec)
+                                H3J 1J8</h1>
+            
+                        <h1><i class="bi bi-facebook"></i><a href="https://www.facebook.com/flhlmq/?locale=fr_CA" target="_blank">Visiter la page</a></h1>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="joindre-droit">
+                <div class="joindre-formulaire">
+                    <form class="joindre-formulaire__form" method="post">
+                        <h1 class="joindre-formulaire__titre">Envoyer nous un message</h1>
+                        <div>
+                            <input class="joindre-formulaire__nom" type="text" id="nom" name="nom" required
+                                placeholder="nom">
+                        </div>
+                        <div>
+                            <input class="joindre-formulaire__email" type="email" id="email" name="email" required
+                                placeholder="email">
+                        </div>
+                        <div>
+                            <textarea class="joindre-formulaire__message" id="message" name="message" rows="4" required
+                                placeholder="message"></textarea>
+                        </div>
+                        <div>
+                            <button class="joindre-formulaire__btn" type="submit">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="joindre-informations">
-            <div class="joindre-informations__telephone">
-                <h1><i class="bi bi-telephone-fill"></i></h1>
-                <p> (514) 521-1485 <br> 1-(800)566-9662</p>
-            </div>
-            <div class="joindre-informations__telecopieur">
-                <h1><i class="bi bi-printer-fill"></i></h1>
-                <p> (514) 521-6444</p>
-            </div>
-
-
-            <div class="joindre-informations__email">
-                <h1><i class="bi bi-envelope-fill"></i></h1>
-                <p>info@flhlmq.com</p>
-            </div>
-            <div class="joindre-informations__facebook">
-                <h1><i class="bi bi-facebook"></i></h1>
-                <a href="https://www.facebook.com/flhlmq/?locale=fr_CA" target="_blank">Visiter la page</a>
-            </div>
-            <div class="joindre-informations__adresse">
-                <h1><i class="bi bi-geo-alt-fill large-icon"></i></h1>
-                <p> 2520, av. Lionel-Groulx, local 202
-                    Montréal, (Québec)
-                    H3J 1J8</p>
-            </div>
-            <div class="joindre-informations__administration">
-                <p class=" joindre-informations__gras">Organisateur communautaire : </p>
-                <a class="joindre-informations__noms"  href="mailto:robert.pilon@flhlmq.com">Robert Pilon</a>
-                <p class="joindre-informations__gras">Coordonnatrice : </p>
-                <a class="joindre-informations__noms"  href="mailto:patricia.viannay@flhlmq.com">Patricia Viannay</a>
-
-                <p class="joindre-informations__gras">Directrice administrative : </p>
-                <a class="joindre-informations__noms"  href="mailto:elisabeth.pham@flhlmq.com">Élisabeth Pham</a>
-
-                <p class="joindre-informations__gras">Organisatrice communautaire : </p>
-                <a class="joindre-informations__noms" href="anik.leroux@flhlmq.com">Anik Leroux</a>
-            </div>
-        </div>
-    </div>
-
-    <body>
-
     </body>
+
+    <!-- Pied de page-->
+    <footer>
+        <div class="footer__grid">
+            <img class="footer__logo" src="../assets/medias/logo/Logo_flhlmq.jpg" />
+            <div class="footer__lien">
+                <a>Nouvelles</a>
+                <a>Services</a>
+                <a>Équipe</a>
+                <a>FAQ</a>
+                <a>Nous Joindre</a>
+                <a>À propos</a>
+            </div>
+            <a class="footer__link"
+                href="https://www.google.ca/maps/place/F%C3%A9d%C3%A9ration+des+Locataires+d'Habitations+A+loyer+modique+du+Qu%C3%A9bec/@45.4840974,-73.5796534,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a70a26b6f7b:0x4dc61d8e3c023eb2!8m2!3d45.4840974!4d-73.5770785!16s%2Fg%2F1vwlnrln?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D">
+                <p class="footer__adresse">2520 Av. Lionel-Groulx, Montréal, QC H3J 1J8</p>
+            </a>
+            <div class="footer__reseaux">
+                <a href="https://www.facebook.com/flhlmq/"><i class="bi bi-facebook"></i></a>
+                <i class="bi bi-twitter"></i>
+                <a href="https://www.youtube.com/@robertpilon547"><i class="bi bi-youtube"></i></a>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-person"></i>
+            </div>
+        </div>
+    </footer>
 
 </html>

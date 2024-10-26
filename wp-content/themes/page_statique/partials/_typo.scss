@@ -1,20 +1,19 @@
-
-                               // 1 rem c'est 16px
+// 1 rem c'est 16px
 // Pour les p
 @mixin small-text {
-  font-size: 0.75rem; // 12px
+  font-size: 1rem; // 16px
   font-weight: normal;
 }
 
 // Pour les p en gras
 @mixin small-text-bold {
-  font-size: 0.75rem; // 12px
+  font-size: 1rem; // 16px
   font-weight: bold;
 }
 
 // Pour les mini titres
 @mixin small-capitals-bold {
-  font-size: 0.75rem; // 12px
+  font-size: 1rem; // 16px
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -22,6 +21,11 @@
 // Pour bold
 @mixin bold {
   font-weight: bold;
+}
+
+// Pour les titres
+@mixin small-title {
+  font-size: 1.5625rem; // 25px
 }
 
 // Pour les titres en gras

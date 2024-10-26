@@ -4,110 +4,150 @@
 @use "buttons";
 @use "typo";
 
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 // textes d'introduction a la page
-.page-joindre {
+
+i{
+    margin-right: 3rem; 
+}
+.joindre-gauche {
     &__base {
+        @include typo.small-capitals-bold;
         width: 70%;
         text-align: center;
-        margin: 0 auto;
-        margin-bottom: 5%;
-        
+        margin: 5% auto;
+
+        &__h1 {
+            @include typo.small-title-bold;
+        }
     }
 }
 
 .joindre-informations {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: none;
+}
+
+.joindre-formulaire {
     text-align: center;
-    gap: 1rem;
+    width: auto;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: colors.$blanc;
+    border-radius: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin: 15% 10%;
 
-    &__gras {
-        font-size: 16px;
-        font-weight: bold;
+    &__titre {
+        @include typo.small-title-bold;
+        width: 70%;
+        margin: 0 auto;
     }
 
-    /*--- Centrer les éléments---*/
-    &__telephone p,
-    &__telephone h1,
-    &__telecopieur p,
-    &__telecopieur h1,
-    &__email p,
-    &__email h1,
-    &__facebook p,
-    &__facebook h1,
-    &__adresse p,
-    &__adresse h1,
-    &__administration p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 5%;
-    }
-
-    &__telephone,
-    &__telephone,
-    &__telecopieur,
-    &__telecopieur,
-    &__email,
-    &__email,
-    &__facebook,
-    &__facebook,
-    &__adresse,
-    &__adresse,
-    &__administration {
+    &__form {
+        @include typo.small-title-bold;
         width: 100%;
         margin: 0 auto;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
-    &__telephone {
-        grid-column: 1;
-        grid-row: 1;
-
+    &__nom,
+    &__email,
+    &__message {
+        width: 70%;
+        margin: 2% auto;
+        border-radius: 5%;
     }
 
-    &__telecopieur {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    &__email {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    &__facebook {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    &__adresse {
-        width: 100%;
-        grid-column: 1 / -1;
-        grid-row: 3;
-
-    }
-
-    &__administration {
-        grid-column: 1 / -1;
-        grid-row: 4;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__noms {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &__btn {
+        @include buttons.small-btn-general;
+        margin-bottom: 5%;
     }
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {}
+@media screen and (min-width: 765px) {
+    .joindre-gauche {
+        &__base {
+            @include typo.medium-capitals-bold;
+
+            &__h1 {
+                @include typo.big-capitals-bold;
+            }
+        }
+    }
+
+    .joindre-formulaire {
+        &__titre {
+            @include typo.medium-title-bold;
+            margin-bottom: 5%;
+        }
+
+        &__form {
+            @include typo.medium-title-bold;
+        }
+
+        &__btn {
+            @include buttons.medium-btn-general;
+            margin-bottom: 10%;
+        }
+    }
+}
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 1400px) {
+
+    .page-joindre{
+        display: flex;
+    }
+
+    .joindre-gauche {
+        width: 50%;
+        display: grid;
+    }
+
+    .joindre-informations {
+        display: inline;
+        margin: 0 auto;
+        width: 70%;
+       
+        &__contact {
+            display: grid;
+        }
+
+        &__contact h1{
+            margin: 5% auto;
+            @include typo.medium-title-bold;
+        }
+    }
+
+    .joindre-droit {
+        width: 50%;
+        outline: dashed 2px red;
+
+        &__base {
+            @include typo.medium-capitals-bold;
+
+            &__h1 {
+                @include typo.medium-title-bold;
+            }
+        }
+    }
+
+    .joindre-formulaire {
+        &__titre {
+            @include typo.medium-title-bold;
+        }
+
+        &__form {
+            @include typo.medium-title-bold;
+        }
+
+        &__btn {
+            @include buttons.medium-btn-general;
+        }
+    }
+
+}

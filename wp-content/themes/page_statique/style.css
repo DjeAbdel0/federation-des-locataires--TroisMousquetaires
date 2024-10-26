@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -106,7 +106,7 @@
 .hero__content__text {
   color: white;
   width: 30%;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   font-size: 15px;
 }
@@ -455,7 +455,7 @@
   padding: 20px;
 }
 .services p {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 .services__no1 img {
@@ -548,7 +548,7 @@
   z-index: 1;
 }
 .page-service__texte {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
   position: absolute;
   top: 40%;
@@ -752,7 +752,7 @@
 }
 .dons__text {
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
 }
 .dons__image {
@@ -1286,73 +1286,168 @@ footer {
   }
 }
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-.page-joindre__base {
+i {
+  margin-right: 3rem;
+}
+
+.joindre-gauche__base {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
   width: 70%;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 5%;
+  margin: 5% auto;
+}
+.joindre-gauche__base__h1 {
+  font-size: 1.5625rem;
+  font-weight: bold;
 }
 
 .joindre-informations {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  display: none;
+}
+
+.joindre-formulaire {
   text-align: center;
-  gap: 1rem;
-  /*--- Centrer les éléments---*/
-}
-.joindre-informations__gras {
-  font-size: 16px;
-  font-weight: bold;
-}
-.joindre-informations__telephone p, .joindre-informations__telephone h1, .joindre-informations__telecopieur p, .joindre-informations__telecopieur h1, .joindre-informations__email p, .joindre-informations__email h1, .joindre-informations__facebook p, .joindre-informations__facebook h1, .joindre-informations__adresse p, .joindre-informations__adresse h1, .joindre-informations__administration p {
+  width: auto;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: #ffffff;
+  border-radius: 12%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 5%;
+  margin: 15% 10%;
 }
-.joindre-informations__telephone, .joindre-informations__telephone, .joindre-informations__telecopieur, .joindre-informations__telecopieur, .joindre-informations__email, .joindre-informations__email, .joindre-informations__facebook, .joindre-informations__facebook, .joindre-informations__adresse, .joindre-informations__adresse, .joindre-informations__administration {
+.joindre-formulaire__titre {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  width: 70%;
+  margin: 0 auto;
+}
+.joindre-formulaire__form {
+  font-size: 1.5625rem;
+  font-weight: bold;
   width: 100%;
   margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
-.joindre-informations__telephone {
-  grid-column: 1;
-  grid-row: 1;
+.joindre-formulaire__nom, .joindre-formulaire__email, .joindre-formulaire__message {
+  width: 70%;
+  margin: 2% auto;
+  border-radius: 5%;
 }
-.joindre-informations__telecopieur {
-  grid-column: 2;
-  grid-row: 1;
+.joindre-formulaire__btn {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-bottom: 5%;
 }
-.joindre-informations__email {
-  grid-column: 1;
-  grid-row: 2;
-}
-.joindre-informations__facebook {
-  grid-column: 2;
-  grid-row: 2;
-}
-.joindre-informations__adresse {
-  width: 100%;
-  grid-column: 1/-1;
-  grid-row: 3;
-}
-.joindre-informations__administration {
-  grid-column: 1/-1;
-  grid-row: 4;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-.joindre-informations__noms {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.joindre-formulaire__btn:hover {
+  background: #8bb08d;
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+  .joindre-gauche__base {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .joindre-gauche__base__h1 {
+    font-size: 2.625rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .joindre-formulaire__titre {
+    font-size: 2.0625rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+  .joindre-formulaire__form {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .joindre-formulaire__btn {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 6px 13px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 10%;
+  }
+  .joindre-formulaire__btn:hover {
+    background: #8bb08d;
+  }
+}
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+  .page-joindre {
+    display: flex;
+  }
+  .joindre-gauche {
+    width: 50%;
+    display: grid;
+  }
+  .joindre-informations {
+    display: inline;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .joindre-informations__contact {
+    display: grid;
+  }
+  .joindre-informations__contact h1 {
+    margin: 5% auto;
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .joindre-droit {
+    width: 50%;
+    outline: dashed 2px red;
+  }
+  .joindre-droit__base {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .joindre-droit__base__h1 {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .joindre-formulaire__titre {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .joindre-formulaire__form {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .joindre-formulaire__btn {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 6px 13px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .joindre-formulaire__btn:hover {
+    background: #8bb08d;
+  }
+}
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
