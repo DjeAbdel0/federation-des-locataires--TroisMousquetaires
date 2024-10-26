@@ -1,0 +1,113 @@
+//Styles pour la page joindre.html
+
+@use "colors";
+@use "buttons";
+@use "typo";
+
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+// textes d'introduction a la page
+.page-joindre {
+    &__base {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 5%;
+        
+    }
+}
+
+.joindre-informations {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    gap: 1rem;
+
+    &__gras {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /*--- Centrer les éléments---*/
+    &__telephone p,
+    &__telephone h1,
+    &__telecopieur p,
+    &__telecopieur h1,
+    &__email p,
+    &__email h1,
+    &__facebook p,
+    &__facebook h1,
+    &__adresse p,
+    &__adresse h1,
+    &__administration p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5%;
+    }
+
+    &__telephone,
+    &__telephone,
+    &__telecopieur,
+    &__telecopieur,
+    &__email,
+    &__email,
+    &__facebook,
+    &__facebook,
+    &__adresse,
+    &__adresse,
+    &__administration {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    &__telephone {
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    &__telecopieur {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    &__email {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    &__facebook {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    &__adresse {
+        width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 3;
+
+    }
+
+    &__administration {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__noms {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {}
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {}

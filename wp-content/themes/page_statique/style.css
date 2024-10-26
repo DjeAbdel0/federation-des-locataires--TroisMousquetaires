@@ -1285,6 +1285,74 @@ footer {
     margin-left: 220px;
   }
 }
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+.page-joindre__base {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.joindre-informations {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 1rem;
+  /*--- Centrer les éléments---*/
+}
+.joindre-informations__gras {
+  font-size: 16px;
+  font-weight: bold;
+}
+.joindre-informations__telephone p, .joindre-informations__telephone h1, .joindre-informations__telecopieur p, .joindre-informations__telecopieur h1, .joindre-informations__email p, .joindre-informations__email h1, .joindre-informations__facebook p, .joindre-informations__facebook h1, .joindre-informations__adresse p, .joindre-informations__adresse h1, .joindre-informations__administration p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+.joindre-informations__telephone, .joindre-informations__telephone, .joindre-informations__telecopieur, .joindre-informations__telecopieur, .joindre-informations__email, .joindre-informations__email, .joindre-informations__facebook, .joindre-informations__facebook, .joindre-informations__adresse, .joindre-informations__adresse, .joindre-informations__administration {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.joindre-informations__telephone {
+  grid-column: 1;
+  grid-row: 1;
+}
+.joindre-informations__telecopieur {
+  grid-column: 2;
+  grid-row: 1;
+}
+.joindre-informations__email {
+  grid-column: 1;
+  grid-row: 2;
+}
+.joindre-informations__facebook {
+  grid-column: 2;
+  grid-row: 2;
+}
+.joindre-informations__adresse {
+  width: 100%;
+  grid-column: 1/-1;
+  grid-row: 3;
+}
+.joindre-informations__administration {
+  grid-column: 1/-1;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.joindre-informations__noms {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
