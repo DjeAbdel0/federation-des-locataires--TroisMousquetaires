@@ -1398,6 +1398,8 @@ i {
   .joindre-gauche {
     width: 50%;
     display: grid;
+    position: absolute;
+    right: 0;
   }
   .joindre-informations {
     display: inline;
@@ -1412,9 +1414,17 @@ i {
     font-size: 2.0625rem;
     font-weight: bold;
   }
+  .joindre-informations__adresse {
+    width: 70%;
+  }
+  .joindre-informations__facebook {
+    display: none;
+  }
+  i {
+    margin: 45%;
+  }
   .joindre-droit {
-    width: 50%;
-    outline: dashed 2px red;
+    width: 70%;
   }
   .joindre-droit__base {
     font-size: 1.5rem;
@@ -1424,6 +1434,11 @@ i {
   .joindre-droit__base__h1 {
     font-size: 2.0625rem;
     font-weight: bold;
+  }
+  .joindre-formulaire {
+    width: 70%;
+    height: auto;
+    padding-bottom: 5%;
   }
   .joindre-formulaire__titre {
     font-size: 2.0625rem;
@@ -1448,6 +1463,39 @@ i {
     background: #8bb08d;
   }
 }
+.accordeon {
+  max-width: 600px;
+  margin: 10px auto;
+  width: 90%;
+  font-family: "Raleway", sans-serif;
+  background: #f4f4f4;
+}
+.accordeon__titre {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem 1.5rem;
+  background: #5b5f97;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.accordeon__titre:hover {
+  background: #484b77;
+}
+.accordeon__contenue {
+  display: none;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  color: red;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 500;
+}
+.accordeon__open {
+  display: block;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;

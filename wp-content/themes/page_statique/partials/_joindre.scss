@@ -11,6 +11,7 @@
 i{
     margin-right: 3rem; 
 }
+
 .joindre-gauche {
     &__base {
         @include typo.small-capitals-bold;
@@ -106,6 +107,8 @@ i{
     .joindre-gauche {
         width: 50%;
         display: grid;
+        position: absolute;
+        right: 0;
     }
 
     .joindre-informations {
@@ -121,11 +124,24 @@ i{
             margin: 5% auto;
             @include typo.medium-title-bold;
         }
+
+        &__adresse{
+            width: 70%;
+        }
+
+        &__facebook{
+            display: none;
+        }
+        
     }
 
+    i{
+        margin: 45%;
+    }
+    
+
     .joindre-droit {
-        width: 50%;
-        outline: dashed 2px red;
+        width: 70%;
 
         &__base {
             @include typo.medium-capitals-bold;
@@ -137,6 +153,9 @@ i{
     }
 
     .joindre-formulaire {
+        width: 70%;
+        height: auto;
+        padding-bottom: 5%;
         &__titre {
             @include typo.medium-title-bold;
         }

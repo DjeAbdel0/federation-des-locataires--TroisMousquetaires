@@ -22,7 +22,16 @@ serviceDiv.forEach((element, index) => {
   });
 });
 
+$(document).ready(function() {
+  var $accordeonTitre = $(".accordeon__titre");
+  var accordeonContenue = ".accordeon__contenue";
 
+  $accordeonTitre.click(function () {
+      $(this).next(accordeonContenue).slideToggle();
+      $(this).parent().siblings().children(accordeonContenue).slideUp();
+      return false;
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".hero__item");

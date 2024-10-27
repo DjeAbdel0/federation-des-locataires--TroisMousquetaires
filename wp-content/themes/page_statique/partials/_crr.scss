@@ -1,0 +1,42 @@
+@use "colors";
+@use "buttons";
+@use "typo";
+
+
+
+.accordeon {
+    max-width: 600px;
+    margin: 10px auto;
+    width: 90%;
+    font-family: "Raleway", sans-serif;
+    background: #f4f4f4;
+
+    &__titre {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem 1.5rem;
+        background: #5b5f97;
+        color: white;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #484b77;
+        }
+    }
+
+    &__contenue {
+        display: none;
+        padding: 1rem 1.5rem 2rem 1.5rem;
+        color: red;
+        line-height: 1.6;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__open {
+        display: block;
+    }
+}
