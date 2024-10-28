@@ -1285,6 +1285,10 @@ footer {
     margin-left: 220px;
   }
 }
+.body-joindre {
+  background-color: #E6EAE4;
+}
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 i {
   margin-right: 3rem;
@@ -1311,8 +1315,7 @@ i {
   text-align: center;
   width: auto;
   height: auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
   border-radius: 12%;
   display: flex;
   align-items: center;
@@ -1351,6 +1354,11 @@ i {
 }
 .joindre-formulaire__btn:hover {
   background: #8bb08d;
+}
+
+#nom, #email, #message {
+  border: 0px solid black;
+  border-radius: 0;
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
