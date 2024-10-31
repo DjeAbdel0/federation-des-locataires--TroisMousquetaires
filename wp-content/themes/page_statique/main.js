@@ -26,11 +26,9 @@ serviceDiv.forEach((element, index) => {
 let scroll_tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".crr_titre",
-      start: "top center",
-      // pin: true,
+      start: "top top",
       scrub: true,
-      end: "+=300",
-      // markers: true,
+      end: "bottom bottom",
     },
   }),
   roles = [...document.querySelectorAll(".role")];
@@ -42,7 +40,7 @@ scroll_tl.to(roles, {
     start: "center center",
     pin: true,
     scrub: 1,
-    snap: 1 / (roles.length - 1),
+    snap: 2 / (roles.length - 1),
     // base vertical scrolling on how wide the container is so it feels more natural.
     // end: () => `+=${smallrolesContainer.offsetWidth}`
     end: () => `+=4320`,

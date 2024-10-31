@@ -85,7 +85,8 @@
 .hero__items .hero__item .hero__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero__content {
   position: absolute;
@@ -214,7 +215,8 @@
   transform: translate(-50%);
   height: 150px;
   width: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
 }
 .actualite__zoneTexte {
@@ -341,11 +343,13 @@
   }
   .actualite__conteneurImg {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .actualite__image {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .actualite__titre--petit {
@@ -479,7 +483,8 @@
 .service-hero__img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -523,7 +528,8 @@
 .page-service__assos img, .page-service__crr img, .page-service__locataire img, .page-service__bulettin img, .page-service__infolettre img, .page-service__guide img, .page-service__congres img, .page-service__memoire img, .page-service__recherche img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -785,6 +791,7 @@
     font-size: 1.5rem;
     font-weight: normal;
     grid-column: span 2;
+    width: -moz-min-content;
     width: min-content;
     min-width: 350px;
     margin: 0 auto;
@@ -793,6 +800,7 @@
     grid-column: span 2;
     width: 100%;
     height: auto;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 250px;
   }
@@ -824,8 +832,10 @@
   .dons__text {
     font-size: 2.25rem;
     font-weight: normal;
+    width: -moz-min-content;
     width: min-content;
     min-width: 650px;
+    height: -moz-fit-content;
     height: fit-content;
     grid-column: span 2;
     margin-right: 150px;
@@ -833,6 +843,7 @@
   }
   .dons__image {
     grid-column: span 2;
+    width: -moz-min-content;
     width: min-content;
     min-width: 750px;
     height: auto;
@@ -1018,7 +1029,8 @@
   transform: translate(-50%);
   height: 150px;
   width: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
 }
 .equipe__zoneTexte {
@@ -1143,11 +1155,13 @@
   }
   .equipe__conteneurImg {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .equipe__image {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .equipe__titre--petit {
@@ -1490,8 +1504,9 @@ i {
 
 .role {
   display: flex;
-  flex-direction: row;
-  height: 40vh;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   flex: 1;
   justify-content: space-between;
   align-items: center;
@@ -1502,12 +1517,15 @@ i {
 .role__p {
   color: red;
   flex-wrap: wrap;
-  width: 50%;
+  width: 100%;
+  height: 50%;
   font-size: 24px;
   line-height: 1.5rem;
+  outline: green dashed 2px;
 }
 
 .role__titre {
+  outline: yellow dashed 2px;
   color: red;
   flex-wrap: wrap;
   font-size: 24px;
@@ -1518,8 +1536,12 @@ i {
   width: 25vw;
   height: 25vh;
   margin: 1em;
-  flex: left;
+  float: left;
   outline: yellow dashed 2px;
+}
+
+.role__fin {
+  margin-right: 1500px;
 }
 
 :root,
@@ -1790,9 +1812,11 @@ p {
 }
 
 abbr[title] {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 address {
