@@ -22,17 +22,34 @@ serviceDiv.forEach((element, index) => {
   });
 });
 
-$(document).ready(function() {
-  var $accordeonTitre = $(".accordeon__titre");
-  var accordeonContenue = ".accordeon__contenue";
-
-  $accordeonTitre.click(function () {
-      $(this).next(accordeonContenue).slideToggle();
-      $(this).parent().siblings().children(accordeonContenue).slideUp();
-      return false;
-  });
+//Anim Gsap
+let scroll_tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".crr_titre",
+      start: "top center",
+      // pin: true,
+      scrub: true,
+      end: "+=300",
+      // markers: true,
+    },
+  }),
+  roles = [...document.querySelectorAll(".role")];
+  
+scroll_tl.to(roles, {
+  xPercent: -100 * (roles.length - 1),
+  scrollTrigger: {
+    trigger: ".crr_contenue",
+    start: "center center",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (roles.length - 1),
+    // base vertical scrolling on how wide the container is so it feels more natural.
+    // end: () => `+=${smallrolesContainer.offsetWidth}`
+    end: () => `+=4320`,
+  },
 });
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
   const items = document.querySelectorAll(".hero__item");
   let currentIndex = 0;
@@ -51,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
     items[currentIndex].classList.add("active");
   }, 3000); // Change d'image toutes les 3 secondes
 });
+*/
