@@ -1259,7 +1259,7 @@ footer {
 }
 @media screen and (min-width: 1400px) {
   footer {
-    font-size: 20px;
+    font-size: 15px;
   }
   .footer__logo {
     height: 120px;
@@ -1283,6 +1283,9 @@ footer {
   .footer__reseaux {
     margin-top: 65px;
     margin-left: 220px;
+  }
+  .footer__reseaux i {
+    padding: 0px;
   }
 }
 .body-joindre {
@@ -3900,20 +3903,10 @@ h3 {
   transform: rotate(45deg) translate(26px, -2px);
 }
 
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: inherit;
-}
-*:before, *:after {
-  box-sizing: inherit;
-}
-
 .pdp .pdp-container {
-  max-width: 1200px;
+  background-color: #97C399;
+  padding-top: 50px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }

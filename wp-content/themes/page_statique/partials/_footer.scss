@@ -102,7 +102,7 @@ footer {
 
   @media screen and (min-width: 1400px) {
     footer {
-      font-size: 20px;
+      font-size: 15px;
     }
   
     .footer {
@@ -133,6 +133,10 @@ footer {
       &__reseaux {
         margin-top: 65px;
         margin-left: 220px;
+      }
+
+      &__reseaux i {
+        padding: 0px;
       }
   }
 }  
