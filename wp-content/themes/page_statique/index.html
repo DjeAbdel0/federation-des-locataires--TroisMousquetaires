@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
 
   <link rel="stylesheet" href="style.css" />
   <title>Index</title>
 </head>
 
 <body>
+
   <!--Section Bannière-->
   <section class="banniere">
     <div class="bannière__contenu">
@@ -21,80 +23,32 @@
   </section>
   <!--Fin Section Bannière-->
 
-  <header>
-    <!-- NavBar Boostrap-->
-    <nav class="navbar navbar-expand-md navbar-light">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="./index.html">
-          <img class="logo__header" src="./assets/medias/logo/Logo_figma.png"  class="d-inline-block align-top" alt="logo_Acceuil"  href="#"/>
-        </a>
+  <!--Barre Nav-->
+  
+  <!--Fin Barre Nav-->
 
-        <!-- Bouton menu burger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile_menu"
-          aria-controls="mobile_menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
- 
-        <!-- Menu burger -->
-        <div class="collapse navbar-collapse" id="mobile_menu">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nouvelles</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Équipe</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Nous joindre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">À propos</a>
-            </li>
-          </ul>
 
-          <!-- Barre de recherche -->
-          <div class="container">
-            <div class="search-box">
-              <input type="text" />
-              <span></span>
-            </div>
-          </div>
 
-          <!-- Icon -->
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-person-fill"></i></a>
-            </li>
-          </ul>
-        </div>
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__content__title">Fédération des locataires d’habitations à loyer modique du Québec</h1>
+      <p class="hero__content__text">La voix des locataires de HLM</p>
+    </div>
+    <div class="hero__items">
+      <div class="hero__item">
+        <img src="./assets/medias/hero/hero_01.jpeg" alt="Slide 1" class="hero__image">
       </div>
-    </nav>
-  </header>
-
-
-<!-- Section Hero -->
-<section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__content__title">Fédération des locataires d’habitations à loyer modique du Québec</h1>
-    <p class="hero__content__text">La voix des locataires de HLM</p>
-  </div>
-  <div class="hero__items">
-    <div class="hero__item">
-      <img src="./assets/medias/hero/hero_01.jpeg" alt="Slide 1" class="hero__image">
+      <div class="hero__item">
+        <img src="./assets/medias/hero/hero_02.jpeg" alt="Slide 2" class="hero__image">
+      </div>
+      <div class="hero__item">
+        <img src="./assets/medias/hero/hero_03.jpeg" alt="Slide 3" class="hero__image">
+      </div>
+      <!-- Add more slides as needed -->
     </div>
-    <div class="hero__item">
-      <img src="./assets/medias/hero/hero_02.jpeg" alt="Slide 2" class="hero__image">
-    </div>
-    <div class="hero__item">
-      <img src="./assets/medias/hero/hero_03.jpeg" alt="Slide 3" class="hero__image">
-    </div>
-    <!-- Add more slides as needed -->
-  </div>
-</section>
-<!-- FIN Section Hero -->
+  </section>
+  <!-- FIN Section Hero -->
 
 
 
@@ -103,9 +57,9 @@
 
   <!-- Section Actualités -->
   <section class="actualite">
-        <!-- Titre section -->
+    <!-- Titre section -->
     <h2 class="actualite__titre">Dernières actualités</h2>
-          <!-- Div englobant les cartes -->
+    <!-- Div englobant les cartes -->
     <div class="actualite__cartes">
       <!-- Carte 1 -->
       <div class="actualite__carte">
@@ -117,7 +71,7 @@
           <div class="actualite__text">Les offices ne doivent pas dépendre des autres pour remplir leur mission..</div>
           <div class="actualite__footer">Publié le : 10 septembre, 2024</div>
         </div>
-      </div>  
+      </div>
       <!-- Carte 2 -->
       <div class="actualite__carte">
         <div class="actualite__conteneurImg">
@@ -128,7 +82,7 @@
           <div class="actualite__text">La liste explose de 200-300 à 454 personnes en attente.</div>
           <div class="actualite__footer">Publié le : 3 septembre, 2024</div>
         </div>
-      </div> 
+      </div>
       <!-- Carte 3 -->
       <div class="actualite__carte">
         <div class="actualite__conteneurImg">
@@ -149,27 +103,30 @@
 
 
   <!--Section Témoignages-->
-    <section class="temoins">
-      <h2 class="temoins__titre">Témoignages</h2>
-      <div class="temoins__carte">
-        <img src="./assets/medias/temoins/temoignage_01.jpg" class="temoins__img temoins__1">
-        <p class="temoins__nom temoins__nom-1">Jean Laroche, Québec</p>
-        <p class="temoins__text temoins__text-1">"Grâce à la Fédération des locataires, j'ai enfin pu comprendre mes droits en
-          tant que locataire en HLM. Ils m'ont aidé à me défendre face à des injustices et à améliorer mes conditions de
-          vie. Leur soutien a changé ma vie pour le mieux."</p>
-        <img src="./assets/medias/temoins/temoignage_02.jpg" class="temoins__img temoins__2">
-        <p class="temoins__nom temoins__nom-2">Fatima Amoura, Laval</p>
-        <p class="temoins__text temoins__text-2">"Quand notre immeuble a eu des problèmes d'entretien, je ne savais pas vers qui
-          me tourner. La Fédération des locataires a été là pour nous. Ils ont organisé une rencontre avec les autorités
-          responsables, et nous avons obtenu les réparations nécessaires. Je me sens enfin en sécurité chez moi."</p>
-        <img src="./assets/medias/temoins/temoignage_03.jpg" class="temoins__img temoins__3">
-        <p class="temoins__nom temoins__nom-3">Sylvie Gaultier, Montréal</p>
-        <p class="temoins__text temoins__text-3">"Être en HLM peut être stressant, surtout quand on est confronté à des hausses de
-          loyer ou à des règles difficiles à comprendre. La Fédération m'a apporté des informations claires et m'a
-          guidée à travers le processus. Je me sens mieux outillée et moins seule grâce à eux."</p>
-        <button class="temoins__btn">Voir Plus</button>
-      </div>
-    </section>
+  <section class="temoins">
+    <h2 class="temoins__titre">Témoignages</h2>
+    <div class="temoins__carte">
+      <img src="./assets/medias/temoins/temoignage_01.jpg" class="temoins__img temoins__1">
+      <p class="temoins__nom temoins__nom-1">Jean Laroche, Québec</p>
+      <p class="temoins__text temoins__text-1">"Grâce à la Fédération des locataires, j'ai enfin pu comprendre mes
+        droits en
+        tant que locataire en HLM. Ils m'ont aidé à me défendre face à des injustices et à améliorer mes conditions de
+        vie. Leur soutien a changé ma vie pour le mieux."</p>
+      <img src="./assets/medias/temoins/temoignage_02.jpg" class="temoins__img temoins__2">
+      <p class="temoins__nom temoins__nom-2">Fatima Amoura, Laval</p>
+      <p class="temoins__text temoins__text-2">"Quand notre immeuble a eu des problèmes d'entretien, je ne savais pas
+        vers qui
+        me tourner. La Fédération des locataires a été là pour nous. Ils ont organisé une rencontre avec les autorités
+        responsables, et nous avons obtenu les réparations nécessaires. Je me sens enfin en sécurité chez moi."</p>
+      <img src="./assets/medias/temoins/temoignage_03.jpg" class="temoins__img temoins__3">
+      <p class="temoins__nom temoins__nom-3">Sylvie Gaultier, Montréal</p>
+      <p class="temoins__text temoins__text-3">"Être en HLM peut être stressant, surtout quand on est confronté à des
+        hausses de
+        loyer ou à des règles difficiles à comprendre. La Fédération m'a apporté des informations claires et m'a
+        guidée à travers le processus. Je me sens mieux outillée et moins seule grâce à eux."</p>
+      <button class="temoins__btn">Voir Plus</button>
+    </div>
+  </section>
   <!--Fin Section Témoignages-->
 
   <!--Section Services-->
@@ -190,7 +147,10 @@
       </div>
       <div class="services__no3">
         <p>CRR</p>
-        <img src="./assets/Icons/Lease.png">
+        <a href="./pages/service_CRR.html">
+          <img src="./assets/Icons/Lease.png">
+        </a>
+
       </div>
     </section>
   </div>
@@ -209,7 +169,7 @@
         <button class="dons__btn">Donner</button>
       </div>
 
-      <img class="dons__image" id="dons__image" src="./assets/medias/dons/donnations_maison.jpg">
+      <img class="dons__image" id="dons__image" src="./assets/medias/dons/maison_dons.jpg">
 
     </section>
   </div>
@@ -229,7 +189,10 @@
         <a>Nous Joindre</a>
         <a>À propos</a>
       </div>
-      <a class="footer__link" href="https://www.google.ca/maps/place/F%C3%A9d%C3%A9ration+des+Locataires+d'Habitations+A+loyer+modique+du+Qu%C3%A9bec/@45.4840974,-73.5796534,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a70a26b6f7b:0x4dc61d8e3c023eb2!8m2!3d45.4840974!4d-73.5770785!16s%2Fg%2F1vwlnrln?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"><p class="footer__adresse">2520 Av. Lionel-Groulx, Montréal, QC H3J 1J8</p></a>
+      <a class="footer__link"
+        href="https://www.google.ca/maps/place/F%C3%A9d%C3%A9ration+des+Locataires+d'Habitations+A+loyer+modique+du+Qu%C3%A9bec/@45.4840974,-73.5796534,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a70a26b6f7b:0x4dc61d8e3c023eb2!8m2!3d45.4840974!4d-73.5770785!16s%2Fg%2F1vwlnrln?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D">
+        <p class="footer__adresse">2520 Av. Lionel-Groulx, Montréal, QC H3J 1J8</p>
+      </a>
       <div class="footer__reseaux">
         <a href="https://www.facebook.com/flhlmq/"><i class="bi bi-facebook"></i></a>
         <i class="bi bi-twitter"></i>
@@ -239,7 +202,7 @@
       </div>
     </div>
   </footer>
-<!----
+  <!----
   <div class="pdp">
     <div class="pdp-container">
         <div class="pdp-grid">

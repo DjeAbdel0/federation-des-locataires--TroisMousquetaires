@@ -54,14 +54,13 @@
       grid-column: span 2;
       width: min-content;
       min-width: 350px;
-      margin: 0 auto;
+      margin: 50% auto;
     }
 
     &__image {
       grid-column: span 2;
       width: 100%;
       height: auto;
-      width: fit-content;
       min-width: 250px;
     }
 
@@ -80,28 +79,31 @@
     justify-items: center;
 
     &__titre {
-      @include typo.big-title-bold;
+      @include typo.giant-title-bold;
     }
 
     &__text {
+      text-align: start;
       @include typo.big-text;
-      width: min-content;
-      min-width: 650px;
+      min-width: fit-content;
+      width: 40vw;
       height: fit-content;
-      grid-column: span 2;
-      margin-right: 150px;
-      margin-left: 55px;
+      margin: 0 5%;
     }
 
     &__image {
-      grid-column: span 2;
-      width:min-content;
-      min-width: 750px;
+
+      position: relative;
+      max-width: 75vw;
       height: auto;
+      bottom: -5%;
+      right: -7%;
     }
 
     &__btn {
       @include buttons.big-btn-general;
+      float: left;
+      width: 250px;
     }
   }
 }

@@ -2,11 +2,9 @@
 @use "buttons";
 @use "typo";
 
-
-
 .crr {
   min-height: 100vh;
-  background: colors.$blanc;
+  background: colors.$alabaster;
   overflow-x: hidden;
 
   &__grosTitre {

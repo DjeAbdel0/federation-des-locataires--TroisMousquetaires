@@ -1,5 +1,10 @@
 // 1 rem c'est 16px
 // Pour les p
+@mixin mini-text {
+  font-size: 10px; 
+  font-weight: normal;
+}
+
 @mixin small-text {
   font-size: 1rem; // 16px
   font-weight: normal;

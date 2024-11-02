@@ -147,7 +147,7 @@ no3;
   }
 
   &__texte {
-    @include typo.small-text;
+    @include typo.mini-text;
     position: absolute;
     top: 40%;
     margin: auto 10%;

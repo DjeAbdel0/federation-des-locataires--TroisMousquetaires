@@ -1,5 +1,5 @@
 /* -------------   Abdel    ------------- */
-/* ---------------------- Code qui lorsqu'on Hover une nouvelle, rend le texte visible et lorqu'on quitte, le cache ------------------------------ */
+/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ */
 
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
@@ -22,18 +22,23 @@ serviceDiv.forEach((element, index) => {
   });
 });
 
-if (window.innerWidth >= 1400) {
-  // Anim Gsap
+
+/* ----------------------  Animation Gsap ------------------------------ */
+
+//Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
+
+if (window.innerWidth > 1399) {
+  console.log("Window is wide enough!");
   let scroll_tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".crr__titre",
         start: "top top",
         scrub: true,
         end: "bottom bottom",
-        markers: true,
+        markers: false,
       },
     }),
-    roles = [...document.querySelectorAll(".role")];
+    roles = document.querySelectorAll(".role");
   
   scroll_tl.to(roles, {
     xPercent: -100 * (roles.length - 1),
@@ -47,11 +52,6 @@ if (window.innerWidth >= 1400) {
     },
   });
 }
-// Check width on page load
-checkWidthAndInit();
-
-// Check width on window resize
-window.addEventListener("resize", checkWidthAndInit);
 
 
 /*

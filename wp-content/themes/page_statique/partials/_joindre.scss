@@ -5,15 +5,15 @@
 @use "typo";
 
 
-.body-joindre{
+.body-joindre {
     background-color: colors.$alabaster;
-  }
-  
+}
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 // textes d'introduction a la page
 
-i{
-    margin-right: 3rem; 
+.joindre__i {
+    margin-right: 3rem;
 }
 
 .joindre-gauche {
@@ -71,10 +71,13 @@ i{
     }
 }
 
-#nom, #email, #message{
+#nom,
+#email,
+#message {
     border: 0px solid black;
     border-radius: 0;
 }
+
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
     .joindre-gauche {
@@ -107,7 +110,7 @@ i{
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
 
-    .page-joindre{
+    .page-joindre {
         display: flex;
     }
 
@@ -122,30 +125,28 @@ i{
         display: inline;
         margin: 0 auto;
         width: 70%;
-       
+
         &__contact {
-            display: grid;
+            text-align: center;
         }
 
-        &__contact h1{
+        &__contact h1 {
             margin: 5% auto;
             @include typo.medium-title-bold;
+
         }
 
-        &__adresse{
-            width: 70%;
+        &__adresse {
+            width: 85%;
+            text-align: justify;
         }
 
-        &__facebook{
+        &__facebook {
             display: none;
         }
-        
+
     }
 
-    i{
-        margin: 45%;
-    }
-    
 
     .joindre-droit {
         width: 70%;
@@ -163,6 +164,7 @@ i{
         width: 70%;
         height: auto;
         padding-bottom: 5%;
+
         &__titre {
             @include typo.medium-title-bold;
         }

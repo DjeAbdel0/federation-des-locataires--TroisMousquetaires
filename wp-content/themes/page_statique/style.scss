@@ -33,13 +33,13 @@
 @import "vendors/bootstrap/scss/nav";
 @import "vendors/bootstrap/scss/navbar";
 
-//Fonts importées
+/*----------------------------------------------------- Fonts importées -----------------------------------------------------*/
 @font-face {
   font-family: "archivo";
   src: url("./assets/font/Archivo-Regular.ttf");
 }
 
-//Styles généraux
+/*----------------------------------------------------- Styles généraux -----------------------------------------------------*/
 header {
   background-color: colors.$espace;
 }
@@ -60,82 +60,7 @@ h3 {
   background-color: colors.$blanc;
 }
 
-// Search Bar
-.container {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%);
-}
 
-.search-box {
-  input[type="text"] {
-    border: none;
-    background: none;
-    z-index: 1;
-    width: 25px;
-    height: 25px;
-    transition: all 0.25s ease-in 0.25s;
-    color: transparent;
-    font-size: 0.75rem;
-    line-height: 25px;
-
-    &:hover {
-      cursor: pointer;
-
-      &:focus {
-        cursor: text;
-      }
-
-      +span {
-        background: rgba(255, 255, 255, 0.2);
-      }
-    }
-
-    &:focus {
-      width: 200px;
-      padding: 0 10px;
-      outline: none;
-      color: black;
-      background: none;
-      color: white;
-
-      +span {
-        width: 200px;
-
-        &::before {
-          width: 2px;
-          opacity: 0;
-          transition: all 0.25s ease-in;
-        }
-      }
-    }
-
-    +span {
-      z-index: -1;
-      position: absolute;
-      border: 2px solid white;
-      top: -1px;
-      width: 25px;
-      height: 25px;
-      transition: all 0.25s ease-in 0.25s;
-      border-radius: 25px;
-      left: 0;
-
-      &::before {
-        transition: all 0.25s ease-in 0.5s;
-        transform-origin: left top;
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 5px;
-        border-radius: 5px;
-        background: white;
-        transform: rotate(45deg) translate(26px, -2px);
-      }
-    }
-  }
-}
 
 .pdp {
   .pdp-container {
@@ -169,7 +94,7 @@ h3 {
 body,
 html {
   font-family: "archivo";
-  background-color: colors.$lime;
+  background-color: colors.$alabaster;
   overflow-x: hidden;
 }
 

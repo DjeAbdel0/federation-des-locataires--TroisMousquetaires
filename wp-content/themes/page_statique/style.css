@@ -1,50 +1,7 @@
 @charset "UTF-8";
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-  display: flex;
-  justify-content: space-between;
-  gap: 10%;
-}
-
-.navbar-nav {
-  justify-content: space-around;
-  gap: 5%;
-}
-
-.nav-item:hover {
-  color: #8BBD8E;
-  background: #8bab8d;
-  box-shadow: 0px 4px 0px 0px #8bab8d;
-}
-
-.bi-person-fill {
-  font-size: 30px;
-}
-
-.nav-item {
-  white-space: nowrap;
-  font-size: 20px;
-  width: 100%;
-}
-
-/**------------------------------------------------ 1400 px -------------------------------------------------------------*/
-@media screen and (min-width: 1400px) {
-  .navbar {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: capitalize;
-  }
-}
+/*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -548,7 +505,7 @@
   z-index: 1;
 }
 .page-service__texte {
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: normal;
   position: absolute;
   top: 40%;
@@ -794,14 +751,12 @@
     width: -moz-min-content;
     width: min-content;
     min-width: 350px;
-    margin: 0 auto;
+    margin: 50% auto;
   }
   .dons__image {
     grid-column: span 2;
     width: 100%;
     height: auto;
-    width: -moz-fit-content;
-    width: fit-content;
     min-width: 250px;
   }
   .dons__btn {
@@ -826,27 +781,26 @@
     justify-items: center;
   }
   .dons__titre {
-    font-size: 3.75rem;
+    font-size: 7rem;
     font-weight: bold;
   }
   .dons__text {
+    text-align: start;
     font-size: 2.25rem;
     font-weight: normal;
-    width: -moz-min-content;
-    width: min-content;
-    min-width: 650px;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    width: 40vw;
     height: -moz-fit-content;
     height: fit-content;
-    grid-column: span 2;
-    margin-right: 150px;
-    margin-left: 55px;
+    margin: 0 5%;
   }
   .dons__image {
-    grid-column: span 2;
-    width: -moz-min-content;
-    width: min-content;
-    min-width: 750px;
+    position: relative;
+    max-width: 75vw;
     height: auto;
+    bottom: -5%;
+    right: -7%;
   }
   .dons__btn {
     margin: 0 auto;
@@ -858,6 +812,8 @@
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    float: left;
+    width: 250px;
   }
   .dons__btn:hover {
     background: #8bb08d;
@@ -1293,7 +1249,7 @@ footer {
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-i {
+.joindre__i {
   margin-right: 3rem;
 }
 
@@ -1359,7 +1315,9 @@ i {
   background: #8bb08d;
 }
 
-#nom, #email, #message {
+#nom,
+#email,
+#message {
   border: 0px solid black;
   border-radius: 0;
 }
@@ -1418,7 +1376,7 @@ i {
     width: 70%;
   }
   .joindre-informations__contact {
-    display: grid;
+    text-align: center;
   }
   .joindre-informations__contact h1 {
     margin: 5% auto;
@@ -1426,13 +1384,11 @@ i {
     font-weight: bold;
   }
   .joindre-informations__adresse {
-    width: 70%;
+    width: 85%;
+    text-align: justify;
   }
   .joindre-informations__facebook {
     display: none;
-  }
-  i {
-    margin: 45%;
   }
   .joindre-droit {
     width: 70%;
@@ -1476,7 +1432,7 @@ i {
 }
 .crr {
   min-height: 100vh;
-  background: #ffffff;
+  background: #E6EAE4;
   overflow-x: hidden;
 }
 .crr__grosTitre {
@@ -3931,10 +3887,12 @@ progress {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/*----------------------------------------------------- Fonts importées -----------------------------------------------------*/
 @font-face {
   font-family: "archivo";
   src: url("./assets/font/Archivo-Regular.ttf");
 }
+/*----------------------------------------------------- Styles généraux -----------------------------------------------------*/
 header {
   background-color: #415456;
 }
@@ -3953,72 +3911,6 @@ h3 {
 
 .fond {
   background-color: #ffffff;
-}
-
-.container {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%);
-}
-
-.search-box input[type=text] {
-  border: none;
-  background: none;
-  z-index: 1;
-  width: 25px;
-  height: 25px;
-  transition: all 0.25s ease-in 0.25s;
-  color: transparent;
-  font-size: 0.75rem;
-  line-height: 25px;
-}
-.search-box input[type=text]:hover {
-  cursor: pointer;
-}
-.search-box input[type=text]:hover:focus {
-  cursor: text;
-}
-.search-box input[type=text]:hover + span {
-  background: rgba(255, 255, 255, 0.2);
-}
-.search-box input[type=text]:focus {
-  width: 200px;
-  padding: 0 10px;
-  outline: none;
-  color: black;
-  background: none;
-  color: white;
-}
-.search-box input[type=text]:focus + span {
-  width: 200px;
-}
-.search-box input[type=text]:focus + span::before {
-  width: 2px;
-  opacity: 0;
-  transition: all 0.25s ease-in;
-}
-.search-box input[type=text] + span {
-  z-index: -1;
-  position: absolute;
-  border: 2px solid white;
-  top: -1px;
-  width: 25px;
-  height: 25px;
-  transition: all 0.25s ease-in 0.25s;
-  border-radius: 25px;
-  left: 0;
-}
-.search-box input[type=text] + span::before {
-  transition: all 0.25s ease-in 0.5s;
-  transform-origin: left top;
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  border-radius: 5px;
-  background: white;
-  transform: rotate(45deg) translate(26px, -2px);
 }
 
 .pdp .pdp-container {
@@ -4047,7 +3939,7 @@ h3 {
 body,
 html {
   font-family: "archivo";
-  background-color: #8BBD8E;
+  background-color: #E6EAE4;
   overflow-x: hidden;
 }
 
