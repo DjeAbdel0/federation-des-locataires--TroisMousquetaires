@@ -21,8 +21,7 @@
     width: 100%;
   }
 
-  &__intro,
-  &__fin {
+  &__intro {
     height: auto;
     margin: 2rem auto;
     text-align: start;
@@ -70,23 +69,18 @@
     text-align: justify;
     border-bottom: solid black 1%;
   }
-  &__fin {
-    margin-right: 1500px;
-  }
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   .crr {
-    &__grosTitre { 
+    &__grosTitre {
       & h1 {
         @include typo.medium-title;
       }
     }
 
-    &__intro,
-    &__fin {
-  
+    &__intro {
       & h3 {
         text-align: center;
         margin: 2rem 30%;
@@ -98,9 +92,8 @@
       }
     }
   }
-  
+
   .role {
-  
     &__titre h3 {
       @include typo.medium-title;
     }
@@ -113,75 +106,70 @@
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
-.crr {
+  .crr {
+    &__grosTitre {
+      text-align: start;
+      width: 100%;
 
-  &__grosTitre {
-    text-align: start;
-    width: 100%;
+      & h1 {
+        @include typo.giant-title;
+      }
+    }
+    &__grosImg img {
+      width: 100%;
+    }
 
-    & h1 {
-      @include typo.giant-title;
+    &__intro,
+    &__fin {
+      & h3 {
+        @include typo.big-title;
+      }
+      & p {
+        padding: 4rem;
+        @include typo.big-text;
+      }
+    }
+
+    &__contenue {
+      display: flex;
+      width: 300vw;
+      margin-left: 50%;
     }
   }
-  &__grosImg img {
-    width: 100%;
-  }
 
-  &__intro,
-  &__fin {
-    & h3 {
-      @include typo.big-title;
-    }
-    & p {
-      padding: 4rem;
-      @include typo.big-text;
-    }
-  }
-
-  &__contenue {
+  .role {
     display: flex;
-    width: 300vw;
-    margin-left: 50%;
-  }
-}
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
 
-.role {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: 100vh;
-  flex: 1;
-  justify-content: space-between;
-  align-items: center;
+    &__titre h3 {
+      padding: auto;
+      text-align: center;
+      @include typo.big-title;
+      height: 5vh;
+      margin-top: 2rem;
+    }
 
-  &__titre h3 {
-    padding: auto;
-    text-align: center;
-    @include typo.big-title;
-    height: 5vh;
-    margin-top: 2rem;
-  }
+    &__titre img {
+      width: 25vw;
+      height: 25vh;
+      margin: 1em;
+      float: left;
+    }
 
-  &__titre img {
-    width: 25vw;
-    height: 25vh;
-    margin: 1em;
-    float: left;
+    & p {
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      min-height: 65%;
+      @include typo.big-text;
+      line-height: 3rem;
+      padding: 2rem 5rem;
+      text-align: justify;
+    }
   }
-
-  & p {
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    min-height: 65%;
-    @include typo.big-text;
-    line-height: 3rem;
-    padding: 2rem 5rem;
-    text-align: justify;
-    
-  }
-  &__fin {
-    margin-right: 1500px;
-  }
-}
 }

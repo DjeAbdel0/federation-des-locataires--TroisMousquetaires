@@ -79,9 +79,9 @@
 
     <body class="body-joindre">
         <div class="page-joindre">
-            <div class="joindre-gauche">
-                <div class="joindre-gauche__base">
-                    <h1 class="joindre-gauche__base__h1">Nous joindre</h1>
+            <div class="joindre-droit">
+                <div class="joindre-droit__base">
+                    <h1 class="joindre-droit__base__h1">Nous joindre</h1>
                     <p>Pour contacter la Fédération des locataires d'habitations à loyer modique du Québec (FLHLMQ).</p>
                 </div>
                 <div class="joindre-informations">
@@ -103,21 +103,23 @@
                     
                 </div>
             </div>
-            <div class="joindre-droit">
+            <div class="joindre-gauche">
                 <div class="joindre-formulaire">
                     <form class="joindre-formulaire__form" method="post">
                         <h1 class="joindre-formulaire__titre">Envoyer nous un message</h1>
+
+                        <label class="joindre-formulaire__label" for="nom">Nom</label>
                         <div>
-                            <input class="joindre-formulaire__nom" type="text" id="nom" name="nom" required
-                                placeholder="nom">
+                            <input class="joindre-formulaire__nom" type="text" id="nom" name="nom" required>
                         </div>
+                        <label class="joindre-formulaire__label" for="email">Email</label>
                         <div>
-                            <input class="joindre-formulaire__email" type="email" id="email" name="email" required
-                                placeholder="email">
+                            <input class="joindre-formulaire__email" type="email" id="email" name="email" required>
                         </div>
+                        <label class="joindre-formulaire__label" for="message">Message</label>
                         <div>
-                            <textarea class="joindre-formulaire__message" id="message" name="message" rows="4" required
-                                placeholder="message"></textarea>
+                            <textarea class="joindre-formulaire__message" id="message" name="message" rows="3" required
+                                placeholder="Je vous contacte pour ..."></textarea>
                         </div>
                         <div>
                             <button class="joindre-formulaire__btn" type="submit">Envoyer</button>

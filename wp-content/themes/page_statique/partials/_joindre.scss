@@ -16,7 +16,7 @@
     margin-right: 3rem;
 }
 
-.joindre-gauche {
+.joindre-droit {
     &__base {
         @include typo.small-capitals-bold;
         width: 70%;
@@ -37,13 +37,14 @@
     text-align: center;
     width: auto;
     height: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
-    border-radius: 12%;
+    border-radius: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 5%;
     margin: 15% 10%;
+    box-sizing: border-box;
+
 
     &__titre {
         @include typo.small-title-bold;
@@ -52,7 +53,6 @@
     }
 
     &__form {
-        @include typo.small-title-bold;
         width: 100%;
         margin: 0 auto;
     }
@@ -69,18 +69,33 @@
         @include buttons.small-btn-general;
         margin-bottom: 5%;
     }
+
+    &__label{
+        @include typo.small-text;
+        display: flex;
+        align-items: start;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    &__label::after{
+        content: "*";
+        color: red;
+    }
+    input, textarea{
+        border-radius: 3%;
+        border: 0px solid black;
+    }
+
+    ::placeholder{
+        @include typo.small-text;
+    }
 }
 
-#nom,
-#email,
-#message {
-    border: 0px solid black;
-    border-radius: 0;
-}
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
-    .joindre-gauche {
+    .joindre-droit{
         &__base {
             @include typo.medium-capitals-bold;
 
@@ -114,11 +129,12 @@
         display: flex;
     }
 
-    .joindre-gauche {
+    .joindre-droit {
         width: 50%;
         display: grid;
         position: absolute;
         right: 0;
+        margin-top: 10%;
     }
 
     .joindre-informations {
@@ -148,7 +164,7 @@
     }
 
 
-    .joindre-droit {
+    .joindre-gauche {
         width: 70%;
 
         &__base {

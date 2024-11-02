@@ -479,7 +479,7 @@
   width: 100vw;
   height: 100%;
   margin: 0 auto;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 100%, rgba(0, 0, 0, 0.25) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
 }
 .page-service__assos img, .page-service__crr img, .page-service__locataire img, .page-service__bulettin img, .page-service__infolettre img, .page-service__guide img, .page-service__congres img, .page-service__memoire img, .page-service__recherche img {
@@ -505,7 +505,7 @@
   z-index: 1;
 }
 .page-service__texte {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   position: absolute;
   top: 40%;
@@ -1253,7 +1253,7 @@ footer {
   margin-right: 3rem;
 }
 
-.joindre-gauche__base {
+.joindre-droit__base {
   font-size: 1rem;
   font-weight: bold;
   text-transform: capitalize;
@@ -1261,7 +1261,7 @@ footer {
   text-align: center;
   margin: 5% auto;
 }
-.joindre-gauche__base__h1 {
+.joindre-droit__base__h1 {
   font-size: 1.5625rem;
   font-weight: bold;
 }
@@ -1274,13 +1274,13 @@ footer {
   text-align: center;
   width: auto;
   height: auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
-  border-radius: 12%;
+  border-radius: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 5%;
   margin: 15% 10%;
+  box-sizing: border-box;
 }
 .joindre-formulaire__titre {
   font-size: 1.5625rem;
@@ -1289,8 +1289,6 @@ footer {
   margin: 0 auto;
 }
 .joindre-formulaire__form {
-  font-size: 1.5625rem;
-  font-weight: bold;
   width: 100%;
   margin: 0 auto;
 }
@@ -1314,22 +1312,39 @@ footer {
 .joindre-formulaire__btn:hover {
   background: #8bb08d;
 }
-
-#nom,
-#email,
-#message {
+.joindre-formulaire__label {
+  font-size: 1rem;
+  font-weight: normal;
+  display: flex;
+  align-items: start;
+  width: 70%;
+  margin: 0 auto;
+}
+.joindre-formulaire__label::after {
+  content: "*";
+  color: red;
+}
+.joindre-formulaire input, .joindre-formulaire textarea {
+  border-radius: 3%;
   border: 0px solid black;
-  border-radius: 0;
+}
+.joindre-formulaire ::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.joindre-formulaire ::placeholder {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
-  .joindre-gauche__base {
+  .joindre-droit__base {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: capitalize;
   }
-  .joindre-gauche__base__h1 {
+  .joindre-droit__base__h1 {
     font-size: 2.625rem;
     font-weight: bold;
     text-transform: capitalize;
@@ -1364,11 +1379,12 @@ footer {
   .page-joindre {
     display: flex;
   }
-  .joindre-gauche {
+  .joindre-droit {
     width: 50%;
     display: grid;
     position: absolute;
     right: 0;
+    margin-top: 10%;
   }
   .joindre-informations {
     display: inline;
@@ -1390,15 +1406,15 @@ footer {
   .joindre-informations__facebook {
     display: none;
   }
-  .joindre-droit {
+  .joindre-gauche {
     width: 70%;
   }
-  .joindre-droit__base {
+  .joindre-gauche__base {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: capitalize;
   }
-  .joindre-droit__base__h1 {
+  .joindre-gauche__base__h1 {
     font-size: 2.0625rem;
     font-weight: bold;
   }
@@ -1447,16 +1463,16 @@ footer {
 .crr__grosImg img {
   width: 100%;
 }
-.crr__intro, .crr__fin {
+.crr__intro {
   height: auto;
   margin: 2rem auto;
   text-align: start;
 }
-.crr__intro h3, .crr__fin h3 {
+.crr__intro h3 {
   margin: 1rem 15%;
   font-size: 1.5625rem;
 }
-.crr__intro p, .crr__fin p {
+.crr__intro p {
   font-size: 1rem;
   font-weight: normal;
   margin: 0 15%;
@@ -1492,21 +1508,18 @@ footer {
   text-align: justify;
   border-bottom: solid black 1%;
 }
-.role__fin {
-  margin-right: 1500px;
-}
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   .crr__grosTitre h1 {
     font-size: 2.0625rem;
   }
-  .crr__intro h3, .crr__fin h3 {
+  .crr__intro h3 {
     text-align: center;
     margin: 2rem 30%;
     font-size: 2.0625rem;
   }
-  .crr__intro p, .crr__fin p {
+  .crr__intro p {
     font-size: 1.5rem;
     font-weight: normal;
     margin: 0 15%;
@@ -1576,9 +1589,6 @@ footer {
     line-height: 3rem;
     padding: 2rem 5rem;
     text-align: justify;
-  }
-  .role__fin {
-    margin-right: 1500px;
   }
 }
 :root,
