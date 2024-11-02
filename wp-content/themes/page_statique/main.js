@@ -22,30 +22,37 @@ serviceDiv.forEach((element, index) => {
   });
 });
 
-//Anim Gsap
-let scroll_tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".crr_titre",
-      start: "top top",
-      scrub: true,
-      end: "bottom bottom",
-    },
-  }),
-  roles = [...document.querySelectorAll(".role")];
+if (window.innerWidth >= 1400) {
+  // Anim Gsap
+  let scroll_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".crr__titre",
+        start: "top top",
+        scrub: true,
+        end: "bottom bottom",
+        markers: true,
+      },
+    }),
+    roles = [...document.querySelectorAll(".role")];
   
-scroll_tl.to(roles, {
-  xPercent: -100 * (roles.length - 1),
-  scrollTrigger: {
-    trigger: ".crr_contenue",
-    start: "center center",
-    pin: true,
-    scrub: 1,
-    snap: 2 / (roles.length - 1),
-    // base vertical scrolling on how wide the container is so it feels more natural.
-    // end: () => `+=${smallrolesContainer.offsetWidth}`
-    end: () => `+=4320`,
-  },
-});
+  scroll_tl.to(roles, {
+    xPercent: -100 * (roles.length - 1),
+    scrollTrigger: {
+      trigger: ".crr__contenue",
+      start: "top top",
+      pin: true,
+      scrub: 1,
+      snap: 2 / (roles.length - 1),
+      end: () => `+=4320`,
+    },
+  });
+}
+// Check width on page load
+checkWidthAndInit();
+
+// Check width on window resize
+window.addEventListener("resize", checkWidthAndInit);
+
 
 /*
 document.addEventListener("DOMContentLoaded", function () {

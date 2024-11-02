@@ -2,73 +2,188 @@
 @use "buttons";
 @use "typo";
 
-* {
-    margin : 0;
-    padding : 0;
+
+
+.crr {
+  min-height: 100vh;
+  background: colors.$blanc;
+  overflow-x: hidden;
+
+  &__grosTitre {
+    text-align: start;
+    width: 70%;
+    margin: 0 auto;
+
+    & h1 {
+      padding: 5%;
+      @include typo.small-title;
+    }
   }
-  
-  .test-crr{
-    height: 100vh;
-    background-color: white;
+  &__grosImg img {
+    width: 100%;
   }
 
-.crr{
-	min-height: 100vh;
-    background: #1d373f;
-    overflow-x: hidden;
-    
-}
+  &__intro,
+  &__fin {
+    height: auto;
+    margin: 2rem auto;
+    text-align: start;
 
-.crr_titre {
-    padding: 0em 2em;
-    text-align: center;
-    line-height: 10vh;
-}
+    & h3 {
+      margin: 1rem 15%;
+      @include typo.small-title;
+    }
+    & p {
+      @include typo.small-text;
+      margin: 0 15%;
+    }
+  }
 
-
-.crr_contenue {
-    display: flex;
-    width: 300vw;
-    margin-left: 500px;
+  &__contenue {
+    width: 100%;
+  }
 }
 
 .role {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-    color: #F0C368;
-    outline: green dashed 2px;
-}
+  display: grid;
+  width: auto;
+  height: 100%;
 
-.role__p {
-    color: red;
+  &__titre h3 {
+    padding: auto;
+    text-align: center;
+    @include typo.small-title;
+    height: 5vh;
+    margin-top: 2rem;
+  }
+
+  &__titre img {
+    width: 100%;
+  }
+
+  & p {
     flex-wrap: wrap;
     width: 100%;
-    height: 50%;
-    font-size: 24px;
+    height: auto;
+    min-height: 65%;
+    @include typo.small-text;
     line-height: 1.5rem;
-    outline: green dashed 2px;
-}
-.role__titre {
-    outline: yellow dashed 2px;
-    color: red;
-    flex-wrap: wrap;
-    font-size: 24px;
-    line-height: 1.5rem;
+    padding: 2rem 5rem;
+    text-align: justify;
+    border-bottom: solid black 1%;
+  }
+  &__fin {
+    margin-right: 1500px;
+  }
 }
 
-.role img {
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+  .crr {
+    &__grosTitre { 
+      & h1 {
+        @include typo.medium-title;
+      }
+    }
+
+    &__intro,
+    &__fin {
+  
+      & h3 {
+        text-align: center;
+        margin: 2rem 30%;
+        @include typo.medium-title;
+      }
+      & p {
+        @include typo.medium-text;
+        margin: 0 15%;
+      }
+    }
+  }
+  
+  .role {
+  
+    &__titre h3 {
+      @include typo.medium-title;
+    }
+
+    & p {
+      @include typo.medium-text;
+    }
+  }
+}
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+.crr {
+
+  &__grosTitre {
+    text-align: start;
+    width: 100%;
+
+    & h1 {
+      @include typo.giant-title;
+    }
+  }
+  &__grosImg img {
+    width: 100%;
+  }
+
+  &__intro,
+  &__fin {
+    & h3 {
+      @include typo.big-title;
+    }
+    & p {
+      padding: 4rem;
+      @include typo.big-text;
+    }
+  }
+
+  &__contenue {
+    display: flex;
+    width: 300vw;
+    margin-left: 50%;
+  }
+}
+
+.role {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100vh;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+
+  &__titre h3 {
+    padding: auto;
+    text-align: center;
+    @include typo.big-title;
+    height: 5vh;
+    margin-top: 2rem;
+  }
+
+  &__titre img {
     width: 25vw;
     height: 25vh;
     margin: 1em;
     float: left;
-    outline: yellow dashed 2px;
-}
+  }
 
-.role__fin{
+  & p {
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 65%;
+    @include typo.big-text;
+    line-height: 3rem;
+    padding: 2rem 5rem;
+    text-align: justify;
+    
+  }
+  &__fin {
     margin-right: 1500px;
+  }
+}
 }
