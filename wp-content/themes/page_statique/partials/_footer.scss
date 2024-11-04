@@ -41,20 +41,28 @@ footer {
     font-size: 10px;
   }
 
+  &__lien a:hover {
+    color: colors.$espace; //couleur du texte
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+    color: colors.$espace; //couleur underline
+  }
+
   &__adresse {
     grid-area: adresse;
     font-size: 8px;
     margin-top: 38px;
     color: colors.$blanc;
-    text-decoration: none;
   }
 
   &__adresse:hover {
-    grid-area: adresse;
-    font-size: 8px;
-    margin-top: 38px;
-    color: colors.$blanc;
-    text-decoration: none;
+    color: colors.$espace; //couleur du texte
   }
 
   &__reseaux {

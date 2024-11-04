@@ -1069,6 +1069,8 @@
     background: #8bb08d;
   }
 }
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 .equipe {
   width: 100vw;
   height: 100%;
@@ -1342,19 +1344,24 @@ footer {
   padding: 2px;
   font-size: 10px;
 }
+.footer__lien a:hover {
+  color: #415456;
+}
+.footer__link {
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+  color: #415456;
+}
 .footer__adresse {
   grid-area: adresse;
   font-size: 8px;
   margin-top: 38px;
   color: #ffffff;
-  text-decoration: none;
 }
 .footer__adresse:hover {
-  grid-area: adresse;
-  font-size: 8px;
-  margin-top: 38px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #415456;
 }
 .footer__reseaux {
   grid-area: reseaux;
