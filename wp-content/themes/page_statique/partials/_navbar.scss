@@ -3,88 +3,43 @@
 @use "colors";
 
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
+.megamenu {
+  position: static;
+  z-index: 9999999;
+}
+
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 100%;
+  z-index: 9999999;
+}
+
+.text-uppercase {
+  letter-spacing: 0.08em;
+  z-index: 9999999;
+}
+
+.logo_nav {
+  width: 90px;
+  height: auto;
+margin-left: 1vw;
+  padding: 0;
+  border-radius: 10%;
+}
+
+
+
 .navbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   background-color: colors.$lime;
 
-  &__logo img {
-    height: 5vw;
-    min-height: 40px;
-    margin-left: 5vw;
-  }
-
-  &__menu {
-    position: relative;
-    right: 5%;
-    width: min-content;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    gap: 0 5vw;
-    margin: 0;
-
-    li:hover .navbar__submenu {
-      display: block; // Assurez-vous que la sous-liste s'affiche lors du survol
-    }
-  }
-
-  &__submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: colors.$lime;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    z-index: 9999999999;
-
-
-    li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: block;
-
-      &:hover {
-        background-color: #444;
-      }
-    }
-  }
-
   &__search {
-    position: relative;
-    margin-right: 5%;
-
-    input[type="search"] {
-      padding-left: 30px;
-      width: min-content;
-      border-radius: 102px;
-    }
-
-    .navbar__loupe {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #aaa;
-    }
+    border: black 2px solid;
+    border-radius: 5px;
   }
 
-  &__toggle {
-    margin-right: 5vw;
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-
-    .navbar__bar {
-      width: 25px;
-      height: 3px;
-      background-color: #fff;
-      margin: 4px 0;
-      transition: 0.3s;
-    }
+  &__dropmenuCouleur{
+    background-color: colors.$lime;
   }
 
   &__icon {

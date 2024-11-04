@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="../style.css" />
     <title>Index</title>
   </head>
 
-  <body>
+  <body class="newsBody">
     <!--Section Bannière-->
     <section class="banniere">
       <div class="bannière__contenu">
@@ -23,9 +21,57 @@
     </section>
     <!--Fin Section Bannière-->
 
-    <!--Barre Nav-->
-
-    <!--Fin Barre Nav-->
+ <!--Barre Nav-->
+ <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <a href="#" class="navbar-brand">
+      <img src="../assets/medias/logo/logo_nouveau.png" alt="Company Logo" class="logo_nav">
+  </a>
+  <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <a href="#" class="nav-link font-weight-bold text-uppercase">Nouvelles</a>
+          </li>
+         <li class="nav-item dropdown megamenu">
+              <a id="megamenu" href="./page_service.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Services</a>
+              <div class="dropdown-menu border-0 p-0 m-0">
+                  <div class="container navbar__dropmenuCouleur">
+                      <div class="row  rounded-0 m-0 shadow-sm">
+                          <div class="col-lg-7 col-xl-8">
+                              <div class="p-4">
+                                  <div class="row">
+                                      <div class="col-lg-6 mb-4">
+                                          <ul class="list-unstyled">
+                                              <li class="nav-item"><a href="./service_CRR.html" class="nav-link text-small pb-0">Crr</a></li>
+                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 2</a></li>
+                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 3</a></li>
+                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 4</a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="nav-item"><a href="./team.html" class="nav-link font-weight-bold text-uppercase">Équipe</a></li>
+          <li class="nav-item"><a href="./joindre.html" class="nav-link font-weight-bold text-uppercase">Nous joindre</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link font-weight-bold text-uppercase">À propos</a></li>
+          <form role="search" aria-label="Site search">
+            <input type="search" class="navbar__search" placeholder="Search..." aria-label="Search">
+            <button type="submit" aria-label="Submit search">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+        
+          <li class="nav-item"><a href="#" class="nav-link font-weight-bold text-uppercase"><i class="bi bi-person-fill"></i></a></li>
+      </ul>
+  </div>
+</nav>
+<!--Fin Barre Nav-->
 
     <section class="newshub">
       <!-- Nouvelle 1 -->
@@ -211,8 +257,19 @@
       <!-- Bouton voir plus -->
       <button class="voirPlus">Voir plus</button>
     </section>
-    <!-- Script Main-->
-    <script src="../main.js"></script>
+    <!-- Scripts Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script Main-->
+<script src="../main.js"></script>
   </body>
   <!-- Pied de page-->
   <footer>

@@ -2,79 +2,40 @@
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
-.navbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #8BBD8E;
+.megamenu {
+  position: static;
+  z-index: 9999999;
 }
-.navbar__logo img {
-  height: 5vw;
-  min-height: 40px;
-  margin-left: 5vw;
+
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 100%;
+  z-index: 9999999;
 }
-.navbar__menu {
-  position: relative;
-  right: 5%;
-  width: -moz-min-content;
-  width: min-content;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  gap: 0 5vw;
-  margin: 0;
+
+.text-uppercase {
+  letter-spacing: 0.08em;
+  z-index: 9999999;
 }
-.navbar__menu li:hover .navbar__submenu {
-  display: block;
-}
-.navbar__submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #8BBD8E;
-  list-style-type: none;
+
+.logo_nav {
+  width: 90px;
+  height: auto;
+  margin-left: 1vw;
   padding: 0;
-  margin: 0;
-  z-index: 9999999999;
+  border-radius: 10%;
 }
-.navbar__submenu li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-}
-.navbar__submenu li a:hover {
-  background-color: #444;
+
+.navbar {
+  background-color: #8BBD8E;
 }
 .navbar__search {
-  position: relative;
-  margin-right: 5%;
+  border: black 2px solid;
+  border-radius: 5px;
 }
-.navbar__search input[type=search] {
-  padding-left: 30px;
-  width: -moz-min-content;
-  width: min-content;
-  border-radius: 102px;
-}
-.navbar__search .navbar__loupe {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #aaa;
-}
-.navbar__toggle {
-  margin-right: 5vw;
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.navbar__toggle .navbar__bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-  transition: 0.3s;
+.navbar__dropmenuCouleur {
+  background-color: #8BBD8E;
 }
 .navbar__icon {
   font-size: 1.5rem;
@@ -657,7 +618,7 @@
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .services__titre {
     font-size: 2.0625rem;
     font-weight: bold;
@@ -851,7 +812,7 @@
 }
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .dons {
     grid-template-rows: auto 1fr;
     grid-template-columns: auto auto;
@@ -1600,7 +1561,7 @@ footer {
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .joindre-droit__base {
     font-size: 1.5rem;
     font-weight: bold;
@@ -1772,7 +1733,7 @@ footer {
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .crr__grosTitre h1 {
     font-size: 2.0625rem;
   }
@@ -1883,11 +1844,14 @@ footer {
     font-size: 1.5rem;
   }
 }
+.newsBody {
+  background-color: #E6EAE4;
+}
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .newshub {
   width: 100vw;
   padding: 20px;
-  background-color: #ffffff;
   text-align: left;
   background-color: #D4E1D7;
   position: relative;
@@ -2109,10 +2073,6 @@ footer {
     height: 15vh;
   }
 }
-.hidden {
-  display: none !important;
-}
-
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -4467,6 +4427,10 @@ h3 {
 }
 .pdp .pdp-container .pdp-logo {
   margin-top: 40px;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /* 
