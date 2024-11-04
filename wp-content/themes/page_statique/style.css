@@ -1591,6 +1591,213 @@ footer {
     text-align: justify;
   }
 }
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+.newshub {
+  width: 100vw;
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  background-color: #D4E1D7;
+  position: relative;
+}
+.newshub .news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2rem;
+  gap: 15px;
+  background-color: #ffffff;
+  border-bottom: 3px solid #8BBD8E;
+}
+.newshub .news__categorie {
+  margin-bottom: 10px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin: 0;
+  align-self: flex-start;
+}
+.newshub .news__categorie:hover {
+  background: #8bb08d;
+}
+.newshub .news__categorie--article {
+  background-color: #ff922c;
+}
+.newshub .news__categorie--comite {
+  background-color: #D4E1D7;
+}
+.newshub .news__categorie--droit {
+  background-color: #5bcfc3;
+}
+.newshub .news__categorie--finance {
+  background-color: #8BBD8E;
+}
+.newshub .news__titre {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.newshub .news__date {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+.newshub .news__image {
+  width: 100%;
+  max-width: 100vw;
+  height: 250px;
+  overflow: hidden;
+}
+.newshub .news__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.voirPlus {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.voirPlus:hover {
+  background: #8bb08d;
+}
+
+@media screen and (min-width: 765px) {
+  .newshub {
+    width: 100vw;
+    padding: 20px;
+  }
+  .newshub .news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  .newshub .news__categorie {
+    margin-bottom: 10px;
+  }
+  .newshub .news__categorie--article {
+    background-color: #ff922c;
+  }
+  .newshub .news__categorie--comite {
+    background-color: #D4E1D7;
+  }
+  .newshub .news__categorie--droit {
+    background-color: #5bcfc3;
+  }
+  .newshub .news__categorie--finance {
+    background-color: #8BBD8E;
+  }
+  .newshub .news__titre {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .newshub .news__date {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .newshub .news__image {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .newshub .news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: start;
+    text-align: left;
+    padding: 20px;
+  }
+  .newshub .news:hover {
+    transform: scale(1.005);
+  }
+  .newshub .news__categorie {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 1.2rem;
+    align-self: left;
+    width: 20%;
+  }
+  .newshub .news__titre {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    align-self: left;
+  }
+  .newshub .news__date {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 1.1rem;
+    align-self: end;
+    margin-bottom: 0;
+  }
+  .newshub .news__image {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  .newshub .news__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
+  }
+}
+.hidden {
+  display: none !important;
+}
+
+.voirPlus {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.voirPlus:hover {
+  background: #8bb08d;
+}
+
+footer {
+  margin-top: 20px;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;

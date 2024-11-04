@@ -1,0 +1,205 @@
+// Parial contenant la section Actualités sur la page d'acceuil
+@use "colors";
+@use "buttons";
+@use "typo";
+@use "sass:color";
+
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+
+// Version mobile - 375px
+
+.newshub {
+  width: 100vw;
+  padding: 20px;
+  background-color: colors.$blanc;
+  text-align: left;
+  background-color: colors.$honeyDew;
+  position: relative;
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 2rem;
+    gap: 15px; // Espacement entre les éléments de la colonne
+    background-color: colors.$blanc;
+    border-bottom: 3px solid colors.$lime;
+
+    &__categorie {
+      margin-bottom: 10px;
+      @include buttons.small-btn-general;
+      margin: 0;
+      align-self: flex-start;
+
+      &--article {
+        background-color: #ff922c;
+      }
+      &--comite {
+        background-color: colors.$honeyDew;
+      }
+      &--droit {
+        background-color: #5bcfc3;
+      }
+      &--finance {
+        background-color: colors.$lime;
+      }
+    }
+
+    &__titre {
+      @include typo.bold;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      align-self: flex-start;
+    }
+
+    &__date {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      align-self: flex-start;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 100vw; // Taille maximale pour le conteneur de l'image
+      height: 250px; // Hauteur fixe du conteneur de l'image
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Remplit le conteneur sans déformation
+        border-radius: 8px;
+      }
+    }
+  }
+}
+.voirPlus {
+  @include buttons.small-btn-general;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Version tablette - 765px
+@media screen and (min-width: 765px) {
+  .newshub {
+    width: 100vw;
+    padding: 20px;
+
+    .news {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; // Espacement entre les éléments de la colonne
+      text-align: center;
+
+      &__categorie {
+        margin-bottom: 10px;
+
+        &--article {
+          background-color: #ff922c;
+        }
+        &--comite {
+          background-color: colors.$honeyDew;
+        }
+        &--droit {
+          background-color: #5bcfc3;
+        }
+        &--finance {
+          background-color: colors.$lime;
+        }
+      }
+
+      &__titre {
+        @include typo.bold;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      &__date {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      &__image {
+        width: 100%; // Taille maximale pour le conteneur de l'image
+        height: 400px; // Hauteur fixe du conteneur de l'image
+      }
+    }
+  }
+}
+
+// Version desktop - 1400px
+@media screen and (min-width: 1400px) {
+  .newshub {
+    .news {
+      display: grid;
+      grid-template-columns: 1fr 1fr; // Deux colonnes
+      grid-template-rows: auto auto auto; // Trois lignes pour la colonne de gauche
+      align-items: start;
+      text-align: left;
+      padding: 20px;
+
+      &:hover {
+        transform: scale(1.005);
+      }
+
+      &__categorie {
+        grid-column: 1 / 2; // Colonne de gauche
+        grid-row: 1 / 2; // Ligne 1
+        font-size: 1.2rem;
+        align-self: left;
+        width: 20%;
+      }
+
+      &__titre {
+        grid-column: 1 / 2; // Colonne de gauche
+        grid-row: 2 / 3; // Ligne 2
+        font-size: 2rem;
+        margin-bottom: 15px;
+        align-self: left;
+      }
+
+      &__date {
+        grid-column: 1 / 2; // Colonne de gauche
+        grid-row: 3 / 4; // Ligne 3
+        font-size: 1.1rem;
+        align-self: end;
+        margin-bottom: 0;
+      }
+
+      &__image {
+        grid-column: 2 / 3; // Prend toute la colonne de droite
+        grid-row: 1 / 4; // S'étend sur les trois lignes
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+.voirPlus {
+  @include buttons.small-btn-general;
+}
+
+footer {
+  margin-top: 20px;
+}

@@ -22,6 +22,18 @@ serviceDiv.forEach((element, index) => {
   });
 });
 
+document.querySelector(".voirPlus").addEventListener("click", function () {
+  // Sélectionne les nouvelles masquées
+  const hiddenNews = document.querySelectorAll(".news.hidden");
+
+  // Affiche les nouvelles masquées
+  hiddenNews.forEach((news) => {
+    news.classList.remove("hidden");
+  });
+
+  // Cache le bouton "voir plus"
+  this.style.display = "none";
+});
 
 /* ----------------------  Animation Gsap ------------------------------ */
 
@@ -39,7 +51,7 @@ if (window.innerWidth > 1399) {
       },
     }),
     roles = document.querySelectorAll(".role");
-  
+
   scroll_tl.to(roles, {
     xPercent: -100 * (roles.length - 1),
     scrollTrigger: {
@@ -52,7 +64,6 @@ if (window.innerWidth > 1399) {
     },
   });
 }
-
 
 /*
 document.addEventListener("DOMContentLoaded", function () {
