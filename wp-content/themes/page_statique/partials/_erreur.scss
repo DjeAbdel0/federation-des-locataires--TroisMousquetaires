@@ -1,0 +1,20 @@
+// Parial contenant la section newshub
+@use "colors";
+@use "buttons";
+@use "typo";
+@use "sass:color";
+
+.erreur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    &__titre{
+        color: red;
+    }
+    &__texte{
+        color: red;
+    }
+}
