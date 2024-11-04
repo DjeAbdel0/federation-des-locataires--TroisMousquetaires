@@ -25,6 +25,35 @@
     <!--Fin Section Bannière-->
   </header>
 
+ <!--Barre Nav-->
+ <nav class="navbar">
+  <div class="navbar__logo">
+    <img src="../assets/medias/logo/Logo_figma.png" alt="Logo">
+  </div>
+  <ul class="navbar__menu">
+    <li><a href="#Nouvelles" id="Nouvelles">Nouvelles</a></li>
+    <li><a href="./page_service.html" id="Services">Services</a>
+        <ul class="navbar__submenu">
+            <li><a href="./service_CRR.html">Crr</a></li>
+        </ul></li>
+    <li><a href="#" id="Équipes">Équipes</a></li>
+    <li><a href="#" id="FAQ">FAQ</a></li>
+    <li><a href="./joindre.html" id="Nousjoindre">Nous joindre</a></li>
+    <li><a href="./about.html" id="Àpropos">À propos</a></li>
+    <form action="" class="navbar__search">
+      <input type="search" placeholder="Recherche...">
+      <i class="bi bi-search navbar__loupe"></i>
+    </form>
+    <li><a href="#Icon"><i class="bi bi-person-fill" id="navbar__icon"></i></a></li>
+  </ul>
+  <div class="navbar__toggle" onclick="toggleMenu()">
+    <span class="navbar__bar"></span>
+    <span class="navbar__bar"></span>
+    <span class="navbar__bar"></span>
+  </div>
+</nav>
+<!--Fin Barre Nav-->
+
   <div class="crr">
     <div class="crr__grosTitre">
       <h1>S'impliquer au CCR, c'est un bienfait pour soi et pour les

@@ -23,9 +23,35 @@
   </section>
   <!--Fin Section Bannière-->
 
-  <!--Barre Nav-->
-  
-  <!--Fin Barre Nav-->
+
+ <!--Barre Nav-->
+ <nav class="navbar">
+  <div class="navbar__logo">
+    <img src="./assets/medias/logo/Logo_figma.png" alt="Logo">
+  </div>
+  <ul class="navbar__menu">
+    <li><a href="#Nouvelles" id="Nouvelles">Nouvelles</a></li>
+    <li><a href="./pages/page_service.html" id="Services">Services</a>
+        <ul class="navbar__submenu">
+            <li><a href="./pages/service_CRR.html">Crr</a></li>
+        </ul></li>
+    <li><a href="#" id="Équipes">Équipes</a></li>
+    <li><a href="#" id="FAQ">FAQ</a></li>
+    <li><a href="./pages/joindre.html" id="Nousjoindre">Nous joindre</a></li>
+    <li><a href="./pages/about.html" id="Àpropos">À propos</a></li>
+    <form action="" class="navbar__search">
+      <input type="search" placeholder="Recherche...">
+      <i class="bi bi-search navbar__loupe"></i>
+    </form>
+    <li><a href="#Icon"><i class="bi bi-person-fill" id="navbar__icon"></i></a></li>
+  </ul>
+  <div class="navbar__toggle" onclick="toggleMenu()">
+    <span class="navbar__bar"></span>
+    <span class="navbar__bar"></span>
+    <span class="navbar__bar"></span>
+  </div>
+</nav>
+<!--Fin Barre Nav-->
 
 
 
@@ -272,8 +298,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
   </script>
-  <!-- Script Main-->
-  <script src="main.js"></script>
+<!-- Script Main-->
+<script src="main.js"></script>
 </body>
 
 </html>
