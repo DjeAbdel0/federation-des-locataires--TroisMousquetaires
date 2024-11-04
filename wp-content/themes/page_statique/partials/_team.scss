@@ -7,8 +7,8 @@
 .equipe {
   width: 100vw;
   height: 100%;
-  background-color: #f7f7f7; 
-  text-align: center;
+  background-color: colors.$blanc;
+  text-align: center; //centrer les cartes
   padding: 30px;
 
   &__titre {
@@ -29,14 +29,14 @@
     background-color: #fff;
     width: 300px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); //De l'ombre sous les cartes
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s; //animation
     margin: 20px;
   }
 
   &__membre:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); //qd on hover la carte agrandi
   }
 
   &__nom {
