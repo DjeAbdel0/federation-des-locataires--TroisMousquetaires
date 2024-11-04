@@ -1765,8 +1765,36 @@ footer {
   }
 }
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+.newsarticle {
+  width: 100%;
+}
+.newsarticle .sectionTexte--vert {
+  background-color: #D4E1D7;
+}
+.newsarticle .sectionTexte--blanc {
+  background-color: #ffffff;
+}
+.newsarticle .sectionTexte__paragraphe {
+  font-size: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+@media screen and (min-width: 765px) {
+  .newsarticle .sectionTexte__paragraphe {
+    font-size: 1.2rem;
+  }
+}
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+  .newsarticle .sectionTexte__paragraphe {
+    font-size: 1.5rem;
+  }
+}
+/**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .newshub {
   width: 100vw;
   padding: 20px;
@@ -1816,13 +1844,14 @@ footer {
   background-color: #8BBD8E;
 }
 .newshub .news__titre {
+  font-size: 1.5625rem;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 10px;
   align-self: flex-start;
 }
 .newshub .news__date {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 15px;
   align-self: flex-start;
 }
@@ -1840,6 +1869,13 @@ footer {
   border-radius: 8px;
 }
 
+.espaceBouton {
+  width: 100vw;
+  height: 10vh;
+  background-color: #D4E1D7;
+  position: relative;
+}
+
 .voirPlus {
   margin: 0 auto;
   display: inline-block;
@@ -1851,7 +1887,7 @@ footer {
   cursor: pointer;
   font-size: 0.8rem;
   position: absolute;
-  bottom: 0;
+  bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1859,6 +1895,7 @@ footer {
   background: #8bb08d;
 }
 
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   .newshub {
     width: 100vw;
@@ -1888,7 +1925,7 @@ footer {
   }
   .newshub .news__titre {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   .newshub .news__date {
@@ -1899,7 +1936,25 @@ footer {
     width: 100%;
     height: 400px;
   }
+  .voirPlus {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 6px 13px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .voirPlus:hover {
+    background: #8bb08d;
+  }
+  .espaceBouton {
+    height: 12vh;
+  }
 }
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
   .newshub .news {
     display: grid;
@@ -1947,24 +2002,26 @@ footer {
        object-fit: cover;
     border-radius: 8px;
   }
+  .voirPlus {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #8BBD8E;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2.2rem;
+  }
+  .voirPlus:hover {
+    background: #8bb08d;
+  }
+  .espaceBouton {
+    height: 15vh;
+  }
 }
 .hidden {
   display: none !important;
-}
-
-.voirPlus {
-  margin: 0 auto;
-  display: inline-block;
-  padding: 5px 13px;
-  background-color: #8BBD8E;
-  color: black;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-.voirPlus:hover {
-  background: #8bb08d;
 }
 
 footer {
