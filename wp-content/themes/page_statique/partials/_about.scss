@@ -4,7 +4,15 @@
 @use "typo";
 @use "sass:color";
 
+.about {
+    width: 100&;
+    text-align: center;
 
+    &__titre {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {

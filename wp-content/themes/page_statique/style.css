@@ -2025,9 +2025,6 @@ footer {
   display: none !important;
 }
 
-footer {
-  margin-top: 20px;
-}
 
 :root,
 [data-bs-theme=light] {
