@@ -4,6 +4,7 @@
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
 const serviceBtn = document.querySelectorAll(".page-service__btn"); //  Choisis le btn dans .list-service
+const newsBtn = document.querySelectorAll(".voirPlus")
 
 // Toogle la visibilité selon si la souris Hover ou pas
 serviceDiv.forEach((element, index) => {
@@ -21,20 +22,6 @@ serviceDiv.forEach((element, index) => {
     serviceBtn[index].style.visibility = "hidden";
   });
 });
-
-document.querySelector(".voirPlus").addEventListener("click", function () {
-  // Sélectionne les nouvelles masquées
-  const hiddenNews = document.querySelectorAll(".news.hidden");
-
-  // Affiche les nouvelles masquées
-  hiddenNews.forEach((news) => {
-    news.classList.remove("hidden");
-  });
-
-  // Cache le bouton "voir plus"
-  this.style.display = "none";
-});
-
 /* ----------------------  Animation Gsap ------------------------------ */
 
 //Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
@@ -64,29 +51,31 @@ if (window.innerWidth > 1399) {
   });
 }
 
+/* ---------------------- Fin Animation Gsap ------------------------------ */
+
 function toggleMenu() {
   const menu = document.querySelector(".navbar__menu");
   menu.classList.toggle("active");
   console.log("ca marche");
 }
 
-/*
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".hero__item");
-  let currentIndex = 0;
+/* -------------  Fin Abdel    ------------- */
 
-  // Affiche la première image
-  items[currentIndex].classList.add("active");
 
-  setInterval(() => {
-    // Retire la classe 'active' de l'image actuelle
-    items[currentIndex].classList.remove("active");
+/* -------------   Vincent    ------------- */
+newsBtn.addEventListener("click", function () {
+  // Sélectionne les nouvelles masquées
+  const hiddenNews = document.querySelectorAll(".news.hidden");
 
-    // Passe à l'image suivante
-    currentIndex = (currentIndex + 1) % items.length; // Réinitialise à 0 si atteint la fin
+  // Affiche les nouvelles masquées
+  hiddenNews.forEach((news) => {
+    news.classList.remove("hidden");
+  });
 
-    // Ajoute la classe 'active' à la nouvelle image
-    items[currentIndex].classList.add("active");
-  }, 3000); // Change d'image toutes les 3 secondes
+  // Cache le bouton "voir plus"
+  this.style.display = "none";
 });
-*/
+/* ------------- Fin  Vincent    ------------- */
+
+/* -------------   Yavuz    ------------- */
+/* -------------  Fin Yavuz    ------------- */
