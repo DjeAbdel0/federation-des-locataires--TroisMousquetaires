@@ -127,6 +127,9 @@
     &__menu {
       right: 0;
     }
+    &__submenu {
+   @include typo.big-text;
+  }
   }
 
   #Nouvelles,
@@ -138,7 +141,5 @@
   #navbar__icon {
     @include typo.medium-text;
   }
-  &__submenu {
-   @include typo.big-text;
-  }
+  
 }

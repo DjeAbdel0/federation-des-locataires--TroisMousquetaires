@@ -4,7 +4,6 @@
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
 const serviceBtn = document.querySelectorAll(".page-service__btn"); //  Choisis le btn dans .list-service
-const newsBtn = document.querySelectorAll(".voirPlus")
 
 // Toogle la visibilité selon si la souris Hover ou pas
 serviceDiv.forEach((element, index) => {
@@ -25,7 +24,7 @@ serviceDiv.forEach((element, index) => {
 /* ----------------------  Animation Gsap ------------------------------ */
 
 //Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
-
+/*
 if (window.innerWidth > 1399) {
   let scroll_tl = gsap.timeline({
       scrollTrigger: {
@@ -50,7 +49,7 @@ if (window.innerWidth > 1399) {
     },
   });
 }
-
+*/
 /* ---------------------- Fin Animation Gsap ------------------------------ */
 
 function toggleMenu() {
@@ -63,18 +62,22 @@ function toggleMenu() {
 
 
 /* -------------   Vincent    ------------- */
-newsBtn.addEventListener("click", function () {
-  // Sélectionne les nouvelles masquées
-  const hiddenNews = document.querySelectorAll(".news.hidden");
-
-  // Affiche les nouvelles masquées
-  hiddenNews.forEach((news) => {
-    news.classList.remove("hidden");
+const newsBtn = document.querySelector(".voirPlus");
+if(newsBtn !== null){
+  newsBtn.addEventListener("click", function () {
+    // Sélectionne les nouvelles masquées
+    const hiddenNews = document.querySelectorAll(".news.hidden");
+  
+    // Affiche les nouvelles masquées
+    hiddenNews.forEach((news) => {
+      news.classList.remove("hidden");
+    });
+  
+    // Cache le bouton "voir plus"
+    this.style.display = "none";
   });
+}
 
-  // Cache le bouton "voir plus"
-  this.style.display = "none";
-});
 /* ------------- Fin  Vincent    ------------- */
 
 /* -------------   Yavuz    ------------- */

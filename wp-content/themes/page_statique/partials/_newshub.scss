@@ -4,14 +4,14 @@
 @use "typo";
 @use "sass:color";
 
+.newsBody{
+  background-color: colors.$alabaster;
+}
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-
-
 .newshub {
   width: 100vw;
   padding: 20px;
-  background-color: colors.$blanc;
   text-align: left;
   background-color: colors.$honeyDew;
   position: relative;
@@ -211,9 +211,3 @@
   }
 }
 
-.hidden {
-  display: none !important;
-}
-footer {
-  margin-top: 20px;
-}

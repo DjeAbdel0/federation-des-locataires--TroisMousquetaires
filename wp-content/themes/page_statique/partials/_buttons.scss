@@ -19,6 +19,13 @@
   }
 }
 
+@mixin devenir-membre-small-btn {
+  
+  display: inline-block;
+
+  
+}
+
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 @mixin medium-btn-general {
   margin: 0 auto;
@@ -51,3 +58,7 @@
     background: color.adjust(colors.$lime, $blackness: 5%);
   }
 }
+
+
+
+
