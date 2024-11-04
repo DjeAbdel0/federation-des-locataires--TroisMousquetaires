@@ -62,6 +62,16 @@ function toggleMenu() {
 
 
 /* -------------   Vincent    ------------- */
+    // Sélectionne le bouton X de la banniere
+const banniereBtn = document.querySelector(".btn-fermer");
+if(banniereBtn !== null){
+  banniereBtn.addEventListener("click", function () {
+    // Sélectionne la banniere
+    const hiddenBanniere = document.querySelector(".banniere");
+    hiddenBanniere.classList.add("hidden");
+  });
+}
+
 const newsBtn = document.querySelector(".voirPlus");
 if(newsBtn !== null){
   newsBtn.addEventListener("click", function () {
