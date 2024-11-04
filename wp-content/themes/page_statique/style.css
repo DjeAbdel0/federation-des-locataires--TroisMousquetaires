@@ -2,128 +2,42 @@
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
-.navbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #8BBD8E;
-}
-.navbar__logo img {
-  height: 5vw;
-  min-height: 40px;
-  margin-left: 5vw;
-}
-.navbar__menu {
-  position: relative;
-  right: 5%;
-  width: -moz-min-content;
-  width: min-content;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  gap: 0 5vw;
-  margin: 0;
-}
-.navbar__menu li:hover .navbar__submenu {
-  display: block;
-}
-.navbar__submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #8BBD8E;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  z-index: 9999999999;
-}
-.navbar__submenu li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-}
-.navbar__submenu li a:hover {
-  background-color: #444;
-}
-.navbar__search {
-  position: relative;
-  margin-right: 5%;
-}
-.navbar__search input[type=search] {
-  padding-left: 30px;
-  width: -moz-min-content;
-  width: min-content;
-  border-radius: 102px;
-}
-.navbar__search .navbar__loupe {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #aaa;
-}
-.navbar__toggle {
-  margin-right: 5vw;
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.navbar__toggle .navbar__bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px 0;
-  transition: 0.3s;
-}
-.navbar__icon {
-  font-size: 1.5rem;
-  font-weight: normal;
+.megamenu {
+  position: static;
+  z-index: 9999999;
 }
 
-/* Media queries */
-@media (max-width: 1000px) {
-  .navbar__menu {
-    display: none; /* Masqué par défaut */
-    flex-direction: column;
-    width: 100%;
-    background-color: #8BBD8E;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    text-align: center;
-    padding-left: 20px;
-  }
-  .navbar__menu.active {
-    display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
-    z-index: 9999999;
-  }
-  .navbar__toggle {
-    display: flex; /* Affiche le bouton hamburger */
-  }
-  .navbar__menu li {
-    padding: 10px 0;
-  }
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 100%;
+  z-index: 9999999;
 }
-@media (min-width: 1000px) {
-  .navbar__menu {
-    right: 0;
-  }
-  .navbar__submenu {
-    font-size: 2.25rem;
-    font-weight: normal;
-  }
-  #Nouvelles,
-  #Services,
-  #Équipes,
-  #FAQ,
-  #Nousjoindre,
-  #Àpropos,
-  #navbar__icon {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
+
+.text-uppercase {
+  letter-spacing: 0.08em;
+  z-index: 9999999;
 }
+
+.logo_nav {
+  width: 90px;
+  height: auto;
+  margin-left: 1vw;
+  padding: 0;
+  border-radius: 10%;
+}
+
+.navbar {
+  background-color: #8BBD8E;
+}
+.navbar__search {
+  border: black 2px solid;
+  border-radius: 5px;
+}
+.navbar__dropmenuCouleur {
+  background-color: #8BBD8E;
+}
+
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -164,8 +78,7 @@
 .hero__items .hero__item .hero__image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero__content {
   position: absolute;
@@ -294,8 +207,7 @@
   transform: translate(-50%);
   height: 150px;
   width: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px;
 }
 .actualite__zoneTexte {
@@ -422,13 +334,11 @@
   }
   .actualite__conteneurImg {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .actualite__image {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .actualite__titre--petit {
@@ -562,8 +472,7 @@
 .service-hero__img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -607,8 +516,7 @@
 .page-service__assos img, .page-service__crr img, .page-service__locataire img, .page-service__bulettin img, .page-service__infolettre img, .page-service__guide img, .page-service__congres img, .page-service__memoire img, .page-service__recherche img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -661,7 +569,7 @@
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .services__titre {
     font-size: 2.0625rem;
     font-weight: bold;
@@ -855,7 +763,7 @@
 }
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .dons {
     grid-template-rows: auto 1fr;
     grid-template-columns: auto auto;
@@ -870,7 +778,6 @@
     font-size: 1.5rem;
     font-weight: normal;
     grid-column: span 2;
-    width: -moz-min-content;
     width: min-content;
     min-width: 350px;
     margin: 50% auto;
@@ -910,10 +817,8 @@
     text-align: start;
     font-size: 2.25rem;
     font-weight: normal;
-    min-width: -moz-fit-content;
     min-width: fit-content;
     width: 40vw;
-    height: -moz-fit-content;
     height: fit-content;
     margin: 0 5%;
   }
@@ -1134,8 +1039,7 @@
   max-width: 100%;
   height: 300px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
@@ -1533,17 +1437,13 @@ footer {
   border-radius: 3%;
   border: 0px solid black;
 }
-.joindre-formulaire ::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: normal;
-}
 .joindre-formulaire ::placeholder {
   font-size: 1rem;
   font-weight: normal;
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .joindre-droit__base {
     font-size: 1.5rem;
     font-weight: bold;
@@ -1715,7 +1615,7 @@ footer {
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .crr__grosTitre h1 {
     font-size: 2.0625rem;
   }
@@ -1899,8 +1799,7 @@ footer {
 .newshub .news__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -2033,8 +1932,7 @@ footer {
   .newshub .news__image img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 8px;
   }
   .voirPlus {
@@ -2323,11 +2221,9 @@ p {
 }
 
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 
 address {
