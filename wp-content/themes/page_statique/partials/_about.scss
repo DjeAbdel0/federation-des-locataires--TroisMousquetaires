@@ -5,21 +5,93 @@
 @use "sass:color";
 
 .about {
-    width: 100&;
-    text-align: center;
+    width: 100%;
+    background-color: colors.$blanc;
+    padding-bottom: 10px;
 
     &__titre {
+        margin-top: 10px;
         width: 100%;
         text-align: center;
     }
+
+    &__info {
+        text-align: start;
+        margin: 10px auto;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    &__img {
+        width: 100%;
+        z-index: 0;
+        position: relative;
+    }
+    
+
+    &__titre-mission {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    &__mission {
+        width: 70%;
+        text-align: start;
+        margin: 0 auto;
+        background-color: red;
+    }
+
+    &__p {
+        margin: 0;
+    }
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+/*******  768px *******/
 
+@media screen and (min-width: 768px) {
+    .about {
+        &__p{
+            font-size: 20px;
+        }
+
+        &__info {
+            font-size: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        &__titre {
+            margin-top: 40px;
+        }
+
+        &__titre-mission {
+            margin-top: 40px;
+        }
+
+    }
 }
 
-/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
+    .about {
+        &__p{
+            @include typo.big-text;
+        }
 
+        &__info {
+            @include typo.big-text;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        &__titre {
+            @include typo.big-title;
+            margin-top: 40px;
+        }
+
+        &__titre-mission {
+            @include typo.big-title;
+            margin-top: 40px;
+        }
+
+    }
 }
