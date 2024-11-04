@@ -45,6 +45,16 @@ footer {
     grid-area: adresse;
     font-size: 8px;
     margin-top: 38px;
+    color: colors.$blanc;
+    text-decoration: none;
+  }
+
+  &__adresse:hover {
+    grid-area: adresse;
+    font-size: 8px;
+    margin-top: 38px;
+    color: colors.$blanc;
+    text-decoration: none;
   }
 
   &__reseaux {
@@ -55,6 +65,11 @@ footer {
 
   &__reseaux i {
     padding: 3px;
+    color: colors.$blanc;
+  }
+
+  &__reseaux i:hover {
+    color: colors.$espace;
   }
 }
   

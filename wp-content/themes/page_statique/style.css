@@ -1090,7 +1090,7 @@
 }
 .equipe__membre {
   background-color: #fff;
-  width: 300px;
+  width: 400px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -1118,7 +1118,7 @@
 }
 .equipe__image {
   max-width: 100%;
-  height: 150px;
+  height: 300px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1346,6 +1346,15 @@ footer {
   grid-area: adresse;
   font-size: 8px;
   margin-top: 38px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__adresse:hover {
+  grid-area: adresse;
+  font-size: 8px;
+  margin-top: 38px;
+  color: #ffffff;
+  text-decoration: none;
 }
 .footer__reseaux {
   grid-area: reseaux;
@@ -1354,6 +1363,10 @@ footer {
 }
 .footer__reseaux i {
   padding: 3px;
+  color: #ffffff;
+}
+.footer__reseaux i:hover {
+  color: #415456;
 }
 
 @media screen and (min-width: 765px) {
