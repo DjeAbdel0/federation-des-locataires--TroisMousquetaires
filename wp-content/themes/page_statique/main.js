@@ -1,5 +1,6 @@
-/* -------------   Abdel    ------------- */
-/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ */
+/* 
+-------------   Abdel    ------------- 
+/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ 
 
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
@@ -22,7 +23,7 @@ serviceDiv.forEach((element, index) => {
     serviceBtn[index].style.visibility = "hidden";
   });
 });
-/* ----------------------  Animation Gsap ------------------------------ */
+/* ----------------------  Animation Gsap ------------------------------ 
 
 //Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
 
@@ -51,7 +52,7 @@ if (window.innerWidth > 1399) {
   });
 }
 
-/* ---------------------- Fin Animation Gsap ------------------------------ */
+/* ---------------------- Fin Animation Gsap ------------------------------ 
 
 function toggleMenu() {
   const menu = document.querySelector(".navbar__menu");
@@ -59,10 +60,10 @@ function toggleMenu() {
   console.log("ca marche");
 }
 
-/* -------------  Fin Abdel    ------------- */
+/* -------------  Fin Abdel    ------------- 
 
 
-/* -------------   Vincent    ------------- */
+/* -------------   Vincent    ------------- 
 newsBtn.addEventListener("click", function () {
   // Sélectionne les nouvelles masquées
   const hiddenNews = document.querySelectorAll(".news.hidden");
@@ -77,5 +78,6 @@ newsBtn.addEventListener("click", function () {
 });
 /* ------------- Fin  Vincent    ------------- */
 
-/* -------------   Yavuz    ------------- */
-/* -------------  Fin Yavuz    ------------- */
+/* -------------   Yavuz    ------------- 
+/* -------------  Fin Yavuz    ------------- 
+*/
