@@ -2,6 +2,125 @@
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #8BBD8E;
+}
+.navbar__logo img {
+  height: 5vw;
+  min-height: 40px;
+  margin-left: 5vw;
+}
+.navbar__menu {
+  position: relative;
+  right: 5%;
+  width: -moz-min-content;
+  width: min-content;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 0 5vw;
+  margin: 0;
+}
+.navbar__menu li:hover .navbar__submenu {
+  display: block;
+}
+.navbar__submenu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  background-color: #8BBD8E;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 9999999999;
+}
+.navbar__submenu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+.navbar__submenu li a:hover {
+  background-color: #444;
+}
+.navbar__search {
+  position: relative;
+  margin-right: 5%;
+}
+.navbar__search input[type=search] {
+  padding-left: 30px;
+  width: -moz-min-content;
+  width: min-content;
+  border-radius: 102px;
+}
+.navbar__search .navbar__loupe {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+.navbar__toggle {
+  margin-right: 5vw;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navbar__toggle .navbar__bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+.navbar__icon {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Media queries */
+@media (max-width: 1000px) {
+  .navbar__menu {
+    display: none; /* Masqué par défaut */
+    flex-direction: column;
+    width: 100%;
+    background-color: #8BBD8E;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    text-align: center;
+    padding-left: 20px;
+  }
+  .navbar__menu.active {
+    display: flex; /* Affiche le menu lorsque la classe active est ajoutée */
+    z-index: 9999999;
+  }
+  .navbar__toggle {
+    display: flex; /* Affiche le bouton hamburger */
+  }
+  .navbar__menu li {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 1000px) {
+  .navbar__menu {
+    right: 0;
+  }
+  #Nouvelles,
+  #Services,
+  #Équipes,
+  #FAQ,
+  #Nousjoindre,
+  #Àpropos,
+  #navbar__icon {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+}
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -3951,10 +4070,6 @@ html {
   font-family: "archivo";
   background-color: #E6EAE4;
   overflow-x: hidden;
-}
-
-.navbar {
-  background-color: #8BBD8E;
 }
 
 .logo__header {

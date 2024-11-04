@@ -23,12 +23,12 @@ serviceDiv.forEach((element, index) => {
 });
 
 
+
 /* ----------------------  Animation Gsap ------------------------------ */
 
 //Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
 
 if (window.innerWidth > 1399) {
-  console.log("Window is wide enough!");
   let scroll_tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".crr__titre",
@@ -53,6 +53,11 @@ if (window.innerWidth > 1399) {
   });
 }
 
+function toggleMenu() {
+  const menu = document.querySelector('.navbar__menu');
+  menu.classList.toggle('active');
+  console.log("ca marche")
+}
 
 /*
 document.addEventListener("DOMContentLoaded", function () {
