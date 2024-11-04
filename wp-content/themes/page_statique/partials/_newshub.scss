@@ -1,16 +1,12 @@
-// Parial contenant la section Actualités sur la page d'acceuil
+// Parial contenant la section newshub
 @use "colors";
 @use "buttons";
 @use "typo";
 @use "sass:color";
 
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-
-/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
-
-// Version mobile - 375px
 
 .newshub {
   width: 100vw;
@@ -52,14 +48,14 @@
     }
 
     &__titre {
-      @include typo.bold;
+      @include typo.small-title-bold;
       font-size: 1.2rem;
       margin-bottom: 10px;
       align-self: flex-start;
     }
 
     &__date {
-      font-size: 1rem;
+      font-size: 0.8rem;
       margin-bottom: 15px;
       align-self: flex-start;
     }
@@ -79,15 +75,23 @@
     }
   }
 }
+.espaceBouton{
+  width: 100vw;
+  height: 10vh;
+  background-color: colors.$honeyDew;
+  position: relative;
+}
 .voirPlus {
   @include buttons.small-btn-general;
   position: absolute;
-  bottom: 0;
+  bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
 }
 
-// Version tablette - 765px
+/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+
+
 @media screen and (min-width: 765px) {
   .newshub {
     width: 100vw;
@@ -119,7 +123,7 @@
 
       &__titre {
         @include typo.bold;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
       }
 
@@ -129,14 +133,22 @@
       }
 
       &__image {
-        width: 100%; // Taille maximale pour le conteneur de l'image
+        width: 100%;
         height: 400px; // Hauteur fixe du conteneur de l'image
       }
     }
   }
+  .voirPlus {
+    @include buttons.medium-btn-general;
+  }
+  .espaceBouton{
+    height: 12vh;
+  }
 }
 
-// Version desktop - 1400px
+
+/**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
+
 @media screen and (min-width: 1400px) {
   .newshub {
     .news {
@@ -191,15 +203,17 @@
       }
     }
   }
+  .voirPlus {
+    @include buttons.big-btn-general;
+  }
+  .espaceBouton{
+    height: 15vh;
+  }
 }
 
 .hidden {
   display: none !important;
 }
-.voirPlus {
-  @include buttons.small-btn-general;
-}
-
 footer {
   margin-top: 20px;
 }
