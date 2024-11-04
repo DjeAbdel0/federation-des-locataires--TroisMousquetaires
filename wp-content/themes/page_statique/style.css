@@ -1072,13 +1072,13 @@
 .equipe {
   width: 100vw;
   height: 100%;
-  background-color: #f7f7f7; /* Couleur de fond douce */
+  background-color: #f7f7f7;
   text-align: center;
   padding: 30px;
 }
 .equipe__titre {
-  font-weight: bold; /* Assurez-vous que le mixin est bien défini */
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 40px;
   color: #333;
   margin-bottom: 40px;
 }
@@ -1090,7 +1090,7 @@
 }
 .equipe__membre {
   background-color: #fff;
-  width: 280px;
+  width: 300px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1098,10 +1098,10 @@
   margin: 20px;
 }
 .equipe__membre:hover {
-  transform: scale(1.05); /* Effet zoom au survol */
+  transform: scale(1.05);
 }
 .equipe__nom {
-  font-weight: bold; /* Assurez-vous que le mixin est bien défini */
+  font-weight: bold;
   font-size: 18px;
   color: #222;
   margin: 15px 0;
@@ -1112,7 +1112,7 @@
   padding: 15px;
 }
 .equipe__text {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
   line-height: 1.6;
 }
