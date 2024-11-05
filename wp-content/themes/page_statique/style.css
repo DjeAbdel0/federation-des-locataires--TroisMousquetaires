@@ -2137,15 +2137,11 @@ footer {
   flex-direction: column;
   width: 100vw;
 }
-.erreur__titre {
-  color: red;
-}
-.erreur__texte {
-  color: red;
-}
 .erreur__img {
-  position: relative;
+  position: absolute;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .erreur__404 {
   width: 400px;

@@ -4,22 +4,17 @@
 @use "typo";
 @use "sass:color";
 
-.erreur{
+.erreur {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    &__titre{
-        color: red;
-    }
-    &__texte{
-        color: red;
-    }
 
     &__img {
-        position: relative;
+        position: absolute;
         width: 100%;
+        object-fit: cover;
     }
 
     &__404 {
