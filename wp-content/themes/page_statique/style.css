@@ -2144,7 +2144,11 @@ footer {
   color: red;
 }
 .erreur__img {
+  position: relative;
   width: 100%;
+}
+.erreur__404 {
+  width: 400px;
 }
 
 :root,

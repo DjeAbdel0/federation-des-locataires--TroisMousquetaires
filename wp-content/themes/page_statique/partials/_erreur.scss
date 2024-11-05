@@ -18,6 +18,11 @@
     }
 
     &__img {
+        position: relative;
         width: 100%;
+    }
+
+    &__404 {
+        width: 400px;
     }
 }
