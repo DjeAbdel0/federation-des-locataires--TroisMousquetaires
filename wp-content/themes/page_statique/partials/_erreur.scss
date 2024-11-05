@@ -10,11 +10,14 @@
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    height: 50vh;
     &__titre{
         color: red;
     }
     &__texte{
         color: red;
+    }
+
+    &__img {
+        width: 100%;
     }
 }
