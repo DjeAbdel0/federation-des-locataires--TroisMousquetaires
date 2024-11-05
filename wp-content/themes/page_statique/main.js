@@ -102,6 +102,28 @@ if (newsBtn !== null) {
 
 /* ------------- Fin  Vincent    ------------- */
 
-/* -------------   Yavuz    ------------- 
+/* -------------   Yavuz    ------------- */
+document.querySelectorAll('.equipe__membre').forEach(membre => {
+  membre.addEventListener('click', () => {
+    const modalId = membre.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  });
+});
+
+document.querySelectorAll('.modal .close').forEach(closeButton => {
+  closeButton.addEventListener('click', () => {
+    closeButton.closest('.modal').style.display = 'none';
+  });
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+});
+
 /* -------------  Fin Yavuz    ------------- 
 */
