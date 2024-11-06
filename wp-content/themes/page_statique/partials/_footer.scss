@@ -20,17 +20,22 @@ footer {
       "logo adresse reseaux";
   }
 
-  &__logo {
-    width: 0;
+
+  &__logo-container {
+    display: block;
+    grid-area: logo;
   }
 
   &__logo {
-    grid-area: logo;
     height: 65px;
     width: 65px;
     margin-left: 10px;
     margin-top: 23px;
     border-radius: 25%;
+  }
+
+  &__equipe {
+    text-align: center;
   }
 
   &__lien {

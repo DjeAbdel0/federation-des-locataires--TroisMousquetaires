@@ -182,11 +182,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
+  mm.add("(min-width: 480px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 280,  // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+
+  mm.add("(min-width: 645px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 310,  // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+
   // Animation pour les écrans moyens (jusqu'à 675px)
   mm.add("(min-width: 768px)", () => {
     gsap.timeline()
       .to(".erreur__404", {
-        y: 340,  // Ajustement pour les écrans plus larges.
+        y: 350,  // Ajustement pour les écrans plus larges.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+
+  mm.add("(min-width: 985px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 390,  // Utilisation d'une valeur en pourcentage pour rester proportionnel.
         duration: 2,
         ease: "bounce.out"
       })
@@ -200,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mm.add("(min-width: 1400px)", () => {
     gsap.timeline()
       .to(".erreur__404", {
-        y: 500,  // Plus grand déplacement pour les écrans plus larges.
+        y: 450,  // Plus grand déplacement pour les écrans plus larges.
         duration: 2,
         ease: "bounce.out"
       })
