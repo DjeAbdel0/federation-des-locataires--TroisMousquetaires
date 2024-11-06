@@ -22,10 +22,96 @@
 
 #sort-date {
   padding: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+
+.newshub-premiere {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &:hover {
+    .premiere__image {
+      transform: scale(1.1); // Agrandit l'image au survol
+    }
+
+    .premiere__overlay {
+      opacity: 0.5; // Augmente l'opacité du voile noir au survol
+    }
+  }
+}
+
+.premiere {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: black;
+    z-index: 1; // Place l'image en dessous du texte
+    transition: transform 0.5s ease; // Animation fluide de zoom
+  }
+
+  &__titre,
+  &__texte,
+  &__date {
+    position: relative;
+    z-index: 3; // Le texte doit être au-dessus  de l'image
+  }
+
+  &__titre {
+    @include typo.small-title-bold;
+  }
+
+  &__texte {
+    @include typo.small-text;
+  }
+
+  &__date {
+    @include typo.small-text;
+  }
+
+  &__bouton {
+    @include buttons.small-btn-general;
+    z-index: 3;
+    text-decoration: none; // Enlève le soulignement du texte
+
+    &:hover {
+      text-decoration: none; // Enlève le soulignement du texte
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.2;
+    transition: opacity 0.5s ease;
+  }
+}
 
 .newshub {
   width: 100vw;
@@ -40,10 +126,11 @@
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 2rem;
+    border-radius: 15px;
     padding: 2rem;
     gap: 15px; // Espacement entre les éléments de la colonne
     background-color: colors.$blanc;
-    border-bottom: 3px solid colors.$lime;
 
     &__categorie {
       margin-bottom: 10px;
@@ -110,6 +197,32 @@
 /**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
 
 @media screen and (min-width: 768px) {
+  .premiere {
+    &__titre,
+    &__texte,
+    &__date {
+      position: relative;
+      z-index: 3; // Le texte doit être au-dessus  de l'image
+    }
+
+    &__titre {
+      @include typo.medium-title-bold;
+    }
+
+    &__texte {
+      @include typo.medium-text;
+    }
+
+    &__date {
+      @include typo.medium-text;
+    }
+
+    &__bouton {
+      @include buttons.medium-btn-general;
+      z-index: 3;
+    }
+  }
+
   .newshub {
     width: 100vw;
     padding: 20px;
@@ -118,6 +231,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 2rem;
+      border-radius: 15px;
       gap: 15px; // Espacement entre les éléments de la colonne
       text-align: center;
 
@@ -166,6 +281,28 @@
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 
 @media screen and (min-width: 1400px) {
+  .newshub-premiere {
+    height: 70vh;
+  }
+  .premiere {
+    &__titre {
+      @include typo.big-title-bold;
+    }
+
+    &__texte {
+      @include typo.medium-text;
+    }
+
+    &__date {
+      @include typo.small-text;
+    }
+
+    &__bouton {
+      @include buttons.big-btn-general;
+      z-index: 3;
+    }
+  }
+
   .newshub {
     .news {
       display: grid;
@@ -173,10 +310,15 @@
       grid-template-rows: auto auto auto; // Trois lignes pour la colonne de gauche
       align-items: start;
       text-align: left;
+      margin-bottom: 2rem;
       padding: 20px;
+      border-radius: 15px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        transform: scale(1.005);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée */
+        transform: translateY(-5px); /* Légère élévation */
+        border: 2px solid colors.$lime;
       }
 
       &__categorie {

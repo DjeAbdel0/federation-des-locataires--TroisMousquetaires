@@ -8,14 +8,18 @@
   display: inline-block;
   padding: 5px 13px;
   background-color: colors.$lime;
-  color: black;
+  color: colors.$espace;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background: color.adjust(colors.$lime, $blackness: 5%);
+    background-color: colors.$espace;
+    color: colors.$lime;
+    text-decoration: none;
   }
 }
 
@@ -73,14 +77,18 @@
   display: inline-block;
   padding: 6px 13px;
   background-color: colors.$lime;
-  color: black;
+  color: colors.$espace;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 1.2rem;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background: color.adjust(colors.$lime, $blackness: 5%);
+    background-color: colors.$espace;
+    color: colors.$lime;
+    text-decoration: none;
   }
 }
 
@@ -138,14 +146,18 @@
   display: inline-block;
   padding: 10px 16px;
   background-color: colors.$lime;
-  color: black;
+  color: colors.$espace;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 2.2rem;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background: color.adjust(colors.$lime, $blackness: 5%);
+    background-color: colors.$espace;
+    color: colors.$lime;
+    text-decoration: none;
   }
 }
 

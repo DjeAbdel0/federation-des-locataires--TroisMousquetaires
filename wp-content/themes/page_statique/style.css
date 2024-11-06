@@ -282,15 +282,19 @@
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   margin-bottom: 30px;
 }
 .actualite__btn:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 
 /**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
@@ -336,15 +340,19 @@
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
     margin-bottom: 15px;
   }
   .actualite__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
@@ -373,9 +381,11 @@
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
   .actualite__carte:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
   }
   .actualite__conteneurImg {
     width: 100%;
@@ -412,16 +422,20 @@
     display: inline-block;
     padding: 10px 16px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    transition: background-color 0.3s ease;
     margin-top: 30px;
     align-self: center;
   }
   .actualite__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
   .actualite__footer {
     align-self: flex-end;
@@ -602,11 +616,13 @@
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -614,7 +630,9 @@
   margin-top: 2%;
 }
 .page-service__btn:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
@@ -666,14 +684,18 @@
     display: inline-block;
     padding: 5px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 0.8rem;
+    transition: background-color 0.3s ease;
   }
   .page-service__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
@@ -760,14 +782,18 @@
     display: inline-block;
     padding: 10px 16px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    transition: background-color 0.3s ease;
   }
   .page-service__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 /**------------------------------------------------ 375 px -------------------------------------------------------------*/
@@ -801,14 +827,18 @@
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
 }
 .dons__btn:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
@@ -843,14 +873,18 @@
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
   }
   .dons__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
@@ -886,16 +920,20 @@
     display: inline-block;
     padding: 10px 16px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    transition: background-color 0.3s ease;
     float: left;
     width: 250px;
   }
   .dons__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 .temoins {
@@ -963,15 +1001,19 @@
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   grid-area: btn;
 }
 .temoins__btn:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 765px) {
@@ -990,14 +1032,18 @@
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
   }
   .temoins__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1019,14 +1065,18 @@
     display: inline-block;
     padding: 10px 16px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    transition: background-color 0.3s ease;
   }
   .temoins__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 .about {
@@ -1552,15 +1602,19 @@ footer {
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   margin-bottom: 5%;
 }
 .joindre-formulaire__btn:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 .joindre-formulaire__label {
   font-size: 1rem;
@@ -1613,15 +1667,19 @@ footer {
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
     margin-bottom: 10%;
   }
   .joindre-formulaire__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
@@ -1686,14 +1744,18 @@ footer {
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
   }
   .joindre-formulaire__btn:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
 }
 .crr {
@@ -1890,10 +1952,103 @@ footer {
 
 #sort-date {
   padding: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+.newshub-premiere {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.newshub-premiere:hover .premiere__image {
+  transform: scale(1.1);
+}
+.newshub-premiere:hover .premiere__overlay {
+  opacity: 0.5;
+}
+
+.premiere {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.premiere__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: black;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+.premiere__titre, .premiere__texte, .premiere__date {
+  position: relative;
+  z-index: 3;
+}
+.premiere__titre {
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+.premiere__texte {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.premiere__date {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.premiere__bouton {
+  margin: 0 auto;
+  display: inline-block;
+  padding: 5px 13px;
+  background-color: #8BBD8E;
+  color: #415456;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+  text-decoration: none;
+}
+.premiere__bouton:hover {
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
+}
+.premiere__bouton:hover {
+  text-decoration: none;
+}
+.premiere__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: black;
+  z-index: 2;
+  opacity: 0.2;
+  transition: opacity 0.5s ease;
+}
+
 .newshub {
   width: 100vw;
   padding: 20px;
@@ -1907,10 +2062,11 @@ footer {
   align-items: center;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 2rem;
+  border-radius: 15px;
   padding: 2rem;
   gap: 15px;
   background-color: #ffffff;
-  border-bottom: 3px solid #8BBD8E;
 }
 .newshub .news__categorie {
   margin-bottom: 10px;
@@ -1918,16 +2074,20 @@ footer {
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   margin: 0;
   align-self: flex-start;
 }
 .newshub .news__categorie:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 .newshub .news__categorie--article {
   background-color: #ff922c;
@@ -1979,22 +2139,61 @@ footer {
   display: inline-block;
   padding: 5px 13px;
   background-color: #8BBD8E;
-  color: black;
+  color: #415456;
   border: none;
+  text-decoration: none;
   border-radius: 40px;
   cursor: pointer;
   font-size: 0.8rem;
+  transition: background-color 0.3s ease;
   position: absolute;
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
 }
 .voirPlus:hover {
-  background: #8bb08d;
+  background-color: #415456;
+  color: #8BBD8E;
+  text-decoration: none;
 }
 
 /**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
+  .premiere__titre, .premiere__texte, .premiere__date {
+    position: relative;
+    z-index: 3;
+  }
+  .premiere__titre {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .premiere__texte {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .premiere__date {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .premiere__bouton {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 6px 13px;
+    background-color: #8BBD8E;
+    color: #415456;
+    border: none;
+    text-decoration: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+  }
+  .premiere__bouton:hover {
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
+  }
   .newshub {
     width: 100vw;
     padding: 20px;
@@ -2003,6 +2202,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
+    border-radius: 15px;
     gap: 15px;
     text-align: center;
   }
@@ -2039,14 +2240,18 @@ footer {
     display: inline-block;
     padding: 6px 13px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
   }
   .voirPlus:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
   .espaceBouton {
     height: 12vh;
@@ -2054,16 +2259,55 @@ footer {
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
+  .newshub-premiere {
+    height: 70vh;
+  }
+  .premiere__titre {
+    font-size: 3.75rem;
+    font-weight: bold;
+  }
+  .premiere__texte {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .premiere__date {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .premiere__bouton {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #8BBD8E;
+    color: #415456;
+    border: none;
+    text-decoration: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 2.2rem;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+  }
+  .premiere__bouton:hover {
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
+  }
   .newshub .news {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     align-items: start;
     text-align: left;
+    margin-bottom: 2rem;
     padding: 20px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
   .newshub .news:hover {
-    transform: scale(1.005);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transform: translateY(-5px); /* Légère élévation */
+    border: 2px solid #8BBD8E;
   }
   .newshub .news__categorie {
     grid-column: 1/2;
@@ -2105,14 +2349,18 @@ footer {
     display: inline-block;
     padding: 10px 16px;
     background-color: #8BBD8E;
-    color: black;
+    color: #415456;
     border: none;
+    text-decoration: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 2.2rem;
+    transition: background-color 0.3s ease;
   }
   .voirPlus:hover {
-    background: #8bb08d;
+    background-color: #415456;
+    color: #8BBD8E;
+    text-decoration: none;
   }
   .espaceBouton {
     height: 15vh;

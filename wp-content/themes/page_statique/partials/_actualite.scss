@@ -159,10 +159,12 @@
       border-radius: 15px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Ombre légère autour de la carte
       transition: box-shadow 0.3s ease; // Animation pour un effet visuel  lors du survol
+      transition: transform 0.3s ease; // Animation pour un effet de survol
     }
 
     &__carte:hover {
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
     }
 
     &__conteneurImg {
