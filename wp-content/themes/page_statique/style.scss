@@ -12,6 +12,7 @@
 @use "partials/about"; // a propos
 @use "partials/team"; //equipe
 @use "partials/footer";
+@use "partials/sponsor";
 @use "partials/joindre";
 @use "partials/crr";
 @use "partials/newsarticle";
@@ -67,30 +68,6 @@ h3 {
   background-color: colors.$blanc;
 }
 
-.pdp {
-  .pdp-container {
-    background-color: colors.$bonbon;
-    padding-top: 50px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-
-    .pdp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 20px;
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-    }
-
-    .pdp-logo {
-      margin-top: 40px;
-    }
-  }
-}
 
 .hidden {
   display: none !important;

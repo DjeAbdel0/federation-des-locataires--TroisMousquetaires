@@ -1,0 +1,65 @@
+// Parial contenant la section newshub
+@use "colors";
+@use "buttons";
+@use "typo";
+@use "sass:color";
+
+
+
+.pdp {
+    .pdp-container {
+      background-color: colors.$bonbon;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      .pdp-titre {
+        padding: 10px 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+  
+      .pdp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 10px 0;
+  
+        img {
+          width: 60px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+@media screen and (min-width: 765px) {
+    .pdp {
+    
+        .pdp-titre {
+            font-size: 28px !important; //Ca ne marche pas si je ne met pas !important. Je ne sais pas pourquoi :(
+        }
+      
+        .pdp-grid {
+            img {
+              width: 80px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .pdp {
+    
+        .pdp-titre {
+            font-size: 32px !important; //Ca ne marche pas si je ne met pas !important. Je ne sais pas pourquoi :(
+        }
+      
+        .pdp-grid {
+            img {
+              width: 100px !important;
+            }
+        }
+    }
+}
