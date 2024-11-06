@@ -704,7 +704,7 @@
     gap: 45px;
   }
   .services__titre {
-    font-size: 3.75rem;
+    font-size: 40px;
     font-weight: bold;
   }
   .services__no2 {
@@ -816,11 +816,13 @@
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
+  margin: 1rem;
 }
 .dons__image {
   width: 100%;
   height: auto;
   border-radius: 50%;
+  max-width: 50vw;
 }
 .dons__btn {
   margin: 0 auto;
@@ -866,6 +868,7 @@
     grid-column: span 2;
     width: 100%;
     height: auto;
+    max-width: 50vw;
     min-width: 250px;
   }
   .dons__btn {
@@ -894,7 +897,8 @@
     justify-items: center;
   }
   .dons__titre {
-    font-size: 7rem;
+    font-size: 40px;
+    font-size: 3.75rem;
     font-weight: bold;
   }
   .dons__text {
@@ -906,11 +910,11 @@
     width: 40vw;
     height: -moz-fit-content;
     height: fit-content;
-    margin: 0 5%;
+    margin: 15%;
   }
   .dons__image {
     position: relative;
-    max-width: 75vw;
+    max-width: 50vw;
     height: auto;
     bottom: -5%;
     right: -7%;

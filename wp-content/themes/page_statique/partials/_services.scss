@@ -233,7 +233,8 @@ no3;
     gap: 45px;
 
     &__titre {
-      @include typo.big-title-bold;
+      font-size: 40px;
+      @include typo.bold;
     }
 
     &__no2 {

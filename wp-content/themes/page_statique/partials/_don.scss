@@ -23,12 +23,14 @@
   &__text {
     text-align: center;
     @include typo.small-text;
+    margin: 1rem;
   }
 
   &__image {
     width: 100%;
     height: auto;
     border-radius: 50%;
+    max-width: 50vw;
   }
 
   &__btn {
@@ -61,6 +63,7 @@
       grid-column: span 2;
       width: 100%;
       height: auto;
+      max-width: 50vw;
       min-width: 250px;
     }
 
@@ -79,7 +82,8 @@
     justify-items: center;
 
     &__titre {
-      @include typo.giant-title-bold;
+      font-size: 40px;
+      @include typo.big-title-bold;
     }
 
     &__text {
@@ -88,13 +92,13 @@
       min-width: fit-content;
       width: 40vw;
       height: fit-content;
-      margin: 0 5%;
+      margin: 15%;
     }
 
     &__image {
 
       position: relative;
-      max-width: 75vw;
+      max-width: 50vw;
       height: auto;
       bottom: -5%;
       right: -7%;
