@@ -10,14 +10,24 @@
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    overflow: hidden;
 
     &__img {
-        position: absolute;
+        position: relative;
         width: 100%;
         object-fit: cover;
     }
 
     &__404 {
-        width: 400px;
+        position: absolute;
+        left: 65%;
+        top: 0;
+        width: 40%;
+        z-index: 2;
+        overflow: hidden;
     }
+}
+
+@media screen and (min-width: 765px) {
+
 }

@@ -136,6 +136,8 @@ if (sortDateDropdown !== null && newsContainer !== null) {
 /* ------------- Fin  Vincent    ------------- */
 
 /* -------------   Yavuz    ------------- */
+
+/* ------------ Modal pour la page equipe ------------ */
 document.querySelectorAll(".equipe__membre").forEach((membre) => {
   membre.addEventListener("click", () => {
     const modalId = membre.getAttribute("data-modal");
@@ -158,5 +160,54 @@ window.addEventListener("click", (event) => {
   }
 });
 
-/* -------------  Fin Yavuz    -------------
- */
+/* --------------- Fin Modal  -----------------*/
+
+/* --------------- Animation 404 ---------*/
+document.addEventListener("DOMContentLoaded", () => {
+  let mm = gsap.matchMedia();
+
+  // Animation pour les petits écrans (375px et moins)
+  mm.add("(min-width: 375px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 265,  // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+
+  // Animation pour les écrans moyens (jusqu'à 675px)
+  mm.add("(min-width: 765px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 340,  // Ajustement pour les écrans plus larges.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+
+  // Animation pour les écrans jusqu'à 1400px
+  mm.add("(min-width: 1400px)", () => {
+    gsap.timeline()
+      .to(".erreur__404", {
+        y: 500,  // Plus grand déplacement pour les écrans plus larges.
+        duration: 2,
+        ease: "bounce.out"
+      })
+      .to(".erreur__404", {
+        rotation: 20,
+        duration: 0.5
+      });
+  });
+});
+
+
+/* -------------  Fin Yavuz    -------------*/
