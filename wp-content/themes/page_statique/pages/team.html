@@ -1,275 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Équipe</title>
+  </head>
 
-  <link rel="stylesheet" href="../style.css" />
-  <title>Équipe</title>
-</head>
+  <body>
+    <!--Section Bannière-->
+    <section class="banniere">
+      <div class="bannière__contenu">
+        <h5>Site scolaire qui refait l'interface du site de la FLHLMQ</h5>
+        <a href="https://flhlmq.com/fr">Site officiel du client</a>
+      </div>
+      <button class="btn-fermer">X</button>
+    </section>
+    <!--Fin Section Bannière-->
 
-<body>
-  <!--Section Bannière-->
-  <section class="banniere">
-    <div class="bannière__contenu">
-      <h5>Site scolaire qui refait l'interface du site de la FLHLMQ</h5>
-      <a href="https://flhlmq.com/fr">Site officiel du client</a>
-    </div>
-    <button class="btn-fermer">X</button>
-  </section>
-  <!--Fin Section Bannière-->
-
-  <header>
-    
- <!--Barre Nav-->
- <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-  <a href="#" class="navbar-brand">
-      <img src="../assets/medias/logo/logo_nouveau.png" alt="Company Logo" class="logo_nav">
-  </a>
-  <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="navbarContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-              <a href="./news-hub.html" class="nav-link font-weight-bold text-uppercase">Nouvelles</a>
-          </li>
-         <li class="nav-item dropdown megamenu">
-              <a id="megamenu" href="./page_service.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Services</a>
+    <header>
+      <!--Barre Nav-->
+      <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <a href="#" class="navbar-brand">
+          <img
+            src="../assets/medias/logo/logo_nouveau.png"
+            alt="Company Logo"
+            class="logo_nav"
+          />
+        </a>
+        <button
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                href="./news-hub.html"
+                class="nav-link font-weight-bold text-uppercase"
+                >Nouvelles</a
+              >
+            </li>
+            <li class="nav-item dropdown megamenu">
+              <a
+                id="megamenu"
+                href="./page_service.html"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="nav-link dropdown-toggle font-weight-bold text-uppercase"
+                >Services</a
+              >
               <div class="dropdown-menu border-0 p-0 m-0">
-                  <div class="container navbar__dropmenuCouleur">
-                      <div class="row  rounded-0 m-0 shadow-sm">
-                          <div class="col-lg-7 col-xl-8">
-                              <div class="p-4">
-                                  <div class="row">
-                                      <div class="col-lg-6 mb-4">
-                                          <ul class="list-unstyled">
-                                              <li class="nav-item"><a href="./service_CRR.html" class="nav-link text-small pb-0">Crr</a></li>
-                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 2</a></li>
-                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 3</a></li>
-                                              <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 4</a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
+                <div class="container navbar__dropmenuCouleur">
+                  <div class="row rounded-0 m-0 shadow-sm">
+                    <div class="col-lg-7 col-xl-8">
+                      <div class="p-4">
+                        <div class="row">
+                          <div class="col-lg-6 mb-4">
+                            <ul class="list-unstyled">
+                              <li class="nav-item">
+                                <a
+                                  href="./service_CRR.html"
+                                  class="nav-link text-small pb-0"
+                                  >Crr</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link text-small pb-0"
+                                  >Service 2</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link text-small pb-0"
+                                  >Service 3</a
+                                >
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link text-small pb-0"
+                                  >Service 4</a
+                                >
+                              </li>
+                            </ul>
                           </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
+                </div>
               </div>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link font-weight-bold text-uppercase">Équipe</a></li>
-          <li class="nav-item"><a href="./joindre.html" class="nav-link font-weight-bold text-uppercase">Nous joindre</a></li>
-          <li class="nav-item"><a href="./about.html" class="nav-link font-weight-bold text-uppercase">À propos</a></li>
-          <form role="search" aria-label="Site search">
-            <input type="search" class="navbar__search" placeholder="Search..." aria-label="Search">
-            <button type="submit" aria-label="Submit search">
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link font-weight-bold text-uppercase"
+                >Équipe</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./joindre.html"
+                class="nav-link font-weight-bold text-uppercase"
+                >Nous joindre</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="./about.html"
+                class="nav-link font-weight-bold text-uppercase"
+                >À propos</a
+              >
+            </li>
+            <form role="search" aria-label="Site search">
+              <input
+                type="search"
+                class="navbar__search"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <button type="submit" aria-label="Submit search">
                 <i class="bi bi-search"></i>
-            </button>
-        </form>
-        
-          <li class="nav-item"><a href="#" class="nav-link font-weight-bold text-uppercase"><i class="bi bi-person-fill"></i></a></li>
-      </ul>
-  </div>
-</nav>
-<!--Fin Barre Nav-->
-  </header>
+              </button>
+            </form>
 
+            <li class="nav-item">
+              <a href="#" class="nav-link font-weight-bold text-uppercase"
+                ><i class="bi bi-person-fill"></i
+              ></a>
+            </li>
+          </ul>
+          <button class="cta">Devenir membre</button>
+        </div>
+      </nav>
+      <!--Fin Barre Nav-->
+    </header>
 
-<!-- Section Hero -->
-<section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__content__title">Fédération des locataires d’habitations à loyer modique du Québec</h1>
-    <p class="hero__content__text">La voix des locataires de HLM</p>
-  </div>
-  <div class="hero__items">
-    <div class="hero__item">
-      <img src="../assets/medias/hero/hero_01.jpeg" alt="Slide 1" class="hero__image">
-    </div>
-    <div class="hero__item">
-      <img src="../assets/medias/hero/hero_02.jpeg" alt="Slide 2" class="hero__image">
-    </div>
-    <div class="hero__item">
-      <img src="../assets/medias/hero/hero_03.jpeg" alt="Slide 3" class="hero__image">
-    </div>
-    <!-- Add more slides as needed -->
-  </div>
-</section>
-<!-- FIN Section Hero -->
+    <!-- Section Hero -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__content__title">
+          Fédération des locataires d’habitations à loyer modique du Québec
+        </h1>
+        <p class="hero__content__text">La voix des locataires de HLM</p>
+      </div>
+      <div class="hero__items">
+        <div class="hero__item">
+          <img
+            src="../assets/medias/hero/hero_01.jpeg"
+            alt="Slide 1"
+            class="hero__image"
+          />
+        </div>
+        <div class="hero__item">
+          <img
+            src="../assets/medias/hero/hero_02.jpeg"
+            alt="Slide 2"
+            class="hero__image"
+          />
+        </div>
+        <div class="hero__item">
+          <img
+            src="../assets/medias/hero/hero_03.jpeg"
+            alt="Slide 3"
+            class="hero__image"
+          />
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+    </section>
+    <!-- FIN Section Hero -->
 
+    <div class="equipe">
+      <!-- Titre d"equipe -->
+      <h2 class="equipe__titre">Équipe de la FLHLMQ</h2>
 
-<div class="equipe">
-  <!-- Titre d"equipe -->
-  <h2 class="equipe__titre">Équipe de la FLHLMQ</h2>
-
-  <!-- Les membres d'equipe -->
-  <div class="equipe__carte">
-    <!-- Carte 1 -->
-    <div class="equipe__membre" data-modal="modal1">
-      <img class="equipe__image" src="../assets/medias/temoins/equipe_01.jpg">
-      <h2 class="equipe__nom">Robert Pilon, organisateur communautaire</h2>
-      
-    </div>
-    <!-- Carte 2 -->
-    <div class="equipe__membre" data-modal="modal2">
-      <img class="equipe__image" src="../assets/medias/temoins/equipe_02.jpg">
-      <h2 class="equipe__nom">Élisabeth Pham, directrice administrative</h2>
-      
-    </div>
-    <!-- Carte 3 -->
-    <div class="equipe__membre" data-modal="modal3">
-      <img class="equipe__image" src="../assets/medias/temoins/equipe_03.jpg">
-      <h2 class="equipe__nom">Patricia Viannay, coordonnatrice</h2>
-      
-    </div>
-    <!-- Carte 4 -->
-    <div class="equipe__membre" data-modal="modal4">
-      <img class="equipe__image" src="../assets/medias/temoins/equipe_04.jpg">
-      <h2 class="equipe__nom">Anik Leroux, organisatrice communautaire</h2>
-      
-    </div>
-  </div>
-</div>
-
-
-<!------modale------------->
-<div id="modal1" class="modal">
-    <div class="modal__content">
-      <span class="close">&times;</span>
-      <div class="equipe__info">
-      <p class="equipe__text"><strong>Robert Pilon</strong>, en tant qu'organisateur communautaire, travaille à mobiliser les membres de sa communauté pour aborder des enjeux locaux, améliorer la qualité de vie et promouvoir la participation citoyenne. Il peut organiser des événements, des ateliers ou des réunions pour sensibiliser les gens à des problématiques sociales, environnementales ou économiques, tout en facilitant la collaboration entre différents groupes et organisations. Pour le contacter, vous pouvez lui écrire à : <a href=""><strong>robert.pilon@flhlmq.com</strong></a></p>
+      <!-- Les membres d'equipe -->
+      <div class="equipe__carte">
+        <!-- Carte 1 -->
+        <div class="equipe__membre" data-modal="modal1">
+          <img
+            class="equipe__image"
+            src="../assets/medias/temoins/equipe_01.jpg"
+          />
+          <h2 class="equipe__nom">Robert Pilon, organisateur communautaire</h2>
+        </div>
+        <!-- Carte 2 -->
+        <div class="equipe__membre" data-modal="modal2">
+          <img
+            class="equipe__image"
+            src="../assets/medias/temoins/equipe_02.jpg"
+          />
+          <h2 class="equipe__nom">Élisabeth Pham, directrice administrative</h2>
+        </div>
+        <!-- Carte 3 -->
+        <div class="equipe__membre" data-modal="modal3">
+          <img
+            class="equipe__image"
+            src="../assets/medias/temoins/equipe_03.jpg"
+          />
+          <h2 class="equipe__nom">Patricia Viannay, coordonnatrice</h2>
+        </div>
+        <!-- Carte 4 -->
+        <div class="equipe__membre" data-modal="modal4">
+          <img
+            class="equipe__image"
+            src="../assets/medias/temoins/equipe_04.jpg"
+          />
+          <h2 class="equipe__nom">Anik Leroux, organisatrice communautaire</h2>
+        </div>
       </div>
     </div>
-</div>
 
-<div id="modal2" class="modal">
-  <div class="modal__content">
-    <span class="close">&times;</span>
-    <div class="equipe__info">
-      <p class="equipe__text"><strong>Élisabeth Pham</strong>, en tant que directrice administrative, supervise les opérations quotidiennes d'une organisation. Elle gère les ressources humaines, la comptabilité, et veille à ce que les procédures administratives soient efficaces et conformes. Élisabeth joue un rôle clé dans la planification stratégique, en soutenant les objectifs de l'organisation tout en optimisant les ressources. Pour la contacter, vous pouvez lui écrire à : <a href=""><strong>elisabeth.pham@flhlmq.com</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div id="modal3" class="modal">
-  <div class="modal__content">
-    <span class="close">&times;</span>
-    <div class="equipe__info">
-      <p class="equipe__text"><strong>Patricia Viannay</strong>, en tant que coordonnatrice, est responsable de la planification et de l'organisation des projets au sein de son équipe ou de son organisation. Elle s'assure que les activités se déroulent de manière fluide, en gérant les ressources, en établissant des échéanciers et en facilitant la communication entre les membres de l'équipe. Son rôle est essentiel pour garantir que les objectifs sont atteints efficacement. Pour la contacter, vous pouvez lui écrire à : <a href=""><strong>patricia.viannay@flhlmq.com</strong></a></p>
-    </div>
-  </div>
-</div>
-
-<div id="modal4" class="modal">
-  <div class="modal__content">
-    <span class="close">&times;</span>
-    <div class="equipe__info">
-      <p class="equipe__text"><strong>Anik Leroux</strong>, en tant qu'organisatrice communautaire, travaille à mobiliser et engager les membres de sa communauté pour aborder des enjeux locaux. Elle organise des événements, des ateliers et des initiatives qui favorisent la participation citoyenne et le dialogue. Son rôle consiste également à établir des partenariats avec d'autres organisations et à promouvoir des projets visant à améliorer la qualité de vie dans la communauté. Pour la contacter, vous pouvez lui écrire à : <a href=""><strong>anik.leroux@flhlmq.com</strong></a></p>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Pied de page-->
-  <footer>
-    <div class="footer__grid">
-      <img class="footer__logo" src="../assets/medias/logo/logo_nouveau.png" />
-      <div class="footer__lien">
-        <a href="">Nouvelles</a>
-        <a href="">Services</a>
-        <a href="">Équipe</a>
-        <a href="">FAQ</a>
-        <a href="">Nous Joindre</a>
-        <a href="">À propos</a>
-      </div>
-      <a class="footer__link" href="https://www.google.ca/maps/place/F%C3%A9d%C3%A9ration+des+Locataires+d'Habitations+A+loyer+modique+du+Qu%C3%A9bec/@45.4840974,-73.5796534,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a70a26b6f7b:0x4dc61d8e3c023eb2!8m2!3d45.4840974!4d-73.5770785!16s%2Fg%2F1vwlnrln?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"><p class="footer__adresse">2520 Av. Lionel-Groulx, Montréal, QC H3J 1J8</p></a>
-      <div class="footer__reseaux">
-        <a href="https://www.facebook.com/flhlmq/"><i class="bi bi-facebook"></i></a>
-        <i class="bi bi-twitter"></i>
-        <a href="https://www.youtube.com/@robertpilon547"><i class="bi bi-youtube"></i></a>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-person"></i>
+    <!------modale------------->
+    <div id="modal1" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <div class="equipe__info">
+          <p class="equipe__text">
+            <strong>Robert Pilon</strong>, en tant qu'organisateur
+            communautaire, travaille à mobiliser les membres de sa communauté
+            pour aborder des enjeux locaux, améliorer la qualité de vie et
+            promouvoir la participation citoyenne. Il peut organiser des
+            événements, des ateliers ou des réunions pour sensibiliser les gens
+            à des problématiques sociales, environnementales ou économiques,
+            tout en facilitant la collaboration entre différents groupes et
+            organisations. Pour le contacter, vous pouvez lui écrire à :
+            <a href=""><strong>robert.pilon@flhlmq.com</strong></a>
+          </p>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <div class="pdp">
-    <div class="pdp-container">
+    <div id="modal2" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <div class="equipe__info">
+          <p class="equipe__text">
+            <strong>Élisabeth Pham</strong>, en tant que directrice
+            administrative, supervise les opérations quotidiennes d'une
+            organisation. Elle gère les ressources humaines, la comptabilité, et
+            veille à ce que les procédures administratives soient efficaces et
+            conformes. Élisabeth joue un rôle clé dans la planification
+            stratégique, en soutenant les objectifs de l'organisation tout en
+            optimisant les ressources. Pour la contacter, vous pouvez lui écrire
+            à : <a href=""><strong>elisabeth.pham@flhlmq.com</strong></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <div class="equipe__info">
+          <p class="equipe__text">
+            <strong>Patricia Viannay</strong>, en tant que coordonnatrice, est
+            responsable de la planification et de l'organisation des projets au
+            sein de son équipe ou de son organisation. Elle s'assure que les
+            activités se déroulent de manière fluide, en gérant les ressources,
+            en établissant des échéanciers et en facilitant la communication
+            entre les membres de l'équipe. Son rôle est essentiel pour garantir
+            que les objectifs sont atteints efficacement. Pour la contacter,
+            vous pouvez lui écrire à :
+            <a href=""><strong>patricia.viannay@flhlmq.com</strong></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <div class="equipe__info">
+          <p class="equipe__text">
+            <strong>Anik Leroux</strong>, en tant qu'organisatrice
+            communautaire, travaille à mobiliser et engager les membres de sa
+            communauté pour aborder des enjeux locaux. Elle organise des
+            événements, des ateliers et des initiatives qui favorisent la
+            participation citoyenne et le dialogue. Son rôle consiste également
+            à établir des partenariats avec d'autres organisations et à
+            promouvoir des projets visant à améliorer la qualité de vie dans la
+            communauté. Pour la contacter, vous pouvez lui écrire à :
+            <a href=""><strong>anik.leroux@flhlmq.com</strong></a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pied de page-->
+    <footer>
+      <div class="footer__grid">
+        <img
+          class="footer__logo"
+          src="../assets/medias/logo/logo_nouveau.png"
+        />
+        <div class="footer__lien">
+          <a href="">Nouvelles</a>
+          <a href="">Services</a>
+          <a href="">Équipe</a>
+          <a href="">FAQ</a>
+          <a href="">Nous Joindre</a>
+          <a href="">À propos</a>
+        </div>
+        <a
+          class="footer__link"
+          href="https://www.google.ca/maps/place/F%C3%A9d%C3%A9ration+des+Locataires+d'Habitations+A+loyer+modique+du+Qu%C3%A9bec/@45.4840974,-73.5796534,16z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a70a26b6f7b:0x4dc61d8e3c023eb2!8m2!3d45.4840974!4d-73.5770785!16s%2Fg%2F1vwlnrln?hl=fr&entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+          ><p class="footer__adresse">
+            2520 Av. Lionel-Groulx, Montréal, QC H3J 1J8
+          </p></a
+        >
+        <div class="footer__reseaux">
+          <a href="https://www.facebook.com/flhlmq/"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <i class="bi bi-twitter"></i>
+          <a href="https://www.youtube.com/@robertpilon547"
+            ><i class="bi bi-youtube"></i
+          ></a>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-person"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="pdp">
+      <div class="pdp-container">
         <div class="pdp-grid">
-            <div>
-                <a href="http://www.accq.qc.ca/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/accq.png" alt="Association des cadres de collèges du Québec" title="Association des cadres de collèges du Québec">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.fedecegeps.qc.ca" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/federation_cegeps.png" alt="Fédération des cégeps" title="Fédération des cégeps">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.fneeq.qc.ca" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/logo-fneeq.png" alt="Fédération nationale des enseignants et enseignantes du Québec" title="Fédération nationale des enseignants et enseignantes du Québec">
-                </a>
-            </div>
-            <div>
-                <a href="http://collecto.ca" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/collecto.png" alt="Collecto" title="Collecto">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.coopsco.com/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/coopsco.png" alt="Coopsco" title="Coopsco">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.csq.qc.net" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/csq.png" alt="Centrale des syndicats du Québec" title="Centrale des syndicats du Québec">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.acpq.net/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/acpq.png" alt="Association des collèges privés du Québec" title="Association des collèges privés du Québec">
-                </a>
-            </div>
-            <div>
-                <a href="https://www.collegesinstitutes.ca/fr/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/logo-ci-can.png" alt="Collèges et Instituts Canada" title="Collèges et Instituts Canada">
-                </a>
-            </div>
-            <div>
-                <a href="http://www.synchronex.ca/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/fichiers/202212/reseau-cctt-nouveau-logo.png" alt="Synchronex" title="Synchronex">
-                </a>
-            </div>
-            <div>
-                <a href="https://spgq.qc.ca/" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/logo_spgq.png" alt="Syndicat des professionnelles et professionnels du Québec" title="Syndicat des professionnelles et professionnels du Québec">
-                </a>
-            </div>
+          <div>
+            <a href="http://www.accq.qc.ca/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/accq.png"
+                alt="Association des cadres de collèges du Québec"
+                title="Association des cadres de collèges du Québec"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.fedecegeps.qc.ca" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/federation_cegeps.png"
+                alt="Fédération des cégeps"
+                title="Fédération des cégeps"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.fneeq.qc.ca" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/logo-fneeq.png"
+                alt="Fédération nationale des enseignants et enseignantes du Québec"
+                title="Fédération nationale des enseignants et enseignantes du Québec"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://collecto.ca" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/collecto.png"
+                alt="Collecto"
+                title="Collecto"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.coopsco.com/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/coopsco.png"
+                alt="Coopsco"
+                title="Coopsco"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.csq.qc.net" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/csq.png"
+                alt="Centrale des syndicats du Québec"
+                title="Centrale des syndicats du Québec"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.acpq.net/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/acpq.png"
+                alt="Association des collèges privés du Québec"
+                title="Association des collèges privés du Québec"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.collegesinstitutes.ca/fr/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/logo-ci-can.png"
+                alt="Collèges et Instituts Canada"
+                title="Collèges et Instituts Canada"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="http://www.synchronex.ca/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/fichiers/202212/reseau-cctt-nouveau-logo.png"
+                alt="Synchronex"
+                title="Synchronex"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="https://spgq.qc.ca/" target="_blank">
+              <img
+                src="https://www.lescegeps.com/a/public/partenaires/logo_spgq.png"
+                alt="Syndicat des professionnelles et professionnels du Québec"
+                title="Syndicat des professionnelles et professionnels du Québec"
+              />
+            </a>
+          </div>
         </div>
         <div class="pdp-logo">
-            <a href="https://www.canada.ca/fr/patrimoine-canadien.html" target="_blank">
-                <img src="https://www.lescegeps.com/a/public/partenaires/patrimoine-canadien.png" alt="Patrimoine Canada" title="Patrimoine Canada">
-            </a>
+          <a
+            href="https://www.canada.ca/fr/patrimoine-canadien.html"
+            target="_blank"
+          >
+            <img
+              src="https://www.lescegeps.com/a/public/partenaires/patrimoine-canadien.png"
+              alt="Patrimoine Canada"
+              title="Patrimoine Canada"
+            />
+          </a>
         </div>
+      </div>
     </div>
-</div>
 
-  <!-- Scripts Boostrap-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-  </script>
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts Boostrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
 
-<!-- Script Main-->
-<script src="../main.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Script Main-->
+    <script src="../main.js"></script>
+  </body>
 </html>

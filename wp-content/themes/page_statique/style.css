@@ -176,8 +176,8 @@
   animation: slide-animation 9s infinite 6s;
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
   .hero {
     height: 60vh;
   }
@@ -293,8 +293,8 @@
   background: #8bb08d;
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
   .actualite {
     padding: 15px;
   }
@@ -1898,8 +1898,8 @@ footer {
   margin-bottom: 0;
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
   .newsarticle .sectionTexte__paragraphe {
     font-size: 1.2rem;
   }
@@ -1917,11 +1917,13 @@ footer {
 .news__filter {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .news__filter label {
   margin-right: 10px;
+  margin-top: 5px;
   font-weight: bold;
 }
 
@@ -1931,36 +1933,6 @@ footer {
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-.cta {
-  border: 5em;
-  cursor: pointer;
-  outline: none;
-  font-size: 16px;
-  transform: translate(0);
-  background-image: linear-gradient(45deg, #ff922c, #8BBD8E);
-  padding: 0.7em 2em;
-  border-radius: 65px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
-  transition: box-shadow 0.25s;
-  color: white;
-}
-.cta:after {
-  content: "";
-  border-radius: 18px;
-  position: absolute;
-  margin: 4px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background: #0e0e10;
-}
-.cta:hover {
-  background-image: linear-gradient(-45deg, #ff922c, #8BBD8E);
-  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
-}
-
 .newshub {
   width: 100vw;
   padding: 20px;
@@ -2060,8 +2032,8 @@ footer {
   background: #8bb08d;
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
   .newshub {
     width: 100vw;
     padding: 20px;
@@ -4548,6 +4520,42 @@ h3 {
   display: none !important;
 }
 
+.cta {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.8rem;
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #ff922c, #79cf7e);
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+  transition: box-shadow 0.25s;
+  color: #415456;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.cta:after {
+  content: "";
+  border-radius: 18px;
+  position: absolute;
+  margin: 4px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #ffffff;
+}
+.cta:hover:after {
+  content: "";
+}
+.cta:hover {
+  background-image: linear-gradient(-45deg, #ff922c, #79cf7e);
+  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  transform: scale(1.05);
+}
+
 /* 
 --------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
 */
@@ -4567,6 +4575,42 @@ html {
 /* 
 --------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
 */
+@media screen and (min-width: 765px) {
+  .cta {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.9rem;
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #ff922c, #79cf7e);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+    transition: box-shadow 0.25s;
+    color: #415456;
+    font-weight: bold;
+  }
+  .cta:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #ffffff;
+  }
+  .cta:hover:after {
+    content: "";
+  }
+  .cta:hover {
+    background-image: linear-gradient(-45deg, #ff922c, #79cf7e);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    transform: scale(1.05);
+  }
+}
 /* 
 --------------------------------------------------------------------------------------------------------Version Pc min 1400px large--------------------------------------------------------------------------------------------------------------------------------------
 */
@@ -4575,5 +4619,39 @@ html {
     border-radius: 25%;
     width: 100px;
     height: 100px;
+  }
+  .cta {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #ff922c, #79cf7e);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+    transition: box-shadow 0.25s;
+    color: #415456;
+    font-weight: bold;
+  }
+  .cta:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #ffffff;
+  }
+  .cta:hover:after {
+    content: "";
+  }
+  .cta:hover {
+    background-image: linear-gradient(-45deg, #ff922c, #79cf7e);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    transform: scale(1.05);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -45,7 +45,7 @@
 
 /*----------------------------------------------------- Styles généraux -----------------------------------------------------*/
 
-*{
+* {
   box-sizing: border-box;
 }
 header {
@@ -69,11 +69,15 @@ h3 {
 }
 
 
-
-.hidden{
+.hidden {
   display: none !important;
 }
 
+//Bouton de donation
+.cta {
+  @include buttons.small-btn-cta;
+  margin-right: 1rem;
+}
 
 /* 
 --------------------------------------------------------------------------------------------------------Version Mobile min 375px large--------------------------------------------------------------------------------------------------------------------------------------
@@ -85,7 +89,6 @@ html {
   overflow-x: hidden;
 }
 
-
 .logo__header {
   border-radius: 25%;
   width: 50px;
@@ -96,6 +99,10 @@ html {
 --------------------------------------------------------------------------------------------------------Version Tablette min 765px large--------------------------------------------------------------------------------------------------------------------------------------
 */
 @media screen and (min-width: 765px) {
+  //Bouton de donation
+  .cta {
+    @include buttons.medium-btn-cta;
+  }
 }
 
 /* 
@@ -108,5 +115,9 @@ html {
     width: 100px;
     height: 100px;
   }
-}
 
+  //Bouton de donation
+  .cta {
+    @include buttons.big-btn-cta;
+  }
+}
