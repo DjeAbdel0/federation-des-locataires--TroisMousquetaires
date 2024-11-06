@@ -5,49 +5,43 @@
 @use "sass:color";
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-.newsarticle{
-    width: 100%;
-    .sectionTexte{
-        &--vert{
-            background-color: colors.$honeyDew;
-        }
-        &--blanc{
-            background-color: colors.$blanc;
-        }
-        &__paragraphe{
-            font-size: 1rem;
-            margin-left: 5%;
-            margin-right: 5%;
-            padding: 2rem;
-            margin-bottom: 0;
-        }
+.newsarticle {
+  width: 100%;
+  .sectionTexte {
+    &--vert {
+      background-color: colors.$honeyDew;
     }
-
+    &--blanc {
+      background-color: colors.$blanc;
+    }
+    &__paragraphe {
+      font-size: 1rem;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 2rem;
+      margin-bottom: 0;
+    }
+  }
 }
 
-
-
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-@media screen and (min-width: 765px) {
-    .newsarticle{
-        .sectionTexte{
-            &__paragraphe{
-                font-size: 1.2rem;
-            }
-        }
-    
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .newsarticle {
+    .sectionTexte {
+      &__paragraphe {
+        font-size: 1.2rem;
+      }
     }
+  }
 }
-
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
-    .newsarticle{
-        .sectionTexte{
-            &__paragraphe{
-                font-size: 1.5rem;
-            }
-        }
-
+  .newsarticle {
+    .sectionTexte {
+      &__paragraphe {
+        font-size: 1.5rem;
+      }
     }
+  }
 }

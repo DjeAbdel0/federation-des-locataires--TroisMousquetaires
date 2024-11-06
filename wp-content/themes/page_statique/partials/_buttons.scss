@@ -19,41 +19,53 @@
   }
 }
 
-@mixin small-btn-cta{
+//Style bouton CTA
+@mixin small-btn-cta {
   border: 5em;
   cursor: pointer;
   outline: none;
-  font-size: 16px;
+  font-size: 0.8rem;
   -webkit-transform: translate(0);
   transform: translate(0);
-  background-image: linear-gradient(45deg, colors.$orange, colors.$lime);
+  background-image: linear-gradient(
+    45deg,
+    colors.$orange,
+    color.adjust(colors.$lime, $saturation: 20%)
+  );
   padding: 0.7em 2em;
   border-radius: 65px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  color: white;
+  color: colors.$espace;
+  font-weight: bold;
 
-&:after {
-  content: "";
-  border-radius: 18px;
-  position: absolute;
-  margin: 4px;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background: #0e0e10;
+  &:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: colors.$blanc;
+  }
+  &:hover:after {
+    content: "";
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      -45deg,
+      colors.$orange,
+      color.adjust(colors.$lime, $saturation: 20%)
+    );
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    transform: scale(1.05);
+  }
 }
-
-&:hover {
-  background-image: linear-gradient(-45deg, colors.$orange, colors.$lime);
-  box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
-}
-
-}
-
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 @mixin medium-btn-general {
@@ -72,6 +84,53 @@
   }
 }
 
+//Style bouton CTA
+@mixin medium-btn-cta {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.9rem;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(
+    45deg,
+    colors.$orange,
+    color.adjust(colors.$lime, $saturation: 20%)
+  );
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: colors.$espace;
+  font-weight: bold;
+
+  &:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: colors.$blanc;
+  }
+  &:hover:after {
+    content: "";
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      -45deg,
+      colors.$orange,
+      color.adjust(colors.$lime, $saturation: 20%)
+    );
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    transform: scale(1.05);
+  }
+}
 
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 @mixin big-btn-general {
@@ -90,6 +149,50 @@
   }
 }
 
+//Style bouton CTA
+@mixin big-btn-cta {
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 1rem;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(
+    45deg,
+    colors.$orange,
+    color.adjust(colors.$lime, $saturation: 20%)
+  );
+  padding: 0.7em 2em;
+  border-radius: 65px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: colors.$espace;
+  font-weight: bold;
 
+  &:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: colors.$blanc;
+  }
+  &:hover:after {
+    content: "";
+  }
 
-
+  &:hover {
+    background-image: linear-gradient(
+      -45deg,
+      colors.$orange,
+      color.adjust(colors.$lime, $saturation: 20%)
+    );
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+    transform: scale(1.05);
+  }
+}

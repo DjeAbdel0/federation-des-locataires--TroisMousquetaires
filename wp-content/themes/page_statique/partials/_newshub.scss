@@ -10,11 +10,13 @@
 .news__filter {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .news__filter label {
   margin-right: 10px;
+  margin-top: 5px;
   font-weight: bold;
 }
 
@@ -24,9 +26,7 @@
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-.cta {
-  @include buttons.small-btn-cta;
-}
+
 .newshub {
   width: 100vw;
   padding: 20px;
@@ -107,9 +107,9 @@
   transform: translateX(-50%);
 }
 
-/**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
+/**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .newshub {
     width: 100vw;
     padding: 20px;

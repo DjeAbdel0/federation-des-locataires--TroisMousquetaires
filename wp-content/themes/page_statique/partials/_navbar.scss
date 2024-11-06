@@ -23,12 +23,10 @@
 .logo_nav {
   width: 90px;
   height: auto;
-margin-left: 1vw;
+  margin-left: 1vw;
   padding: 0;
   border-radius: 10%;
 }
-
-
 
 .navbar {
   background-color: colors.$lime;
@@ -38,7 +36,7 @@ margin-left: 1vw;
     border-radius: 5px;
   }
 
-  &__dropmenuCouleur{
+  &__dropmenuCouleur {
     background-color: colors.$lime;
   }
 
@@ -93,5 +91,4 @@ margin-left: 1vw;
   #navbar__icon {
     @include typo.medium-text;
   }
- 
 }
