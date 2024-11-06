@@ -1,6 +1,6 @@
 /* 
--------------   Abdel    ------------- 
-/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ 
+-------------   Abdel    ------------- */
+/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ */
 
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
@@ -23,8 +23,8 @@ if (serviceDiv !== null) {
       serviceBtn[index].style.visibility = "hidden";
     });
   });
-});
-/* ----------------------  Animation Gsap ------------------------------ 
+};
+/* ----------------------  Animation Gsap ------------------------------ */
 
 //Detecte si la width du viewport est a 1400px et + pour activer le code Gsap
 let   miniteur;
@@ -61,8 +61,10 @@ function restartGsap() {
     });
   }
 }
+}
 
-/* ---------------------- Fin Animation Gsap ------------------------------ 
+
+/* ---------------------- Fin Animation Gsap ------------------------------ */
 
 function toggleMenu() {
   const menu = document.querySelector(".navbar__menu");
@@ -181,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Animation pour les écrans moyens (jusqu'à 675px)
-  mm.add("(min-width: 765px)", () => {
+  mm.add("(min-width: 768px)", () => {
     gsap.timeline()
       .to(".erreur__404", {
         y: 340,  // Ajustement pour les écrans plus larges.
