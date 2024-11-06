@@ -70,20 +70,11 @@ function toggleMenu() {
   console.log("ca marche");
 }
 
-/* -------------  Fin Abdel    ------------- 
+/* -------------  Fin Abdel    ------------- */
 
+/* -------------   Vincent    ------------- */
 
-/* -------------   Vincent    ------------- 
-newsBtn.addEventListener("click", function () {
-  // Sélectionne les nouvelles masquées
-  const hiddenNews = document.querySelectorAll(".news.hidden");
-
-  // Affiche les nouvelles masquées
-  hiddenNews.forEach((news) => {
-    news.classList.remove("hidden");
-  });
-}
-
+// Affiche les nouvelles masqués lors du clique du bouton
 const newsBtn = document.querySelector(".voirPlus");
 if (newsBtn !== null) {
   newsBtn.addEventListener("click", function () {
@@ -100,30 +91,72 @@ if (newsBtn !== null) {
   });
 }
 
+// Sélectionne le bouton X de la bannière
+const banniereBtn = document.querySelector(".btn-fermer");
+const banniere = document.querySelector(".banniere");
+
+// Vérifie si la bannière a déjà été fermée
+if (localStorage.getItem("banniereFermee") === "true") {
+  banniere.classList.add("hidden");
+}
+
+// Ajoute un événement de clic au bouton pour fermer la bannière
+if (banniereBtn !== null) {
+  banniereBtn.addEventListener("click", function () {
+    // Cache la bannière
+    banniere.classList.add("hidden");
+    // Enregistre dans le localStorage que la bannière a été fermée
+    localStorage.setItem("banniereFermee", "true");
+  });
+}
+
+// Sélectionne le menu déroulant pour le tri
+const sortDateDropdown = document.getElementById("sort-date");
+const newsContainer = document.querySelector(".newshub");
+
+if (sortDateDropdown !== null && newsContainer !== null) {
+  sortDateDropdown.addEventListener("change", function () {
+    const order = sortDateDropdown.value;
+    const newsItems = Array.from(document.querySelectorAll(".news"));
+
+    // Trie les nouvelles en fonction de l'ordre sélectionné
+    newsItems.sort((a, b) => {
+      const dateA = new Date(a.querySelector(".news__date").textContent);
+      const dateB = new Date(b.querySelector(".news__date").textContent);
+
+      // Trie par date en fonction de l'ordre choisi
+      return order === "new-to-old" ? dateB - dateA : dateA - dateB;
+    });
+
+    // Réordonne les éléments dans le DOM
+    newsItems.forEach((item) => newsContainer.appendChild(item));
+  });
+}
+
 /* ------------- Fin  Vincent    ------------- */
 
 /* -------------   Yavuz    ------------- */
-document.querySelectorAll('.equipe__membre').forEach(membre => {
-  membre.addEventListener('click', () => {
-    const modalId = membre.getAttribute('data-modal');
+document.querySelectorAll(".equipe__membre").forEach((membre) => {
+  membre.addEventListener("click", () => {
+    const modalId = membre.getAttribute("data-modal");
     const modal = document.getElementById(modalId);
     if (modal) {
-      modal.style.display = 'block';
+      modal.style.display = "block";
     }
   });
 });
 
-document.querySelectorAll('.modal .close').forEach(closeButton => {
-  closeButton.addEventListener('click', () => {
-    closeButton.closest('.modal').style.display = 'none';
+document.querySelectorAll(".modal .close").forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    closeButton.closest(".modal").style.display = "none";
   });
 });
 
-window.addEventListener('click', (event) => {
-  if (event.target.classList.contains('modal')) {
-    event.target.style.display = 'none';
+window.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
   }
 });
 
-/* -------------  Fin Yavuz    ------------- 
-*/
+/* -------------  Fin Yavuz    -------------
+ */

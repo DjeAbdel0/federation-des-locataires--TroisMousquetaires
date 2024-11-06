@@ -4,12 +4,27 @@
 @use "typo";
 @use "sass:color";
 
-.newsBody{
+.newsBody {
   background-color: colors.$alabaster;
+}
+.news__filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.news__filter label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#sort-date {
+  padding: 5px;
+  font-size: 1rem;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
-.cta{
+.cta {
   @include buttons.small-btn-cta;
 }
 .newshub {
@@ -78,7 +93,7 @@
     }
   }
 }
-.espaceBouton{
+.espaceBouton {
   width: 100vw;
   height: 10vh;
   background-color: colors.$honeyDew;
@@ -93,7 +108,6 @@
 }
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
-
 
 @media screen and (min-width: 765px) {
   .newshub {
@@ -144,11 +158,10 @@
   .voirPlus {
     @include buttons.medium-btn-general;
   }
-  .espaceBouton{
+  .espaceBouton {
     height: 12vh;
   }
 }
-
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 
@@ -209,12 +222,7 @@
   .voirPlus {
     @include buttons.big-btn-general;
   }
-  .espaceBouton{
+  .espaceBouton {
     height: 15vh;
-
   }
-
-
 }
-
-

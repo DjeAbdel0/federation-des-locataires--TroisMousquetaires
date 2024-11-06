@@ -1875,6 +1875,22 @@ footer {
   background-color: #E6EAE4;
 }
 
+.news__filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.news__filter label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#sort-date {
+  padding: 5px;
+  font-size: 1rem;
+}
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .cta {
   border: 5em;
