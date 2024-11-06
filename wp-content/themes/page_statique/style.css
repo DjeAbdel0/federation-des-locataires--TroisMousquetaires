@@ -1433,9 +1433,12 @@ footer {
   grid-template-areas: "logo lien lien" "logo adresse reseaux";
 }
 .footer__logo {
+  width: 0;
+}
+.footer__logo {
   grid-area: logo;
   height: 65px;
-  width: 55px;
+  width: 65px;
   margin-left: 10px;
   margin-top: 23px;
   border-radius: 25%;
@@ -1445,6 +1448,10 @@ footer {
   width: 100%;
   margin-top: 23px;
   padding: none;
+}
+.footer__lien a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .footer__lien a {
   padding: 2px;
@@ -1488,7 +1495,7 @@ footer {
   }
   .footer__logo {
     height: 80px;
-    width: 70px;
+    width: 80px;
     margin-top: 30px;
   }
   .footer__lien {
@@ -1518,7 +1525,7 @@ footer {
   }
   .footer__logo {
     height: 120px;
-    width: 105px;
+    width: 120px;
     margin-left: 20px;
   }
   .footer__lien {
