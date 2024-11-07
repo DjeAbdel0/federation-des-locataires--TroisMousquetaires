@@ -4,6 +4,7 @@
 @use "typo";
 @use "sass:color";
 
+// à propos 
 .about {
     width: 100%;
     background-color: colors.$blanc;
@@ -15,6 +16,7 @@
         text-align: center;
     }
 
+    //texte avec les informations
     &__info {
         text-align: start;
         margin: 10px auto;
@@ -28,7 +30,7 @@
         position: relative;
     }
     
-
+    //Titre de la section mission
     &__titre-mission {
         margin-top: 10px;
         text-align: center;
@@ -74,22 +76,22 @@
 @media screen and (min-width: 1400px) {
     .about {
         &__p{
-            @include typo.big-text;
+            @include typo.big-text; //des font size deja fait dans le partial typo
         }
 
         &__info {
-            @include typo.big-text;
+            @include typo.big-text; //des font size deja fait dans le partial typo
             margin-top: 50px;
             margin-bottom: 50px;
         }
 
         &__titre {
-            @include typo.big-title;
+            @include typo.big-title; //des font size deja fait dans le partial typo
             margin-top: 40px;
         }
 
         &__titre-mission {
-            @include typo.big-title;
+            @include typo.big-title; //des font size deja fait dans le partial typo
             margin-top: 40px;
         }
 

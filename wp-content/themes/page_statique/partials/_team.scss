@@ -9,15 +9,16 @@
   height: 100%;
   background-color: colors.$blanc;
   text-align: center; //centrer les cartes
-  padding: 30px;
+  padding: 30px;// espacement entre les cartes
 
+  //Titre de la team
   &__titre {
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 40px;
-    color: #333;
     margin-bottom: 40px;
   }
 
+  //carte de chaque membre de l'équipe
   &__carte {
     display: flex;
     flex-wrap: wrap;
@@ -26,12 +27,11 @@
   }
 
   &__membre {
-    background-color: #fff;
     width: 400px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); //De l'ombre sous les cartes
     overflow: hidden;
-    transition: transform 0.3s; //animation
+    transition: transform 0.3s; //animation qui zoom la carte
     margin: 20px;
   }
 
@@ -67,16 +67,18 @@
   }
 }
 
+// Les modales avec les info de chaque personne
 .modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: none; //cacher les modales
+  position: fixed; // elles sont fixer 
+  top: 50%; //centré à la page
+  left: 50%;//centré à la page
+  transform: translate(-50%, -50%);//centré à la page
   width: 50%;
   height: 25%;
-  background-color: white;
-  border: 1px solid #888;
+  background-color: colors.$blanc;
+  border: 2px solid colors.$lime;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   z-index: 1000;
 }
@@ -85,6 +87,7 @@
   padding: 20px;
 }
 
+//bouton pour fermer la modale
 .close {
   position: absolute;
   top: 10px;
@@ -92,76 +95,6 @@
   font-size: 20px;
   cursor: pointer;
 }
-
-
-
-
-/*.equipe {
-  width: 100vw;
-  height: 100%;
-  background-color: colors.$blanc;
-  text-align: center;
-
-  &__titre {
-    @include typo.bold;
-    padding: 20px;
-  }
-
-  &__carte {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    margin: 20px;
-    gap: 20px;
-  }
-
-  &__conteneurImg {
-    width: 40%;
-    height: auto;
-
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-  }
-
-  &__image {
-    max-width: 100%;
-    position: relative;
-    vertical-align: middle;
-    left: 50%;
-    transform: translate(-50%);
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-
-  &__zoneTexte {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 40%;
-    height: 150px;
-  }
-
-  &__titre--petit {
-    @include typo.small-title-bold;
-    font-size: 15px;
-  }
-
-  &__text {
-    font-size: 14px;
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-
-  &__btn {
-    @include buttons.small-btn-general;
-    margin-bottom: 30px;
-  }
-}*/
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {

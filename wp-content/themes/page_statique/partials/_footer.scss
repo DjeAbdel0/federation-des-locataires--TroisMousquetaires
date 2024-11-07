@@ -14,24 +14,26 @@ footer {
 .footer {
   
   &__grid {
-      display: grid;
+      display: grid; //grid des elements
       grid-template-areas:
       "logo lien lien"
       "logo adresse reseaux";
   }
 
 
+  //une a href qui contient le logo avec le lien
   &__logo-container {
     display: block;
     grid-area: logo;
   }
 
+  //le logo
   &__logo {
     height: 65px;
     width: 65px;
     margin-left: 10px;
     margin-top: 23px;
-    border-radius: 25%;
+    border-radius: 25%; //arrondir les côtés 
   }
 
   &__lien {
@@ -41,8 +43,8 @@ footer {
     padding: none;
 
     a {
-      color: colors.$blanc;
-      text-decoration: none;
+      color: colors.$blanc;// la couleur du texte
+      text-decoration: none;// enlever la ligne en dessous du texte
     }
   }
 
@@ -52,7 +54,7 @@ footer {
   }
 
   &__lien a:hover {
-    color: colors.$espace; //couleur du texte
+    color: colors.$espace; //changement de la couleur durant le hover
   }
 
   &__link {
@@ -61,7 +63,7 @@ footer {
 
   &__link:hover {
     text-decoration: underline;
-    color: colors.$espace; //couleur underline
+    color: colors.$espace; //couleur underline different
   }
 
   &__adresse {
@@ -90,13 +92,7 @@ footer {
     color: colors.$espace;
   }
 
-  &__eq-btn {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    padding: 10px 0;
-  }
-
+  // Mon équipe , copyright, l'année 
   &__equipe {
     //margin-left: 70px;
     //font-size: 8px;
@@ -105,7 +101,7 @@ footer {
 }
   
   
-
+  // Des petites modification pour rendre plus responsive
   @media screen and (min-width: 765px) {
     footer {
       font-size: 15px;
@@ -151,6 +147,8 @@ footer {
     }
   }
 
+
+  // Des petites modification pour rendre plus responsive
   @media screen and (min-width: 1400px) {
     footer {
       font-size: 15px;

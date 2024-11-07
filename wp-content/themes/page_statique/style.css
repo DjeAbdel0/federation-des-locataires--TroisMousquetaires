@@ -1169,7 +1169,6 @@
 .equipe__titre {
   font-weight: bold;
   font-size: 40px;
-  color: #333;
   margin-bottom: 40px;
 }
 .equipe__carte {
@@ -1179,7 +1178,6 @@
   gap: 20px;
 }
 .equipe__membre {
-  background-color: #fff;
   width: 400px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -1223,8 +1221,9 @@
   transform: translate(-50%, -50%);
   width: 50%;
   height: 25%;
-  background-color: white;
-  border: 1px solid #888;
+  background-color: #ffffff;
+  border: 2px solid #8BBD8E;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
@@ -1241,72 +1240,6 @@
   cursor: pointer;
 }
 
-/*.equipe {
-  width: 100vw;
-  height: 100%;
-  background-color: colors.$blanc;
-  text-align: center;
-
-  &__titre {
-    @include typo.bold;
-    padding: 20px;
-  }
-
-  &__carte {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    margin: 20px;
-    gap: 20px;
-  }
-
-  &__conteneurImg {
-    width: 40%;
-    height: auto;
-
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-  }
-
-  &__image {
-    max-width: 100%;
-    position: relative;
-    vertical-align: middle;
-    left: 50%;
-    transform: translate(-50%);
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-
-  &__zoneTexte {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 40%;
-    height: 150px;
-  }
-
-  &__titre--petit {
-    @include typo.small-title-bold;
-    font-size: 15px;
-  }
-
-  &__text {
-    font-size: 14px;
-    margin-bottom: 20px;
-    overflow: hidden;
-  }
-
-  &__btn {
-    @include buttons.small-btn-general;
-    margin-bottom: 30px;
-  }
-}*/
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 765px) {
   /*.equipe {
@@ -1495,12 +1428,6 @@ footer {
 }
 .footer__reseaux i:hover {
   color: #415456;
-}
-.footer__eq-btn {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
 }
 .footer__equipe {
   text-align: center;
@@ -2436,11 +2363,7 @@ footer {
   }
 }
 .erreur {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 .erreur__img {
