@@ -42,6 +42,10 @@
   font-weight: normal;
 }
 
+.navbar-collapse {
+  padding-left: 5%;
+}
+
 /* Media queries */
 @media (max-width: 1000px) {
   .navbar__menu {

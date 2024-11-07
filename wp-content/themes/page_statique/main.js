@@ -72,6 +72,25 @@ function toggleMenu() {
   console.log("ca marche");
 }
 
+const burgerButton = document.querySelector('.navbar-toggler');
+
+// Create GSAP animation on hover to move button left by 400px
+burgerButton.addEventListener('mouseenter', () => {
+    gsap.to(burgerButton, {
+      rotation: 90,    // Rotates the button 45 degrees for effect
+      duration: 0.5,
+        ease: "power1.inOut"
+    });
+});
+
+burgerButton.addEventListener('mouseleave', () => {
+    gsap.to(burgerButton, {
+      rotation: -90,     // Resets rotation
+      duration: 0.3,
+        ease: "power1.inOut"
+    });
+});
+
 /* -------------  Fin Abdel    ------------- */
 
 /* -------------   Vincent    ------------- */
