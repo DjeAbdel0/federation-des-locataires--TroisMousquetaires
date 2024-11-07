@@ -2,11 +2,13 @@
 @use "buttons";
 @use "typo";
 
+/*Styles pour service.html*/
 .crr {
   min-height: 100vh;
   background: colors.$alabaster;
   overflow-x: hidden;
 
+  /*Titre en début de page*/
   &__grosTitre {
     text-align: start;
     width: 70%;
@@ -17,11 +19,13 @@
       @include typo.small-title;
     }
   }
+ /*Image en début de page*/
   &__grosImg img {
     width: 100%;
   }
-
-  &__intro {
+ /*Styles pour le paragraphe d'intro et de conclusion*/
+  &__intro,
+  &__fin {
     height: auto;
     margin: 2rem auto;
     text-align: start;
@@ -40,12 +44,12 @@
     width: 100%;
   }
 }
-
+/*Style pour chaque role*/
 .role {
   display: grid;
   width: auto;
   height: 100%;
-
+    /*Centre le titre et lui donne du margin*/
   &__titre h3 {
     padding: auto;
     text-align: center;
@@ -57,8 +61,8 @@
   &__titre img {
     width: 100%;
   }
-
-  & p {
+/*texte qui est en bloc*/
+  &__paragraphe {
     flex-wrap: wrap;
     width: 100%;
     height: auto;
@@ -68,6 +72,74 @@
     padding: 2rem 5rem;
     text-align: justify;
     border-bottom: solid black 1%;
+  }
+}
+/*Meme styles que page-service*/
+.page-service-crr {
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: relative;
+
+  &__assos-crr,
+  &__locataire-crr {
+    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      margin: 0 auto;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 100%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      z-index: 1;
+    }
+  }
+
+  &__assos-crr img,
+  &__locataire-crr img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__titre-crr {
+    @include typo.small-title-bold;
+  }
+
+  &__nom-crr {
+    @include typo.bold;
+    margin: auto 0;
+    top: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__texte-crr {
+    @include typo.mini-text;
+    position: absolute;
+    top: 40%;
+    margin: auto 10%;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2;
   }
 }
 
@@ -80,7 +152,8 @@
       }
     }
 
-    &__intro {
+    &__intro,
+    &__fin {
       & h3 {
         text-align: center;
         margin: 2rem 30%;
@@ -98,8 +171,25 @@
       @include typo.medium-title;
     }
 
-    & p {
+    &__paragraphe {
       @include typo.medium-text;
+    }
+  }
+
+  .page-service-crr {
+    width: 100%;
+
+    &__titre-crr {
+      @include typo.medium-title-bold;
+    }
+
+    &__nom-crr {
+      @include typo.medium-title-bold;
+    }
+
+    &__texte-crr {
+      @include typo.medium-text;
+      top: 35%;
     }
   }
 }
@@ -108,68 +198,77 @@
 @media screen and (min-width: 1400px) {
   .crr {
     &__grosTitre {
-      text-align: start;
-      width: 100%;
-
       & h1 {
-        @include typo.giant-title;
+        @include typo.big-title;
       }
-    }
-    &__grosImg img {
-      width: 100%;
     }
 
     &__intro,
     &__fin {
       & h3 {
+        text-align: center;
+        margin: 2rem 30%;
         @include typo.big-title;
       }
       & p {
-        padding: 4rem;
         @include typo.big-text;
+        margin: 0 15%;
       }
-    }
-
-    &__contenue {
-      display: flex;
-      width: 300vw;
-      margin-left: 50%;
     }
   }
 
   .role {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100vh;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-
     &__titre h3 {
-      padding: auto;
-      text-align: center;
       @include typo.big-title;
-      height: 5vh;
-      margin-top: 2rem;
+      margin: 2rem 30%;
     }
 
     &__titre img {
-      width: 25vw;
-      height: 25vh;
-      margin: 1em;
-      float: left;
+      height: 75%;
+      margin: 0;
     }
 
-    & p {
-      flex-wrap: wrap;
-      width: 100%;
-      height: auto;
-      min-height: 65%;
+    &__paragraphe {
       @include typo.big-text;
-      line-height: 3rem;
-      padding: 2rem 5rem;
-      text-align: justify;
+      line-height: 2rem;
+    }
+  }
+  /*Met les autres services en avant avec du grid
+   2 services par rangée*/
+  .page-service-crr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+    &__assos-crr,
+    &__locataire-crr {
+      width: 90%;
+      max-height: 75%;
+      margin: 15% auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    &__titre-crr {
+      @include typo.medium-title-bold;
+    }
+
+    &__nom-crr {
+      @include typo.big-title-bold;
+      top: 40%;
     }
   }
 }

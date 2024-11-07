@@ -2,6 +2,10 @@
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
+.navbar a {
+  color: #ffffff !important;
+}
+
 .megamenu {
   position: static;
   z-index: 9999999;
@@ -17,6 +21,10 @@
 .text-uppercase {
   letter-spacing: 0.08em;
   z-index: 9999999;
+}
+
+.navbar a:hover {
+  color: #415456 !important;
 }
 
 .logo_nav {
@@ -49,7 +57,7 @@
   padding-left: 5%;
 }
 
-/* Media queries */
+/**-------------------------------------------------------------- 1000- px -------------------------------------------------------------*/
 @media (max-width: 1000px) {
   .navbar__menu {
     display: none; /* Masqué par défaut */
@@ -73,7 +81,8 @@
     padding: 10px 0;
   }
 }
-@media (min-width: 1000px) {
+/**-------------------------------------------------------------- 1001+ px -------------------------------------------------------------*/
+@media (min-width: 1001px) {
   .navbar__menu {
     right: 0;
   }
@@ -1489,10 +1498,12 @@ footer {
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+/*Met de la margin pour les icon*/
 .joindre__i {
   margin-right: 3rem;
 }
 
+/*Section informations a droite*/
 .joindre-droit__base {
   font-size: 1rem;
   font-weight: bold;
@@ -1510,6 +1521,7 @@ footer {
   display: none;
 }
 
+/*Section formulaire a gauche*/
 .joindre-formulaire {
   text-align: center;
   width: auto;
@@ -1698,10 +1710,14 @@ footer {
     text-decoration: none;
   }
 }
+/*Styles pour service.html*/
 .crr {
   min-height: 100vh;
   background: #E6EAE4;
   overflow-x: hidden;
+  /*Titre en début de page*/
+  /*Image en début de page*/
+  /*Styles pour le paragraphe d'intro et de conclusion*/
 }
 .crr__grosTitre {
   text-align: start;
@@ -1715,16 +1731,16 @@ footer {
 .crr__grosImg img {
   width: 100%;
 }
-.crr__intro {
+.crr__intro, .crr__fin {
   height: auto;
   margin: 2rem auto;
   text-align: start;
 }
-.crr__intro h3 {
+.crr__intro h3, .crr__fin h3 {
   margin: 1rem 15%;
   font-size: 1.5625rem;
 }
-.crr__intro p {
+.crr__intro p, .crr__fin p {
   font-size: 1rem;
   font-weight: normal;
   margin: 0 15%;
@@ -1733,10 +1749,13 @@ footer {
   width: 100%;
 }
 
+/*Style pour chaque role*/
 .role {
   display: grid;
   width: auto;
   height: 100%;
+  /*Centre le titre et lui donne du margin*/
+  /*texte qui est en bloc*/
 }
 .role__titre h3 {
   padding: auto;
@@ -1748,7 +1767,7 @@ footer {
 .role__titre img {
   width: 100%;
 }
-.role p {
+.role__paragraphe {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
@@ -1761,17 +1780,77 @@ footer {
   border-bottom: solid black 1%;
 }
 
+/*Meme styles que page-service*/
+.page-service-crr {
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.page-service-crr__assos-crr, .page-service-crr__locataire-crr {
+  margin-bottom: 5%;
+  width: 100%;
+  height: auto;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+  display: block;
+}
+.page-service-crr__assos-crr::before, .page-service-crr__locataire-crr::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+.page-service-crr__assos-crr img, .page-service-crr__locataire-crr img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+.page-service-crr__titre-crr {
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+.page-service-crr__nom-crr {
+  font-weight: bold;
+  margin: auto 0;
+  top: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.page-service-crr__texte-crr {
+  font-size: 12px;
+  font-weight: normal;
+  position: absolute;
+  top: 40%;
+  margin: auto 10%;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2;
+}
+
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .crr__grosTitre h1 {
     font-size: 2.0625rem;
   }
-  .crr__intro h3 {
+  .crr__intro h3, .crr__fin h3 {
     text-align: center;
     margin: 2rem 30%;
     font-size: 2.0625rem;
   }
-  .crr__intro p {
+  .crr__intro p, .crr__fin p {
     font-size: 1.5rem;
     font-weight: normal;
     margin: 0 15%;
@@ -1779,68 +1858,88 @@ footer {
   .role__titre h3 {
     font-size: 2.0625rem;
   }
-  .role p {
+  .role__paragraphe {
     font-size: 1.5rem;
     font-weight: normal;
+  }
+  .page-service-crr {
+    width: 100%;
+  }
+  .page-service-crr__titre-crr {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .page-service-crr__nom-crr {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .page-service-crr__texte-crr {
+    font-size: 1.5rem;
+    font-weight: normal;
+    top: 35%;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
-  .crr__grosTitre {
-    text-align: start;
-    width: 100%;
-  }
   .crr__grosTitre h1 {
-    font-size: 5rem;
-  }
-  .crr__grosImg img {
-    width: 100%;
+    font-size: 3.75rem;
   }
   .crr__intro h3, .crr__fin h3 {
+    text-align: center;
+    margin: 2rem 30%;
     font-size: 3.75rem;
   }
   .crr__intro p, .crr__fin p {
-    padding: 4rem;
     font-size: 2.25rem;
     font-weight: normal;
-  }
-  .crr__contenue {
-    display: flex;
-    width: 300vw;
-    margin-left: 50%;
-  }
-  .role {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100vh;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0 15%;
   }
   .role__titre h3 {
-    padding: auto;
-    text-align: center;
     font-size: 3.75rem;
-    height: 5vh;
-    margin-top: 2rem;
+    margin: 2rem 30%;
   }
   .role__titre img {
-    width: 25vw;
-    height: 25vh;
-    margin: 1em;
-    float: left;
+    height: 75%;
+    margin: 0;
   }
-  .role p {
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    min-height: 65%;
+  .role__paragraphe {
     font-size: 2.25rem;
     font-weight: normal;
-    line-height: 3rem;
-    padding: 2rem 5rem;
-    text-align: justify;
+    line-height: 2rem;
+  }
+  /*Met les autres services en avant avec du grid
+   2 services par rangée*/
+  .page-service-crr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .page-service-crr__assos-crr, .page-service-crr__locataire-crr {
+    width: 90%;
+    max-height: 75%;
+    margin: 15% auto;
+  }
+  .page-service-crr__assos-crr::before, .page-service-crr__locataire-crr::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .page-service-crr__assos-crr:hover::before, .page-service-crr__locataire-crr:hover::before {
+    opacity: 1;
+  }
+  .page-service-crr__titre-crr {
+    font-size: 2.0625rem;
+    font-weight: bold;
+  }
+  .page-service-crr__nom-crr {
+    font-size: 3.75rem;
+    font-weight: bold;
+    top: 40%;
   }
 }
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
