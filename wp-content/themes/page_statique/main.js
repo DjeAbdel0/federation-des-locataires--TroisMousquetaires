@@ -261,6 +261,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
-
-
 /* -------------  Fin Yavuz    -------------*/
