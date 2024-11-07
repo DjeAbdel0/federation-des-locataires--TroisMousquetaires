@@ -3,38 +3,58 @@
 @use "colors";
 @use "buttons";
 
-
 /**------------------------------------------------ 375 px -------------------------------------------------------------*/
 .dons {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  text-align: center;
-  padding: 25px 0;
-  overflow: hidden;
-  width: 100%;
-  background-color: colors.$alabaster;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__titre {
-    grid-column: span 4;
-    margin: 20px;
-    @include typo.small-title-bold;
-  }
-
-  &__text {
+    @include typo.bold;
+    padding: 20px;
     text-align: center;
-    @include typo.small-text;
-    margin: 1rem;
+    color: #333;
   }
 
-  &__image {
+  // Conteneur principal pour aligner le texte et l'image en ligne
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    height: auto;
-    border-radius: 50%;
-    max-width: 50vw;
-  }
+    padding: 20px;
 
-  &__btn {
-    @include buttons.small-btn-general;
+    // Texte à gauche
+    &__text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        @include typo.small-text;
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Image à droite
+    &__image {
+      flex: 1;
+      max-width: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
   }
 }
 
@@ -42,72 +62,48 @@
 
 @media screen and (min-width: 768px) {
   .dons {
-    grid-template-rows: auto 1fr;
-    grid-template-columns: auto auto;
-
     &__titre {
-      margin: 20px;
       @include typo.medium-title-bold;
-      grid-column: span 4;
     }
 
-    &__text {
-      @include typo.medium-text;
-      grid-column: span 2;
-      width: min-content;
-      min-width: 350px;
-      margin: 50% auto;
-    }
+    // Conteneur principal pour aligner le texte et l'image en ligne
+    &__content {
+      // Texte à gauche
+      &__text {
+        flex: 1;
 
-    &__image {
-      grid-column: span 2;
-      width: 100%;
-      height: auto;
-      max-width: 50vw;
-      min-width: 250px;
-    }
-
-    &__btn {
-      @include buttons.medium-btn-general;
+        p {
+          @include typo.medium-text;
+          margin-bottom: 1rem;
+        }
+        button {
+          transform: scale(1.15);
+        }
+      }
     }
   }
 }
-
-
 /**------------------------------------------------ 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
-
   .dons {
-    align-items: center;
-    justify-items: center;
-
     &__titre {
-      font-size: 40px;
       @include typo.big-title-bold;
+      font-size: 40px;
     }
 
-    &__text {
-      text-align: start;
-      @include typo.big-text;
-      min-width: fit-content;
-      width: 40vw;
-      height: fit-content;
-      margin: 15%;
-    }
+    // Conteneur principal pour aligner le texte et l'image en ligne
+    &__content {
+      // Texte à gauche
+      &__text {
+        flex: 1;
 
-    &__image {
-
-      position: relative;
-      max-width: 50vw;
-      height: auto;
-      bottom: -5%;
-      right: -7%;
-    }
-
-    &__btn {
-      @include buttons.big-btn-general;
-      float: left;
-      width: 250px;
+        p {
+          @include typo.big-text;
+        }
+        button {
+          transform: scale(1.3);
+        }
+      }
     }
   }
 }
