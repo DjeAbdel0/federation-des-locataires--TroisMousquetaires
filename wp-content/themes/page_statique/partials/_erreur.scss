@@ -19,9 +19,49 @@
   &__404 {
     position: absolute;
     left: 55%;
-    top: 0;
+    top: 170px;
     width: 40%;
     z-index: 2;
     overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .erreur {
+  
+    // mon image pancarte 404
+    &__404 {
+      top: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .erreur {
+  
+    // mon image pancarte 404
+    &__404 {
+      top: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .erreur {
+  
+    // mon image pancarte 404
+    &__404 {
+      top: 70px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .erreur {
+  
+    // mon image pancarte 404
+    &__404 {
+      top: 0;
+    }
   }
 }
