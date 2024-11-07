@@ -57,7 +57,7 @@
   padding-left: 5%;
 }
 
-/* Media queries */
+/**-------------------------------------------------------------- 1000- px -------------------------------------------------------------*/
 @media (max-width: 1000px) {
   .navbar__menu {
     display: none; /* Masqué par défaut */
@@ -81,7 +81,8 @@
     padding: 10px 0;
   }
 }
-@media (min-width: 1000px) {
+/**-------------------------------------------------------------- 1001+ px -------------------------------------------------------------*/
+@media (min-width: 1001px) {
   .navbar__menu {
     right: 0;
   }
@@ -1497,10 +1498,12 @@ footer {
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
+/*Met de la margin pour les icon*/
 .joindre__i {
   margin-right: 3rem;
 }
 
+/*Section informations a droite*/
 .joindre-droit__base {
   font-size: 1rem;
   font-weight: bold;
@@ -1518,6 +1521,7 @@ footer {
   display: none;
 }
 
+/*Section formulaire a gauche*/
 .joindre-formulaire {
   text-align: center;
   width: auto;

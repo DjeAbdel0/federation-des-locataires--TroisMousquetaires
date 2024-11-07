@@ -12,10 +12,11 @@
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 // textes d'introduction a la page
 
+/*Met de la margin pour les icon*/
 .joindre__i {
     margin-right: 3rem;
 }
-
+/*Section informations a droite*/
 .joindre-droit {
     &__base {
         @include typo.small-capitals-bold;
@@ -33,8 +34,9 @@
     display: none;
 }
 
+/*Section formulaire a gauche*/
 .joindre-formulaire {
-    text-align: center;
+    text-align: center; // center les text
     width: auto;
     height: auto;
     border-radius: 3%;
@@ -46,7 +48,7 @@
     box-sizing: border-box;
 
 
-    &__titre {
+    &__titre { //centre le titre
         @include typo.small-title-bold;
         width: 70%;
         margin: 0 auto;
@@ -59,10 +61,10 @@
 
     &__nom,
     &__email,
-    &__message {
+    &__message { 
         width: 70%;
         margin: 2% auto;
-        border-radius: 5%;
+        border-radius: 5%; //arrondie le contour des inputs
     }
 
     &__btn {
@@ -80,10 +82,10 @@
 
     &__label::after{
         content: "*";
-        color: red;
+        color: red; //ajoute un astérix pour les champs obligatoires du formulaire
     }
-    input, textarea{
-        border-radius: 3%;
+    input, textarea{ 
+        border-radius: 3%; //arrondie le contour
         border: 0px solid black;
     }
 

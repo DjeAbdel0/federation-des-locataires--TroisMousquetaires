@@ -3,31 +3,31 @@
 @use "colors";
 
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
-.navbar a{
+.navbar a{  //met la couleur en blanc des fonts
   color: colors.$blanc !important;
 }
-.megamenu {
+.megamenu { 
   position: static;
-  z-index: 9999999;
+  z-index: 9999999; //je veux VRAIMENT qu'il soit au-dessus des autres éléments aka le hero
 }
 
 .megamenu .dropdown-menu {
   background: none;
   border: none;
   width: 100%;
-  z-index: 9999999;
+  z-index: 9999999;  //le drop-down est au-dessus des autres éléments aka le hero
 }
 
 .text-uppercase {
   letter-spacing: 0.08em;
-  z-index: 9999999;
+  z-index: 9999999;  //les liens est au-dessus des autres éléments aka le hero
 }
 
 .navbar a:hover {
-  color: colors.$espace !important;
+  color: colors.$espace !important; //lorsque tu hover change la couleur de la font
 }
 
-
+//placer le logo un peu excentré des bords
 .logo_nav {
   width: 90px;
   height: auto;
@@ -61,7 +61,8 @@
   padding-left: 5%;
 }
 
-/* Media queries */
+/**-------------------------------------------------------------- 1000- px -------------------------------------------------------------*/
+
 @media (max-width: 1000px) {
   .navbar {
     &__menu {
@@ -90,8 +91,8 @@
     }
   }
 }
-
-@media (min-width: 1000px) {
+/**-------------------------------------------------------------- 1001+ px -------------------------------------------------------------*/
+@media (min-width: 1001px) {
   .navbar {
     &__menu {
       right: 0;
