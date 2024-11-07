@@ -3,6 +3,9 @@
 @use "colors";
 
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
+.navbar a{
+  color: colors.$blanc !important;
+}
 .megamenu {
   position: static;
   z-index: 9999999;
@@ -19,6 +22,11 @@
   letter-spacing: 0.08em;
   z-index: 9999999;
 }
+
+.navbar a:hover {
+  color: colors.$espace !important;
+}
+
 
 .logo_nav {
   width: 90px;
@@ -43,7 +51,7 @@
   &__icon {
     @include typo.medium-text;
   }
-  
+
   &-toggler {
     margin-right: 2%;
   }
