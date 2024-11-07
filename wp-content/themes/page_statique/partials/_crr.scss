@@ -1,11 +1,11 @@
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 
 /*Styles pour service.html*/
 .crr {
   min-height: 100vh;
-  background: colors.$alabaster;
+  background: variables.$alabaster;
   overflow-x: hidden;
 
   /*Titre en début de page*/
@@ -19,11 +19,11 @@
       @include typo.small-title;
     }
   }
- /*Image en début de page*/
+  /*Image en début de page*/
   &__grosImg img {
     width: 100%;
   }
- /*Styles pour le paragraphe d'intro et de conclusion*/
+  /*Styles pour le paragraphe d'intro et de conclusion*/
   &__intro,
   &__fin {
     height: auto;
@@ -49,7 +49,7 @@
   display: grid;
   width: auto;
   height: 100%;
-    /*Centre le titre et lui donne du margin*/
+  /*Centre le titre et lui donne du margin*/
   &__titre h3 {
     padding: auto;
     text-align: center;
@@ -61,7 +61,7 @@
   &__titre img {
     width: 100%;
   }
-/*texte qui est en bloc*/
+  /*texte qui est en bloc*/
   &__paragraphe {
     flex-wrap: wrap;
     width: 100%;

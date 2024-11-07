@@ -1,5 +1,5 @@
 // Parial contenant la section newsarticle
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 @use "sass:color";
@@ -9,12 +9,13 @@
   width: 100%;
   .sectionTexte {
     &--vert {
-      background-color: colors.$honeyDew;
+      background-color: variables.$honeyDew;
     }
     &--blanc {
-      background-color: colors.$blanc;
+      background-color: variables.$blanc;
     }
     &__paragraphe {
+      width: 90%;
       font-size: 1rem;
       margin-left: 5%;
       margin-right: 5%;
@@ -29,6 +30,8 @@
   .newsarticle {
     .sectionTexte {
       &__paragraphe {
+        margin-left: 10%;
+        width: 80%;
         font-size: 1.2rem;
       }
     }
@@ -40,6 +43,8 @@
   .newsarticle {
     .sectionTexte {
       &__paragraphe {
+        margin-left: 15%;
+        width: 70%;
         font-size: 1.5rem;
       }
     }

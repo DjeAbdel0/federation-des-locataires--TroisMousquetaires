@@ -1,5 +1,5 @@
 //Appel de nos partials
-@use "colors";
+@use "variables";
 @use "sass:color";
 
 //Style du bouton général
@@ -7,8 +7,8 @@
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: colors.$lime;
-  color: colors.$espace;
+  background-color: variables.$lime;
+  color: variables.$espace;
   border: none;
   text-decoration: none;
   border-radius: 40px;
@@ -17,8 +17,8 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: colors.$espace;
-    color: colors.$lime;
+    background-color: variables.$espace;
+    color: variables.$lime;
     text-decoration: none;
   }
 }
@@ -33,15 +33,15 @@
   transform: translate(0);
   background-image: linear-gradient(
     45deg,
-    colors.$orange,
-    color.adjust(colors.$lime, $saturation: 20%)
+    variables.$orange,
+    color.adjust(variables.$lime, $saturation: 20%)
   );
   padding: 0.7em 2em;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  color: colors.$espace;
+  color: variables.$espace;
   font-weight: bold;
 
   &:after {
@@ -54,7 +54,7 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: colors.$blanc;
+    background: variables.$blanc;
   }
   &:hover:after {
     content: "";
@@ -63,8 +63,8 @@
   &:hover {
     background-image: linear-gradient(
       -45deg,
-      colors.$orange,
-      color.adjust(colors.$lime, $saturation: 20%)
+      variables.$orange,
+      color.adjust(variables.$lime, $saturation: 20%)
     );
     box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
     transform: scale(1.05);
@@ -76,8 +76,8 @@
   margin: 0 auto;
   display: inline-block;
   padding: 6px 13px;
-  background-color: colors.$lime;
-  color: colors.$espace;
+  background-color: variables.$lime;
+  color: variables.$espace;
   border: none;
   text-decoration: none;
   border-radius: 40px;
@@ -86,8 +86,8 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: colors.$espace;
-    color: colors.$lime;
+    background-color: variables.$espace;
+    color: variables.$lime;
     text-decoration: none;
   }
 }
@@ -102,15 +102,15 @@
   transform: translate(0);
   background-image: linear-gradient(
     45deg,
-    colors.$orange,
-    color.adjust(colors.$lime, $saturation: 20%)
+    variables.$orange,
+    color.adjust(variables.$lime, $saturation: 20%)
   );
   padding: 0.7em 2em;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  color: colors.$espace;
+  color: variables.$espace;
   font-weight: bold;
 
   &:after {
@@ -123,7 +123,7 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: colors.$blanc;
+    background: variables.$blanc;
   }
   &:hover:after {
     content: "";
@@ -132,8 +132,8 @@
   &:hover {
     background-image: linear-gradient(
       -45deg,
-      colors.$orange,
-      color.adjust(colors.$lime, $saturation: 20%)
+      variables.$orange,
+      color.adjust(variables.$lime, $saturation: 20%)
     );
     box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
     transform: scale(1.05);
@@ -145,8 +145,8 @@
   margin: 0 auto;
   display: inline-block;
   padding: 10px 16px;
-  background-color: colors.$lime;
-  color: colors.$espace;
+  background-color: variables.$lime;
+  color: variables.$espace;
   border: none;
   text-decoration: none;
   border-radius: 40px;
@@ -155,8 +155,8 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: colors.$espace;
-    color: colors.$lime;
+    background-color: variables.$espace;
+    color: variables.$lime;
     text-decoration: none;
   }
 }
@@ -171,15 +171,15 @@
   transform: translate(0);
   background-image: linear-gradient(
     45deg,
-    colors.$orange,
-    color.adjust(colors.$lime, $saturation: 20%)
+    variables.$orange,
+    color.adjust(variables.$lime, $saturation: 20%)
   );
   padding: 0.7em 2em;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
-  color: colors.$espace;
+  color: variables.$espace;
   font-weight: bold;
 
   &:after {
@@ -192,7 +192,7 @@
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: colors.$blanc;
+    background: variables.$blanc;
   }
   &:hover:after {
     content: "";
@@ -201,8 +201,8 @@
   &:hover {
     background-image: linear-gradient(
       -45deg,
-      colors.$orange,
-      color.adjust(colors.$lime, $saturation: 20%)
+      variables.$orange,
+      color.adjust(variables.$lime, $saturation: 20%)
     );
     box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
     transform: scale(1.05);

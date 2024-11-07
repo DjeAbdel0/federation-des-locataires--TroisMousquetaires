@@ -1,12 +1,11 @@
 //Styles pour la page joindre.html
 
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 
-
 .body-joindre {
-    background-color: colors.$alabaster;
+  background-color: variables.$alabaster;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -14,186 +13,181 @@
 
 /*Met de la margin pour les icon*/
 .joindre__i {
-    margin-right: 3rem;
+  margin-right: 3rem;
 }
 /*Section informations a droite*/
 .joindre-droit {
-    &__base {
-        @include typo.small-capitals-bold;
-        width: 70%;
-        text-align: center;
-        margin: 5% auto;
+  &__base {
+    @include typo.small-capitals-bold;
+    width: 70%;
+    text-align: center;
+    margin: 5% auto;
 
-        &__h1 {
-            @include typo.small-title-bold;
-        }
+    &__h1 {
+      @include typo.small-title-bold;
     }
+  }
 }
 
 .joindre-informations {
-    display: none;
+  display: none;
 }
 
 /*Section formulaire a gauche*/
 .joindre-formulaire {
-    text-align: center; // center les text
-    width: auto;
-    height: auto;
-    border-radius: 3%;
+  text-align: center; // center les text
+  width: auto;
+  height: auto;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  margin: 15% 10%;
+  box-sizing: border-box;
+
+  &__titre {
+    //centre le titre
+    @include typo.small-title-bold;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  &__form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__nom,
+  &__email,
+  &__message {
+    width: 70%;
+    margin: 2% auto;
+    border-radius: 5%; //arrondie le contour des inputs
+  }
+
+  &__btn {
+    @include buttons.small-btn-general;
+    margin-bottom: 5%;
+  }
+
+  &__label {
+    @include typo.small-text;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    margin: 15% 10%;
-    box-sizing: border-box;
+    align-items: start;
+    width: 70%;
+    margin: 0 auto;
+  }
 
+  &__label::after {
+    content: "*";
+    color: red; //ajoute un astérix pour les champs obligatoires du formulaire
+  }
+  input,
+  textarea {
+    border-radius: 3%; //arrondie le contour
+    border: 0px solid black;
+  }
 
-    &__titre { //centre le titre
-        @include typo.small-title-bold;
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    &__form {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    &__nom,
-    &__email,
-    &__message { 
-        width: 70%;
-        margin: 2% auto;
-        border-radius: 5%; //arrondie le contour des inputs
-    }
-
-    &__btn {
-        @include buttons.small-btn-general;
-        margin-bottom: 5%;
-    }
-
-    &__label{
-        @include typo.small-text;
-        display: flex;
-        align-items: start;
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    &__label::after{
-        content: "*";
-        color: red; //ajoute un astérix pour les champs obligatoires du formulaire
-    }
-    input, textarea{ 
-        border-radius: 3%; //arrondie le contour
-        border: 0px solid black;
-    }
-
-    ::placeholder{
-        @include typo.small-text;
-    }
+  ::placeholder {
+    @include typo.small-text;
+  }
 }
-
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
-    .joindre-droit{
-        &__base {
-            @include typo.medium-capitals-bold;
+  .joindre-droit {
+    &__base {
+      @include typo.medium-capitals-bold;
 
-            &__h1 {
-                @include typo.big-capitals-bold;
-            }
-        }
+      &__h1 {
+        @include typo.big-capitals-bold;
+      }
+    }
+  }
+
+  .joindre-formulaire {
+    &__titre {
+      @include typo.medium-title-bold;
+      margin-bottom: 5%;
     }
 
-    .joindre-formulaire {
-        &__titre {
-            @include typo.medium-title-bold;
-            margin-bottom: 5%;
-        }
-
-        &__form {
-            @include typo.medium-title-bold;
-        }
-
-        &__btn {
-            @include buttons.medium-btn-general;
-            margin-bottom: 10%;
-        }
+    &__form {
+      @include typo.medium-title-bold;
     }
+
+    &__btn {
+      @include buttons.medium-btn-general;
+      margin-bottom: 10%;
+    }
+  }
 }
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
+  .page-joindre {
+    display: flex;
+  }
 
-    .page-joindre {
-        display: flex;
+  .joindre-droit {
+    width: 50%;
+    display: grid;
+    position: absolute;
+    right: 0;
+    margin-top: 10%;
+  }
+
+  .joindre-informations {
+    display: inline;
+    margin: 0 auto;
+    width: 70%;
+
+    &__contact {
+      text-align: center;
     }
 
-    .joindre-droit {
-        width: 50%;
-        display: grid;
-        position: absolute;
-        right: 0;
-        margin-top: 10%;
+    &__contact h1 {
+      margin: 5% auto;
+      @include typo.medium-title-bold;
     }
 
-    .joindre-informations {
-        display: inline;
-        margin: 0 auto;
-        width: 70%;
-
-        &__contact {
-            text-align: center;
-        }
-
-        &__contact h1 {
-            margin: 5% auto;
-            @include typo.medium-title-bold;
-
-        }
-
-        &__adresse {
-            width: 85%;
-            text-align: justify;
-        }
-
-        &__facebook {
-            display: none;
-        }
-
+    &__adresse {
+      width: 85%;
+      text-align: justify;
     }
 
+    &__facebook {
+      display: none;
+    }
+  }
 
-    .joindre-gauche {
-        width: 70%;
+  .joindre-gauche {
+    width: 70%;
 
-        &__base {
-            @include typo.medium-capitals-bold;
+    &__base {
+      @include typo.medium-capitals-bold;
 
-            &__h1 {
-                @include typo.medium-title-bold;
-            }
-        }
+      &__h1 {
+        @include typo.medium-title-bold;
+      }
+    }
+  }
+
+  .joindre-formulaire {
+    width: 70%;
+    height: auto;
+    padding-bottom: 5%;
+
+    &__titre {
+      @include typo.medium-title-bold;
     }
 
-    .joindre-formulaire {
-        width: 70%;
-        height: auto;
-        padding-bottom: 5%;
-
-        &__titre {
-            @include typo.medium-title-bold;
-        }
-
-        &__form {
-            @include typo.medium-title-bold;
-        }
-
-        &__btn {
-            @include buttons.medium-btn-general;
-        }
+    &__form {
+      @include typo.medium-title-bold;
     }
 
+    &__btn {
+      @include buttons.medium-btn-general;
+    }
+  }
 }

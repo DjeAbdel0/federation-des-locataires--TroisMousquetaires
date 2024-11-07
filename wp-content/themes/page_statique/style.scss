@@ -1,5 +1,5 @@
 //Appel de nos partials
-@use "partials/colors";
+@use "partials/variables";
 @use "partials/navbar";
 @use "partials/typo";
 @use "partials/hero";
@@ -49,7 +49,7 @@
   box-sizing: border-box;
 }
 header {
-  background-color: colors.$espace;
+  background-color: variables.$espace;
 }
 
 section {
@@ -65,7 +65,7 @@ h3 {
 }
 
 .fond {
-  background-color: colors.$blanc;
+  background-color: variables.$blanc;
 }
 
 .hidden {
@@ -84,7 +84,7 @@ h3 {
 body,
 html {
   font-family: "archivo";
-  background-color: colors.$alabaster;
+  background-color: variables.$alabaster;
   overflow-x: hidden;
 }
 

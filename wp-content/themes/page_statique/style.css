@@ -36,14 +36,14 @@
 }
 
 .navbar {
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
 }
 .navbar__search {
   border: black 2px solid;
   border-radius: 5px;
 }
 .navbar__dropmenuCouleur {
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
 }
 .navbar__icon {
   font-size: 1.5rem;
@@ -63,7 +63,7 @@
     display: none; /* Masqué par défaut */
     flex-direction: column;
     width: 100%;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     position: absolute;
     top: 55px;
     left: 0;
@@ -105,7 +105,7 @@
   width: 100vw;
   height: 50vh;
   overflow: hidden;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
 }
 .hero::before {
   content: "";
@@ -297,7 +297,7 @@
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -309,7 +309,7 @@
 }
 .actualite__btn:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 
@@ -356,7 +356,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -368,7 +368,7 @@
   }
   .actualite__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -438,7 +438,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 10px 16px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -451,7 +451,7 @@
   }
   .actualite__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
   .actualite__footer {
@@ -632,7 +632,7 @@
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -648,7 +648,7 @@
 }
 .page-service__btn:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 
@@ -700,7 +700,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 5px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -711,7 +711,7 @@
   }
   .page-service__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -798,7 +798,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 10px 16px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -809,7 +809,7 @@
   }
   .page-service__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -898,7 +898,7 @@
   }
 }
 .temoins {
-  background-color: #E6EAE4;
+  background-color: #e6eae4;
   width: 100%;
   display: grid;
 }
@@ -961,7 +961,7 @@
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -973,7 +973,7 @@
 }
 .temoins__btn:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 
@@ -992,7 +992,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -1003,7 +1003,7 @@
   }
   .temoins__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -1025,7 +1025,7 @@
     margin: 0 auto;
     display: inline-block;
     padding: 10px 16px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -1036,7 +1036,7 @@
   }
   .temoins__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -1175,7 +1175,7 @@
   width: 50%;
   height: 25%;
   background-color: #ffffff;
-  border: 2px solid #8BBD8E;
+  border: 2px solid #8bbd8e;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -1317,7 +1317,7 @@
 }
 footer {
   font-weight: bold;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   font-size: 11px;
   color: white;
 }
@@ -1455,7 +1455,7 @@ footer {
   }
 }
 .pdp .pdp-container {
-  background-color: #97C399;
+  background-color: #97c399;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -1494,7 +1494,7 @@ footer {
   }
 }
 .body-joindre {
-  background-color: #E6EAE4;
+  background-color: #e6eae4;
 }
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
@@ -1553,7 +1553,7 @@ footer {
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -1565,7 +1565,7 @@ footer {
 }
 .joindre-formulaire__btn:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 .joindre-formulaire__label {
@@ -1580,7 +1580,8 @@ footer {
   content: "*";
   color: red;
 }
-.joindre-formulaire input, .joindre-formulaire textarea {
+.joindre-formulaire input,
+.joindre-formulaire textarea {
   border-radius: 3%;
   border: 0px solid black;
 }
@@ -1618,7 +1619,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -1630,7 +1631,7 @@ footer {
   }
   .joindre-formulaire__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
@@ -1695,7 +1696,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -1706,14 +1707,14 @@ footer {
   }
   .joindre-formulaire__btn:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
 }
 /*Styles pour service.html*/
 .crr {
   min-height: 100vh;
-  background: #E6EAE4;
+  background: #e6eae4;
   overflow-x: hidden;
   /*Titre en début de page*/
   /*Image en début de page*/
@@ -1947,12 +1948,13 @@ footer {
   width: 100%;
 }
 .newsarticle .sectionTexte--vert {
-  background-color: #D4E1D7;
+  background-color: #d4e1d7;
 }
 .newsarticle .sectionTexte--blanc {
   background-color: #ffffff;
 }
 .newsarticle .sectionTexte__paragraphe {
+  width: 90%;
   font-size: 1rem;
   margin-left: 5%;
   margin-right: 5%;
@@ -1963,17 +1965,21 @@ footer {
 /**-------------------------------------------------------------- 768 px -------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .newsarticle .sectionTexte__paragraphe {
+    margin-left: 10%;
+    width: 80%;
     font-size: 1.2rem;
   }
 }
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
   .newsarticle .sectionTexte__paragraphe {
+    margin-left: 15%;
+    width: 70%;
     font-size: 1.5rem;
   }
 }
 .newsBody {
-  background-color: #E6EAE4;
+  background-color: #e6eae4;
 }
 
 .news__filter {
@@ -2055,7 +2061,7 @@ footer {
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -2068,7 +2074,7 @@ footer {
 }
 .premiere__bouton:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 .premiere__bouton:hover {
@@ -2092,7 +2098,7 @@ footer {
   width: 100vw;
   padding: 20px;
   text-align: left;
-  background-color: #D4E1D7;
+  background-color: #d4e1d7;
   position: relative;
 }
 .newshub .news {
@@ -2112,7 +2118,7 @@ footer {
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -2125,20 +2131,20 @@ footer {
 }
 .newshub .news__categorie:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 .newshub .news__categorie--article {
   background-color: #ff922c;
 }
 .newshub .news__categorie--comite {
-  background-color: #D4E1D7;
+  background-color: #d4e1d7;
 }
 .newshub .news__categorie--autre {
   background-color: #5bcfc3;
 }
 .newshub .news__categorie--finance {
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
 }
 .newshub .news__titre {
   font-size: 1.5625rem;
@@ -2169,7 +2175,7 @@ footer {
 .espaceBouton {
   width: 100vw;
   height: 10vh;
-  background-color: #D4E1D7;
+  background-color: #d4e1d7;
   position: relative;
 }
 
@@ -2177,7 +2183,7 @@ footer {
   margin: 0 auto;
   display: inline-block;
   padding: 5px 13px;
-  background-color: #8BBD8E;
+  background-color: #8bbd8e;
   color: #415456;
   border: none;
   text-decoration: none;
@@ -2192,7 +2198,7 @@ footer {
 }
 .voirPlus:hover {
   background-color: #415456;
-  color: #8BBD8E;
+  color: #8bbd8e;
   text-decoration: none;
 }
 
@@ -2218,7 +2224,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -2230,7 +2236,7 @@ footer {
   }
   .premiere__bouton:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
   .newshub {
@@ -2253,13 +2259,13 @@ footer {
     background-color: #ff922c;
   }
   .newshub .news__categorie--comite {
-    background-color: #D4E1D7;
+    background-color: #d4e1d7;
   }
   .newshub .news__categorie--droit {
     background-color: #5bcfc3;
   }
   .newshub .news__categorie--finance {
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
   }
   .newshub .news__titre {
     font-weight: bold;
@@ -2278,7 +2284,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 6px 13px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -2289,7 +2295,7 @@ footer {
   }
   .voirPlus:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
   .espaceBouton {
@@ -2317,7 +2323,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 10px 16px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -2329,7 +2335,7 @@ footer {
   }
   .premiere__bouton:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
   .newshub .news {
@@ -2346,7 +2352,7 @@ footer {
   .newshub .news:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée */
     transform: translateY(-5px); /* Légère élévation */
-    border: 2px solid #8BBD8E;
+    border: 2px solid #8bbd8e;
   }
   .newshub .news__categorie {
     grid-column: 1/2;
@@ -2387,7 +2393,7 @@ footer {
     margin: 0 auto;
     display: inline-block;
     padding: 10px 16px;
-    background-color: #8BBD8E;
+    background-color: #8bbd8e;
     color: #415456;
     border: none;
     text-decoration: none;
@@ -2398,7 +2404,7 @@ footer {
   }
   .voirPlus:hover {
     background-color: #415456;
-    color: #8BBD8E;
+    color: #8bbd8e;
     text-decoration: none;
   }
   .espaceBouton {
@@ -4806,7 +4812,7 @@ h3 {
 body,
 html {
   font-family: "archivo";
-  background-color: #E6EAE4;
+  background-color: #e6eae4;
   overflow-x: hidden;
 }
 

@@ -1,11 +1,11 @@
 // Parial contenant la section newshub
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 @use "sass:color";
 
 .newsBody {
-  background-color: colors.$alabaster;
+  background-color: variables.$alabaster;
 }
 .news__filter {
   display: flex;
@@ -117,7 +117,7 @@
   width: 100vw;
   padding: 20px;
   text-align: left;
-  background-color: colors.$honeyDew;
+  background-color: variables.$honeyDew;
   position: relative;
 
   .news {
@@ -130,7 +130,7 @@
     border-radius: 15px;
     padding: 2rem;
     gap: 15px; // Espacement entre les éléments de la colonne
-    background-color: colors.$blanc;
+    background-color: variables.$blanc;
 
     &__categorie {
       margin-bottom: 10px;
@@ -142,13 +142,13 @@
         background-color: #ff922c;
       }
       &--comite {
-        background-color: colors.$honeyDew;
+        background-color: variables.$honeyDew;
       }
       &--autre {
         background-color: #5bcfc3;
       }
       &--finance {
-        background-color: colors.$lime;
+        background-color: variables.$lime;
       }
     }
 
@@ -183,7 +183,7 @@
 .espaceBouton {
   width: 100vw;
   height: 10vh;
-  background-color: colors.$honeyDew;
+  background-color: variables.$honeyDew;
   position: relative;
 }
 .voirPlus {
@@ -243,13 +243,13 @@
           background-color: #ff922c;
         }
         &--comite {
-          background-color: colors.$honeyDew;
+          background-color: variables.$honeyDew;
         }
         &--droit {
           background-color: #5bcfc3;
         }
         &--finance {
-          background-color: colors.$lime;
+          background-color: variables.$lime;
         }
       }
 
@@ -318,7 +318,7 @@
       &:hover {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée */
         transform: translateY(-5px); /* Légère élévation */
-        border: 2px solid colors.$lime;
+        border: 2px solid variables.$lime;
       }
 
       &__categorie {

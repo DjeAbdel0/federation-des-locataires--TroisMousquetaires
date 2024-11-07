@@ -1,4 +1,4 @@
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 @use "sass:color";
@@ -10,7 +10,7 @@
   width: 100vw;
   height: 50vh;
   overflow: hidden;
-  background-color: colors.$lime;
+  background-color: variables.$lime;
 
   &::before {
     content: "";

@@ -1,12 +1,13 @@
 // Appel de nos partials
 @use "typo";
-@use "colors";
+@use "variables";
 
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
-.navbar a{  //met la couleur en blanc des fonts
-  color: colors.$blanc !important;
+.navbar a {
+  //met la couleur en blanc des fonts
+  color: variables.$blanc !important;
 }
-.megamenu { 
+.megamenu {
   position: static;
   z-index: 9999999; //je veux VRAIMENT qu'il soit au-dessus des autres éléments aka le hero
 }
@@ -15,16 +16,16 @@
   background: none;
   border: none;
   width: 100%;
-  z-index: 9999999;  //le drop-down est au-dessus des autres éléments aka le hero
+  z-index: 9999999; //le drop-down est au-dessus des autres éléments aka le hero
 }
 
 .text-uppercase {
   letter-spacing: 0.08em;
-  z-index: 9999999;  //les liens est au-dessus des autres éléments aka le hero
+  z-index: 9999999; //les liens est au-dessus des autres éléments aka le hero
 }
 
 .navbar a:hover {
-  color: colors.$espace !important; //lorsque tu hover change la couleur de la font
+  color: variables.$espace !important; //lorsque tu hover change la couleur de la font
 }
 
 //placer le logo un peu excentré des bords
@@ -37,7 +38,7 @@
 }
 
 .navbar {
-  background-color: colors.$lime;
+  background-color: variables.$lime;
 
   &__search {
     border: black 2px solid;
@@ -45,7 +46,7 @@
   }
 
   &__dropmenuCouleur {
-    background-color: colors.$lime;
+    background-color: variables.$lime;
   }
 
   &__icon {
@@ -69,7 +70,7 @@
       display: none; /* Masqué par défaut */
       flex-direction: column;
       width: 100%;
-      background-color: colors.$lime;
+      background-color: variables.$lime;
       position: absolute;
       top: 55px;
       left: 0;

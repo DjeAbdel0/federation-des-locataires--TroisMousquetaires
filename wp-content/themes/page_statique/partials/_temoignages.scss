@@ -1,121 +1,119 @@
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
-@use 'sass:color';
-  
-  .temoins {
-    background-color: colors.$alabaster;
-    width: 100%;
+@use "sass:color";
+
+.temoins {
+  background-color: variables.$alabaster;
+  width: 100%;
+  display: grid;
+
+  &__titre {
+    @include typo.bold;
+    color: #000;
+    grid-column: span 3;
+    margin: 30px auto;
+  }
+
+  &__carte {
+    margin: 20px auto;
+    width: 70%;
+    padding: 10px;
+    grid-column: span 3;
+    gap: 20px;
     display: grid;
+    grid-template-areas:
+      "t1 text1"
+      "n1 text1"
+      "t2 text2"
+      "n2 text2"
+      "t3 text3"
+      "n3 text3"
+      "btn btn";
+  }
 
-    &__titre {
-      @include typo.bold;
-      color: #000;
-      grid-column: span 3;
-      margin: 30px auto;
-    }
+  &__1 {
+    grid-area: t1;
+  }
 
-    &__carte {
-      margin: 20px auto;
-      width: 70%;
-      padding: 10px;
-      grid-column: span 3;
-      gap: 20px;
-      display: grid;
-      grid-template-areas:
-        "t1 text1"
-        "n1 text1"
-        "t2 text2"
-        "n2 text2"
-        "t3 text3"
-        "n3 text3"
-        "btn btn";
-    }
+  &__2 {
+    grid-area: t2;
+  }
 
-    &__1 {
-      grid-area: t1; 
-    }
+  &__3 {
+    grid-area: t3;
+  }
 
-    &__2 {
-      grid-area: t2; 
-    }
+  &__nom {
+    font-size: 12px;
+  }
 
-    &__3 {
-      grid-area: t3; 
+  &__nom-1 {
+    grid-area: n1;
+  }
+
+  &__nom-2 {
+    grid-area: n2;
+  }
+
+  &__nom-3 {
+    grid-area: n3;
+  }
+
+  &__text-1 {
+    grid-area: text1;
+  }
+
+  &__text-2 {
+    grid-area: text2;
+  }
+
+  &__text-3 {
+    grid-area: text3;
+  }
+
+  &__img {
+    margin-left: 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  &__btn {
+    @include buttons.small-btn-general;
+    grid-area: btn;
+  }
+}
+
+//////////  tablette 765px
+
+@media screen and (min-width: 765px) {
+  .temoins {
+    &__text {
+      font-size: 18px;
     }
 
     &__nom {
-      font-size: 12px;
-    }
-
-    &__nom-1 {
-      grid-area: n1;
-    }
-
-    &__nom-2 {
-      grid-area: n2;
-    }
-
-    &__nom-3 {
-      grid-area: n3;
-    }
-
-    &__text-1 {
-      grid-area: text1;
-    }
-
-    &__text-2 {
-      grid-area: text2;
-    }
-
-    &__text-3 {
-      grid-area: text3;
+      font-size: 18px;
     }
 
     &__img {
-      margin-left: 10px;
-      width: 90px;
-      height: 90px;
-      border-radius: 100%;
-    }
-
-    &__text {
-      font-size: 12px;
-      font-style: italic;
+      width: 120px;
+      height: 120px;
     }
 
     &__btn {
-      @include buttons.small-btn-general;
-      grid-area: btn;
+      @include buttons.medium-btn-general;
     }
   }
-  
-  //////////  tablette 765px
-
-  @media screen and (min-width: 765px) {
-    
-    .temoins {
-      &__text {
-        font-size: 18px;
-      }
-
-      &__nom {
-          font-size: 18px;
-      }
-
-      &__img {
-        width: 120px;
-        height: 120px;
-      }
-
-      &__btn {
-        @include buttons.medium-btn-general;
-      }
-    }
 }
 
 @media screen and (min-width: 1400px) {
-  
   .temoins {
     &__titre {
       font-size: 40px;
@@ -133,17 +131,9 @@
       width: 180px;
       height: 180px;
     }
-    
+
     &__btn {
       @include buttons.big-btn-general;
     }
   }
-
-  
-
-  
-
-  
-
-  
 }

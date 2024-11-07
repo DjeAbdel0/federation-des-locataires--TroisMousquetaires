@@ -1,5 +1,5 @@
 // Parial contenant la section Actualités sur la page d'acceuil
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 @use "sass:color";
@@ -8,7 +8,7 @@
 .actualite {
   width: 100vw;
   height: 100%;
-  background-color: colors.$blanc;
+  background-color: variables.$blanc;
   text-align: center;
 
   &__titre {

@@ -1,12 +1,12 @@
 //Appel de nos partials
-@use "colors";
+@use "variables";
 @use "typo";
 
 ////////////////////// footer
 
 footer {
   @include typo.bold;
-  background-color: colors.$lime;
+  background-color: variables.$lime;
   font-size: 11px;
   color: white;
 }
@@ -41,7 +41,7 @@ footer {
     padding: none;
 
     a {
-      color: colors.$blanc; // la couleur du texte
+      color: variables.$blanc; // la couleur du texte
       text-decoration: none; // enlever la ligne en dessous du texte
     }
   }
@@ -52,7 +52,7 @@ footer {
   }
 
   &__lien a:hover {
-    color: colors.$espace; //changement de la couleur durant le hover
+    color: variables.$espace; //changement de la couleur durant le hover
   }
 
   &__link {
@@ -61,18 +61,18 @@ footer {
 
   &__link:hover {
     text-decoration: underline;
-    color: colors.$espace; //couleur underline different
+    color: variables.$espace; //couleur underline different
   }
 
   &__adresse {
     grid-area: adresse;
     font-size: 8px;
     margin-top: 38px;
-    color: colors.$blanc;
+    color: variables.$blanc;
   }
 
   &__adresse:hover {
-    color: colors.$espace; //couleur du texte
+    color: variables.$espace; //couleur du texte
   }
 
   &__reseaux {
@@ -83,11 +83,11 @@ footer {
 
   &__reseaux i {
     padding: 3px;
-    color: colors.$blanc;
+    color: variables.$blanc;
   }
 
   &__reseaux i:hover {
-    color: colors.$espace;
+    color: variables.$espace;
   }
 
   // Mon équipe , copyright, l'année

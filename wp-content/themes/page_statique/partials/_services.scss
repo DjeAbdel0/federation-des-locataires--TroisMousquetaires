@@ -1,12 +1,9 @@
 // Parial contenant la section Services sur la page d'acceuil
-@use "colors";
+@use "variables";
 @use "buttons";
 @use "typo";
 
-$servicesNumero: no1,
-no2,
-no3;
-
+$servicesNumero: no1, no2, no3;
 
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 /*-------------------- index.html -- Services*/
@@ -73,7 +70,7 @@ no3;
     left: 5%;
     @include typo.medium-title-bold;
     z-index: 5;
-    color: colors.$blanc;
+    color: variables.$blanc;
   }
 }
 
@@ -82,7 +79,6 @@ no3;
   text-align: center;
   width: 100%;
   position: relative;
-
 
   &__assos,
   &__crr,
@@ -108,9 +104,11 @@ no3;
       width: 100vw;
       height: 100%;
       margin: 0 auto;
-      background: linear-gradient(to top,
-          rgba(0, 0, 0, 0.5) 100%,
-          rgba(0, 0, 0, 0.5) 100%);
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 100%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
       z-index: 1;
     }
   }
@@ -168,13 +166,11 @@ no3;
     transform: translateX(-50%);
     margin-top: 2%;
   }
-
 }
-
 
 /**-------------------------------------------------------------- 765 px -------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
-    // Adaptation pour les écrans moyens
+  // Adaptation pour les écrans moyens
   .services {
     &__titre {
       @include typo.medium-title-bold;
@@ -198,7 +194,7 @@ no3;
       }
     }
   }
- // Adaptation pour l'élément "service-hero" sur des écrans plus larges
+  // Adaptation pour l'élément "service-hero" sur des écrans plus larges
   .service-hero {
     &__titre {
       @include typo.big-title-bold;
@@ -225,13 +221,11 @@ no3;
       @include buttons.small-btn-general;
     }
   }
-
 }
-
 
 /**-------------------------------------------------------------- 1400 px -------------------------------------------------------------*/
 @media screen and (min-width: 1400px) {
-   // Adaptation pour les écrans très larges (plus de 1400px)
+  // Adaptation pour les écrans très larges (plus de 1400px)
   .services {
     gap: 45px;
 
@@ -259,13 +253,13 @@ no3;
       }
     }
   }
-   // Adaptation pour l'élément "service-hero" sur des écrans très larges
+  // Adaptation pour l'élément "service-hero" sur des écrans très larges
   .service-hero {
     &__titre {
       @include typo.giant-title-bold;
     }
   }
-   // Adaptation pour la page de service sur des écrans très larges
+  // Adaptation pour la page de service sur des écrans très larges
   .page-service {
     width: 100%;
 
@@ -278,13 +272,12 @@ no3;
     &__congres,
     &__memoire,
     &__recherche {
-
       width: 70%;
       height: 85%;
       margin: 15% auto;
 
       &::before {
-        content: '';
+        content: "";
         /* Ensure content is set */
         position: absolute;
         /* Required for positioning */
@@ -295,9 +288,11 @@ no3;
         top: 0;
         left: 0;
         /* Align to the left edge */
-        background: linear-gradient(to top,
-            rgba(0, 0, 0, 0.25) 100%,
-            rgba(0, 0, 0, 0.25) 100%);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.25) 100%,
+          rgba(0, 0, 0, 0.25) 100%
+        );
         z-index: 1;
         /* Adjust z-index if necessary */
         opacity: 0;
@@ -310,7 +305,6 @@ no3;
         opacity: 1;
         /* Show on hover */
       }
-
     }
 
     &__titre {
