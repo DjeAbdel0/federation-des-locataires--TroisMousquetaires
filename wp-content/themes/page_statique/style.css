@@ -41,6 +41,9 @@
   font-size: 1.5rem;
   font-weight: normal;
 }
+.navbar-toggler {
+  margin-right: 2%;
+}
 
 .navbar-collapse {
   padding-left: 5%;

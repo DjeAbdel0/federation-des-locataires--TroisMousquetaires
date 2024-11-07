@@ -43,9 +43,13 @@
   &__icon {
     @include typo.medium-text;
   }
+  
+  &-toggler {
+    margin-right: 2%;
+  }
 }
 
-.navbar-collapse{
+.navbar-collapse {
   padding-left: 5%;
 }
 
