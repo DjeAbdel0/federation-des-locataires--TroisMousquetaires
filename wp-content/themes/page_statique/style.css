@@ -1447,9 +1447,6 @@ footer {
   margin-top: 23px;
   border-radius: 25%;
 }
-.footer__equipe {
-  text-align: center;
-}
 .footer__lien {
   grid-area: lien;
   width: 100%;
@@ -1495,6 +1492,15 @@ footer {
 .footer__reseaux i:hover {
   color: #415456;
 }
+.footer__eq-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+.footer__equipe {
+  text-align: center;
+}
 
 @media screen and (min-width: 765px) {
   footer {
@@ -1524,6 +1530,9 @@ footer {
   }
   .footer__reseaux i {
     padding: 10px;
+  }
+  .footer__equipe {
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1556,6 +1565,9 @@ footer {
   .footer__reseaux i {
     font-size: 25px;
     padding: 10px;
+  }
+  .footer__equipe {
+    font-size: 16px;
   }
 }
 .pdp .pdp-container {

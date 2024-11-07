@@ -34,10 +34,6 @@ footer {
     border-radius: 25%;
   }
 
-  &__equipe {
-    text-align: center;
-  }
-
   &__lien {
     grid-area: lien;
     width: 100%;
@@ -93,6 +89,19 @@ footer {
   &__reseaux i:hover {
     color: colors.$espace;
   }
+
+  &__eq-btn {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__equipe {
+    //margin-left: 70px;
+    //font-size: 8px;
+    text-align: center;
+  }
 }
   
   
@@ -133,6 +142,11 @@ footer {
 
       &__reseaux i {
         padding: 10px;
+      }
+
+      &__equipe {
+        font-size: 12px;
+        //margin-left: 60px;
       }
     }
   }
@@ -175,6 +189,11 @@ footer {
       &__reseaux i {
         font-size: 25px;
         padding: 10px;
+      }
+
+      &__equipe {
+        //margin-left: -20px;
+        font-size: 16px;
       }
   }
 }  
