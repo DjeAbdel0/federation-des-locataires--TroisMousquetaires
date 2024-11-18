@@ -32,6 +32,8 @@
 - testi_title: Text
 - testi_description: TextArea
 
+---
+
 # about
 
 ## TYPE DE CONTENU (POST TYPE)
@@ -55,6 +57,8 @@
 - description_title: TextArea
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+
+---
 
 # contact-us
 
@@ -84,6 +88,8 @@
 - contact_message: Text
 - contact_button: Text
 
+---
+
 # erreur404
 
 ## TYPE DE CONTENU (POST TYPE)
@@ -101,6 +107,8 @@
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+
+---
 
 # news-hub
 
@@ -132,6 +140,8 @@
 - news_hero_date: Text
 - news_hero_button: Text
 
+---
+
 # news-article
 
 ## TYPE DE CONTENU (POST TYPE)
@@ -153,6 +163,8 @@
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
 - news_description: TextArea
+
+---
 
 # services-hub
 
@@ -176,6 +188,8 @@
 - service_title: Text
 - service_description: TextArea
 
+---
+
 # service
 
 ## TYPE DE CONTENU (POST TYPE)
@@ -196,7 +210,9 @@
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-# team
+---
+
+# Team
 
 ## TYPE DE CONTENU (POST TYPE)
 
