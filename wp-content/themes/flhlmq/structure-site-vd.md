@@ -16,33 +16,33 @@
 
 ### CHAMPS PERSONNALISÉS
 
-- hero-title: Text
-- hero-image: Gallery
+- hero_title: Text
+- hero_image: Gallery
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
-- actualite-title: Text
+- actualite_title: Text
 
 ### testimonial:Group
 
-- testimonial-title: Text
-- testimonial-icon: Image
-- testimonial-name: Text
-- testimonial-description: TextArea
-- testimonial-btn : Text
+- testimonial_title: Text
+- testimonial_icon: Image
+- testimonial_name: Text
+- testimonial_description: TextArea
+- testimonial_btn : Text
 
 ### services:Group
 
-- services-title: Text
-- services-icon: Image
-- services-name: Text
+- services_title: Text
+- services_icon: Image
+- services_name: Text
 
 ### donation:Group
 
-- donation-title: Text
-- donation-description: TextArea
-- donation-btn : Text
-- donation-image: Image
+- donation_title: Text
+- donation_description: TextArea
+- donation_btn : Text
+- donation_image: Image
 
 ---
 
@@ -54,7 +54,7 @@
 
 ## MODÈLE
 
-- news-hub.php
+- news_hub.php
 
 ## COMPOSANTES
 
@@ -64,17 +64,17 @@
 
 ### CHAMPS PERSONNALISÉS
 
-- news-tag: text
-- news-title: text
-- news-image: image
-- news-date: text
+- news_tag: text
+- news_title: text
+- news_image: image
+- news_date: text
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
-- news-hero-title: text
-- news-hero-desc: text
-- news-hero-date: text
-- news-hero-button: text
+- news_hero_title: text
+- news_hero_desc: text
+- news_hero_date: text
+- news_hero_button: text
 
 ---
 
@@ -86,20 +86,20 @@
 
 ## MODÈLE
 
-- news-article.php
+- news_article.php
 
 ## COMPOSANTES
 
 ### NOM DU PARTIAL
 
-- news-card.php
+- news_card.php
 
 ### CHAMPS PERSONNALISÉS
 
-- news-tag: text
-- news-title: text
-- news-image: image
-- news-date: text
+- news_tag: text
+- news_title: text
+- news_image: image
+- news_date: text
 
 ---
 
@@ -117,21 +117,21 @@
 
 ### NOM DU PARTIAL
 
-- service-card.php
+- service_card.php
 
 ### CHAMPS PERSONNALISÉS
 
-- service-image: Image
-- service-title: Text
-- service-description: TextArea
+- service_image: Image
+- service_title: Text
+- service_description: TextArea
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
 ### autres_services: Group
 
-- autres-services-title: Text
-- autres-services-image: Image
-- autres-services-name: Text
+- autres_services_title: Text
+- autres_services_image: Image
+- autres_services_name: Text
 
 ---
 
@@ -143,7 +143,7 @@
 
 ## MODÈLE
 
-- service-hub.php
+- service_hub.php
 
 ## COMPOSANTES
 
@@ -153,17 +153,17 @@
 
 ### CHAMPS PERSONNALISÉS
 
-- hero-title: Text
-- hero-image: Image
+- hero_title: Text
+- hero_image: Image
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
 ### servicesList: Group
 
 - services_list_description: TextArea
-- services-list_image: Image
-- services-list_title: Text
-- services-list_btn: Text
+- services_list_image: Image
+- services_list_title: Text
+- services_list_btn: Text
 
 ---
 
@@ -219,15 +219,15 @@ form.php
 
 ### contact:Group
 
-- contact-join-title: text
-- contact-info: text-area
-- contact-phone: text
-- contact-email-info: text
-- contact-adress: text-area
-- contact-name: text
-- contact-email: text
-- contact-message: text
-- contact-button: text
+- contact_join_title: text
+- contact_info: text-area
+- contact_phone: text
+- contact_email_info: text
+- contact_adress: text-area
+- contact_name: text
+- contact_email: text
+- contact_message: text
+- contact_button: text
 
 ---
 
@@ -269,6 +269,6 @@ form.php
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
-- team-image: image
-- team-name: text
-- team-description: text-area
+- team_image: image
+- team_name: text
+- team_description: text-area
