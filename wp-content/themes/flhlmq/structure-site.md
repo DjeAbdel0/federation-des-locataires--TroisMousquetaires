@@ -43,7 +43,6 @@
 - donation_description: TextArea
 - donation_btn : Text
 - donation_image: Image
-  ----------------------- Fini --------------------------
 
 # À propos
 
@@ -55,52 +54,55 @@
 
 - about.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
-- paragraphe.php
+- about_text.php
 
 ### CHAMPS PERSONNALISÉS
 
-- paragraphe_title: Text
-- paragraphe_image: Image
-- paragraphe_descrition: TextArea
+- about_title: Text
+- about_image: Image
+- about_description: TextArea
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
 # Contact
 
-## TYPE DE CONTENU
+## TYPE DE CONTENU (POST TYPE)
 
 - Page
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 
-- formulaire.php
+- contact.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 
 ### NOM DU PARTIAL
 
-- join.php
+form.php
 
 ### CHAMPS PERSONNALISÉS
 
-- name_contact: Text
-- email_contact: Email
-- message_contact: TextArea
+- form_name: Text
+- form_email: Email
+- form_message: TextArea
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
-### join:Group
+### contact:Group
 
-- join_title: Text
-- join_description: TextArea
-- join_phone: Number
-- join_fax: Number
-- join_email: Email
-- join_map: GoodleMap
+- contact-join-title: text
+- contact-info: text-area
+- contact-phone: text
+- contact-email-info: text
+- contact-adress: text-area
+- contact-name: text
+- contact-email: text
+- contact-message: text
+- contact-button: text
 
 # Erreur-404
 
@@ -112,7 +114,7 @@
 
 - erreur_404.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
@@ -130,12 +132,15 @@
 
 - news.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
+- news-card.php
+
 ### CHAMPS PERSONNALISÉS
 
+- news-tag: text
 - news_description : TextArea
 - news_image: Image
 - news_title: Text
@@ -155,6 +160,10 @@
 - news_card_btn : Text
 
 # Liste-Nouvelles
+
+## TYPE DE CONTENU (POST TYPE)
+
+- Page
 
 ## MODÈLE (TEMPLATE)
 
@@ -193,7 +202,7 @@
 
 - service.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
@@ -205,12 +214,11 @@
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
-- autres_services_title: Text
-
 ### autres_services: Group
 
-- autres_services_image: Image
-- autres_services_name: Text
+- autres-services-title: Text
+- autres-services-image: Image
+- autres-services-name: Text
 
 # Liste-Services
 
@@ -222,7 +230,7 @@
 
 - services-hub.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
@@ -252,7 +260,7 @@
 
 - home.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTE DE LA PAGE
 
 ### NOM DU PARTIAL
 
