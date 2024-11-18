@@ -1,6 +1,6 @@
 # Acceuil
 ## TYPE DE CONTENU 
-- Page
+-Page
 
 ## MODÈLE (TEMPLATE)
 - home.php
@@ -8,165 +8,165 @@
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 - hero.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- hero-title: Text
-- hero-image: Gallery
+-hero_title: Text
+-hero_image: Gallery
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-- actualite-title: Text
+-actualite_title: Text
 ### testi:Group
-- testi-title: Text
-- testi-icon: Image
-- testi-name: Text
-- testi-description: TextArea
-- testi-btn : Text
+-testi_title: Text
+-testi_icon: Image
+-testi_name: Text
+-testi_description: TextArea
+-testi_btn : Text
 ### services:Group
-- services-title: Text
-- services-icon: Image
-- services-name: Text
+-services_title: Text
+-services_icon: Image
+-services_name: Text
 ### donation:Group
-- donation-title: Text
-- donation-description: TextArea
-- donation-btn : Text
-- donation-image: Image
-            ----------------------- Fini --------------------------
+-donation_title: Text
+-donation_description: TextArea
+-donation_btn : Text
+-donation_image: Image
+            _______________________ Fini __________________________
 # À propos
 ## TYPE DE CONTENU (POST TYPE)
-- Page
+-Page
 ## MODÈLE (TEMPLATE)
-- about.php
+-about.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-- paragraphe.php
+-paragraphe.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- paragraphe-title: Text
-- paragraphe-image: Image
-- paragraphe-descrition: TextArea
+-paragraphe_title: Text
+-paragraphe_image: Image
+-paragraphe_descrition: TextArea
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-            ----------------------- Fini --------------------------
+            _______________________ Fini __________________________
 # Contact
 ## TYPE DE CONTENU (POST TYPE)
-- Page
+-Page
 ## MODÈLE (TEMPLATE)
-- formulaire.php
+-formulaire.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-- join.php
+-join.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- name_contact: Text
-- email_contact: Email
-- message_contact: TextArea
+-name_contact: Text
+-email_contact: Email
+-message_contact: TextArea
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 ### join:Group
-- join-title: Text
-- join-description: TextArea
-- join-phone: Number
-- join-fax: Number
-- join-email: Email
-- join-map: GoodleMap
+-join_title: Text
+-join_description: TextArea
+-join_phone: Number
+-join_fax: Number
+-join_email: Email
+-join_map: GoodleMap
 
-            ----------------------- Fini --------------------------
-# Erreur-404
+            _______________________ Fini __________________________
+# Erreur_404
 ## TYPE DE CONTENU (POST TYPE)
-- Page
+-Page
 ## MODÈLE (TEMPLATE)
-- erreur-404.php
+-erreur_404.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 
-            ----------------------- Fini --------------------------
+            _______________________ Fini __________________________
 # Nouvelle
 ## TYPE DE CONTENU (POST TYPE)
-- news
+-news
 ## MODÈLE (TEMPLATE)
-- news.php
+-news.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- news-description :  TextArea
-- news-image: Image
-- news-title: Text
+-news_description :  TextArea
+-news_image: Image
+-news_title: Text
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 ### newsList:Group
-- newsList-title: Text
+-newsList_title: Text
 #### newsCard:Group
-- newsCard-title: Text
-- newsCard-image: Image
-- newsCard-descrition: Text
-- newsCard-date: Text
-- newsCard-btn : Text
-            ----------------------- Fini --------------------------
-# Liste-Nouvelles
+-news_card_title: Text
+-news_card_image: Image
+-news_card_descrition: Text
+-news_card_date: Text
+-news_card_btn : Text
+            _______________________ Fini __________________________
+# Liste_Nouvelles
 ## MODÈLE (TEMPLATE)
-- home.php
+-home.php
 ## COMPOSANTE DE LA PAGE
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-- hero.php
+-hero.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- hero-title: Text
-- hero-image: Image
-- hero-description: TextArea
-- hero-btn: Text
-- hero-date: Text
+-hero_title: Text
+-hero_image: Image
+-hero_description: TextArea
+-hero_btn: Text
+-hero_date: Text
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 #### newsCard:Group
-- newsCard-title: Text
-- newsCard-image: Image
-- newsCard-date: Text
-- newsCard-tag : Text
+-news_card_title: Text
+-news_card_image: Image
+-news_card_date: Text
+-news_card_tag : Text
 
-            ----------------------- Fini --------------------------
+            _______________________ Fini __________________________
 # Service
 ## TYPE DE CONTENU (POST TYPE)
-- Service
+-Service
 ## MODÈLE (TEMPLATE)
-- service.php
+-service.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- service-description: TextArea
-- service-image: Image
-- service-title: Text
+-service_description: TextArea
+-service_image: Image
+-service_title: Text
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-- autresServices-title: Text
+-autres_services_title: Text
 ### autresServices: Group
-- autresServices-image: Image
-- autresServices-name: Text
-            ----------------------- Fini --------------------------
-# Liste-Services
+-autres_services_image: Image
+-autres_services_name: Text
+            _______________________ Fini __________________________
+# Liste_Services
 ## TYPE DE CONTENU (POST TYPE)
-- Page
+-Page
 ## MODÈLE (TEMPLATE)
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-- hero.php
+-hero.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- hero-title: Text
-- hero-image: Image
+-hero_title: Text
+-hero_image: Image
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
 ### servicesList: Group
-- servicesList-description: TextArea
-- servicesList-image: Image
-- servicesList-title: Text
-- servicesList-btn: Text
-            ----------------------- Pas Fini --------------------------
+-services_list_description: TextArea
+-services_list_image: Image
+-services_list_title: Text
+-services_list_btn: Text
+            _______________________ Fini __________________________
 # Team
 ## TYPE DE CONTENU (POST TYPE)
-- Page
+-Page
 ## MODÈLE (TEMPLATE)
 -home.php
 ## COMPOSANTE DE LA PAGES
 ### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
-- hero.php
+-hero.php
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-- hero-title: Text
-- hero-image: gallery
+-hero_title: Text
+-hero_image: gallery
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
-- team-title: Text
+-team_title: Text
 ### member: Group
-- member-name: Text
-- member-image: Image
+-member_name: Text
+-member_image: Image
 
 
  
