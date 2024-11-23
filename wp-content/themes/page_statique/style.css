@@ -137,8 +137,7 @@
 .hero__items .hero__item .hero__image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hero__content {
   position: absolute;
@@ -267,8 +266,7 @@
   transform: translate(-50%);
   height: 150px;
   width: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px;
 }
 .actualite__zoneTexte {
@@ -406,13 +404,11 @@
   }
   .actualite__conteneurImg {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .actualite__image {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .actualite__titre--petit {
@@ -550,8 +546,7 @@
 .service-hero__img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -595,8 +590,7 @@
 .page-service__assos img, .page-service__crr img, .page-service__locataire img, .page-service__bulettin img, .page-service__infolettre img, .page-service__guide img, .page-service__congres img, .page-service__memoire img, .page-service__recherche img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -857,8 +851,7 @@
 .dons__content__image img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
@@ -1161,8 +1154,7 @@
   max-width: 100%;
   height: 300px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
@@ -1585,10 +1577,6 @@ footer {
   border-radius: 3%;
   border: 0px solid black;
 }
-.joindre-formulaire ::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: normal;
-}
 .joindre-formulaire ::placeholder {
   font-size: 1rem;
   font-weight: normal;
@@ -1811,8 +1799,7 @@ footer {
 .page-service-crr__assos-crr img, .page-service-crr__locataire-crr img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -2035,8 +2022,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background: black;
   z-index: 1;
   transition: transform 0.5s ease;
@@ -2086,8 +2072,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: black;
   z-index: 2;
   opacity: 0.2;
@@ -2167,8 +2152,7 @@ footer {
 .newshub .news__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -2385,8 +2369,7 @@ footer {
   .newshub .news__image img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 8px;
   }
   .voirPlus {
@@ -2418,8 +2401,7 @@ footer {
 .erreur__img {
   position: relative;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .erreur__404 {
   position: absolute;
@@ -2718,11 +2700,9 @@ p {
 }
 
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 
 address {
@@ -4795,11 +4775,13 @@ h3 {
   cursor: pointer;
   outline: none;
   font-size: 0.8rem;
+  -webkit-transform: translate(0);
   transform: translate(0);
   background-image: linear-gradient(45deg, #ff922c, #79cf7e);
   padding: 0.7em 2em;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+  -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
   color: #415456;
   font-weight: bold;
@@ -4851,11 +4833,13 @@ html {
     cursor: pointer;
     outline: none;
     font-size: 0.9rem;
+    -webkit-transform: translate(0);
     transform: translate(0);
     background-image: linear-gradient(45deg, #ff922c, #79cf7e);
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+    -webkit-transition: box-shadow 0.25s;
     transition: box-shadow 0.25s;
     color: #415456;
     font-weight: bold;
@@ -4895,11 +4879,13 @@ html {
     cursor: pointer;
     outline: none;
     font-size: 1rem;
+    -webkit-transform: translate(0);
     transform: translate(0);
     background-image: linear-gradient(45deg, #ff922c, #79cf7e);
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
+    -webkit-transition: box-shadow 0.25s;
     transition: box-shadow 0.25s;
     color: #415456;
     font-weight: bold;

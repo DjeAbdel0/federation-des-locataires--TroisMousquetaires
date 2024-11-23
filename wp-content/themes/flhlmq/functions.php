@@ -64,3 +64,36 @@ function add_style_and_js()  {
 
 /* Appel de la fonction ajoutant les styles et scripts */
 add_action('wp_enqueue_scripts', 'add_style_and_js'); 
+
+function create_post_type() {
+	register_post_type('services', 
+	  array(
+		'labels' => array(
+		  'name' => _x('Services', 'Nom générique'),
+		  'singular_name' => _x('Service', 'Au singulier'),
+		  'menu_name' => __('Services'),
+		  'all_items' => __('Tous les services'),
+		  'view_item' => __('Voir les services'),
+		  'add_new_item' => __('Ajouter un nouveau service'),
+		  'add_new' => __('Ajouter'),
+		  'edit_item' => __('Editer le service'),
+		  'update_item' => __('Modifier le service'),
+		  'search_items' => __('Rechercher un service'),
+		  'not_found' => __('Non trouvé'),
+		  'not_found_in_trash' => __('Non trouvé dans la corbeille'),
+		),
+		'supports' => array(
+		  'title', 
+		  'editor', 
+		  'author', 
+		  'thumbnail', 
+		  'custom-fields',
+		),
+		'show_in_rest' => true,
+		'public' => true,
+		'has_archive' => true,
+	  )
+	);
+  }
+  
+  add_action('init', 'create_post_type');
