@@ -32,7 +32,7 @@ if( $service_list ):
 				<P> <?php if( !empty($service['services_list_description']) ): ?>
                     <p><?php echo ( $service['services_list_description'] ); ?></p>
                 <?php endif; ?>
-			</P>
+				</P>
 			
                 <?php if( !empty($service['services_list_image']) ): ?>
                     <img src="<?php echo esc_url( $service['services_list_image']); ?>" alt="<?php echo esc_attr( $service['services_list_image'] ); ?>" />
@@ -41,8 +41,6 @@ if( $service_list ):
                 <?php if( !empty($service['services_list_title']) ): ?>
                     <h3><?php echo esc_html( $service['services_list_title'] ); ?></h3>
                 <?php endif; ?>
-                
-               
                 
                 <?php if( !empty($service['services_list_btn']) ): ?>
                     <a href="#" class="btn"><?php echo esc_html( $service['services_list_btn'] ); ?></a>
