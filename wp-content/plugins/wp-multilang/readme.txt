@@ -2,10 +2,10 @@
 
 Contributors: magazine3
 Donate link: https://paypal.me/kaludi
-Tags: localization, multilanguage, multilingual, translation, multilang
+Tags: localization, multilanguage, multilingual, translation, translate
 Requires at least: 4.7
-Tested up to: 6.6
-Stable tag: 2.4.11
+Tested up to: 6.7
+Stable tag: 2.4.14
 Requires PHP: 5.6.20
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -24,7 +24,10 @@ Translations of post types, taxonomies, meta fields, options, text fields in mil
 * Support full site editor for block based themes
 * Support block based widgets
 * Support different feature image for each language
-* Auto Translation ( [available in premium version](https://wp-multilang.com/) ) - [View Tutorial](https://wp-multilang.com/docs/)
+* Support Smart Custom Fields Plugin
+* Auto Translation ( [available in premium version](https://wp-multilang.com/) ) - [View Tutorial](https://wp-multilang.com/docs/knowledge-base/how-to-auto-translate-your-website-contents-using-wp-multilang/)
+* Support URL Slug Translation ( [available in premium version](https://wp-multilang.com/) ) - [View Tutorial](https://wp-multilang.com/docs/knowledge-base/how-to-translate-url-slugs-with-selective-languages/)
+* Support Base Translation ( [available in premium version](https://wp-multilang.com/) ) - [View Tutorial](https://wp-multilang.com/docs/knowledge-base/how-to-translate-taxonomy-bases-such-as-categories-and-tags-into-selective-languages-using-the-base-translation-option/)
 
 == Features of the plugin WP Multilang ==
 
@@ -71,6 +74,8 @@ Translations of post types, taxonomies, meta fields, options, text fields in mil
 * Download Monitor (Redefine templates for links in your theme and translate link texts)
 * Better Search
 * Rank Math SEO (thanks for @pratikmts)
+* WPGraphQL (Add lang to the query parameters in URL. Eg: lang=en)
+* Smart Custom Fields
 
 Manage translation settings via json.
 
@@ -230,6 +235,30 @@ If you have opened several browser tabs for editing this post in different langu
 
 == Changelog ==
 
+= 2.4.14 =
+- fixed Woocommerce product attributes are not getting translated #93
+- feature Added ompatibility with the WP Githuber plugin #99
+- enhancement Use 'translate' keyword for search the plugin from add new plugin section #103
+- feature Added compatibility with Smart Custom Fields Plugin #116
+- feature Added eature to translate slug for 2nd level of hierarchy of urls #121
+- fixed Code improvement #125
+- fixed Compatibility with WordPress 6.7 and updated readme.txt #126
+
+= 2.4.13 =
+- feature WP GraphQL support #44
+- fixed Post Title translation issue for multiple languages #78
+- enhancement Language switcher disappears too early in Wordpress 6.6 #91
+- enhancement Code improvement #96
+- fixed Out of memory error after update to 2.4.11 #111
+- fixed Issue with yoast meta description #113
+- fixed License key wrong link issue #118
+- fixed Error after the update 2.4.11 #109
+
+= 2.4.12 =
+- feature URL Slug Translation #25
+- fixed PHP waring #102
+- fixed Yoast meta description translation issue #113
+
 = 2.4.11 =
 - fixed Product attributers are not getting translated in frontend #94
 - enhancement Code improvement #96
@@ -292,22 +321,7 @@ If you have opened several browser tabs for editing this post in different langu
 - enhancement ( ! ) Deprecated: setcookie(): Passing null to parameter #5 ($domain) of type string is deprecated #8
 - fixed Issue with the ACF Pro plugin #10
 
-= 2.4.2 =
-- fixed Compatibility with WordPress 6.4 and updated readme.txt #1
-- fixed Code Improvement #2
-- added support tab and form
-
 = 2.4.1 =
 - removed support old version of ACF lower 5.0
-
-= 2.4.0 =
-- added support for Rank Math SEO (thanks for @pratikmts)
-- optimized speed
-- deleted support for old translate syntax
-- other fixes and improvements
-
-= 2.3.0 =
-- fixed compatibility with WordPress 5.0
-- fixed compatibility with AIOSP
 
 All changelog available on [GitHub](https://github.com/ahmedkaludi/wp-multilang/releases).

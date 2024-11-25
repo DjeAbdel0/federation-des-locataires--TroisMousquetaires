@@ -34,6 +34,7 @@ class WPM_Yoast_Seo {
 			add_action( 'wp_after_insert_post', array($this, 'update_yoast_post_meta_tags'));
 			add_action( 'saved_term', array($this, 'update_yoast_term_meta_tags'), 10, 5);
 		}
+		add_filter( 'wpseo_metadesc', array( $this, 'translate_metadesc' ) );
 
 
 		$options = \WPSEO_Options::get_option( 'wpseo_social' );
@@ -366,7 +367,7 @@ class WPM_Yoast_Seo {
 
 					// Fetch post data from yoast_indexable table
 					//phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
-					$result = $wpdb->get_row($wpdb->prepare("SELECT object_id, title, description FROM {$wpdb->prefix}yoast_indexable WHERE object_id = %d", $post_id));
+					$result = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}yoast_indexable WHERE object_id = %d", $post_id));
 					if(!empty($result) && is_object($result)){
 						if(isset($result->object_id)){
 							// Loop through the values
@@ -390,7 +391,7 @@ class WPM_Yoast_Seo {
 										}else if($key_name == '_yoast_wpseo_twitter-description' && $result->twitter_description !== $meta_value){
 											$update_array_values['twitter_description'] = sanitize_textarea_field($meta_value); 
 										}else if($key_name == '_yoast_wpseo_focuskw' && $result->primary_focus_keyword !== $meta_value){
-											$update_array_values['primary_focus_keyword'] = sanitize_textarea_field($meta_value); 
+											// $update_array_values['primary_focus_keyword'] = sanitize_textarea_field($meta_value); 
 										}else if($key_name == '_yoast_wpseo_schema_page_type' && $result->schema_page_type !== $meta_value){
 											$update_array_values['schema_page_type'] = sanitize_textarea_field($meta_value); 
 										}else if($key_name == '_yoast_wpseo_schema_article_type' && $result->schema_article_type !== $meta_value){
@@ -527,7 +528,6 @@ class WPM_Yoast_Seo {
 			$_presenters[] = $presenter;
 
 			if ( get_class($presenter) == 'Yoast\WP\SEO\Presenters\Open_Graph\Locale_Presenter' ) {
-				error_log(print_r($presenter, 1));
 
 				foreach ( $this->get_ogp_alternate_languages() as $lang ) {
 					$_presenters[] = new WPM_Yoast_Seo_Presenters( $lang );
@@ -570,14 +570,20 @@ class WPM_Yoast_Seo {
 	public function wpm_translate_opengraph_image($image)
 	{
 		$id = 0;
+		$type = '';
 		if(is_singular()){
 			$id = get_the_ID();
+			$type = get_post_type();
 		}else if(is_archive() || (function_exists('is_product_category') && is_product_category())) {
-			$id = get_queried_object_id();
+			$cat_obj = get_queried_object();
+			if( is_object( $cat_obj ) && isset( $cat_obj->term_id ) ) {
+				$id 	= $cat_obj->term_id;
+				$type 	= $cat_obj->taxonomy;
+			}
 		}
 
 		if($id > 0){
-			$result = $this->wpm_get_yoast_data($id, 'open_graph_image');
+			$result = $this->wpm_get_yoast_data( $id, 'open_graph_image', $type );
 
 			if(is_object($result) && isset($result->open_graph_image)){
 
@@ -601,14 +607,20 @@ class WPM_Yoast_Seo {
 	public function wpm_translate_twitter_image($image)
 	{
 		$id = 0;
+		$type = '';
 		if(is_singular()){
 			$id = get_the_ID();
+			$type = get_post_type();
 		}else if(is_archive() || (function_exists('is_product_category') && is_product_category())) {
-			$id = get_queried_object_id();
+			$cat_obj = get_queried_object();
+			if( is_object( $cat_obj ) && isset( $cat_obj->term_id ) ) {
+				$id 	= $cat_obj->term_id;
+				$type 	= $cat_obj->taxonomy;
+			}
 		}
 
 		if($id > 0){
-			$result = $this->wpm_get_yoast_data($id, 'twitter_image');
+			$result = $this->wpm_get_yoast_data( $id, 'twitter_image', $type );
 
 			if(is_object($result) && isset($result->twitter_image)){
 				
@@ -630,13 +642,12 @@ class WPM_Yoast_Seo {
 	 *
 	 * @return $result Object
 	 */
-	public function wpm_get_yoast_data($object_id, $field_name)
+	public function wpm_get_yoast_data( $object_id, $field_name, $type = '' )
 	{
 		global $wpdb;
-		$table_name = $wpdb->prefix . 'yoast_indexable'; 
 
 		//phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching --Reason: As per requirement, We have to use the direct query.
-		$result = $wpdb->get_row($wpdb->prepare("SELECT {$field_name} FROM {$wpdb->prefix}yoast_indexable WHERE object_id = %d", $object_id ));
+		$result = $wpdb->get_row($wpdb->prepare("SELECT {$field_name} FROM {$wpdb->prefix}yoast_indexable WHERE object_id = %d AND object_sub_type = %s", $object_id, $type ));
 		return $result;
 	}
 
@@ -654,5 +665,16 @@ class WPM_Yoast_Seo {
 			$schema_data = wpm_translate_value($schema_data);
 		}
 		return $schema_data;
+	}
+
+	public function translate_metadesc( $description ){
+
+		global $post;
+
+		if( is_object( $post ) && ! empty( $post->ID ) ) {
+			
+			$description 	=	get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true );
+		}
+		return $description;
 	}
 }

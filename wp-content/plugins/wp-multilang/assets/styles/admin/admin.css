@@ -71,6 +71,10 @@
   .language-switcher a {
     margin-top: 0 !important;
   }
+  .edit-post-header-toolbar .wpm-language-switcher{
+    left: 10px;
+    margin-left: 0px !important;
+  }
 }
 .language-switcher {
   left: 0;
@@ -156,22 +160,22 @@
   box-shadow: none;
 }
 
-.edit-post-header-toolbar, .edit-widgets-header__navigable-toolbar-wrapper {
+.edit-post-header-toolbar, .edit-widgets-header__navigable-toolbar-wrapper, .edit-site-layout__header-container {
   margin-left: 48px !important;
 }
-.edit-post-header-toolbar .wpm-language-switcher, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher {
+.edit-post-header-toolbar .wpm-language-switcher, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher, .edit-site-layout__header-container .wpm-language-switcher {
   position: absolute;
-  left: 10px !important;
+  left: 10px;
 }
-.edit-post-header-toolbar .wpm-language-switcher .lang-main, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher .lang-main {
+.edit-post-header-toolbar .wpm-language-switcher .lang-main, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher .lang-main, .edit-site-layout__header-container .wpm-language-switcher .lang-main {
   padding-left: 10px;
   padding-right: 10px;
   line-height: 36px;
 }
-.edit-post-header-toolbar .wpm-language-switcher .lang-main img, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher .lang-main img {
+.edit-post-header-toolbar .wpm-language-switcher .lang-main img, .edit-widgets-header__navigable-toolbar-wrapper .wpm-language-switcher .lang-main img, .edit-site-layout__header-container .wpm-language-switcher .lang-main img {
   top: 2px;
 }
-.edit-post-header-toolbar .lang-dropdown, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown {
+.edit-post-header-toolbar .lang-dropdown, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown, .edit-site-layout__header-container .lang-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -179,14 +183,14 @@
   border: 1px solid #ccc;
   z-index: 1;
 }
-.edit-post-header-toolbar .lang-dropdown ul, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul {
+.edit-post-header-toolbar .lang-dropdown ul, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul, .edit-site-layout__header-container .lang-dropdown ul {
   list-style: none;
 }
-.edit-post-header-toolbar .lang-dropdown ul a, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a {
+.edit-post-header-toolbar .lang-dropdown ul a, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a, .edit-site-layout__header-container .lang-dropdown ul a {
   padding: 10px;
   display: block;
 }
-.edit-post-header-toolbar .lang-dropdown ul a:hover, .edit-post-header-toolbar .lang-dropdown ul a:focus, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a:hover, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a:focus {
+.edit-post-header-toolbar .lang-dropdown ul a:hover, .edit-post-header-toolbar .lang-dropdown ul a:focus, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a:hover, .edit-widgets-header__navigable-toolbar-wrapper .lang-dropdown ul a:focus, .edit-site-layout__header-container .lang-dropdown ul a:hover, .edit-site-layout__header-container .lang-dropdown ul a:focus {
   background-color: #ccc;
 }
 
@@ -250,4 +254,62 @@
 
 .wpm-query-error {
   color: #f00;
-}/*# sourceMappingURL=admin.css.map */
+}
+
+/**
+ * Upgrade to pro button design changes
+ * */
+.wpm-upgrade-pro-btn, .wpm-upgrade-pro-btn:hover{
+  background-color: #0099E7; 
+  color:#fff;
+  border: 1px solid #0099E7;
+  font-weight: 500;
+}
+
+#wpm-auto-translation-free-note{
+    padding: 12px 10px 15px 10px !important;
+    background-color: #fff;
+    width: 470px;
+    margin-top: 20px;
+    border-radius: 7px;
+    color: #000;
+    text-align: center;
+    border: 1px solid #0099E7;
+    font-size: 16px;
+}
+
+.wpm-premium-btn{
+    text-decoration: none;
+    margin-left: 13px;
+    color: #fff !important;
+    font-weight: 500;
+    padding: 7px 20px 9px 20px;
+    background: #0099E7;
+    border-radius: 40px;
+    font-size: 15px;
+}
+
+.wpm-premium-btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    color: #fff;
+}
+
+.wpm-premium-btn:hover{
+    color: #fff;
+}
+
+.wpm-cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.wpm-free-translation-cb{
+  margin-right: 15px !important;
+}
+
+.wpm-upgrade-to-pro-note, .wpm-pro-free-btn {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=admin.css.map */
