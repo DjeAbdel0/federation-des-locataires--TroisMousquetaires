@@ -21,3 +21,4 @@ wp-signup.php
 wp-trackback.php
 xmlrpc.php
 .htaccess
+!wp-content/themes/*/index.php

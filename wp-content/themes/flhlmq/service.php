@@ -27,10 +27,10 @@ if( $service_list ):
                 <?php
                    
                     // Var_dump to inspect the data
-                    var_dump($service);
+                    
                 ?>
 				<P> <?php if( !empty($service['services_list_description']) ): ?>
-                    <p><?php echo ( $service['services_list_description'] ); ?></p>
+                    <p><?php the_field( $service['services_list_description'] ); ?></p>
                 <?php endif; ?>
 				</P>
 			

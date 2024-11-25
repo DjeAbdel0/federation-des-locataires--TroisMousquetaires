@@ -160,11 +160,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /federation-des-locataires--TroisMousquetaires/
+RewriteBase /fede_locataires/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /federation-des-locataires--TroisMousquetaires/index.php [L]
+RewriteRule . /fede_locataires/index.php [L]
 </IfModule>
 
 # END WordPress
