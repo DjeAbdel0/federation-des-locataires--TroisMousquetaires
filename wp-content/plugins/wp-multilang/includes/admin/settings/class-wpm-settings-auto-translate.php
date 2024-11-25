@@ -33,7 +33,7 @@ class WPM_Settings_Auto_Translate extends WPM_Settings_Page {
 	}
 
 	public function enqueue_translation_script( $hook ){
-		if( $hook === 'settings_page_wpm-settings' && ! defined( 'WP_MULTILANG_PRO_VERSION' ) ){
+		if( $hook === 'toplevel_page_wpm-settings' && ! defined( 'WP_MULTILANG_PRO_VERSION' ) ){
 
 			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 			$dir_path = plugin_dir_url(__DIR__);
@@ -55,7 +55,7 @@ class WPM_Settings_Auto_Translate extends WPM_Settings_Page {
 				'title' => __( 'Auto Translate', 'wp-multilang' ), 
 				'type' => 'title', 
 				/* translators: %s: url */
-				'desc'  => sprintf( __( 'Read <a href="%s" target="_blank">Auto Translate Docs</a>', 'wp-multilang' ), esc_url( 'https://wp-multilang.com/docs/' ) ),
+				'desc'  => sprintf( __( 'Read <a href="%s" target="_blank">Auto Translate Docs</a>', 'wp-multilang' ), esc_url( 'https://wp-multilang.com/docs/knowledge-base/how-to-auto-translate-your-website-contents-using-wp-multilang/' ) ),
 				'id' => 'autotranslate_options', 
 			),
 
