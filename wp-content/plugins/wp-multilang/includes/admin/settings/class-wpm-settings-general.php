@@ -30,6 +30,7 @@ class WPM_Settings_General extends WPM_Settings_Page {
 
 		add_filter( 'wpm_general_settings', array( $this, 'add_uninstall_setting' ) );
 		add_action( 'wpm_update_options_general', array( $this, 'update_wplang' ) );
+		add_filter( 'wpm_disable_translation_options', array( $this, 'unset_translation_options' ) );
 	}
 
 	/**
@@ -90,6 +91,24 @@ class WPM_Settings_General extends WPM_Settings_Page {
 				'default' => 'no',
 				'type'    => 'checkbox',
 			),
+			
+			array(
+				'title'   => esc_html__( 'Slug Translation', 'wp-multilang' ),
+				/* translators: %s: url */
+				'desc'    => sprintf( __( 'Translate posts, pages, custom posts, categories and custom taxonomies slug. <a href="%s" target="_blank">Learn More</a>', 'wp-multilang' ), esc_url( 'https://wp-multilang.com/docs/knowledge-base/how-to-translate-url-slugs-with-selective-languages/' ) ),
+				'id'      => 'wpm_string_translation',
+				'default' => 'no',
+				'type'    => 'checkbox',
+			),
+
+			array(
+				'title'   => esc_html__( 'Base Translation', 'wp-multilang' ),
+				/* translators: %s: url */
+				'desc'    => sprintf( __( 'Translate Categories, Product categories, Tags and Custom Taxonomies base. <a href="%s" target="_blank">Learn More</a>', 'wp-multilang' ), esc_url( 'https://wp-multilang.com/docs/knowledge-base/how-to-translate-taxonomy-bases-such-as-categories-and-tags-into-selective-languages-using-the-base-translation-option/' ) ),
+				'id'      => 'wpm_base_translation',
+				'default' => 'no',
+				'type'    => 'checkbox',
+			),
 
 			array( 'type' => 'sectionend', 'id' => 'general_options' ),
 
@@ -134,7 +153,7 @@ class WPM_Settings_General extends WPM_Settings_Page {
 	 */
 	public function save() {
 		$settings = $this->get_settings();
-
+		$settings = apply_filters( 'wpm_disable_translation_options', $settings );
 		WPM_Admin_Settings::save_fields( $settings );
 	}
 
@@ -146,5 +165,30 @@ class WPM_Settings_General extends WPM_Settings_Page {
 		$languages = wpm_get_languages();
 		$locale    = $languages[ $value ]['translation'];
 		update_option( 'WPLANG', 'en_US' !== $locale ? $locale : '' );
+	}
+
+	/**
+	 * Don't save string translation and base translations if pro is not active
+	 * @param  	$settings 	Array
+	 * @return 	$settings 	Array
+	 * @since 	2.4.12
+	 * */
+	public function unset_translation_options( $settings ){
+		
+		$unset_keys 	=	array( 'wpm_string_translation', 'wpm_base_translation' );
+
+		if( ! defined('WP_MULTILANG_PRO_VERSION') ) {
+			if( ! empty( $settings ) && is_array( $settings ) ) {
+				foreach ($settings as $key => $value) {
+					if( ! empty( $value['id'] ) && in_array($value['id'], $unset_keys) ) {
+						unset($settings[$key]);
+					}
+				}
+				// Rearrange array keys
+				$settings 	=	array_values($settings);	
+			}
+		}
+		
+		return $settings;
 	}
 }

@@ -13,7 +13,7 @@ $tab_exists        = isset( $tabs[ $current_tab ] ) || has_action( 'wpm_sections
 $current_tab_label = isset( $tabs[ $current_tab ] ) ? $tabs[ $current_tab ] : '';
 
 if ( ! $tab_exists ) {
-	wp_safe_redirect( admin_url( 'options-general.php?page=wpm-settings' ) );
+	wp_safe_redirect( admin_url( 'admin.php?page=wpm-settings' ) );
 	exit;
 }
 ?>
@@ -27,7 +27,7 @@ if ( ! $tab_exists ) {
 				if($slug == 'upgradetopro'){
 					echo '<a href="https://wp-multilang.com/pricing/" class="nav-tab wpm-upgrade-pro-btn ' . ( $current_tab === $slug ? 'nav-tab-active' : '' ) . '" class="wpm-upgrade-to-pro" style="background-color: #0099E7; color:#fff; border-color: #0099E7; font-weight: 500;" target="_blank">' . esc_html( $label ) . '</a>';
 				}else{
-					echo '<a href="' . esc_html( admin_url( 'options-general.php?page=wpm-settings&tab=' . esc_attr( $slug ) ) ) . '" class="nav-tab ' . ( $current_tab === $slug ? 'nav-tab-active' : '' ) . '">' . esc_html( $label ) . '</a>';
+					echo '<a href="' . esc_html( admin_url( 'admin.php?page=wpm-settings&tab=' . esc_attr( $slug ) ) ) . '" class="nav-tab ' . ( $current_tab === $slug ? 'nav-tab-active' : '' ) . '">' . esc_html( $label ) . '</a>';
 				}
 			}
 
@@ -100,7 +100,7 @@ function wpm_newsletter_form(){
 									<?php esc_html_e( 'No thanks', 'wp-multilang' ); ?>
 									</span>
 									<small style="display:block; margin-top:8px;">
-										<?php echo esc_html__( 'We\'ll share our', 'wp-multilang' ); ?><code> <?php echo esc_html__ ('root', 'wp-multilang'); ?></code> <?php echo esc_html__('password before we share your email with anyone else.', 'wp-multilang' ); ?></small>
+										<?php echo esc_html__( 'We\'ll share our root password before we share your email with anyone else', 'wp-multilang' ); ?></small>
 									
 								</fieldset>
 							</form>
