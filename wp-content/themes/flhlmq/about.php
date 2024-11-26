@@ -1,6 +1,7 @@
 <?php 
 /**
- * 	Template Name: À propos
+ * 	Template Name: about
+ *  Template Post Type: post, page
  * 	Identique à page, mais avec une barre latérale
  */
 
@@ -11,15 +12,46 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	while ( have_posts() ) : the_post(); 
 ?>
 
-	<article>
-		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
-		<?php endif; ?>
-		
-		<?php the_content(); // Contenu principal de la page ?>
-	</article>
+
+	<div class="about">
+      <img class="about__img" src="<?php the_post_thumbnail(); // Extrait de l'image?>">
+      <h2 class="about__titre"><?php the_title(); // Titre de la page ?></h2>
+
+      <!-----Info sur la page------>
+      <p class="about__info">
+        <?php the_content(); // Contenu principal de la page ?>
+      </p>
+      <!-----image a propos------>
+      <img class="about__img" src="<?php the_field('about_image_1'); ?>">
+      <h2 class="about__titre-mission"><?php the_field('about_title_1'); // Titre de la page ?></h2>
+      <!-----autre info------>
+      <div class="about__info">
+        <p class="about__p"> <?php the_field('about_description_1'); ?> </p>
+        <br />
+        <p class="about__p"> <?php the_field('about_description_2'); ?> </p>
+        <br />
+        <p class="about__p"> <?php the_field('about_description_3'); // Contenu principal de la page ?> </p>
+        <br />
+        <p class="about__p"> <?php the_field('about_description_4'); // Contenu principal de la page ?> </p>
+      </div>
+      <img class="about__img" src="<?php the_post_thumbnail(); // Extrait de l'image?>" />
+      <div class="about__info">
+        <p class="about__p"><?php the_field('about_description_5'); // Extrait de l'image?></p>
+        <br />
+        <p class="about__p">
+			<?php the_field('about_description_6'); // Extrait de l'image?>
+          <a
+            href="https://flhlmq.com/sites/flhlmq.com/files/2022-09/R%C3%88GLEMENTS%20G%C3%89N%C3%89RAUX%20DE%20LA%20FLHLMQ-%202021.pdf"
+            >ici</a
+          >!
+        </p>
+        <br />
+        <p class="about__p"> <?php the_field('about_description_7'); // Extrait de l'image?> </p>
+      </div>
+    </div>
+
+
+
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
