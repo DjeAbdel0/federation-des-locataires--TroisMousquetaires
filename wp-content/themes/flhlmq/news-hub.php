@@ -49,13 +49,11 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <h2 class="news__titre">
                         <?php echo esc_html($news_card_title); // Titre de la nouvelle ?>
                     </h2>
-                    <div class="news__image">
-                        <?php if (!empty($news_card_image)) : ?>
-                            <img src="<?php echo esc_url($news_card_image); ?>" alt="<?php echo esc_attr($news_card_title); ?>" />
-                        <?php else : ?>
-                            <p>Aucune image disponible</p>
-                        <?php endif; ?>
-                    </div>
+
+                    <?php if (has_post_thumbnail()) : ?>
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" class="news__image" alt="<?php the_title(); ?>" />
+                    <?php endif; ?>
+
                     <p class="news__date">
                         <?php echo esc_html($news_card_date); // Date de la nouvelle ?>
                     </p>
