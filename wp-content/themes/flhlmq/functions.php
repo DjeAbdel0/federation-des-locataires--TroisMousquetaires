@@ -61,6 +61,17 @@ function add_style_and_js()  {
 
 	/* Pour ajoutez un script, copier la ligne précédente et ajuster le chemin de façon relative vers votre nouveau fichier JS */
 }
+// Enqueue FontAwesome in your theme
+function enqueue_font_awesome() {
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_bootstrap_icons() {
+    wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap_icons');
+
+
 
 /* Appel de la fonction ajoutant les styles et scripts */
 add_action('wp_enqueue_scripts', 'add_style_and_js'); 
