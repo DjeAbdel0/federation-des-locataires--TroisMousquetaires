@@ -1,63 +1,110 @@
 <?php 
 /**
  * 	Template Name: about
- *  Template Post Type: post, page
- * 	Identique à page, mais avec une barre latérale
+ *  Template Post Type: page
  */
 
 get_header(); // Affiche header.php
 
 if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
-	while ( have_posts() ) : the_post(); 
+	the_post(); 
 ?>
 
-
 	<div class="about">
-      <img class="about__img" src="<?php the_post_thumbnail(); // Extrait de l'image?>">
+  <div class="about__img"> 
+<?php the_post_thumbnail(); // Extrait de l'image?>
+</div>
       <h2 class="about__titre"><?php the_title(); // Titre de la page ?></h2>
 
       <!-----Info sur la page------>
       <p class="about__info">
         <?php the_content(); // Contenu principal de la page ?>
       </p>
-      <!-----image a propos------>
-      <img class="about__img" src="<?php the_field('about_image_1'); ?>">
-      <h2 class="about__titre-mission"><?php the_field('about_title_1'); ?></h2>
-      <!-----autre info------>
-      <div class="about__info">
-        <p class="about__p"> <?php the_field('about_description_1'); ?> </p>
-        <br />
-        <p class="about__p"> <?php the_field('about_description_2'); ?> </p>
-        <br />
-        <p class="about__p"> <?php the_field('about_description_3'); ?> </p>
-        <br />
-        <p class="about__p"> <?php the_field('about_description_4'); ?> </p>
-      </div>
-      <img class="about__img" src="<?php the_field('about_image_2'); ?>" />
-      <div class="about__info">
-        <p class="about__p"><?php the_field('about_description_5');?></p>
-        <br />
-        <p class="about__p">
-			<?php the_field('about_description_6'); ?>
-          <a
-            href="https://flhlmq.com/sites/flhlmq.com/files/2022-09/R%C3%88GLEMENTS%20G%C3%89N%C3%89RAUX%20DE%20LA%20FLHLMQ-%202021.pdf"
-            >ici</a
-          >!
-        </p>
-        <br />
-        <p class="about__p"> <?php the_field('about_description_7'); ?> </p>
-      </div>
-    </div>
+      
+      <?php 
+      // Tableau des champs ACF
+      $abouts = [
+        'about_1',
+        'about_2',
+      ];
+      
+      foreach ( $abouts as $about_field ) {
+        $about = get_field( $about_field ); // Fetch the field dynamically
+    
+        if( $about ): ?>
 
+                  <?php 
+                    // Verifier s'il y a une image et l'afficher
+                    if ( !empty( $about['image']['url'] ) ): ?>
+                        <img class="about__img" src="<?php echo esc_url( $about['image']['url'] ); ?>"/>
+                    <?php endif; ?>
 
+                  <?php 
+                    // Verifier s'il y a un titre et l'afficher
+                    if ( !empty( $about['title'] ) ): ?>
+                        <h2 class="about__titre" ><?php echo esc_html( $about['title'] ); ?></h2>
+                    <?php endif; ?>
+    
+                    <div class="about__info">
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      <br />
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      <br />
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      <br />
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                    </div>
 
-<?php endwhile; // Fermeture de la boucle
+                    <?php 
+                    // Verifier s'il y a une image et l'afficher
+                    if ( !empty( $about['image']['url'] ) ): ?>
+                        <img class="about__img" src="<?php echo esc_url( $about['image']['url'] ); ?>"/>
+                    <?php endif; ?>
 
-else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/404' ); // Affiche partials/404.php
+                    <div class="about__info">
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      <br />
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      <br />
+                      <?php 
+                      // Verifier s'il y a une description et l'afficher
+                      if ( !empty( $about['description'] ) ): ?>
+                          <p class="about__p"><?php echo wp_kses_post( $about['description'] ); ?></p>
+                      <?php endif; ?>
+                      </div>
+                  </div>
+        <?php endif;
+    }
+
+else : // Sil y a rien afficher ce message
+  echo '<p>Aucun service trouvé</p>'; 
+  get_template_part( 'partials/404' ); //Afficher le 404
 endif;
 
-get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>
