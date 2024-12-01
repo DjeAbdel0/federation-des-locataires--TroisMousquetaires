@@ -17,50 +17,42 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 <?php the_title(); // Titre de la page ?>
             </h2>
             <div class="service-hero__img">
-                <?php 
-                    the_post_thumbnail(); // Extrait de l'image
-                ?>
+                <img class="role__titre__img" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
             </div>
         <?php endif; ?>
     </article>  
 
     <div class="page-service">
-        <div class="page-service__assos">
             <?php the_content(); // Contenu principal de la page ?>
 
             <?php 
-                $services = new WP_Query('post_type=services');
+                $services = new WP_Query('post_type=services'); //récupère les services et les stocke dans $services
                 ?>
                 <?php  
-                // Boucle pour chercher le titre, la description et l'image de chaque service
+                // Boucle pour chercher le titre, la description, l'image et le btn de chaque service
                 while ( $services->have_posts() ) : $services->the_post();
             ?>
-                <div class="service-item">
-                    <h3 class="page-service__nom">
-                        <?php the_title(); // Titre du service ?>
-                    </h3>
-                    <div class="page-service__texte">
-                        <?php the_excerpt(); // Extrait de la description du service ?>
-                    </div>
-                    <div class="page-service__image">
-                        <?php the_post_thumbnail('medium'); // Extrait de l'image du service ?>
-                    </div>
-                </div>
+                <div class="page-service__assos">
+    <img class="page-service__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+    <p class="page-service__nom"><?php the_title(); ?></p>
+    <p class="page-service__texte"><?php the_content(); ?></p>
+    <a href="<?php the_permalink(); ?>"> <!-- Link to the service page -->
+        <button class="page-service__btn">En savoir plus</button>
+    </a>
+</div>
+
             <?php 
                 endwhile;
                 wp_reset_postdata();  // Réinitialise les données de la requête
             ?>
-        </div>
         
     </div>
 
 <?php endwhile; // Fermeture de la boucle
-
-
 else : // Si aucune page n'a été trouvée
     get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 
 get_sidebar();  // Ajoute la barre latérale
 get_footer();  // Affiche footer.php
-?>
+?> 

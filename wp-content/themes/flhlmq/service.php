@@ -13,13 +13,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 <div class="crr">
     <div class="crr__grosTitre">
-        <h1><?php the_title(); ?></h1>
+        <h1><?php the_title(); //Titre de la page?></h1> 
     </div>
     <div class="crr__grosImg">
-        <?php the_post_thumbnail(); ?>
+        <?php the_post_thumbnail();  //Image de la page?>
     </div>
     <div class="crr__intro">
-        <?php the_content(); ?>
+        <?php the_content();  //Description de la page?>
     </div>
 </div>
 
@@ -47,13 +47,13 @@ foreach ( $services as $service_field ) {
                 <?php 
                 // Verifier s'il y a un titre et l'afficher
                 if ( !empty( $service['title'] ) ): ?>
-                    <h3><?php echo esc_html( $service['title'] ); ?></h3>
+                    <h3 class="role__titre__h3"><?php echo esc_html( $service['title'] ); ?></h3>
                 <?php endif; ?>
 
                 <?php 
                 // Verifier s'il y a une image et l'afficher
                 if ( !empty( $service['image']['url'] ) ): ?>
-                    <img src="<?php echo esc_url( $service['image']['url'] ); ?>" alt="<?php echo esc_attr( $service['image']['alt'] ); ?>" />
+                    <img class="role__titre__img"  src="<?php echo esc_url( $service['image']['url'] ); ?>" />
                 <?php endif; ?>
 
                 <?php 
@@ -61,6 +61,7 @@ foreach ( $services as $service_field ) {
                 if ( !empty( $service['description'] ) ): ?>
                     <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?></p>
                 <?php endif; ?>
+                
             </div>
         </div>
     <?php endif;

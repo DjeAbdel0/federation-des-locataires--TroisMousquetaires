@@ -80,15 +80,7 @@ $servicesNumero: no1, no2, no3;
   width: 100%;
   position: relative;
 
-  &__assos,
-  &__crr,
-  &__locataire,
-  &__bulettin,
-  &__infolettre,
-  &__guide,
-  &__congres,
-  &__memoire,
-  &__recherche {
+  &__assos{
     width: 100%;
     height: auto;
     background-size: contain;
@@ -113,15 +105,7 @@ $servicesNumero: no1, no2, no3;
     }
   }
 
-  &__assos img,
-  &__crr img,
-  &__locataire img,
-  &__bulettin img,
-  &__infolettre img,
-  &__guide img,
-  &__congres img,
-  &__memoire img,
-  &__recherche img {
+  &__image {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -263,47 +247,30 @@ $servicesNumero: no1, no2, no3;
   .page-service {
     width: 100%;
 
-    &__assos,
-    &__crr,
-    &__locataire,
-    &__bulettin,
-    &__infolettre,
-    &__guide,
-    &__congres,
-    &__memoire,
-    &__recherche {
+    &__assos{
       width: 70%;
       height: 85%;
       margin: 15% auto;
 
       &::before {
         content: "";
-        /* Ensure content is set */
         position: absolute;
-        /* Required for positioning */
         width: 100%;
-        /* Set width to 100% */
         height: 100%;
-        /* Adjust height as needed */
         top: 0;
         left: 0;
-        /* Align to the left edge */
         background: linear-gradient(
           to top,
           rgba(0, 0, 0, 0.25) 100%,
           rgba(0, 0, 0, 0.25) 100%
         );
         z-index: 1;
-        /* Adjust z-index if necessary */
         opacity: 0;
-        /* Initially hidden */
         transition: opacity 0.3s;
-        /* Smooth transition */
       }
 
       &:hover::before {
         opacity: 1;
-        /* Show on hover */
       }
     }
 

@@ -71,6 +71,21 @@ function enqueue_bootstrap_icons() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap_icons');
 
+function theme_enqueue_styles() {
+    // Charger le CSS de Bootstrap
+    wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+    
+    // Charger le CSS de votre thème
+    wp_enqueue_style('theme-style', get_stylesheet_uri());
+    
+    // Charger le script jQuery (nécessaire pour Bootstrap)
+    wp_enqueue_script('jquery');
+    
+    // Charger le JavaScript de Bootstrap (assurez-vous que jQuery est chargé avant Bootstrap)
+    wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js', array('jquery'), '', true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
 
 
 /* Appel de la fonction ajoutant les styles et scripts */

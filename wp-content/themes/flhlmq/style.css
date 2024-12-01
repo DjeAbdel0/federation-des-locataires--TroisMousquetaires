@@ -4,9 +4,20 @@ Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
 Author URI: https://smnarnold.com
 Description: Thème FLHLMQ
 */
-
-
 @charset "UTF-8";
+/*
+Theme Name: Les Trois Mousquetaires
+Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
+Author URI: https://smnarnold.com
+Description: Thème FLHLMQ
+*/
+@charset "UTF-8";
+/*
+Theme Name: Les Trois Mousquetaires
+Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
+Author URI: https://smnarnold.com
+Description: Thème FLHLMQ
+*/
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
@@ -576,7 +587,7 @@ Description: Thème FLHLMQ
   width: 100%;
   position: relative;
 }
-.page-service__type {
+.page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
   width: 100%;
   height: auto;
   background-size: contain;
@@ -584,7 +595,7 @@ Description: Thème FLHLMQ
   background-repeat: no-repeat;
   display: block;
 }
-.page-service__type::before {
+.page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -595,7 +606,7 @@ Description: Thème FLHLMQ
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
 }
-.page-service__type img {
+.page-service__image {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -754,12 +765,12 @@ Description: Thème FLHLMQ
   .page-service {
     width: 100%;
   }
-  .page-service__type {
+  .page-service__assos, .page-service__crr, .page-service__locataire, .page-service__bulettin, .page-service__infolettre, .page-service__guide, .page-service__congres, .page-service__memoire, .page-service__recherche {
     width: 70%;
     height: 85%;
     margin: 15% auto;
   }
-  .page-service__type::before {
+  .page-service__assos::before, .page-service__crr::before, .page-service__locataire::before, .page-service__bulettin::before, .page-service__infolettre::before, .page-service__guide::before, .page-service__congres::before, .page-service__memoire::before, .page-service__recherche::before {
     content: "";
     /* Ensure content is set */
     position: absolute;
@@ -779,7 +790,7 @@ Description: Thème FLHLMQ
     transition: opacity 0.3s;
     /* Smooth transition */
   }
-  .page-service__type:hover::before {
+  .page-service__assos:hover::before, .page-service__crr:hover::before, .page-service__locataire:hover::before, .page-service__bulettin:hover::before, .page-service__infolettre:hover::before, .page-service__guide:hover::before, .page-service__congres:hover::before, .page-service__memoire:hover::before, .page-service__recherche:hover::before {
     opacity: 1;
     /* Show on hover */
   }
@@ -1754,14 +1765,14 @@ footer {
   /*Centre le titre et lui donne du margin*/
   /*texte qui est en bloc*/
 }
-.role__titre h3 {
+.role__titre__h3 {
   padding: auto;
   text-align: center;
   font-size: 1.5625rem;
   height: 5vh;
   margin-top: 2rem;
 }
-.role__titre img {
+.role__titre__img {
   width: 100%;
 }
 .role__paragraphe {
@@ -1851,7 +1862,7 @@ footer {
     font-weight: normal;
     margin: 0 15%;
   }
-  .role__titre h3 {
+  .role__titre__h3 {
     font-size: 2.0625rem;
   }
   .role__paragraphe {
@@ -1890,11 +1901,11 @@ footer {
     font-weight: normal;
     margin: 0 15%;
   }
-  .role__titre h3 {
+  .role__titre__h3 {
     font-size: 3.75rem;
     margin: 2rem 30%;
   }
-  .role__titre img {
+  .role__titre__img {
     height: 75%;
     margin: 0;
   }

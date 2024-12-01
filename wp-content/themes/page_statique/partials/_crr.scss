@@ -50,7 +50,7 @@
   width: auto;
   height: 100%;
   /*Centre le titre et lui donne du margin*/
-  &__titre h3 {
+  &__titre__h3 {
     padding: auto;
     text-align: center;
     @include typo.small-title;
@@ -58,7 +58,7 @@
     margin-top: 2rem;
   }
 
-  &__titre img {
+  &__titre__img {
     width: 100%;
   }
   /*texte qui est en bloc*/
@@ -167,7 +167,7 @@
   }
 
   .role {
-    &__titre h3 {
+    &__titre__h3 {
       @include typo.medium-title;
     }
 
@@ -218,12 +218,12 @@
   }
 
   .role {
-    &__titre h3 {
+    &__titre__h3 {
       @include typo.big-title;
       margin: 2rem 30%;
     }
 
-    &__titre img {
+    &__titre__img {
       height: 75%;
       margin: 0;
     }
