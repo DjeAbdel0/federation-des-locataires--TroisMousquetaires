@@ -19,6 +19,52 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<?php endif; ?>
 		
 		<?php the_content(); // Contenu principal de la page ?>
+
+		<section class="newsarticle">
+  <!-- Première section (paragraphe 1) -->
+  <div class="sectionTexte sectionTexte--blanc">
+    <?php if (get_field('paragraphe_1')): ?>
+      <p class="sectionTexte__paragraphe">
+        <?php echo esc_html(get_field('paragraphe_1')); ?>
+      </p>
+    <?php endif; ?>
+
+    <?php if (get_field('paragraphe_2')): ?>
+      <p class="sectionTexte__paragraphe">
+        <?php echo esc_html(get_field('paragraphe_2')); ?>
+      </p>
+    <?php endif; ?>
+  </div>
+
+  <!-- Deuxième section (paragraphe 3) -->
+  <div class="sectionTexte sectionTexte--vert">
+    <?php if (get_field('paragraphe_3')): ?>
+      <p class="sectionTexte__paragraphe">
+        <strong>
+          <?php echo esc_html(get_field('paragraphe_3')); ?>
+        </strong>
+      </p>
+    <?php endif; ?>
+  </div>
+
+  <!-- Troisième section (paragraphe 4) -->
+  <div class="sectionTexte sectionTexte--blanc">
+    <?php if (get_field('paragraphe_4')): ?>
+      <p class="sectionTexte__paragraphe">
+        <?php echo esc_html(get_field('paragraphe_4')); ?>
+      </p>
+    <?php endif; ?>
+  </div>
+
+  <!-- Quatrième section (paragraphe 5) -->
+  <div class="sectionTexte sectionTexte--vert">
+    <?php if (get_field('paragraphe_5')): ?>
+      <p class="sectionTexte__paragraphe">
+        <?php echo esc_html(get_field('paragraphe_5')); ?>
+      </p>
+    <?php endif; ?>
+  </div>
+</section>
 	</article>
 <?php endwhile; // Fermeture de la boucle
 

@@ -149,6 +149,35 @@ function create_post_type() {
 	  'has_archive' => true,
 	)
   );
+
+  register_post_type('nouvelle', 
+  array(
+	'labels' => array(
+	  'name' => _x('Nouvelle', 'Nom générique'),
+	  'singular_name' => _x('Nouvelle', 'Au singulier'),
+	  'menu_name' => __('Nouvelle'),
+	  'all_items' => __('Tous les nouvelles'),
+	  'view_item' => __('Voir les nouvelles'),
+	  'add_new_item' => __('Ajouter une nouvelle'),
+	  'add_new' => __('Ajouter'),
+	  'edit_item' => __('Editer la nouvelle'),
+	  'update_item' => __('Mettre à jour la nouvelle'),
+	  'search_items' => __('Rechercher une nouvelle'),
+	  'not_found' => __('Non trouvé'),
+	  'not_found_in_trash' => __('Non trouvé dans la corbeille'),
+	),
+	'supports' => array(
+	  'title', 
+	  'editor', 
+	  'author', 
+	  'thumbnail', 
+	  'custom-fields',
+	),
+	'show_in_rest' => true,
+	'public' => true,
+	'has_archive' => true,
+  )
+);
   }
   
   add_action('init', 'create_post_type');
