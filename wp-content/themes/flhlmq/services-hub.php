@@ -32,20 +32,25 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 // Boucle pour chercher le titre, la description, l'image et le btn de chaque service
                 while ( $services->have_posts() ) : $services->the_post();
             ?>
-                <div class="page-service__assos">
-    <img class="page-service__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+        <div class="page-service__assos">
+    <img class="page-service__image" src="<?php the_post_thumbnail_url(); ?>" />
     <p class="page-service__nom"><?php the_title(); ?></p>
-    <p class="page-service__texte"><?php the_content(); ?></p>
+    
+    <!-- Ensure the content is wrapped in a single <p> tag with the class -->
+    <p class="page-service__texte"><?php echo wp_kses_post( the_content() ); ?></p>
+
     <a href="<?php the_permalink(); ?>"> <!-- Link to the service page -->
         <button class="page-service__btn">En savoir plus</button>
     </a>
 </div>
 
+
+
             <?php 
                 endwhile;
                 wp_reset_postdata();  // Réinitialise les données de la requête
             ?>
-        
+       
     </div>
 
 <?php endwhile; // Fermeture de la boucle
