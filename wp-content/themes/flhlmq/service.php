@@ -53,7 +53,8 @@ foreach ( $services as $service_field ) {
                 <?php 
                 // Verifier s'il y a une image et l'afficher
                 if ( !empty( $service['image']['url'] ) ): ?>
-                    <img class="role__titre__img"  src="<?php echo esc_url( $service['image']['url'] ); ?>" />
+                    <img class="role__titre__img"  src="<?php echo ( $service['image']['url'] ); ?>" />
+                   
                 <?php endif; ?>
 
                 <?php 
