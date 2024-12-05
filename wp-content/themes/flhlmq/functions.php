@@ -46,7 +46,7 @@ function add_style_and_js()  {
 	  1. 'default' = ID de référence à donner au à la feuille de style
 		2. get_template_directory_uri() . '/style.css' = Chemin où ce trouve le fichier CSS en question
 	*/
-	wp_enqueue_style('default', get_template_directory_uri() . '/style.css');
+	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */
 
@@ -57,7 +57,7 @@ function add_style_and_js()  {
 		 4. false = Si un no de version doit être ajouté (généralement à false)
 		 5. true = Est-ce que le script doit-être ajouté à la fin du body. Si mis à false le script est ajouter dans le head à la place
 	*/
-	wp_enqueue_script('default', get_template_directory_uri() . '/main.js', array(), false, true);
+	wp_enqueue_script('default', get_template_directory_uri() . './main.js?v='.time(), array(), false, true);
 
 	/* Pour ajoutez un script, copier la ligne précédente et ajuster le chemin de façon relative vers votre nouveau fichier JS */
 }
@@ -178,6 +178,18 @@ function create_post_type() {
 	'has_archive' => true,
   )
 );
-  }
+}
   
   add_action('init', 'create_post_type');
+
+  function add_acf_to_rest_api() {
+    // Ajouter les champs ACF dans l'API REST
+    register_rest_field('post', 'acf', array(
+        'get_callback' => function($post_arr) {
+            return get_fields($post_arr['id']);
+        },
+        'update_callback' => null,
+        'schema' => null,
+    ));
+}
+add_action('rest_api_init', 'add_acf_to_rest_api');

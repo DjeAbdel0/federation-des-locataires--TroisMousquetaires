@@ -1,11 +1,13 @@
 /* 
 -------------   Abdel    ------------- */
-/* ----------------------  Hover une nouvelle, texte visible/Non-visible ------------------------------ */
+/* ----------------------  Hover un service, texte visible/Non-visible ------------------------------ */
 const serviceDiv = document.querySelectorAll(".page-service > div"); // Choisis la div enfant directe de .list-service
 const serviceTexte = document.querySelectorAll(".page-service__texte"); // Choisis le texte dans .list-service
 const serviceBtn = document.querySelectorAll(".page-service__btn"); //  Choisis le btn dans .list-service
 const serviceDivCrr = document.querySelectorAll(".page-service-crr > div"); // Choisis la div enfant directe de .list-service
-const serviceTexteCrr = document.querySelectorAll(".page-service-crr__texte-crr"); // Choisis le texte dans .list-service
+const serviceTexteCrr = document.querySelectorAll(
+  ".page-service-crr__texte-crr"
+); // Choisis le texte dans .list-service
 
 // Toogle la visibilité selon si la souris Hover ou pas
 if (serviceDiv !== null) {
@@ -19,7 +21,7 @@ if (serviceDiv !== null) {
       serviceDivCrr[index].style.opacity = "1";
       serviceDivCrr[index].style.visibility = "visible";
     });
-//Met les elements caches
+    //Met les elements caches
     element.addEventListener("mouseleave", () => {
       serviceTexte[index].style.opacity = "0";
       serviceTexte[index].style.visibility = "hidden";
@@ -29,29 +31,28 @@ if (serviceDiv !== null) {
       serviceDivCrr[index].style.visibility = "hidden";
     });
   });
-};
+}
 /* -------------   Anim qui ouvre le menu burger   ------------- */
 function toggleMenu() {
   const menu = document.querySelector(".navbar__menu");
   menu.classList.toggle("active"); //Lui donne la classe ("active")
 }
 /* -------------   Gsap qui rotate le menu burger  ------------- */
-const burgerButton = document.querySelector('.navbar-toggler');
+const burgerButton = document.querySelector(".navbar-toggler");
 let isRotated = false;
 
 // Au click du burger
-burgerButton.addEventListener('click', () => {
+burgerButton.addEventListener("click", () => {
   // Utilise GSAP pour animer la rotation du bouton burger
   gsap.to(burgerButton, {
-      rotation: isRotated ? 0 : 90, // Si le bouton est déjà tourné, on le remet à 0° (sinon, on le fait tourner à 90°)
-      duration: 0.5, // Durée de l'animation en secondes (0.5s)
-      ease: "power1.inOut" // Type de transition de l'animation, ici "inOut" pour un mouvement fluide
+    rotation: isRotated ? 0 : 90, // Si le bouton est déjà tourné, on le remet à 0° (sinon, on le fait tourner à 90°)
+    duration: 0.5, // Durée de l'animation en secondes (0.5s)
+    ease: "power1.inOut", // Type de transition de l'animation, ici "inOut" pour un mouvement fluide
   });
 
   // Inverse l'état de rotation (true/false)
   isRotated = !isRotated;
 });
-
 
 /* -------------  Fin Abdel    ------------- */
 
@@ -147,15 +148,16 @@ window.addEventListener("click", (event) => {
 
 /* --------------- Animation 404 ---------*/
 
-    gsap.timeline()
-      .to(".erreur__404", {
-        y: "100%",  // Utilisation d'une valeur en pourcentage pour rester proportionnel.
-        duration: 2,
-        ease: "bounce.out"
-      })
-      .to(".erreur__404", {
-        rotation: 20,
-        duration: 0.5
-      });
+gsap
+  .timeline()
+  .to(".erreur__404", {
+    y: "100%", // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+    duration: 2,
+    ease: "bounce.out",
+  })
+  .to(".erreur__404", {
+    rotation: 20,
+    duration: 0.5,
+  });
 
 /* -------------  Fin Yavuz    -------------*/
