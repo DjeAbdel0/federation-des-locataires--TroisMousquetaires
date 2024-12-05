@@ -46,7 +46,7 @@ function add_style_and_js()  {
 	  1. 'default' = ID de référence à donner au à la feuille de style
 		2. get_template_directory_uri() . '/style.css' = Chemin où ce trouve le fichier CSS en question
 	*/
-	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
+	wp_enqueue_style('default', get_template_directory_uri() . './style.css?v='.time());
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */
 
@@ -86,6 +86,14 @@ function theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+// Fonction pour ajouter le CDN de GSAP
+function enqueue_gsap_cdn() {
+    // Ajouter le script GSAP via le CDN
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js', array(), null, true);
+}
+
+// Ajouter GSAP à l'action wp_enqueue_scripts
+add_action('wp_enqueue_scripts', 'enqueue_gsap_cdn');
 
 
 /* Appel de la fonction ajoutant les styles et scripts */
@@ -149,35 +157,6 @@ function create_post_type() {
 	  'has_archive' => true,
 	)
   );
-
-  register_post_type('nouvelle', 
-  array(
-	'labels' => array(
-	  'name' => _x('Nouvelle', 'Nom générique'),
-	  'singular_name' => _x('Nouvelle', 'Au singulier'),
-	  'menu_name' => __('Nouvelle'),
-	  'all_items' => __('Tous les nouvelles'),
-	  'view_item' => __('Voir les nouvelles'),
-	  'add_new_item' => __('Ajouter une nouvelle'),
-	  'add_new' => __('Ajouter'),
-	  'edit_item' => __('Editer la nouvelle'),
-	  'update_item' => __('Mettre à jour la nouvelle'),
-	  'search_items' => __('Rechercher une nouvelle'),
-	  'not_found' => __('Non trouvé'),
-	  'not_found_in_trash' => __('Non trouvé dans la corbeille'),
-	),
-	'supports' => array(
-	  'title', 
-	  'editor', 
-	  'author', 
-	  'thumbnail', 
-	  'custom-fields',
-	),
-	'show_in_rest' => true,
-	'public' => true,
-	'has_archive' => true,
-  )
-);
 }
   
   add_action('init', 'create_post_type');
