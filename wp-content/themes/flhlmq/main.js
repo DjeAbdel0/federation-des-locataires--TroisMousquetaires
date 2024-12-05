@@ -22,7 +22,7 @@ if (banniereBtn !== null) {
 }
 
 const container = document.querySelector(".newshub"); // Assure-toi que l'élément existe dans le HTML
-const apiUrl = "http://localhost/fede_locataires/wp-json/wp/v2/nouvelles"; // URL de l'API
+const apiUrl = "http://localhost:81/fede_locataires/wp-json/wp/v2/nouvelles"; // URL de l'API
 const maxNewsToDisplay = 4; // Nombre de nouvelles à afficher
 
 fetch(apiUrl)
