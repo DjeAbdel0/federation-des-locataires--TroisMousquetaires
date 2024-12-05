@@ -30,9 +30,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             </div>
         <?php endif; ?>
     </article>
+    
+    <section class="newshub-premiere" id="newshub-premiere">
+        <!-- Le contenu de la premiere news -->
+    </section>
 
     <section class="newshub" id="news-container">
-        <!-- Le contenu des news sera généré dynamiquement par un script JavaScript -->
+        <!-- Le contenu des news suivantes-->
     </section>
 
     <section class="espaceBouton">
