@@ -81,8 +81,7 @@
   width: 100%;
   position: relative;
 
-  &__assos-crr,
-  &__locataire-crr {
+  &__assos-crr{
     margin-bottom: 5%;
     width: 100%;
     height: auto;
@@ -108,8 +107,7 @@
     }
   }
 
-  &__assos-crr img,
-  &__locataire-crr img {
+  &__assos-crr__image{
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -241,8 +239,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1em;
 
-    &__assos-crr,
-    &__locataire-crr {
+    &__assos-crr{
       width: 90%;
       max-height: 75%;
       margin: 15% auto;

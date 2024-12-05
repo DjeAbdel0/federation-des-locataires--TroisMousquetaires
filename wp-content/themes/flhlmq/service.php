@@ -7,25 +7,24 @@
 get_header(); // Affiche header.php
 
 if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
-    // Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
     the_post(); 
 ?>
 
 <div class="crr">
     <div class="crr__grosTitre">
-        <h1><?php the_title(); //Titre de la page?></h1> 
+        <h1><?php the_title(); // Titre de la page?></h1> 
     </div>
     <div class="crr__grosImg">
-        <?php the_post_thumbnail();  //Image de la page?>
+        <?php the_post_thumbnail();  // Image de la page?>
     </div>
     <div class="crr__intro">
-        <?php the_content();  //Description de la page?>
+        <?php the_content();  // Description de la page?>
     </div>
 </div>
 
 <?php
 
-// Array avec la liste de mes service (Custom FieldGroup)
+// Array with the list of my services (Custom FieldGroup)
 $services = [
     'service_list',       // service 1
     'service_list_2',     // service 2
@@ -35,7 +34,6 @@ $services = [
     'service_list_6',     // service 6
     'service_list_7',     // service 7
     'service_list_8',     // service 8
-    
 ];
 
 foreach ( $services as $service_field ) {
@@ -45,20 +43,19 @@ foreach ( $services as $service_field ) {
         <div class="crr__contenue">
             <div class="role">
                 <?php 
-                // Verifier s'il y a un titre et l'afficher
+                // Check if there's a title and display it
                 if ( !empty( $service['title'] ) ): ?>
                     <h3 class="role__titre__h3"><?php echo esc_html( $service['title'] ); ?></h3>
                 <?php endif; ?>
 
                 <?php 
-                // Verifier s'il y a une image et l'afficher
+                // Check if there's an image and display it
                 if ( !empty( $service['image']['url'] ) ): ?>
-                    <img class="role__titre__img"  src="<?php echo ( $service['image']['url'] ); ?>" />
-                   
+                    <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" />
                 <?php endif; ?>
 
                 <?php 
-                // Verifier s'il y a une description et l'afficher
+                // Check if there's a description and display it
                 if ( !empty( $service['description'] ) ): ?>
                     <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?></p>
                 <?php endif; ?>
@@ -68,10 +65,62 @@ foreach ( $services as $service_field ) {
     <?php endif;
 }
 
-else : // Sil y a rien afficher ce message
+else : // If no service found, display a message
     echo '<p>Aucun service trouvé</p>'; 
-    get_template_part( 'partials/404' ); //Afficher le 404
+    get_template_part( 'partials/404' ); // Display the 404 page
 endif;
+?>
 
-get_footer(); // Montrer le footer
+<div class="crr__fin">
+    <br>
+    <h3>Autres services</h3>
+    <div class="page-service-crr">
+        <?php
+        // Array with additional services (Custom FieldGroup)
+        $services_supp = [
+            'serviceSupp_1',       // service 1
+            'serviceSupp_2',       // service 2
+        ];
+
+        // Loop through each additional service to display
+        foreach ( $services_supp as $service_field_supp ) {
+            $serviceSupp  = get_field( $service_field_supp ); // Dynamically fetch the field
+
+            if ( $serviceSupp ): ?>
+                <div class="page-service-crr__assos-crr">
+                    <a href="./services-hub.html">
+                        <?php 
+                        // Check if there's an image and display it
+                        if ( !empty( $serviceSupp['image'] ) ) {
+                            // If image is an array, use the URL directly
+                            if ( is_array($serviceSupp['image']) && !empty($serviceSupp['image']['url']) ) {
+                                $image_url = $serviceSupp['image']['url'];
+                            } 
+                            // If image is an ID, get the URL using wp_get_attachment_image_url()
+                            elseif ( is_int($serviceSupp['image']) ) {
+                                $image_url = wp_get_attachment_image_url($serviceSupp['image'], 'full');
+                            }
+
+                            // Display the image if the URL is available
+                            if ( !empty( $image_url ) ) {
+                                echo '<img class="page-service-crr__assos-crr__image" src="' . esc_url( $image_url ) . '" alt="Service Image" />';
+                            }
+                        }
+                        ?>
+                    </a>
+
+                    <?php 
+                    // Check if there's a title and display it
+                    if ( !empty( $serviceSupp['titre'] ) ): ?>
+                        <p class="page-service-crr__nom-crr"><?php echo esc_html( $serviceSupp['titre'] ); ?></p>
+                    <?php endif; ?>
+                </div>
+            <?php endif;
+        }
+        ?>
+    </div>
+</div>
+
+<?php
+get_footer(); // Display the footer
 ?>

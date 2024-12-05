@@ -5,6 +5,7 @@ Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
 Author URI: https://smnarnold.com
 Description: Thème FLHLMQ
 */
+
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
@@ -1773,7 +1774,7 @@ footer {
   width: 100%;
   position: relative;
 }
-.page-service-crr__assos-crr, .page-service-crr__locataire-crr {
+.page-service-crr__assos-crr {
   margin-bottom: 5%;
   width: 100%;
   height: auto;
@@ -1782,7 +1783,7 @@ footer {
   background-repeat: no-repeat;
   display: block;
 }
-.page-service-crr__assos-crr::before, .page-service-crr__locataire-crr::before {
+.page-service-crr__assos-crr::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1793,7 +1794,7 @@ footer {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
 }
-.page-service-crr__assos-crr img, .page-service-crr__locataire-crr img {
+.page-service-crr__assos-crr__image {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -1900,12 +1901,12 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 1em;
   }
-  .page-service-crr__assos-crr, .page-service-crr__locataire-crr {
+  .page-service-crr__assos-crr {
     width: 90%;
     max-height: 75%;
     margin: 15% auto;
   }
-  .page-service-crr__assos-crr::before, .page-service-crr__locataire-crr::before {
+  .page-service-crr__assos-crr::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -1914,7 +1915,7 @@ footer {
     left: 0;
     pointer-events: none;
   }
-  .page-service-crr__assos-crr:hover::before, .page-service-crr__locataire-crr:hover::before {
+  .page-service-crr__assos-crr:hover::before {
     opacity: 1;
   }
   .page-service-crr__titre-crr {
