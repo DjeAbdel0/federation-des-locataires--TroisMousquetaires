@@ -45,6 +45,6 @@ else :
     get_template_part('partials/404'); // Affiche partials/404.php si aucun contenu n'est trouvé
 endif;
 
-get_sidebar(); // Affiche la barre latérale
+
 get_footer(); // Affiche footer.php
 ?>

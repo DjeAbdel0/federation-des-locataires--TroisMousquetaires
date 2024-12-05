@@ -118,5 +118,15 @@ if (voirPlusButton) {
 /* ------------- Fin  Vincent    ------------- */
 
 /* -------------   Yavuz    ------------- */
-
+gsap
+  .timeline()
+  .to(".erreur__404", {
+    y: "100%", // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+    duration: 2,
+    ease: "bounce.out",
+  })
+  .to(".erreur__404", {
+    rotation: 20,
+    duration: 0.5,
+  });
 /* -------------  Fin Yavuz    -------------*/

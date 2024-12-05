@@ -86,6 +86,14 @@ function theme_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+// Fonction pour ajouter le CDN de GSAP
+function enqueue_gsap_cdn() {
+    // Ajouter le script GSAP via le CDN
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js', array(), null, true);
+}
+
+// Ajouter GSAP à l'action wp_enqueue_scripts
+add_action('wp_enqueue_scripts', 'enqueue_gsap_cdn');
 
 
 /* Appel de la fonction ajoutant les styles et scripts */
