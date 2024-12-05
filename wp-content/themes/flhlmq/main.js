@@ -22,18 +22,21 @@ if (banniereBtn !== null) {
 }
 
 const container = document.querySelector(".newshub"); // Assure-toi que l'élément existe dans le HTML
-const apiUrl = "http://localhost:81/fede_locataires/wp-json/wp/v2/nouvelles"; // URL de l'API
-const maxNewsToDisplay = 4; // Nombre de nouvelles à afficher
+const apiUrl = "http://localhost:81/fede_locataires/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=13&_embed"; // URL de l'API
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    // Limiter l'affichage aux 4 premières nouvelles
-    const firstFourNews = data.slice(0, maxNewsToDisplay);
 
-    firstFourNews.forEach((news) => {
+    data.forEach((news, index) => {
       const newsCard = document.createElement("div");
       newsCard.classList.add("news");
+    
+      // Ajoute la classe 'hidden' à partir de la 4e news (index >= 3)
+      if (index >= 4) {
+        newsCard.classList.add("hidden");
+      }
+  
 
       // Créer le titre
       const title = document.createElement("h2");
