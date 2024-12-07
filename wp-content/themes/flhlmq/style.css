@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Les Trois Mousquetaires
 Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
@@ -611,9 +612,9 @@ Description: Thème FLHLMQ
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 123;
 }
-.page-service__texte {
+.page-service__texte, .page-service__texte > p {
   font-size: 12px;
   font-weight: normal;
   position: absolute;
@@ -621,7 +622,7 @@ Description: Thème FLHLMQ
   margin: auto 10%;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 2;
+  z-index: 1234;
 }
 .page-service__btn {
   opacity: 0;

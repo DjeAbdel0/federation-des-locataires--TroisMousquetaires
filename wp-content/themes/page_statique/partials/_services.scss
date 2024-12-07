@@ -125,17 +125,17 @@ $servicesNumero: no1, no2, no3;
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 123;
   }
 
-  &__texte {
+  &__texte,  &__texte > p {
     @include typo.mini-text;
     position: absolute;
     top: 40%;
     margin: auto 10%;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 2;
+    z-index: 1234;
   }
 
   &__btn {
