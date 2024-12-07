@@ -51,13 +51,13 @@ foreach ( $services as $service_field ) {
                 <?php 
                 // Check if there's an image and display it
                 if ( !empty( $service['image']['url'] ) ): ?>
-                    <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" />
+                <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" alt="image" />
                 <?php endif; ?>
 
                 <?php 
                 // Check if there's a description and display it
                 if ( !empty( $service['description'] ) ): ?>
-                    <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?></p>
+                    <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?>
                 <?php endif; ?>
                 
             </div>
