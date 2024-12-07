@@ -14,9 +14,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 <!-- Début de la section "About" -->
 <div class="about">
     <!-- Affichage du thumbnail, titre et contenu de la page une seule fois -->
-    <?php the_post_thumbnail('full', ['class' => 'about__img']); ?>
+    <img class="about__img" src="<?php the_post_thumbnail_url(); ?>" />
     <h2 class="about__titre"><?php the_title(); ?></h2>
-    <p class="about__info"><?php the_content(); ?></p>
+    <p class="about__info"><?php the_field("about_info"); ?></p>
 
 
     <!-- Tableau des champs ACF -->
@@ -31,7 +31,6 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         if( $about ):
     ?>
         <!-- Affichage des informations liées à chaque champ ACF -->
-        <div class="about__section">
             <!-- Vérifier et afficher l'image si elle existe -->
             <?php if ( !empty( $about['image']['url'] ) ): ?>
                 <img class="about__img" src="<?php echo esc_url( $about['image']['url'] ); ?>" />
@@ -87,7 +86,6 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <p class="about__p"><?php echo wp_kses_post( $about['description_7'] ); ?></p>
                 <?php endif; ?>
             </div>
-        </div>
     <?php endif; } ?>
 </div> <!-- Fin de la section "About" -->
 

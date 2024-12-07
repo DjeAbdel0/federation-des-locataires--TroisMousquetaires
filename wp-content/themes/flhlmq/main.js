@@ -1,7 +1,49 @@
 /* -------------   Abdel    ------------- */
 /* -------------  Fin Abdel    ------------- */
 
-/* -------------   Vincent    ------------- */
+/* -------------   Yavuz    ------------- */
+/* ------------ Modal pour la page equipe ------------ */
+document.querySelectorAll(".equipe__membre").forEach((membre) => {
+  membre.addEventListener("click", () => {
+    const modalId = membre.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "block";
+    }
+  });
+});
+
+document.querySelectorAll(".modal .close").forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    closeButton.closest(".modal").style.display = "none";
+  });
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal")) {
+    event.target.style.display = "none";
+  }
+});
+
+/* --------------- Fin Modal  -----------------*/
+
+/* --------------- Animation 404 ---------*/
+
+gsap
+  .timeline()
+  .to(".erreur__404", {
+    y: "100%", // Utilisation d'une valeur en pourcentage pour rester proportionnel.
+    duration: 2,
+    ease: "bounce.out",
+  })
+  .to(".erreur__404", {
+    rotation: 20,
+    duration: 0.5,
+  });
+
+/* -------------  Fin Yavuz    -------------*/
+
+/* -------------   Vincent    ------------- 
 // Sélectionne le bouton X de la bannière
 const banniereBtn = document.querySelector(".btn-fermer");
 const banniere = document.querySelector(".banniere");
@@ -187,18 +229,4 @@ if (voirPlusButton) {
     voirPlusButton.style.display = "none";
   });
 }
-/* ------------- Fin  Vincent    ------------- */
-
-/* -------------   Yavuz    ------------- */
-gsap
-  .timeline()
-  .to(".erreur__404", {
-    y: "100%", // Utilisation d'une valeur en pourcentage pour rester proportionnel.
-    duration: 2,
-    ease: "bounce.out",
-  })
-  .to(".erreur__404", {
-    rotation: 20,
-    duration: 0.5,
-  });
-/* -------------  Fin Yavuz    -------------*/
+ ------------- Fin  Vincent    ------------- */
