@@ -10,27 +10,11 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     while ( have_posts() ) : the_post(); 
 ?>
 
-    <article class="newshub-premiere">
+    <article>
         <?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-            <div class="premiere">
-                <h2 class="premiere__titre">
-                    <?php the_title(); // Titre de la nouvelle ?>
-                </h2>
-                <p class="premiere__texte">
-                    <?php the_excerpt(); // Extrait de la description de la nouvelle ?>
-                </p>
-                <p class="premiere__date">
-                    <?php the_date(); // Date de la nouvelle ?>
-                </p>
-                <a class="premiere__bouton" href="<?php the_permalink(); ?>">Accéder</a>
-                <div class="premiere__overlay"></div>
-                <?php if (has_post_thumbnail()) : ?>
-                    <img src="<?php the_post_thumbnail_url('full'); ?>" class="premiere__image" alt="<?php the_title(); ?>" />
-                <?php endif; ?>
-            </div>
+
         <?php endif; ?>
     </article>
-    
     <section class="newshub-premiere" id="newshub-premiere">
         <!-- Le contenu de la premiere news -->
     </section>

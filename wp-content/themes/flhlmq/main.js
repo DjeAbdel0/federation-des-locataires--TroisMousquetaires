@@ -21,31 +21,86 @@ if (banniereBtn !== null) {
   });
 }
 
-const premiereNews = document.querySelector(".newshub-premiere");
-const container = document.querySelector(".newshub"); 
-const apiUrl = "http://localhost:81/fede_locataires/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=13&_embed"; // URL de l'API
+const premiereNewsContainer = document.querySelector(".newshub-premiere");
+const container = document.querySelector(".newshub");
+const apiUrl =
+  "http://localhost/fede_locataires/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=12&_embed"; // URL de l'API
 
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
     data.forEach((news, index) => {
+      // Nouvelle en héro (première nouvelle)
+      if (index === 0) {
+        const premiere = document.createElement("div");
+        premiere.classList.add("premiere");
 
-      //Nouvelle en héro
-      const newsPremiere = document.createElement("div");
-      newsPremiere.classList.add("newshub-premiere")
-      if(index = 1){
+        // Ajouter le titre
+        const title = document.createElement("h2");
+        title.classList.add("premiere__titre");
+        title.textContent = news.title.rendered;
+        premiere.appendChild(title);
 
+        // Ajouter la date
+        const date = document.createElement("p");
+        date.classList.add("premiere__date");
+        date.textContent = new Date(news.date).toLocaleDateString("fr-FR");
+        premiere.appendChild(date);
+
+        // Ajouter le bouton
+        const bouton = document.createElement("a");
+        bouton.classList.add("premiere__bouton");
+        bouton.href = news.link;
+        bouton.textContent = "Accéder";
+        premiere.appendChild(bouton);
+
+        // Ajouter l'image si disponible
+        if (news._links["wp:featuredmedia"]) {
+          const mediaUrl = news._links["wp:featuredmedia"][0].href;
+
+          fetch(mediaUrl)
+            .then((response) => response.json())
+            .then((mediaData) => {
+              const imageUrl = mediaData.source_url;
+              const img = document.createElement("img");
+              img.classList.add("premiere__image");
+              img.src = imageUrl;
+              img.alt = news.title.rendered;
+              premiere.appendChild(img);
+            })
+            .catch((error) => {
+              console.error(
+                "Erreur lors de la récupération de l'image :",
+                error
+              );
+            });
+        }
+
+        // Ajouter un overlay
+        const overlay = document.createElement("div");
+        overlay.classList.add("premiere__overlay");
+        premiere.appendChild(overlay);
+
+        // Ajouter la première nouvelle au conteneur dédié
+        premiereNewsContainer.appendChild(premiere);
+        return; // Évite de continuer pour cette nouvelle
       }
 
-      // Nouvelles Cartes
+      // Nouvelles Cartes (autres nouvelles)
       const newsCard = document.createElement("div");
       newsCard.classList.add("news");
-    
+
+      // Créer un lien qui enveloppe toute la carte
+      const cardLink = document.createElement("a");
+      cardLink.href = news.link; // Lien vers la page de contenu de l'article
+      cardLink.style.textDecoration = "none"; // Supprime le soulignement
+      cardLink.style.color = "inherit"; // Inhère la couleur du parent
+      cardLink.classList.add("cliquable"); // Classe pour styliser le lien si besoin
+
       // Ajoute la classe 'hidden' à partir de la 5e news (index >= 4)
       if (index >= 4) {
         newsCard.classList.add("hidden");
       }
-  
 
       // Créer le titre
       const title = document.createElement("h2");
@@ -75,6 +130,11 @@ fetch(apiUrl)
           .catch((error) => {
             console.error("Erreur lors de la récupération de l'image :", error);
           });
+      } else {
+        console.warn(
+          "Aucune image trouvée pour cette nouvelle :",
+          news.title.rendered
+        );
       }
 
       // Ajouter la date de publication
@@ -98,8 +158,11 @@ fetch(apiUrl)
       tagButton.textContent = newsCardTag; // Ajoute la valeur de la sélection comme texte du bouton
       newsCard.appendChild(tagButton);
 
-      // Ajouter la carte d'actualité au conteneur
-      container.appendChild(newsCard);
+      // Ajouter la carte d'actualité dans le lien
+      cardLink.appendChild(newsCard);
+
+      // Ajouter le lien complet au conteneur
+      container.appendChild(cardLink);
     });
   })
   .catch((error) => {

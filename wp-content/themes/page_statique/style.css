@@ -5,7 +5,6 @@ Author: Vincent Delisle, Yavuz-Selim Gucluer , Abdel Ali Djeral
 Author URI: https://smnarnold.com
 Description: Thème FLHLMQ
 */
-
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
 /**------------------------------------------------ 1400px et + -------------------------------------------------------------*/
 /*----------------------------------------------------- Barre de recherche -----------------------------------------------------*/
@@ -144,7 +143,8 @@ Description: Thème FLHLMQ
 .hero__items .hero__item .hero__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero__content {
   position: absolute;
@@ -273,7 +273,8 @@ Description: Thème FLHLMQ
   transform: translate(-50%);
   height: 150px;
   width: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
 }
 .actualite__zoneTexte {
@@ -411,11 +412,13 @@ Description: Thème FLHLMQ
   }
   .actualite__conteneurImg {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .actualite__image {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
   .actualite__titre--petit {
@@ -553,7 +556,8 @@ Description: Thème FLHLMQ
 .service-hero__img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -597,7 +601,8 @@ Description: Thème FLHLMQ
 .page-service__image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -849,7 +854,8 @@ Description: Thème FLHLMQ
 .dons__content__image img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /**------------------------------------------------ 765 px -------------------------------------------------------------*/
@@ -1152,7 +1158,8 @@ Description: Thème FLHLMQ
   max-width: 100%;
   height: 300px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
@@ -1575,6 +1582,10 @@ footer {
   border-radius: 3%;
   border: 0px solid black;
 }
+.joindre-formulaire ::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: normal;
+}
 .joindre-formulaire ::placeholder {
   font-size: 1rem;
   font-weight: normal;
@@ -1797,7 +1808,8 @@ footer {
 .page-service-crr__assos-crr__image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -1986,6 +1998,10 @@ footer {
   border-radius: 15px;
 }
 
+a .cliquable {
+  text-decoration: none !important;
+}
+
 /**-------------------------------------------------------------- 375 px -------------------------------------------------------------*/
 .newshub-premiere {
   width: 100vw;
@@ -2020,7 +2036,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background: black;
   z-index: 1;
   transition: transform 0.5s ease;
@@ -2070,7 +2087,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: black;
   z-index: 2;
   opacity: 0.2;
@@ -2150,7 +2168,8 @@ footer {
 .newshub .news__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
 }
 
@@ -2367,7 +2386,8 @@ footer {
   .newshub .news__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 8px;
   }
   .voirPlus {
@@ -2399,7 +2419,8 @@ footer {
 .erreur__img {
   position: relative;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .erreur__404 {
   position: absolute;
@@ -2698,9 +2719,11 @@ p {
 }
 
 abbr[title] {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 address {
@@ -4773,13 +4796,11 @@ h3 {
   cursor: pointer;
   outline: none;
   font-size: 0.8rem;
-  -webkit-transform: translate(0);
   transform: translate(0);
   background-image: linear-gradient(45deg, #ff922c, #79cf7e);
   padding: 0.7em 2em;
   border-radius: 65px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
-  -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
   color: #415456;
   font-weight: bold;
@@ -4804,6 +4825,10 @@ h3 {
   background-image: linear-gradient(-45deg, #ff922c, #79cf7e);
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
   transform: scale(1.05);
+}
+
+.cliquable {
+  text-decoration: none !important;
 }
 
 /* 
@@ -4831,13 +4856,11 @@ html {
     cursor: pointer;
     outline: none;
     font-size: 0.9rem;
-    -webkit-transform: translate(0);
     transform: translate(0);
     background-image: linear-gradient(45deg, #ff922c, #79cf7e);
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
-    -webkit-transition: box-shadow 0.25s;
     transition: box-shadow 0.25s;
     color: #415456;
     font-weight: bold;
@@ -4877,13 +4900,11 @@ html {
     cursor: pointer;
     outline: none;
     font-size: 1rem;
-    -webkit-transform: translate(0);
     transform: translate(0);
     background-image: linear-gradient(45deg, #ff922c, #79cf7e);
     padding: 0.7em 2em;
     border-radius: 65px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.438);
-    -webkit-transition: box-shadow 0.25s;
     transition: box-shadow 0.25s;
     color: #415456;
     font-weight: bold;
