@@ -1138,11 +1138,10 @@ Description: Thème FLHLMQ
   margin: 15px 0;
   padding: 0 15px;
 }
-.equipe__info {
-  text-align: left;
-  padding: 15px;
-}
+
 .equipe__text {
+  padding: 15px;
+  text-align: left;
   font-size: 15px;
   color: #555;
   line-height: 1.6;

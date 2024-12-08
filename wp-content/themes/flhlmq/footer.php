@@ -38,74 +38,37 @@
         <i class="bi bi-person"></i>
       </div>
     </div>
-      <p class="footer__equipe">@2024 FLHLMQ, TroisMousquetaires </p>
-    
+      <p class="footer__equipe">@2024 FLHLMQ, TroisMousquetaires </p>    
 
-     <!--Partenaire-->
-    <div class="pdp">
-        <div class="pdp-container">
-            <h2 class="pdp-titre">Nos Partenaires</h2>
-            <div class="pdp-grid">
+    <!--Partenaire-->
+<div class="pdp">
+    <div class="pdp-container">
+        <h2 class="pdp-titre">Nos Partenaires</h2>
+        <div class="pdp-grid">
+            <?php 
+            // Récupérer les partenaires avec WP_Query
+            $partners = new WP_Query('post_type=partenaire');
+            while ($partners->have_posts()) : $partners->the_post(); 
+                // Récupérer l'URL de l'image
+                $image = get_the_post_thumbnail_url(); // URL de l'image à la une
+                $partenaire_url = get_field('partenaire_url'); // URL personnalisée
+                ?>
                 <div>
-                    <a href="http://www.accq.qc.ca/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/accq.png" alt="Association des cadres de collèges du Québec" title="Association des cadres de collèges du Québec">
+                    <a href="<?php echo esc_url($partenaire_url); ?>" target="_blank">
+                        <img class="img__partenaire" src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
                     </a>
                 </div>
-                <div>
-                    <a href="http://www.fedecegeps.qc.ca" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/federation_cegeps.png" alt="Fédération des cégeps" title="Fédération des cégeps">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://www.fneeq.qc.ca" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/logo-fneeq.png" alt="Fédération nationale des enseignants et enseignantes du Québec" title="Fédération nationale des enseignants et enseignantes du Québec">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://collecto.ca" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/collecto.png" alt="Collecto" title="Collecto">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://www.coopsco.com/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/coopsco.png" alt="Coopsco" title="Coopsco">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://www.csq.qc.net" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/csq.png" alt="Centrale des syndicats du Québec" title="Centrale des syndicats du Québec">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://www.acpq.net/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/acpq.png" alt="Association des collèges privés du Québec" title="Association des collèges privés du Québec">
-                    </a>
-                </div>
-                <div>
-                    <a href="https://www.collegesinstitutes.ca/fr/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/logo-ci-can.png" alt="Collèges et Instituts Canada" title="Collèges et Instituts Canada">
-                    </a>
-                </div>
-                <div>
-                    <a href="http://www.synchronex.ca/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/fichiers/202212/reseau-cctt-nouveau-logo.png" alt="Synchronex" title="Synchronex">
-                    </a>
-                </div>
-                <div>
-                    <a href="https://spgq.qc.ca/" target="_blank">
-                        <img src="https://www.lescegeps.com/a/public/partenaires/logo_spgq.png" alt="Syndicat des professionnelles et professionnels du Québec" title="Syndicat des professionnelles et professionnels du Québec">
-                    </a>
-                </div>
-            </div>
-            <div class="pdp-logo">
-                <a href="https://www.canada.ca/fr/patrimoine-canadien.html" target="_blank">
-                    <img src="https://www.lescegeps.com/a/public/partenaires/patrimoine-canadien.png" alt="Patrimoine Canada" title="Patrimoine Canada">
-                </a>
-                <button class="cta">Donner</button>
-            </div>
-            </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+        </div>
+        <div class="pdp-logo">
+            <a href="https://www.canada.ca/fr/patrimoine-canadien.html" target="_blank">
+                <img src="https://www.lescegeps.com/a/public/partenaires/patrimoine-canadien.png" alt="Patrimoine Canada" title="Patrimoine Canada">
+            </a>
+            <button class="cta">Donner</button>
         </div>
     </div>
+</div>
+
 </footer>
 
 <?php wp_footer(); 
