@@ -30,7 +30,7 @@
   <!-- Barre de Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
     <a href="<?php echo esc_url( home_url( '/' ) ); //Lien du logo vers la page d'acceuil ?>" class="navbar-brand"> 
-      <img src="<?php echo get_template_directory_uri(); //Chemin d'accès de l'image ?>/assets/medias/logo/logo_nouveau.png" alt="Logo" class="logo_nav">
+      <img src="<?php echo get_template_directory_uri(); //Chemin d'accès de l'image ?>/assets/logo/logo_nouveau.png" alt="Logo" class="logo_nav">
     </a>
     <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
