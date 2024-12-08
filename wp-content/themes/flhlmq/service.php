@@ -26,7 +26,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 // Array with the list of my services (Custom FieldGroup)
 $services = [
-    'service_list_1',     // service 1
+    'service_list',     // service 1
     'service_list_2',     // service 2
     'service_list_3',     // service 3
     'service_list_4',     // service 4
@@ -53,7 +53,7 @@ foreach ( $services as $service_field ) {
 
                 <?php 
                 // Display image if it exists
-                if ( !empty( $service['image']['url'] ) ): ?>
+                if ( !empty( $service['image'] ) ): ?>
                     <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" alt="image" />
                 <?php endif; ?>
 
@@ -81,7 +81,7 @@ endif;
         <?php
         // Array with additional services (Custom FieldGroup)
         $services_supp = [
-            'serviceSupp_1',       // service 1
+            'serviceSupp_3',       // service 1
             'serviceSupp_2',       // service 2
         ];
 
