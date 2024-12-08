@@ -26,7 +26,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 // Array with the list of my services (Custom FieldGroup)
 $services = [
-    'service_list',       // service 1
+    'service_list_1',     // service 1
     'service_list_2',     // service 2
     'service_list_3',     // service 3
     'service_list_4',     // service 4
@@ -36,34 +36,37 @@ $services = [
     'service_list_8',     // service 8
 ];
 
-foreach ( $services as $service_field ) {
-    $service = get_field( $service_field ); // Fetch the field dynamically
 
-    if( $service ): ?>
+foreach ( $services as $service_field ) {
+    // Fetch the service data dynamically
+    $service = get_field( $service_field );
+
+    // Ensure that there is data for the service
+    if ( $service ): ?>
         <div class="crr__contenue">
             <div class="role">
                 <?php 
-                // Check if there's a title and display it
+                // Display title if it exists
                 if ( !empty( $service['title'] ) ): ?>
                     <h3 class="role__titre__h3"><?php echo esc_html( $service['title'] ); ?></h3>
                 <?php endif; ?>
 
                 <?php 
-                // Check if there's an image and display it
+                // Display image if it exists
                 if ( !empty( $service['image']['url'] ) ): ?>
-                <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" alt="image" />
+                    <img class="role__titre__img" src="<?php echo esc_url( $service['image']['url'] ); ?>" alt="image" />
                 <?php endif; ?>
 
                 <?php 
-                // Check if there's a description and display it
+                // Display description if it exists
                 if ( !empty( $service['description'] ) ): ?>
-                    <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?>
+                    <p class="role__paragraphe"><?php echo wp_kses_post( $service['description'] ); ?></p>
                 <?php endif; ?>
-                
             </div>
         </div>
-    <?php endif;
+    <?php endif; 
 }
+
 
 else : // If no service found, display a message
     echo '<p>Aucun service trouvé</p>'; 
@@ -98,7 +101,7 @@ endif;
                             } 
                             // If image is an ID, get the URL using wp_get_attachment_image_url()
                             elseif ( is_int($serviceSupp['image']) ) {
-                                $image_url = wp_get_attachment_image_url($serviceSupp['image'], 'full');
+                                $image_url = esc_url($serviceSupp['image'], 'full');
                             }
 
                             // Display the image if the URL is available

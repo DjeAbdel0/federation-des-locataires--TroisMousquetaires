@@ -10,7 +10,7 @@
 <div class="footer__grid">
       <a class="footer__logo-container" href="<?php echo esc_url( home_url( '/' ) ); //Lien du logo vers la page d'acceuil ?>"><img
         class="footer__logo"
-        src="<?php echo get_template_directory_uri(); //Chemin d'accès de l'image ?>/assets/medias/logo/logo_nouveau.png"/></a>
+        src="<?php echo get_template_directory_uri(); //Chemin d'accès de l'image ?>/assets/logo/logo_nouveau.png"/></a>
       <div class="footer__lien">
         <a href="<?php echo esc_url( home_url( '/news-hub' ) );//Chemin d'accès de news-hub ?>">Nouvelles</a>
         <a href="<?php echo esc_url( home_url( '/services/association/' ) ); //Chemin d'accès d'un service (CRR) ?>">Services</a>
