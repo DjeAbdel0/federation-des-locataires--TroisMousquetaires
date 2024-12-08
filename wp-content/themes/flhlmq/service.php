@@ -15,7 +15,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         <h1><?php the_title(); // Titre de la page?></h1> 
     </div>
     <div class="crr__grosImg">
-        <?php the_post_thumbnail();  // Image de la page?>
+    <?php if ( has_post_thumbnail() ) : ?>
+    <img src="<?php echo get_the_post_thumbnail_url( null, 'full' ); ?>" alt="<?php the_title(); ?>" class="custom-thumbnail-class">
+<?php endif; ?>
+
     </div>
     <div class="crr__intro">
         <?php the_content();  // Description de la page?>
@@ -91,7 +94,7 @@ endif;
 
             if ( $serviceSupp ): ?>
                 <div class="page-service-crr__assos-crr">
-                    <a href="./services-hub.html">
+                    <a href="<?php echo esc_url( home_url( '/se' ) ); //Chemin d'accès d'un service (CRR) ?>">
                         <?php 
                         // Check if there's an image and display it
                         if ( !empty( $serviceSupp['image'] ) ) {
