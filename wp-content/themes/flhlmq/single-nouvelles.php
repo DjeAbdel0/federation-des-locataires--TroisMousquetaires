@@ -58,6 +58,8 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 <section class="actualite">
 <h2 class="actualite__titre">Dernières actualités</h2>
     <div class="actualite__cartes"></div>
+    <!-- Bouton Voir plus -->
+    <a href="<?php echo get_permalink(get_page_by_path('listes-des-nouvelles')->ID); ?>" class="actualite__btn">Voir Plus</a>
 </section>
 
 <?php endwhile; // Fermeture de la boucle

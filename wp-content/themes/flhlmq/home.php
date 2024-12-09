@@ -22,6 +22,32 @@ while ( have_posts() ) : the_post();
 		
 		<?php the_content(); // Contenu principal de la page ?>
 
+      <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__content__title">Fédération des locataires d’habitations à loyer modique du Québec</h1>
+      <p class="hero__content__text">La voix des locataires de HLM</p>
+    </div>
+    <div class="hero__items">
+      <div class="hero__item">
+        <img src="<?php bloginfo('template_url'); ?>./assets/hero_01.jpeg" alt="Slide 1" class="hero__image">
+      </div>
+      <div class="hero__item">
+        <img src="<?php bloginfo('template_url'); ?>./assets/hero_02.jpeg" alt="Slide 2" class="hero__image">
+      </div>
+      <div class="hero__item">
+        <img src="<?php bloginfo('template_url'); ?>./assets/hero_03.jpeg" alt="Slide 3" class="hero__image">
+      </div>
+    </div>
+  </section>
+  <!-- FIN Section Hero -->
+
+    <!-- Section Dernières Actualités -->
+    <section class="actualite">
+      <h2 class="actualite__titre">Dernières actualités</h2>
+      <div class="actualite__cartes"></div>
+    </section>
+
 	
 	  <!--Section Services-->
 	  <div class="fond">
