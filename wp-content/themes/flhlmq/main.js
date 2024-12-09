@@ -140,7 +140,7 @@ const premiereNewsContainer = document.querySelector(".newshub-premiere");
 const newsContainer = document.querySelector(".newshub");
 const newsLinks = [];
 const apiUrl =
-  "http://localhost/fede_locataires/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=12&_embed"; // URL de l'API
+  "http://wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=12&_embed"; // URL de l'API
 
 if (premiereNewsContainer !== null && newsContainer !== null) {
   // Fetch Api de toutes les nouvelles
@@ -298,7 +298,7 @@ if (premiereNewsContainer !== null && newsContainer !== null) {
 // Fetch Api pour les cartes d'actualité (nouvelles 1 à 3)
 const actualiteCartes = document.querySelector(".actualite__cartes");
 const apiUrlActualiteCartes =
-  "http://localhost/fede_locataires/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=3&_embed";
+  "http://wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=12&_embed";;
 if (actualiteCartes !== null) {
   fetch(apiUrlActualiteCartes)
     .then((response) => response.json())
