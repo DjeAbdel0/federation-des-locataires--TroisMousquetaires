@@ -25,8 +25,8 @@ while ( have_posts() ) : the_post();
       <!-- Section Hero -->
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__content__title">Fédération des locataires d’habitations à loyer modique du Québec</h1>
-      <p class="hero__content__text">La voix des locataires de HLM</p>
+      <h1 class="hero__content__title">"><?php the_field("hero_title"); ?></h1>
+      <p class="hero__content__text"><?php the_field("hero_text"); ?></p>
     </div>
     <div class="hero__items">
       <div class="hero__item">
