@@ -172,3 +172,39 @@ function create_post_type() {
     ));
 }
 add_action('rest_api_init', 'add_acf_to_rest_api');
+
+function add_news_microdata() {
+    if (is_singular('nouvelles')) { // Vérifie que c'est une page du CPT "nouvelles"
+        global $post;
+
+        // Récupérer les données dynamiques
+        $post_title = get_the_title($post->ID);
+        $post_date = get_the_date('c', $post->ID);
+        $post_modified = get_the_modified_date('c', $post->ID);
+        $post_thumbnail = has_post_thumbnail($post->ID) ? get_the_post_thumbnail_url($post->ID) : '';
+        $post_author = get_the_author_meta('display_name', $post->post_author);
+        $post_description = wp_strip_all_tags(get_the_excerpt($post->ID));
+        $post_url = get_permalink($post->ID);
+
+        // Générer le JSON-LD
+        ?>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "headline": "<?php echo esc_js($post_title); ?>",
+            "datePublished": "<?php echo esc_js($post_date); ?>",
+            "dateModified": "<?php echo esc_js($post_modified); ?>",
+            "image": "<?php echo esc_js($post_thumbnail); ?>",
+            "author": {
+                "@type": "Person",
+                "name": "<?php echo esc_js($post_author); ?>"
+            },
+            "description": "<?php echo esc_js($post_description); ?>",
+            "url": "<?php echo esc_js($post_url); ?>"
+        }
+        </script>
+        <?php
+    }
+}
+add_action('wp_head', 'add_news_microdata');

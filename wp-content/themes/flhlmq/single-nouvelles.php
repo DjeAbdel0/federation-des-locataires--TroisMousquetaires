@@ -54,12 +54,16 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
     ?>
 </section>
 
-
+<!-- Section Dernières Actualités -->
+<section class="actualite">
+<h2 class="actualite__titre">Dernières actualités</h2>
+    <div class="actualite__cartes"></div>
+</section>
 
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/404' ); // Affiche partials/404.php
+    get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 
 get_footer(); // Affiche footer.php 

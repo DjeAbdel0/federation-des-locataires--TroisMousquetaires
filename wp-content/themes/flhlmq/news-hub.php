@@ -20,7 +20,15 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     </section>
 
     <section class="newshub" id="news-container">
-        <!-- Le contenu des news suivantes-->
+      <!--Filtre de date pour les nouvelles-->
+      <div class="news__filter">
+        <label for="sort-date">Trier par date :</label>
+        <select id="sort-date">
+          <option value="new-to-old">Nouveau au plus vieux</option>
+          <option value="old-to-new">Vieux au plus nouveau</option>
+        </select>
+      </div>
+    <!-- Le contenu des news suivantes-->
     </section>
 
     <section class="espaceBouton">
