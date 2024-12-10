@@ -6,7 +6,7 @@
 
 get_header(); // Affiche header.php
 ?>
-
+<!-- La section hero est séparer des modales-->
 <section class="hero">
     <div class="hero__content">
       <h1 class="hero__content__title"><?php the_field("hero_title"); ?></h1>
@@ -31,7 +31,7 @@ get_header(); // Affiche header.php
     <div class="equipe__carte">
 
     <?php
-    if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
+    if ( have_posts() ) :
         $teams = new WP_Query('post_type=team');
  
         while ($teams->have_posts()) : $teams->the_post();
@@ -53,7 +53,7 @@ get_header(); // Affiche header.php
     $teams = new WP_Query('post_type=team');
     while ($teams->have_posts()) : $teams->the_post();
     ?>
-        <div id="modal<?php echo get_the_ID(); ?>" class="modal">
+        <div id="modal<?php echo get_the_ID(); // cherche le modale par son id?>" class="modal">
             <div class="modal__content">
                 <span class="close">&times;</span>
                     <p class="equipe__text"><?php the_field("team_text"); ?></p>

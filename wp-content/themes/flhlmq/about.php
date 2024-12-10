@@ -26,6 +26,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       'about_2',
     ];
 
+
+    // Boucle foreach pour le champ about
     foreach ( $abouts as $about_field ) {
         $about = get_field( $about_field );
         if( $about ):

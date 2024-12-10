@@ -20,12 +20,12 @@ while ( have_posts() ) : the_post();
 			</h2>
 		<?php endif; ?>
 		
-		<?php the_content(); // Contenu principal de la page ?>
+		
 
       <!-- Section Hero -->
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__content__title">"><?php the_field("hero_title"); ?></h1>
+      <h1 class="hero__content__title"><?php the_field("hero_title"); ?></h1>
       <p class="hero__content__text"><?php the_field("hero_text"); ?></p>
     </div>
     <div class="hero__items">
@@ -47,6 +47,24 @@ while ( have_posts() ) : the_post();
       <h2 class="actualite__titre">Dernières actualités</h2>
       <div class="actualite__cartes"></div>
     </section>
+
+    <!--Section Témoignages-->
+    <section class="temoins">
+      <h2 class="temoins__titre"><?php the_field("main_titre"); ?></h2>
+      <div class="temoins__carte">
+        <img src="<?php the_field("img_1"); ?>" class="temoins__img temoins__1">
+        <p class="temoins__nom temoins__nom-1"><?php the_field("nom_1"); ?></p>
+        <p class="temoins__text temoins__text-1"><?php the_field("temoins_1"); ?></p>
+        <img src="<?php the_field("img_2"); ?>" class="temoins__img temoins__2">
+        <p class="temoins__nom temoins__nom-2"><?php the_field("nom_2"); ?></p>
+        <p class="temoins__text temoins__text-2"><?php the_field("temoins_2"); ?></p>
+        <img src="<?php the_field("img_3"); ?>" class="temoins__img temoins__3">
+        <p class="temoins__nom temoins__nom-3"><?php the_field("nom_3"); ?></p>
+        <p class="temoins__text temoins__text-3"><?php the_field("temoins_2"); ?></p>
+        <button class="temoins__btn"><?php the_field("btn"); ?></button>
+      </div>
+    </section>
+    <!--Fin Section Témoignages-->
 
 	
 	  <!--Section Services-->
