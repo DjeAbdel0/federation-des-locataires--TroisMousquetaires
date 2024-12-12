@@ -14,13 +14,13 @@ get_header(); // Affiche header.php
     </div>
     <div class="hero__items">
       <div class="hero__item">
-        <img src="<?php bloginfo('template_url'); ?>/assets/medias/hero_01.jpeg" alt="Slide 1" class="hero__image">
+        <img src="<?php bloginfo('template_url'); ?>/assets/hero_01.jpeg" alt="Slide 1" class="hero__image">
       </div>
       <div class="hero__item">
-        <img src="<?php bloginfo('template_url'); ?>/assets/medias/hero_02.jpeg" alt="Slide 2" class="hero__image">
+        <img src="<?php bloginfo('template_url'); ?>/assets/hero_02.jpeg" alt="Slide 2" class="hero__image">
       </div>
       <div class="hero__item">
-        <img src="<?php bloginfo('template_url'); ?>/assets/medias/hero_03.jpeg" alt="Slide 3" class="hero__image">
+        <img src="<?php bloginfo('template_url'); ?>/assets/hero_03.jpeg" alt="Slide 3" class="hero__image">
       </div>
     </div>
   </section>

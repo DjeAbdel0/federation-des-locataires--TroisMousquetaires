@@ -12,11 +12,11 @@
         class="footer__logo"
         src="<?php echo get_template_directory_uri(); //Chemin d'accès de l'image ?>/assets/logo/logo_nouveau.png"/></a>
       <div class="footer__lien">
-        <a href="<?php echo esc_url( home_url( '/news-hub' ) );//Chemin d'accès de news-hub ?>">Nouvelles</a>
-        <a href="<?php echo esc_url( home_url( '/services/association/' ) ); //Chemin d'accès d'un service (CRR) ?>">Services</a>
-        <a href="<?php echo esc_url( home_url( '/team' ) ); //Chemin d'accès de team ?>">Équipe</a>
+        <a href="<?php echo esc_url( home_url( 'listes-des-nouvelles/' ) );//Chemin d'accès de news-hub ?>">Nouvelles</a>
+        <a href="<?php echo esc_url( home_url( '/se' ) ); //Chemin d'accès d'un service (CRR) ?>">Services</a>
+        <a href="<?php echo esc_url( home_url( '/equipe' ) ); //Chemin d'accès de team ?>">Équipe</a>
         <a href="<?php echo esc_url( home_url( '/contactez-nous' ) ); //Chemin d'accès de contatc-us ?>">Nous Joindre</a>
-        <a href="<?php echo esc_url( home_url( '/about' ) ); //Chemin d'accès de about ?>">À propos</a>
+        <a href="<?php echo esc_url( home_url( '/about' ) ); //Chemin d'accès de about ?>">À Propos</a>
         <a href="https://flhlmq.com/fr/publication/adhesion-et-abonnement"><button class="cta">Donner</button></a>
       </div>
       <a

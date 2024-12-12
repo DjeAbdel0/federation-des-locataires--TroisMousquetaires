@@ -37,9 +37,9 @@
     </button>
     <div id="navbarContent" class="collapse navbar-collapse">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/news-hub' ) );//Chemin d'accès de news-hub ?>" class="nav-link font-weight-bold text-uppercase">Nouvelles</a></li>
+        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/listes-des-nouvelles/' ) );//Chemin d'accès de news-hub ?>" class="nav-link font-weight-bold text-uppercase"><?php the_field("header_nouvelle") ?></a></li>
         <li class="nav-item dropdown megamenu">
-          <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Services</a>
+          <a id="megamenu" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Nouvelles</a>
           <div class="dropdown-menu border-0 p-0 m-0">
             <div class="container navbar__dropmenuCouleur">
               <div class="row rounded-0 m-0 shadow-sm">
@@ -48,7 +48,7 @@
                     <div class="row">
                       <div class="col-lg-6 mb-4">
                         <ul class="list-unstyled">
-                          <li class="nav-item"><a href="<?php echo esc_url( home_url( '/se' ) ); //Chemin d'accès de services-hub ?>" class="nav-link text-small pb-0">Tous les services</a></li>
+                          <li class="nav-item"><a href="<?php echo esc_url( home_url( '/se' ) ); //Chemin d'accès de services-hub ?>" class="nav-link text-small pb-0">Services</a></li>
                           <li class="nav-item"><a href="<?php echo esc_url( home_url( '/services/association/' ) ); //Chemin d'accès d'un service (CRR) ?>" class="nav-link text-small pb-0">Crr</a></li>
                           <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 2</a></li>
                           <li class="nav-item"><a href="#" class="nav-link text-small pb-0">Service 3</a></li>
@@ -61,9 +61,9 @@
             </div>
           </div>
         </li>
-        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/team' ) ); //Chemin d'accès de team ?>" class="nav-link font-weight-bold text-uppercase">Équipe</a></li>
-        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/contactez-nous' ) ); //Chemin d'accès de contatc-us ?>" class="nav-link font-weight-bold text-uppercase">Nous joindre</a></li>
-        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/about' ) ); //Chemin d'accès de about ?>" class="nav-link font-weight-bold text-uppercase">À propos</a></li>
+        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/equipe' ) ); //Chemin d'accès de team ?>" class="nav-link font-weight-bold text-uppercase">Équipe</a></li>
+        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/contactez-nous' ) ); //Chemin d'accès de contatc-us ?>" class="nav-link font-weight-bold text-uppercase">Nous Joindre</a></li>
+        <li class="nav-item"><a href="<?php echo esc_url( home_url( '/about' ) ); //Chemin d'accès de about ?>" class="nav-link font-weight-bold text-uppercase">À Propos</a></li>
         
         <form role="search" aria-label="Site search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
           <input type="search" class="navbar__search" placeholder="Search..." aria-label="Search" name="s" value="<?php echo get_search_query();  //Chemin d'accès de la abrre de recherche   ?>">

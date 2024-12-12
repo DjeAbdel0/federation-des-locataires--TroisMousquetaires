@@ -57,7 +57,7 @@ function add_style_and_js()  {
 		 4. false = Si un no de version doit être ajouté (généralement à false)
 		 5. true = Est-ce que le script doit-être ajouté à la fin du body. Si mis à false le script est ajouter dans le head à la place
 	*/
-	wp_enqueue_script('default', get_template_directory_uri() . './main.js?v='.time(), array(), false, true);
+	wp_enqueue_script('default', get_template_directory_uri() . '/main.js?v='.time(), array(), false, true);
 
 	/* Pour ajoutez un script, copier la ligne précédente et ajuster le chemin de façon relative vers votre nouveau fichier JS */
 }

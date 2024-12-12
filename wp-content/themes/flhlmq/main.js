@@ -297,6 +297,7 @@ if (premiereNewsContainer !== null && newsContainer !== null) {
 // Section derniere actualité à l'index et single-nouvelles
 // Fetch Api pour les cartes d'actualité (nouvelles 1 à 3)
 const actualiteCartes = document.querySelector(".actualite__cartes");
+const apercuNewsLinks = [];
 const apiUrlActualiteCartes =
   "https://trois-mousquetaires.tim-momo.com/wp-json/wp/v2/nouvelles?orderby=date&order=desc&per_page=3&_embed";
 if (actualiteCartes !== null) {
@@ -338,11 +339,23 @@ if (actualiteCartes !== null) {
         footer.textContent = `Publié le : ${
           new Date(news.date).toISOString().split("T")[0]
         }`;
+        
+        // Créer un lien qui enveloppe toute la carte
+        const apercuLink = document.createElement("a");
+        apercuLink.href = news.link; // Lien vers la page de contenu de l'article
+        apercuLink.style.textDecoration = "none"; // Supprime le soulignement
+        apercuLink.style.color = "inherit"; // Inhère la couleur du parent
+        
         zoneTexte.appendChild(footer);
 
         actualiteCarte.appendChild(zoneTexte);
+        
+        apercuLink.appendChild(actualiteCarte);
 
-        actualiteCartes.appendChild(actualiteCarte);
+        actualiteCartes.appendChild(apercuLink);
+        
+        // Sauvegarde des liens pour réattribution après le tri
+        apercuNewsLinks.push({ link: news.link, element: apercuLink });
       });
     })
     .catch((error) => {
